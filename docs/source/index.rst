@@ -1,22 +1,18 @@
-Welcome to Lumache's documentation!
-===================================
+.. OurChat-Docs documentation master file, created by
+   sphinx-quickstart on Sat Aug 17 22:14:23 2024.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+OurChat 文档
+==========================
+这里是 **OurChat** 的开发，部署，接口文档。
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
-.. note::
-
-   This project is under active development.
-
-Contents
---------
+OurChat 是一个全平台的即时聊天软件，具体参见 `README <https://github.com/SkyUOI/OurChat/blob/main/README.md>`_
 
 .. toctree::
-
-   usage
-   api
+   :maxdepth: 2
+   :caption: 目录:
+   
+   docs/deploy/index
+   docs/run/index
+   docs/development/index
