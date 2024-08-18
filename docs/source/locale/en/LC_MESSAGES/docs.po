@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-18 15:52+0800\n"
+"POT-Creation-Date: 2024-08-18 17:43+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -71,7 +71,7 @@ msgstr ""
 "`build/target` directory after generation"
 
 #: ../../source/docs/deploy/document-deploy.md:40
-msgid "The default language of this document is zh_CN. If you want to generate documents in other languages, please modify the language configuration item in source/conf.py. Currently supported languages are:"
+msgid "该文档默认语言为zh_CN，如果你想要生成其他语言的文档，请修改`source/conf.py`中的`language`配置项 目前支持语言"
 msgstr ""
 
 #: ../../source/docs/deploy/document-deploy.md:43
@@ -398,6 +398,7 @@ msgstr "Get Session Information"
 #: ../../source/docs/development/msg_json.md:186
 #: ../../source/docs/development/msg_json.md:232
 #: ../../source/docs/development/msg_json.md:325
+#: ../../source/docs/development/msg_json.md:411
 msgid "**_Server <- Client_**"
 msgstr "**Server <- Client**"
 
@@ -484,6 +485,7 @@ msgstr "Get Session Information Return Information"
 #: ../../source/docs/development/msg_json.md:336
 #: ../../source/docs/development/msg_json.md:372
 #: ../../source/docs/development/msg_json.md:394
+#: ../../source/docs/development/msg_json.md:433
 msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
@@ -648,6 +650,10 @@ msgid "该账号的 ocid"
 msgstr "The ocid of the account"
 
 #: ../../source/docs/development/msg_json.md
+msgid "该账号的 ocid **_注意：在[设置账号信息](#设置账号信息)时，该字段不可用_**"
+msgstr "The OCID of this account **_Note: This field is unavailable when [setting up account information](#设置账号信息)_**."
+
+#: ../../source/docs/development/msg_json.md
 msgid "nickname"
 msgstr "Nickname"
 
@@ -676,7 +682,8 @@ msgid "sessions"
 msgstr "Sessions"
 
 #: ../../source/docs/development/msg_json.md
-msgid "该账号加入/创建的会话列表(仅本账号可获取)"
+#, fuzzy
+msgid "该账号加入/创建的会话列表(仅本账号可获取，非本账号返回null)"
 msgstr ""
 "The list of sessions joined/created by the account (only accessible by "
 "this account)"
@@ -686,7 +693,8 @@ msgid "friends"
 msgstr "Friends"
 
 #: ../../source/docs/development/msg_json.md
-msgid "该账号的好友列表 (仅本账号可获取)"
+#, fuzzy
+msgid "该账号的好友列表 (仅本账号可获取，非本账号返回null)"
 msgstr "The friend list of the account (only accessible by this account)"
 
 #: ../../source/docs/development/msg_json.md:265
@@ -793,6 +801,36 @@ msgstr "Details"
 #: ../../source/docs/development/msg_json.md
 msgid "异常信息"
 msgstr "Exception Information"
+
+#: ../../source/docs/development/msg_json.md:409
+#, fuzzy
+msgid "设置账号信息"
+msgstr "Get Account Information"
+
+#: ../../source/docs/development/msg_json.md
+#, fuzzy
+msgid "需要更改的账号信息，详情[见上**获取账号信息**`request_value`](#获取账号信息)"
+msgstr ""
+"Account information, details [see above **Get Account Information** "
+"`request_value`](#获取账号信息)"
+
+#: ../../source/docs/development/msg_json.md:431
+#, fuzzy
+msgid "设置账号信息返回信息"
+msgstr "Get Account Information Return Information"
+
+#: ../../source/docs/development/msg_json.md
+#, fuzzy
+msgid "状态码"
+msgstr "Verification Status Code"
+
+#: ../../source/docs/development/msg_json.md
+msgid "设置成功"
+msgstr "Set Successfully"
+
+#: ../../source/docs/development/msg_json.md
+msgid "权限不足"
+msgstr "Insufficient Permissions"
 
 #: ../../source/docs/development/server/basic.md:1
 msgid "开发基本注意事项"
@@ -1403,4 +1441,13 @@ msgstr "Database Example:"
 #: ../../source/docs/run/server_argv.md:33
 msgid "Redis 示例:"
 msgstr "Redis Example:"
+
+#~ msgid ""
+#~ "The default language of this document"
+#~ " is zh_CN. If you want to "
+#~ "generate documents in other languages, "
+#~ "please modify the language configuration "
+#~ "item in source/conf.py. Currently supported"
+#~ " languages are:"
+#~ msgstr ""
 

@@ -53,20 +53,20 @@
 
 | key            | ValueType | comment              |
 |:---------------|:----------|:---------------------|
-| code           | Number    | 信息类型              |
-| session_id     | String    | 该会话的ID            |
-| request_values | Array     | 需要服务端返回的信息   |
+| code           | Number    | 信息类型             |
+| session_id     | String    | 该会话的ID           |
+| request_values | Array     | 需要服务端返回的信息 |
 
-| request_value | comment                                   |
-|:--------------|:------------------------------------------|
-| session_id    | 该会话的ID                                 |
-| name          | 会话名称                                   |
-| avatar        | 该会话头像的 url 链接                       |
-| avatar_hash   | 该会话头像的哈希值                          |
-| time          | 该会话创建的时间戳                          |
-| update_time   | 该会话数据最后更新的时间戳                   |
-| members       | 该会话的成员列表                            |
-| owner         | 该会话拥有者的 ocid                         |
+| request_value | comment                    |
+|:--------------|:---------------------------|
+| session_id    | 该会话的ID                 |
+| name          | 会话名称                   |
+| avatar        | 该会话头像的 url 链接      |
+| avatar_hash   | 该会话头像的哈希值         |
+| time          | 该会话创建的时间戳         |
+| update_time   | 该会话数据最后更新的时间戳 |
+| members       | 该会话的成员列表           |
+| owner         | 该会话拥有者的 ocid        |
 
 ## 获取会话信息返回信息
 
@@ -84,9 +84,9 @@
 }
 ```
 
-| key  | ValueType | comment                                           |
-|:-----|:----------|:--------------------------------------------------|
-| code | Number    | 信息类型                                          |
+| key  | ValueType | comment                                                           |
+|:-----|:----------|:------------------------------------------------------------------|
+| code | Number    | 信息类型                                                          |
 | data | Object    | 账号信息,详情[见上**获取会话信息**`request_value`](#获取会话信息) |
 
 ## 注册信息
@@ -250,17 +250,17 @@
 | ocid           | String    | 该账号的 ocid        |
 | request_values | Array     | 需要服务端返回的信息 |
 
-| request_value | comment                                   |
-|:--------------|:------------------------------------------|
-| ocid          | 该账号的 ocid                             |
-| nickname      | 昵称                                      |
-| status        | 该账号的状态                              |
-| avatar        | 该账号头像的 url 链接                     |
-|avatar_hash    | 该账号头像的 hash                         |
-| time          | 该账号注册的时间戳                        |
-| update_time   | 该账号数据最后更新的时间戳                 |
-| sessions      | 该账号加入/创建的会话列表(仅本账号可获取)   |
-| friends       | 该账号的好友列表 (仅本账号可获取)          |
+| request_value | comment                                                                 |
+|:--------------|:------------------------------------------------------------------------|
+| ocid          | 该账号的 ocid **_注意：在[设置账号信息](#设置账号信息)时，该字段不可用_** |
+| nickname      | 昵称                                                                    |
+| status        | 该账号的状态                                                            |
+| avatar        | 该账号头像的 url 链接                                                   |
+| avatar_hash   | 该账号头像的 hash                                                       |
+| time          | 该账号注册的时间戳                                                      |
+| update_time   | 该账号数据最后更新的时间戳                                              |
+| sessions      | 该账号加入/创建的会话列表(仅本账号可获取，非本账号返回null)              |
+| friends       | 该账号的好友列表 (仅本账号可获取，非本账号返回null)                      |
 
 ## 获取账号信息返回信息
 
@@ -278,9 +278,9 @@
 }
 ```
 
-| key  | ValueType | comment                                           |
-|:-----|:----------|:--------------------------------------------------|
-| code | Number    | 信息类型                                          |
+| key  | ValueType | comment                                                           |
+|:-----|:----------|:------------------------------------------------------------------|
+| code | Number    | 信息类型                                                          |
 | data | Object    | 账号信息,详情[见上**获取账号信息**`request_value`](#获取账号信息) |
 
 ## 获取服务器状态
@@ -405,3 +405,48 @@
 |:--------|:----------|:---------|
 | code    | Number    | 信息类型 |
 | details | String    | 异常信息 |
+
+## 设置账号信息
+
+**_Server <- Client_**
+
+```json
+// E.g.
+{
+  "code": 19,
+  "ocid": "0000000000", // 该账号的 ocid
+  "data": {
+    "nickname": "OurChat1" // 更改后的账号昵称
+    // ...
+  }
+}
+```
+
+| key  | ValueType | comment                                                                     |
+|:-----|:----------|:----------------------------------------------------------------------------|
+| code | Number    | 信息类型                                                                    |
+| ocid | String    | 该账号的 ocid                                                               |
+| data | Object    | 需要更改的账号信息，详情[见上**获取账号信息**`request_value`](#获取账号信息) |
+
+## 设置账号信息返回信息
+
+**_Server -> Client_**
+
+```json
+// E.g.
+{
+  "code": 20,
+  "status": 0 // 状态码
+}
+```
+
+| key    | ValueType | comment  |
+|:-------|:----------|:---------|
+| code   | Number    | 信息类型 |
+| status | Number    | 状态码   |
+
+| status | comment    |
+|:-------|:-----------|
+| 0      | 设置成功   |
+| 1      | 权限不足   |
+| 2      | 服务器错误 |
