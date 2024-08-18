@@ -446,7 +446,7 @@ msgstr "Data"
 
 #: ../../source/docs/development/msg_json.md
 msgid "账号信息,详情[见上**获取会话信息**`request_value`](#获取会话信息)"
-msgstr "Account information, details [see above **Session Information Retrieval** `request_value`](#Get-Session-Information)"
+msgstr "Account information, details [see above **Session Information Retrieval** `request_value`](#获取会话信息)"
 
 #: ../../source/docs/development/msg_json.md:92
 msgid "注册信息"
@@ -644,7 +644,7 @@ msgstr "Get Account Information Return Information"
 
 #: ../../source/docs/development/msg_json.md
 msgid "账号信息,详情[见上**获取账号信息**`request_value`](#获取账号信息)"
-msgstr "Account information, details [see above **Get Account Information** `request_value`](#Get-Account-Information)"
+msgstr "Account information, details [see above **Get Account Information** `request_value`](#获取账号信息)"
 
 #: ../../source/docs/development/msg_json.md:286
 msgid "获取服务器状态"
@@ -972,19 +972,19 @@ msgstr "Server Development Guide"
 
 #: ../../source/docs/development/server/server-develop.md:3
 msgid "[项目构建依赖](#项目构建依赖)"
-msgstr "[Project Build Dependencies](#Project-Build-Dependencies)"
+msgstr "[Project Build Dependencies](#项目构建依赖)"
 
 #: ../../source/docs/development/server/server-develop.md:4
 msgid "[容器开发](#容器开发)"
-msgstr "[Container Development](#Container-Development)"
+msgstr "[Container Development](#容器开发)"
 
 #: ../../source/docs/development/server/server-develop.md:5
 msgid "[数据库](#数据库)"
-msgstr "[Database](#Database)"
+msgstr "[Database](#数据库)"
 
 #: ../../source/docs/development/server/server-develop.md:6
 msgid "[服务器配置文件](#服务器配置文件)"
-msgstr "[Server Configuration File](#Server-Configuration-File)"
+msgstr "[Server Configuration File](#服务器配置文件)"
 
 #: ../../source/docs/development/server/server-develop.md:8
 msgid "项目构建依赖"
@@ -1104,7 +1104,7 @@ msgstr "Table of Contents"
 
 #: ../../source/docs/development/user_msg_json.md:5
 msgid "[文本消息](#文本消息)"
-msgstr "[Text Message](#Text-Message)"
+msgstr "[Text Message](#文本消息)"
 
 #: ../../source/docs/development/user_msg_json.md:7
 msgid "文本消息"
@@ -1229,7 +1229,7 @@ msgstr "--cfg=path_to_config_file"
 
 #: ../../source/docs/run/server_argv.md
 msgid "选择配置文件.[example](#配置文件示例)"
-msgstr "Select the configuration file. [example](#Configuration-File-Example)"
+msgstr "Select the configuration file. [example](#配置文件示例)"
 
 #: ../../source/docs/run/server_argv.md
 msgid "--test-mode"
