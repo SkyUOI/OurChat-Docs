@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-18 21:13+0800\n"
+"POT-Creation-Date: 2024-08-19 14:57+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -281,7 +281,7 @@ msgid "用户信息"
 msgstr "User Information"
 
 #: ../../source/docs/development/msg_json.md:5
-#: ../../source/docs/development/msg_json.md:289
+#: ../../source/docs/development/msg_json.md:308
 msgid "**_Server <-> Client_**"
 msgstr "**Server <-> Client**"
 
@@ -396,9 +396,9 @@ msgstr "Get Session Information"
 #: ../../source/docs/development/msg_json.md:94
 #: ../../source/docs/development/msg_json.md:140
 #: ../../source/docs/development/msg_json.md:186
-#: ../../source/docs/development/msg_json.md:232
-#: ../../source/docs/development/msg_json.md:326
-#: ../../source/docs/development/msg_json.md:412
+#: ../../source/docs/development/msg_json.md:250
+#: ../../source/docs/development/msg_json.md:345
+#: ../../source/docs/development/msg_json.md:431
 msgid "**_Server <- Client_**"
 msgstr "**Server <- Client**"
 
@@ -479,13 +479,13 @@ msgstr "Get Session Information Return Information"
 #: ../../source/docs/development/msg_json.md:73
 #: ../../source/docs/development/msg_json.md:115
 #: ../../source/docs/development/msg_json.md:161
-#: ../../source/docs/development/msg_json.md:207
-#: ../../source/docs/development/msg_json.md:268
-#: ../../source/docs/development/msg_json.md:311
-#: ../../source/docs/development/msg_json.md:337
-#: ../../source/docs/development/msg_json.md:373
-#: ../../source/docs/development/msg_json.md:395
-#: ../../source/docs/development/msg_json.md:434
+#: ../../source/docs/development/msg_json.md:225
+#: ../../source/docs/development/msg_json.md:287
+#: ../../source/docs/development/msg_json.md:330
+#: ../../source/docs/development/msg_json.md:356
+#: ../../source/docs/development/msg_json.md:392
+#: ../../source/docs/development/msg_json.md:414
+#: ../../source/docs/development/msg_json.md:453
 msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
@@ -618,10 +618,22 @@ msgid "新建会话请求信息"
 msgstr "New Session Request Information"
 
 #: ../../source/docs/development/msg_json.md
+msgid "会话头像,可选(如不填写使用默认头像)"
+msgstr "Conversation avatar, optional (use default avatar if not filled)"
+
+#: ../../source/docs/development/msg_json.md
+msgid "会话头像的哈希值,当`avatar`不为空时必填"
+msgstr "Hash value of the conversation avatar, required when `avatar` is not empty"
+
+#: ../../source/docs/development/msg_json.md
+msgid "会话名称,可选(如不填写使用默认名称)"
+msgstr "Conversation name, optional (use default name if not filled)"
+
+#: ../../source/docs/development/msg_json.md
 msgid "会话成员"
 msgstr "Session Members"
 
-#: ../../source/docs/development/msg_json.md:205
+#: ../../source/docs/development/msg_json.md:223
 msgid "新建会话返回信息"
 msgstr "New Session Return Information"
 
@@ -641,7 +653,7 @@ msgstr "Created Successfully"
 msgid "到达创建会话上限"
 msgstr "Reached the maximum number of sessions"
 
-#: ../../source/docs/development/msg_json.md:230
+#: ../../source/docs/development/msg_json.md:248
 msgid "获取账号信息"
 msgstr "Get Account Information"
 
@@ -654,6 +666,11 @@ msgid "该账号的 ocid **_注意：在[设置账号信息](#设置账号信息
 msgstr ""
 "The OCID of this account **_Note: This field is unavailable when [setting"
 " up account information](#设置账号信息)_**."
+
+#: ../../source/docs/development/msg_json.md
+#, fuzzy
+msgid "该账号绑定的邮箱"
+msgstr "Email bound to the account"
 
 #: ../../source/docs/development/msg_json.md
 msgid "nickname"
@@ -685,7 +702,11 @@ msgstr "Public Update Time"
 msgid ""
 "该账号公共(即不包括**_sessions_**和**_friends_**)数据最后更新的时间戳 "
 "**_注意：在[设置账号信息](#设置账号信息)时，该字段不可用_**"
-msgstr "The last update timestamp of the public (i.e., excluding **_sessions_** and **_friends_**) data for this account. **Note: This field is unavailable when [setting up account information](#setting-up-account-information).**"
+msgstr ""
+"The last update timestamp of the public (i.e., excluding **_sessions_** "
+"and **_friends_**) data for this account. **Note: This field is "
+"unavailable when [setting up account information](#setting-up-account-"
+"information).**"
 
 #: ../../source/docs/development/msg_json.md
 #, fuzzy
@@ -695,7 +716,10 @@ msgstr "Private Update Time"
 #: ../../source/docs/development/msg_json.md
 #, fuzzy
 msgid "该账号私有(即所有数据)数据最后更新的时间戳**_注意：在[设置账号信息](#设置账号信息)时，该字段不可用_**"
-msgstr "The last update timestamp for the private (i.e., all data) data of this account. **_Note: This field is unavailable when [setting up account information](#设置账号信息)._**"
+msgstr ""
+"The last update timestamp for the private (i.e., all data) data of this "
+"account. **_Note: This field is unavailable when [setting up account "
+"information](#设置账号信息)._**"
 
 #: ../../source/docs/development/msg_json.md
 msgid "sessions"
@@ -717,7 +741,7 @@ msgstr "Friends"
 msgid "该账号的好友列表 (仅本账号可获取，非本账号返回null)"
 msgstr "The friend list of the account (only accessible by this account)"
 
-#: ../../source/docs/development/msg_json.md:266
+#: ../../source/docs/development/msg_json.md:285
 msgid "获取账号信息返回信息"
 msgstr "Get Account Information Return Information"
 
@@ -727,7 +751,7 @@ msgstr ""
 "Account information, details [see above **Get Account Information** "
 "`request_value`](#获取账号信息)"
 
-#: ../../source/docs/development/msg_json.md:287
+#: ../../source/docs/development/msg_json.md:306
 msgid "获取服务器状态"
 msgstr "Get Server Status"
 
@@ -743,15 +767,15 @@ msgstr "Running Normally"
 msgid "维护中"
 msgstr "Under Maintenance"
 
-#: ../../source/docs/development/msg_json.md:309
+#: ../../source/docs/development/msg_json.md:328
 msgid "发起验证"
 msgstr "Initiate Verification"
 
-#: ../../source/docs/development/msg_json.md:324
+#: ../../source/docs/development/msg_json.md:343
 msgid "生成验证码"
 msgstr "Generate Verification Code"
 
-#: ../../source/docs/development/msg_json.md:335
+#: ../../source/docs/development/msg_json.md:354
 msgid "验证状态"
 msgstr "Verification Status"
 
@@ -771,22 +795,22 @@ msgstr "Verification Failed"
 msgid "验证超时"
 msgstr "Verification Timeout"
 
-#: ../../source/docs/development/msg_json.md:358
+#: ../../source/docs/development/msg_json.md:377
 msgid "注销"
 msgstr "Logout"
 
-#: ../../source/docs/development/msg_json.md:360
+#: ../../source/docs/development/msg_json.md:379
 msgid "**_Server<-Client_**"
 msgstr "**Server<-Client**"
 
-#: ../../source/docs/development/msg_json.md:369
+#: ../../source/docs/development/msg_json.md:388
 #, fuzzy
 msgid "**_警告：该注销是删除帐号的意思，请勿误用接口_**"
 msgstr ""
 "**Warning: This logout refers to the deletion of the account, please do "
 "not misuse the interface_**"
 
-#: ../../source/docs/development/msg_json.md:371
+#: ../../source/docs/development/msg_json.md:390
 msgid "注销返回信息"
 msgstr "Logout Return Information"
 
@@ -802,7 +826,7 @@ msgstr "Logout Successful"
 msgid "注销失败"
 msgstr "Logout Failed"
 
-#: ../../source/docs/development/msg_json.md:393
+#: ../../source/docs/development/msg_json.md:412
 msgid "错误信息"
 msgstr "Error Information"
 
@@ -822,7 +846,7 @@ msgstr "Details"
 msgid "异常信息"
 msgstr "Exception Information"
 
-#: ../../source/docs/development/msg_json.md:410
+#: ../../source/docs/development/msg_json.md:429
 #, fuzzy
 msgid "设置账号信息"
 msgstr "Get Account Information"
@@ -834,7 +858,7 @@ msgstr ""
 "Account information, details [see above **Get Account Information** "
 "`request_value`](#获取账号信息)"
 
-#: ../../source/docs/development/msg_json.md:432
+#: ../../source/docs/development/msg_json.md:451
 #, fuzzy
 msgid "设置账号信息返回信息"
 msgstr "Get Account Information Return Information"
