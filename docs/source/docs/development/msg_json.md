@@ -347,9 +347,15 @@
 ```json
 // E.g.
 {
-  "code": 14
+  "code": 14,
+  "email": "123456@ourchat.com", // 验证邮箱
 }
 ```
+
+| key      | ValueType | comment          |
+|:---------|:----------|:-----------------|
+| code     | Number    | 信息类型         |
+| email    | String    | 验证邮箱         |
 
 ## 验证状态
 

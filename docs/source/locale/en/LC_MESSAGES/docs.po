@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-19 14:57+0800\n"
+"POT-Creation-Date: 2024-08-19 16:16+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -398,7 +398,7 @@ msgstr "Get Session Information"
 #: ../../source/docs/development/msg_json.md:186
 #: ../../source/docs/development/msg_json.md:250
 #: ../../source/docs/development/msg_json.md:345
-#: ../../source/docs/development/msg_json.md:431
+#: ../../source/docs/development/msg_json.md:437
 msgid "**_Server <- Client_**"
 msgstr "**Server <- Client**"
 
@@ -482,10 +482,10 @@ msgstr "Get Session Information Return Information"
 #: ../../source/docs/development/msg_json.md:225
 #: ../../source/docs/development/msg_json.md:287
 #: ../../source/docs/development/msg_json.md:330
-#: ../../source/docs/development/msg_json.md:356
-#: ../../source/docs/development/msg_json.md:392
-#: ../../source/docs/development/msg_json.md:414
-#: ../../source/docs/development/msg_json.md:453
+#: ../../source/docs/development/msg_json.md:362
+#: ../../source/docs/development/msg_json.md:398
+#: ../../source/docs/development/msg_json.md:420
+#: ../../source/docs/development/msg_json.md:459
 msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
@@ -775,7 +775,12 @@ msgstr "Initiate Verification"
 msgid "生成验证码"
 msgstr "Generate Verification Code"
 
-#: ../../source/docs/development/msg_json.md:354
+#: ../../source/docs/development/msg_json.md
+#, fuzzy
+msgid "验证邮箱"
+msgstr "Email to be verified"
+
+#: ../../source/docs/development/msg_json.md:360
 msgid "验证状态"
 msgstr "Verification Status"
 
@@ -795,22 +800,22 @@ msgstr "Verification Failed"
 msgid "验证超时"
 msgstr "Verification Timeout"
 
-#: ../../source/docs/development/msg_json.md:377
+#: ../../source/docs/development/msg_json.md:383
 msgid "注销"
 msgstr "Logout"
 
-#: ../../source/docs/development/msg_json.md:379
+#: ../../source/docs/development/msg_json.md:385
 msgid "**_Server<-Client_**"
 msgstr "**Server<-Client**"
 
-#: ../../source/docs/development/msg_json.md:388
+#: ../../source/docs/development/msg_json.md:394
 #, fuzzy
 msgid "**_警告：该注销是删除帐号的意思，请勿误用接口_**"
 msgstr ""
 "**Warning: This logout refers to the deletion of the account, please do "
 "not misuse the interface_**"
 
-#: ../../source/docs/development/msg_json.md:390
+#: ../../source/docs/development/msg_json.md:396
 msgid "注销返回信息"
 msgstr "Logout Return Information"
 
@@ -826,7 +831,7 @@ msgstr "Logout Successful"
 msgid "注销失败"
 msgstr "Logout Failed"
 
-#: ../../source/docs/development/msg_json.md:412
+#: ../../source/docs/development/msg_json.md:418
 msgid "错误信息"
 msgstr "Error Information"
 
@@ -846,7 +851,7 @@ msgstr "Details"
 msgid "异常信息"
 msgstr "Exception Information"
 
-#: ../../source/docs/development/msg_json.md:429
+#: ../../source/docs/development/msg_json.md:435
 #, fuzzy
 msgid "设置账号信息"
 msgstr "Get Account Information"
@@ -858,7 +863,7 @@ msgstr ""
 "Account information, details [see above **Get Account Information** "
 "`request_value`](#获取账号信息)"
 
-#: ../../source/docs/development/msg_json.md:451
+#: ../../source/docs/development/msg_json.md:457
 #, fuzzy
 msgid "设置账号信息返回信息"
 msgstr "Get Account Information Return Information"
