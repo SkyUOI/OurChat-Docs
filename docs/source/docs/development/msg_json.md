@@ -254,7 +254,7 @@
 | members       | Array     | 该会话的成员列表           |
 | owner         | Array     | 该会话拥有者的 ocid        |
 
-## 获取会话信息返回信息
+### 获取会话信息返回信息
 
 **_Server -> Client_**
 
