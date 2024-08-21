@@ -1,41 +1,227 @@
 ﻿# OurChat 信息传递格式
 
-## 用户信息
+## 账号
 
-**_Server <-> Client_**
+### 注册信息
+
+**_Server <- Client_**
 
 ```json
 // E.g.
 {
-  "code": 0,
-  "time": 114514, // 发送消息的时间戳
-  "msg_id": "1643212388", //传输给服务器时无此字段
-  "sender": {
-    "ocid":"0000000000",
-    "session_id": "1145141919" //发送此消息的会话id
-  },
-  "msg": [
-    {
-      "type":0, // 用户消息类型
-      // ...相关数据
-    },
+  "code": 4,
+  "email": "123456@ourchat.com", // 注册使用的邮箱
+  "password": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", // 注册密码(已加密)
+  "name": "Outchat" // 昵称
+}
+```
+
+| key      | ValueType | comment          |
+|:---------|:----------|:-----------------|
+| code     | Number    | 信息类型         |
+| email    | String    | 注册邮箱         |
+| password | String    | 注册密码(已加密) |
+| name     | String    | 昵称             |
+
+### 注册返回信息
+
+**_Server -> Client_**
+
+```json
+// E.g.
+{
+  "code": 5,
+  "ocid": "0000000000", // 注册账号的ocid
+  "status_code":0 // 状态码，返回运行状态
+}
+```
+
+| key         | ValueType | comment                                                                          |
+|:------------|:----------|:---------------------------------------------------------------------------------|
+| code        | Number    | 信息类型                                                                         |
+| ocid        | String    | 该账号的 ocid                                                                   |
+| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#注册返回信息) |
+
+### 登录信息
+
+**_Server <- Client_**
+
+```json
+// E.g.
+{
+  "code": 6,
+  "login_type": 1, // 登录方式,此处1表示使用ocid登录
+  "account": "0000000000", // 邮箱/ocid
+  "password": "密码"
+}
+```
+
+| key        | ValueType | comment                     |
+|:-----------|:----------|:----------------------------|
+| code       | Number    | 信息类型                    |
+| login_type | Number    | 0 为邮箱登录，1 为 ocid 登录 |
+| account    | String    | 账号绑定的邮箱或 ocid       |
+| password   | String    | 密码                        |
+
+### 登录返回信息
+
+**_Server -> Client_**
+
+```json
+// E.g.
+{
+  "code": 7,
+  "ocid":"0000000000", // 该账号的ocid
+  "status_code":0 // 状态码，返回运行状态
+}
+```
+
+| key         | ValueType | comment                                                                          |
+|:------------|:----------|:---------------------------------------------------------------------------------|
+| code        | Number    | 信息类型                                                                         |
+| ocid        | String    | 该账号的 ocid                                                                    |
+| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#登录返回信息) |
+
+### 获取账号信息
+
+**_Server <- Client_**
+
+```json
+// E.g.
+{
+  "code": 10,
+  "ocid": "0000000000", //该账号的ocid
+  "request_values":[
+    "ocid",
+    "nickname",
     // ...
   ]
 }
 ```
 
-| key        | ValueType | comment                                                 |
-|:-----------|:----------|:--------------------------------------------------------|
-| code       | Number    | 信息类型                                                |
-| time       | Number    | 发消息的时间戳                                          |
-| msg_id     | Number    | message 的 ID，唯一 **_(注意：传输给服务器时无此字段)_**  |
-| sender     | Object    | 发送者的相关数据                                        |
-| ocid       | String    | 发送者的 ocid                                           |
-| session_id | Number    | 发送者的会话 id                                         |
-| msg        | Array     | 消息列表                                                |
-| type       | Number    | 用户消息类型，详细见[用户消息传递格式](user_msg_json.md) |
+| key            | ValueType | comment              |
+|:---------------|:----------|:---------------------|
+| code           | Number    | 信息类型             |
+| ocid           | String    | 该账号的 ocid        |
+| request_values | Array     | 需要服务端返回的信息 |
 
-## 获取会话信息
+| request_value      | ValueType | comment                                                           |
+|:-------------------|:----------|:------------------------------------------------------------------|
+| ocid               | String    | 该账号的 ocid                                                     |
+| email              | String    | 该账号绑定的邮箱                                                  |
+| nickname           | String    | 昵称                                                              |
+| status             | Number    | 该账号的状态                                                      |
+| avatar             | String    | 该账号头像的 url 链接                                             |
+| avatar_hash        | String    | 该账号头像的 hash                                                 |
+| time               | Number    | 该账号注册的时间戳                                                |
+| public_update_time | Number    | 该账号公共(即不包括**sessions**和**friends**)数据最后更新的时间戳 |
+| update_time        | Number    | 该账号所有数据最后更新的时间戳                                    |
+| sessions           | Array     | 该账号加入/创建的会话列表(仅本账号可获取，非本账号返回null)        |
+| friends            | Array     | 该账号的好友列表 (仅本账号可获取，非本账号返回null)                |
+
+### 获取账号信息返回信息
+
+**_Server -> Client_**
+
+```json
+// E.g.
+{
+  "code": 11,
+  "data":{
+    "ocid": "0000000000", // 该账号的 ocid
+    "nickname": "OurChat", // 该账号的昵称
+    // ...
+  },
+  "status_code":0 // 状态码，返回运行状态
+}
+```
+
+| key         | ValueType | comment                                                                                  |
+|:------------|:----------|:-----------------------------------------------------------------------------------------|
+| code        | Number    | 信息类型                                                                                 |
+| data        | Object    | 账号信息,详情[见上**获取账号信息**`request_value`](#获取账号信息)                        |
+| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#获取账号信息返回信息) |
+
+### 注销
+
+**_Server <- Client_**
+
+```json
+// E.g.
+{
+  "code": 16
+}
+```
+
+**_警告：该注销是删除帐号的意思，请勿误用接口_**
+
+### 注销返回信息
+
+**_Server -> Client_**
+
+```json
+// E.g.
+{
+  "code": 17,
+  "status_code":0 // 状态码，返回运行状态
+}
+```
+
+| key         | ValueType | comment                                                                          |
+|:------------|:----------|:---------------------------------------------------------------------------------|
+| code        | Number    | 信息类型                                                                         |
+| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#注销返回信息) |
+
+### 设置账号信息
+
+**_Server <- Client_**
+
+```json
+// E.g.
+{
+  "code": 19,
+  "data": {
+    "nickname": "OurChat1" // 更改后的账号昵称
+    // ...
+  }
+}
+```
+
+| key  | ValueType | comment                                   |
+|:-----|:----------|:------------------------------------------|
+| code | Number    | 信息类型                                  |
+| data | Object    | 需要更改的账号信息，可设置的字段见下面表格 |
+
+可设置的字段：
+| key         | ValueType |
+|:------------|:----------|
+| nickname    | String    |
+| avatar      | String    |
+| avatar_hash | String    |
+| status      | Number    |
+
+以上字段具体意义见[**获取账号信息**`request_value`](#获取账号信息)
+
+### 设置账号信息返回信息
+
+**_Server -> Client_**
+
+```json
+// E.g.
+{
+  "code": 20,
+  "status_code":0 // 状态码，返回运行状态
+}
+```
+
+| key         | ValueType | comment                                                                                  |
+|:------------|:----------|:-----------------------------------------------------------------------------------------|
+| code        | Number    | 信息类型                                                                                 |
+| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#设置账号信息返回信息) |
+
+## 会话
+
+### 获取会话信息
 
 **_Server <- Client_**
 
@@ -57,16 +243,16 @@
 | session_id     | String    | 该会话的ID           |
 | request_values | Array     | 需要服务端返回的信息 |
 
-| request_value | comment                    |
-|:--------------|:---------------------------|
-| session_id    | 该会话的ID                 |
-| name          | 会话名称                   |
-| avatar        | 该会话头像的 url 链接      |
-| avatar_hash   | 该会话头像的哈希值         |
-| time          | 该会话创建的时间戳         |
-| update_time   | 该会话数据最后更新的时间戳 |
-| members       | 该会话的成员列表           |
-| owner         | 该会话拥有者的 ocid        |
+| request_value | valueType | comment                    |
+|:--------------|:----------|:---------------------------|
+| session_id    | String    | 该会话的ID                 |
+| name          | String    | 会话名称                   |
+| avatar        | String    | 该会话头像的 url 链接      |
+| avatar_hash   | String    | 该会话头像的哈希值         |
+| time          | Number    | 该会话创建的时间戳         |
+| update_time   | Number    | 该会话数据最后更新的时间戳 |
+| members       | Array     | 该会话的成员列表           |
+| owner         | Array     | 该会话拥有者的 ocid        |
 
 ## 获取会话信息返回信息
 
@@ -80,108 +266,18 @@
     "session_id": "1145141919", // 该会话的ID
     "name": "Session1", // 会话名称
     // ...
-  }
+  },
+  "status_code":0 // 状态码，返回运行状态
 }
 ```
 
-| key  | ValueType | comment                                                           |
-|:-----|:----------|:------------------------------------------------------------------|
-| code | Number    | 信息类型                                                          |
-| data | Object    | 账号信息,详情[见上**获取会话信息**`request_value`](#获取会话信息) |
+| key         | ValueType | comment                                                                                  |
+|:------------|:----------|:-----------------------------------------------------------------------------------------|
+| code        | Number    | 信息类型                                                                                 |
+| data        | Object    | 账号信息,详情[见上**获取会话信息**`request_value`](#获取会话信息)                        |
+| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#获取会话信息返回信息) |
 
-## 注册信息
-
-**_Server <- Client_**
-
-```json
-// E.g.
-{
-  "code": 4,
-  "email": "123456@ourchat.com", // 注册使用的邮箱
-  "password": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", // 注册密码(已加密)
-  "name": "Outchat" // 昵称
-}
-```
-
-| key      | ValueType | comment          |
-|:---------|:----------|:-----------------|
-| code     | Number    | 信息类型         |
-| email    | String    | 注册邮箱         |
-| password | String    | 注册密码(已加密) |
-| name     | String    | 昵称             |
-
-## 注册返回信息
-
-**_Server -> Client_**
-
-```json
-// E.g.
-{
-  "code": 5,
-  "status": 0, // 返回码
-  "ocid": "0000000000" // 注册账号的OCID
-}
-```
-
-| key    | ValueType | comment            |
-|:-------|:----------|:-------------------|
-| code   | Number    | 信息类型           |
-| status | Number    | 服务端返回的状态码 |
-| ocid   | String    | 该账号的 OC 号     |
-
-| returnCode | comment    |
-|:-----------|:-----------|
-| 0          | 注册成功   |
-| 1          | 服务器错误 |
-| 2          | 邮箱重复   |
-
-## 登录信息
-
-**_Server <- Client_**
-
-```json
-// E.g.
-{
-  "code": 6,
-  "login_type": 1, // 登录方式,此处1表示使用ocid登录
-  "account": "0000000000", // 邮箱/OCID
-  "password": "密码"
-}
-```
-
-| key        | ValueType | comment                     |
-|:-----------|:----------|:----------------------------|
-| code       | Number    | 信息类型                    |
-| login_type | Number    | 0 为邮箱登录，1 为 ocid 登录 |
-| account    | String    | 账号绑定的邮箱或 ocid       |
-| password   | String    | 密码                        |
-
-## 登录返回信息
-
-**_Server -> Client_**
-
-```json
-// E.g.
-{
-  "code": 7,
-  "status": 0, // 登录状态码
-  "ocid":"0000000000" // 该账号的ocid
-}
-```
-
-| key    | ValueType | comment            |
-|:-------|:----------|:-------------------|
-| code   | Number    | 信息类型           |
-| status | Number    | 服务器返回的状态码 |
-| ocid   | String    | 该账号的 OCID      |
-
-| status | comment          |
-|:-------|:-----------------|
-| 0      | 登录成功         |
-| 1      | 账号或密码不正确 |
-| 2      | 服务器错误       |
-
-## 新建会话请求信息
+### 新建会话请求信息
 
 **_Server <- Client_**
 
@@ -220,7 +316,7 @@
 | name        | String    | 会话名称,可选(如不填写使用默认名称)     |
 | members     | Array     | 会话成员                                |
 
-## 新建会话返回信息
+### 新建会话返回信息
 
 **_Server -> Client_**
 
@@ -228,82 +324,20 @@
 // E.g.
 {
   "code": 9,
-  "status": 0, // 会话状态码
-  "session_id": "1145141919" // 仅当创建成功时有此字段
+  "session_id": "1145141919", // 仅当创建成功时有此字段
+  "status_code":0 // 状态码，返回运行状态
 }
 ```
 
-| key        | ValueType | comment    |
-|:-----------|:----------|:-----------|
-| code       | Number    | 信息类型   |
-| status     | Number    | 会话状态码 |
-| session_id | Number    | 会话 id    |
+| key         | ValueType | comment                                                                              |
+|:------------|:----------|:-------------------------------------------------------------------------------------|
+| code        | Number    | 信息类型                                                                             |
+| session_id  | Number    | 会话 id                                                                              |
+| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#新建会话返回信息) |
 
-| status | comment          |
-|:-------|:-----------------|
-| 0      | 创建成功         |
-| 1      | 服务器错误       |
-| 2      | 到达创建会话上限 |
+## 服务器
 
-## 获取账号信息
-
-**_Server <- Client_**
-
-```json
-// E.g.
-{
-  "code": 10,
-  "ocid": "0000000000", //该账号的OCID
-  "request_values":[
-    "ocid",
-    "nickname",
-    // ...
-  ]
-}
-```
-
-| key            | ValueType | comment              |
-|:---------------|:----------|:---------------------|
-| code           | Number    | 信息类型             |
-| ocid           | String    | 该账号的 ocid        |
-| request_values | Array     | 需要服务端返回的信息 |
-
-| request_value       | comment                                                                                                                         |
-|:--------------------|:--------------------------------------------------------------------------------------------------------------------------------|
-| ocid                | 该账号的 ocid **_注意：在[设置账号信息](#设置账号信息)时，该字段不可用_**                                                         |
-| email               | 该账号绑定的邮箱                                                                                                                |
-| nickname            | 昵称                                                                                                                            |
-| status              | 该账号的状态                                                                                                                    |
-| avatar              | 该账号头像的 url 链接                                                                                                           |
-| avatar_hash         | 该账号头像的 hash                                                                                                               |
-| time                | 该账号注册的时间戳                                                                                                              |
-| public_update_time  | 该账号公共(即不包括**_sessions_**和**_friends_**)数据最后更新的时间戳 **_注意：在[设置账号信息](#设置账号信息)时，该字段不可用_** |
-| private_update_time | 该账号私有(即所有数据)数据最后更新的时间戳**_注意：在[设置账号信息](#设置账号信息)时，该字段不可用_**                             |
-| sessions            | 该账号加入/创建的会话列表(仅本账号可获取，非本账号返回null)                                                                      |
-| friends             | 该账号的好友列表 (仅本账号可获取，非本账号返回null)                                                                              |
-
-## 获取账号信息返回信息
-
-**_Server -> Client_**
-
-```json
-// E.g.
-{
-  "code": 11,
-  "data":{
-    "ocid": "0000000000", // 该账号的 ocid
-    "nickname": "OurChat", // 该账号的昵称
-    // ...
-  }
-}
-```
-
-| key  | ValueType | comment                                                           |
-|:-----|:----------|:------------------------------------------------------------------|
-| code | Number    | 信息类型                                                          |
-| data | Object    | 账号信息,详情[见上**获取账号信息**`request_value`](#获取账号信息) |
-
-## 获取服务器状态
+### 获取服务器状态
 
 **_Server <-> Client_**
 
@@ -311,21 +345,18 @@
 // E.g.
 {
   "code": 12,
-  "status": 0 // 服务器状态码,传输给服务器时无此字段
+  "status_code":0 // 状态码，返回运行状态
 }
 ```
 
-| key    | ValueType | comment      |
-|:-------|:----------|:-------------|
-| code   | Number    | 信息类型     |
-| status | Number    | 服务器状态码 |
+| key         | ValueType | comment                                                                            |
+|:------------|:----------|:-----------------------------------------------------------------------------------|
+| code        | Number    | 信息类型                                                                           |
+| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#获取服务器状态) |
 
-| status | comment  |
-|:-------|:---------|
-| 0      | 正常运行 |
-| 1      | 维护中   |
+## 验证码
 
-## 发起验证
+### 发起验证
 
 **_Server -> Client_**
 
@@ -340,7 +371,7 @@
 |:-----|:----------|:---------|
 | code | Number    | 信息类型 |
 
-## 生成验证码
+### 生成验证码
 
 **_Server <- Client_**
 
@@ -352,12 +383,12 @@
 }
 ```
 
-| key      | ValueType | comment          |
-|:---------|:----------|:-----------------|
-| code     | Number    | 信息类型         |
-| email    | String    | 验证邮箱         |
+| key   | ValueType | comment  |
+|:------|:----------|:---------|
+| code  | Number    | 信息类型 |
+| email | String    | 验证邮箱 |
 
-## 验证状态
+### 验证状态
 
 **_Server -> Client_**
 
@@ -365,57 +396,53 @@
 // E.g.
 {
   "code": 15,
-  "status": 0 // 验证状态码
+  "status_code":0 // 状态码，返回运行状态
 }
 ```
 
-| key    | ValueType | comment    |
-|:-------|:----------|:-----------|
-| code   | Number    | 信息类型   |
-| status | Number    | 验证状态码 |
+| key         | ValueType | comment                                                                      |
+|:------------|:----------|:-----------------------------------------------------------------------------|
+| code        | Number    | 信息类型                                                                     |
+| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#验证状态) |
 
-| status | comment  |
-|:-------|:---------|
-| 0      | 验证通过 |
-| 1      | 验证失败 |
-| 2      | 验证超时 |
+## 其他信息
 
-## 注销
+### 用户发送信息
 
-**_Server<-Client_**
+**_Server <-> Client_**
 
 ```json
 // E.g.
 {
-  "code": 16
+  "code": 0,
+  "time": 114514, // 发送消息的时间戳
+  "msg_id": "1643212388", //传输给服务器时无此字段
+  "sender": {
+    "ocid":"0000000000",
+    "session_id": "1145141919" //发送此消息的会话id
+  },
+  "msg": [
+    {
+      "type":0, // 用户消息类型
+      // ...相关数据
+    },
+    // ...
+  ]
 }
 ```
 
-**_警告：该注销是删除帐号的意思，请勿误用接口_**
+| key        | ValueType | comment                                                     |
+|:-----------|:----------|:------------------------------------------------------------|
+| code       | Number    | 信息类型                                                    |
+| time       | Number    | 发消息的时间戳                                              |
+| msg_id     | Number    | message 的 ID，唯一 **(注意：传输给服务器时无此字段)**        |
+| sender     | Object    | 发送者的相关数据                                            |
+| ocid       | String    | 发送者的 ocid                                               |
+| session_id | Number    | 发送者的会话 id                                             |
+| msg        | Array     | 消息列表                                                    |
+| type       | Number    | 用户消息类型，详细见[**用户消息传递格式**](user_msg_json.md) |
 
-## 注销返回信息
-
-**_Server -> Client_**
-
-```json
-// E.g.
-{
-  "code": 17,
-  "status": 0 // 注销状态码
-}
-```
-
-| key    | ValueType | comment    |
-|:-------|:----------|:-----------|
-| code   | Number    | 信息类型   |
-| status | Number    | 注销状态码 |
-
-| status | comment  |
-|:-------|:---------|
-| 0      | 注销成功 |
-| 1      | 注销失败 |
-
-## 错误信息
+### 错误信息
 
 **_Server -> Client_**
 
@@ -431,48 +458,3 @@
 |:--------|:----------|:---------|
 | code    | Number    | 信息类型 |
 | details | String    | 异常信息 |
-
-## 设置账号信息
-
-**_Server <- Client_**
-
-```json
-// E.g.
-{
-  "code": 19,
-  "ocid": "0000000000", // 该账号的 ocid
-  "data": {
-    "nickname": "OurChat1" // 更改后的账号昵称
-    // ...
-  }
-}
-```
-
-| key  | ValueType | comment                                                                     |
-|:-----|:----------|:----------------------------------------------------------------------------|
-| code | Number    | 信息类型                                                                    |
-| ocid | String    | 该账号的 ocid                                                               |
-| data | Object    | 需要更改的账号信息，详情[见上**获取账号信息**`request_value`](#获取账号信息) |
-
-## 设置账号信息返回信息
-
-**_Server -> Client_**
-
-```json
-// E.g.
-{
-  "code": 20,
-  "status": 0 // 状态码
-}
-```
-
-| key    | ValueType | comment  |
-|:-------|:----------|:---------|
-| code   | Number    | 信息类型 |
-| status | Number    | 状态码   |
-
-| status | comment    |
-|:-------|:-----------|
-| 0      | 设置成功   |
-| 1      | 权限不足   |
-| 2      | 服务器错误 |

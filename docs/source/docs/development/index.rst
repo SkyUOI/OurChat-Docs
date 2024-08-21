@@ -11,4 +11,5 @@
    server/index
    msg_json
    user_msg_json
+   status_code
    special_string
