@@ -41,7 +41,6 @@ msgid "相关依赖: 见下方说明"
 msgstr "Dependencies: see explanation below"
 
 #: ../../source/docs/deploy/document-deploy.md:10
-#, fuzzy
 msgid "在`docs`目录下运行下方命令以安装相关依赖"
 msgstr ""
 "Run the following command in the `update_docs` directory to install the "
@@ -52,7 +51,6 @@ msgid "生成文档"
 msgstr "Generate Documentation"
 
 #: ../../source/docs/deploy/document-deploy.md:18
-#, fuzzy
 msgid "在`docs`目录下运行"
 msgstr "Run in the `update_docs` directory"
 
@@ -87,9 +85,8 @@ msgid "Example"
 msgstr "Example"
 
 #: ../../source/docs/deploy/document-deploy.md:48
-#, fuzzy
 msgid "例如: 生成`en`语言的`html`文档"
-msgstr "For example: Generate HTML documentation"
+msgstr "For example: Generate HTML documentation in `en`"
 
 #: ../../source/docs/deploy/document-deploy.md:59
 msgid "文档将会生成在`build/html`目录中"
@@ -385,7 +382,6 @@ msgid "该账号的 ocid"
 msgstr "The ocid of the account"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "status_code"
 msgstr "Status Code"
 
@@ -451,7 +447,6 @@ msgid "request_value"
 msgstr "Requested Value"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "该账号绑定的邮箱"
 msgstr "Email bound to the account"
 
@@ -492,12 +487,10 @@ msgid "该账号注册的时间戳"
 msgstr "The timestamp when the account was registered"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "public_update_time"
 msgstr "Public Update Time"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "该账号公共(即不包括**sessions**和**friends**)数据最后更新的时间戳"
 msgstr ""
 "The last update timestamp of the public (i.e., excluding **_sessions_** "
@@ -510,7 +503,6 @@ msgid "update_time"
 msgstr "Update Time"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "该账号所有数据最后更新的时间戳"
 msgstr "The timestamp of the last update of the data"
 
@@ -519,7 +511,6 @@ msgid "sessions"
 msgstr "Sessions"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "该账号加入/创建的会话列表(仅本账号可获取，非本账号返回null)"
 msgstr ""
 "The session list that this account has joined/created (only this account "
@@ -530,7 +521,6 @@ msgid "friends"
 msgstr "Friends"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "该账号的好友列表 (仅本账号可获取，非本账号返回null)"
 msgstr ""
 "The friend list of this account (only accessible to this account, other "
@@ -566,7 +556,6 @@ msgid "注销"
 msgstr "Logout"
 
 #: ../../source/docs/development/msg_json.md:156
-#, fuzzy
 msgid "**_警告：该注销是删除帐号的意思，请勿误用接口_**"
 msgstr ""
 "**Warning: This logout refers to the deletion of the account, please do "
@@ -584,7 +573,6 @@ msgstr ""
 "[`status_code`](status_code.md#注销返回信息)"
 
 #: ../../source/docs/development/msg_json.md:175
-#, fuzzy
 msgid "设置账号信息"
 msgstr "Set Account Information"
 
@@ -599,7 +587,6 @@ msgid "可设置的字段："
 msgstr "the fields that can be configured"
 
 #: ../../source/docs/development/msg_json.md:203
-#, fuzzy
 msgid "以上字段具体意义见[**获取账号信息**`request_value`](#获取账号信息)"
 msgstr ""
 "Account information, details [see above **Get Account Information** "
@@ -607,7 +594,6 @@ msgstr ""
 
 #: ../../source/docs/development/msg_json.md:205
 #: ../../source/docs/development/status_code.md:98
-#, fuzzy
 msgid "设置账号信息返回信息"
 msgstr "Get Account Information Return Information"
 
@@ -618,7 +604,6 @@ msgstr ""
 "[`status_code`](status_code.md#设置账号信息返回信息)"
 
 #: ../../source/docs/development/msg_json.md:222
-#, fuzzy
 msgid "会话"
 msgstr "Session"
 
@@ -728,7 +713,6 @@ msgstr ""
 "[`status_code`](status_code.md#新建会话返回信息)"
 
 #: ../../source/docs/development/msg_json.md:338
-#, fuzzy
 msgid "服务器"
 msgstr "Server"
 
@@ -749,7 +733,6 @@ msgstr ""
 "[`status_code`](status_code.md#获取服务器状态)"
 
 #: ../../source/docs/development/msg_json.md:357
-#, fuzzy
 msgid "验证码"
 msgstr "Verification Status Code"
 
@@ -762,7 +745,6 @@ msgid "生成验证码"
 msgstr "Generate Verification Code"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "验证邮箱"
 msgstr "Email to be verified"
 
@@ -782,7 +764,6 @@ msgid "其他信息"
 msgstr "Other Information"
 
 #: ../../source/docs/development/msg_json.md:410
-#, fuzzy
 msgid "用户发送信息"
 msgstr "User Information"
 
@@ -795,7 +776,6 @@ msgid "msg_id"
 msgstr "Message ID"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "message 的 ID，唯一 **(注意：传输给服务器时无此字段)**"
 msgstr ""
 "Message ID, unique **_(Note: This field is not present when transmitted "
@@ -831,7 +811,6 @@ msgid "type"
 msgstr "Type"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "用户消息类型，详细见[**用户消息传递格式**](user_msg_json.md)"
 msgstr ""
 "User message type, see [User Message Passing Format](user_msg_json.md) "
@@ -1250,12 +1229,10 @@ msgid "含义"
 msgstr "Meaning"
 
 #: ../../source/docs/development/status_code.md:1
-#, fuzzy
 msgid "OurChat 状态码"
 msgstr "OurChat Status Code"
 
 #: ../../source/docs/development/status_code.md:3
-#, fuzzy
 msgid "状态码表格"
 msgstr "Status Code Table"
 
@@ -1268,7 +1245,6 @@ msgid "0"
 msgstr "0"
 
 #: ../../source/docs/development/status_code.md
-#, fuzzy
 msgid "运行成功"
 msgstr "Operation successful"
 
@@ -1285,7 +1261,6 @@ msgid "2"
 msgstr ""
 
 #: ../../source/docs/development/status_code.md
-#, fuzzy
 msgid "服务器维护中"
 msgstr "Under Maintenance"
 
@@ -1358,7 +1333,6 @@ msgid "邮箱已存在"
 msgstr "Email already exists"
 
 #: ../../source/docs/development/status_code.md
-#, fuzzy
 msgid "未完成验证"
 msgstr "Verification not completed"
 
@@ -1371,12 +1345,10 @@ msgid "账号/密码错误"
 msgstr "Account/password is incorrect"
 
 #: ../../source/docs/development/status_code.md
-#, fuzzy
 msgid "新建成功"
 msgstr "Created Successfully"
 
 #: ../../source/docs/development/status_code.md
-#, fuzzy
 msgid "到达创建会话数量上限"
 msgstr "Reached the maximum number of sessions"
 
@@ -1385,9 +1357,8 @@ msgid "该账号不存在"
 msgstr "The account does not exist"
 
 #: ../../source/docs/development/status_code.md
-#, fuzzy
 msgid "服务器正常"
-msgstr "Server Error"
+msgstr "Server is running normally"
 
 #: ../../source/docs/development/status_code.md
 msgid "验证通过"
