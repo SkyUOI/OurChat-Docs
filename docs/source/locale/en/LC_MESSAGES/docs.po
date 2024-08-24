@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 20:57+0800\n"
+"POT-Creation-Date: 2024-08-24 23:29+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -25,7 +25,7 @@ msgid "本地文档部署指南"
 msgstr "Local Document Deployment Guide"
 
 #: ../../source/docs/deploy/document-deploy.md:3
-msgid "该文档使用Sphinx作为文档生成器"
+msgid "该文档使用 Sphinx 作为文档生成器"
 msgstr "This document uses Sphinx as the document generator"
 
 #: ../../source/docs/deploy/document-deploy.md:5
@@ -41,54 +41,59 @@ msgid "相关依赖: 见下方说明"
 msgstr "Dependencies: see explanation below"
 
 #: ../../source/docs/deploy/document-deploy.md:10
-msgid "在`docs`目录下运行下方命令以安装相关依赖"
-msgstr ""
-"Run the following command in the `update_docs` directory to install the "
-"dependencies"
+msgid "首先，请创建一个虚拟环境，接下来的所有操作都在其中进行，例如:"
+msgstr "Firstly, please create a virtual environment, and all subsequent operations should be conducted within it, for example:"
 
 #: ../../source/docs/deploy/document-deploy.md:16
+msgid "在项目根目录下运行下方命令以安装相关依赖"
+msgstr ""
+"Run the following command in the project root directory to install the "
+"dependencies"
+
+#: ../../source/docs/deploy/document-deploy.md:22
 msgid "生成文档"
 msgstr "Generate Documentation"
 
-#: ../../source/docs/deploy/document-deploy.md:18
+#: ../../source/docs/deploy/document-deploy.md:24
 msgid "在`docs`目录下运行"
 msgstr "Run in the `update_docs` directory"
 
-#: ../../source/docs/deploy/document-deploy.md:24
+#: ../../source/docs/deploy/document-deploy.md:30
 msgid "即可查看所有可用的生成器"
 msgstr "You can view all available generators"
 
-#: ../../source/docs/deploy/document-deploy.md:32
+#: ../../source/docs/deploy/document-deploy.md:38
 msgid "使用"
 msgstr "Usage"
 
-#: ../../source/docs/deploy/document-deploy.md:38
+#: ../../source/docs/deploy/document-deploy.md:44
 msgid "即可生成指定类型的文档，生成完毕后请检查`build/target`目录"
 msgstr ""
 "This will generate the specified type of document, please check the "
 "`build/target` directory after generation"
 
-#: ../../source/docs/deploy/document-deploy.md:40
-msgid "该文档默认语言为zh_CN，如果你想要生成其他语言的文档，请修改`source/conf.py`中的`language`配置项 目前支持语言"
-msgstr ""
+#: ../../source/docs/deploy/document-deploy.md:46
+msgid "该文档默认语言为 zh_CN，如果你想要生成其他语言的文档，请修改`source/conf.py`中的`language`配置项 目前支持语言:"
+msgstr "The default language for this document is zh_CN. If you want to generate documentation in other languages, please modify the `language` configuration item in `source/conf.py`. Currently supported languages are:"
 
-#: ../../source/docs/deploy/document-deploy.md:43
+
+#: ../../source/docs/deploy/document-deploy.md:49
 msgid "zh_CN"
 msgstr ""
 
-#: ../../source/docs/deploy/document-deploy.md:44
+#: ../../source/docs/deploy/document-deploy.md:50
 msgid "en"
 msgstr ""
 
-#: ../../source/docs/deploy/document-deploy.md:46
+#: ../../source/docs/deploy/document-deploy.md:52
 msgid "Example"
 msgstr "Example"
 
-#: ../../source/docs/deploy/document-deploy.md:48
+#: ../../source/docs/deploy/document-deploy.md:54
 msgid "例如: 生成`en`语言的`html`文档"
 msgstr "For example: Generate HTML documentation in `en`"
 
-#: ../../source/docs/deploy/document-deploy.md:59
+#: ../../source/docs/deploy/document-deploy.md:65
 msgid "文档将会生成在`build/html`目录中"
 msgstr "The documentation will be generated in the `build/html` directory"
 
@@ -250,6 +255,51 @@ msgid "这一步请参考[服务器参数](../run/server_argv.md)进行运行，
 msgstr ""
 "Please refer to the [Server Arguments](../run/server_argv.md) for this "
 "step to run the executable file located at ``target/server`"
+
+#: ../../source/docs/development/document_contributing.md:1
+msgid "贡献文档"
+msgstr "Documentation Contributing"
+
+#: ../../source/docs/development/document_contributing.md:3
+msgid "前置条件"
+msgstr "Prerequisites"
+
+#: ../../source/docs/development/document_contributing.md:5
+msgid "为该项目做出贡献之前，请先阅读[本地部署文档项目](../deploy/document-deploy.md)"
+msgstr "Before contributing to this project, please read the [Local Deployment Documentation](../deploy/document-deploy.md) first."
+
+#: ../../source/docs/development/document_contributing.md:7
+msgid "本地文档贡献指南"
+msgstr "Local Document Deployment Guide"
+
+#: ../../source/docs/development/document_contributing.md:9
+msgid ""
+"接下来，你可以正常的编写文档并提交，你可以通过运行`gettext_generator.py`脚本来生成项目文档的翻译字符串，对于母语非中文的用户，我们推荐的是首先使用您熟悉的语言编写文档，然后使用"
+" AI 翻译工具翻译为中文并粘贴到文档，然后将您的翻译内容放在您的语言所对应的翻译中."
+msgstr ""
+"Next, you can write and submit the documentation as usual. You can generate the translation strings for the project documentation by running the `gettext_generator.py` script. For users whose native language is not Chinese, we recommend first writing the documentation in the language you are familiar with, and then using an AI translation tool to translate it into Chinese and paste it into the document. After that, place your translated content in the corresponding translation for your language."
+
+
+#: ../../source/docs/development/document_contributing.md:11
+msgid ""
+"请注意，生成翻译字符串的部分并不是必须的，我们有 github "
+"的定时任务生成翻译字符串，同时，为文档同时编写其所有翻译也是不现实的，您只需要完成其中一种语言的编写即可，剩下的将会由文档项目的开发者补全翻译。"
+msgstr ""
+"Please note that generating translation strings is not mandatory, as we have scheduled tasks on GitHub to generate translation strings. Additionally, it is impractical to write all translations for the documentation at the same time; you only need to complete the writing in one language, and the rest will be completed by the developers of the documentation project."
+
+#: ../../source/docs/development/document_contributing.md:13
+msgid "操作细节"
+msgstr "Operation Details"
+
+#: ../../source/docs/development/document_contributing.md:15
+msgid ""
+"如果您要创建一个新的文档部分，您需要将您的文档(md 或 rst "
+"文件都是受到支持的)分门别类的放在`source`文件夹中，并对应修改`index.rst`中的内容，使得你的文档能够被识别到。接下类，构建并检验您的文档是否发挥了作用。"
+msgstr "If you are creating a new section of the documentation, you need to categorize and place your documents (both .md and .rst files are supported) in the source folder, and then modify the contents of index.rst accordingly, to ensure your documentation can be recognized. Next, build and verify that your documentation is functioning properly."
+
+#: ../../source/docs/development/document_contributing.md:17
+msgid "感谢您的贡献，期待您在文档的贡献中获得乐趣，如果您有任何问题，请随时打开一个 issue!"
+msgstr "Thank you for your contribution, and I hope you find joy in participating in the documentation process. If you encounter any issues, please feel free to open an issue at any time!"
 
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
@@ -494,9 +544,7 @@ msgstr "Public Update Time"
 msgid "该账号公共(即不包括**sessions**和**friends**)数据最后更新的时间戳"
 msgstr ""
 "The last update timestamp of the public (i.e., excluding **_sessions_** "
-"and **_friends_**) data for this account. **Note: This field is "
-"unavailable when [setting up account information](#setting-up-account-"
-"information).**"
+"and **_friends_**) data for this account.**"
 
 #: ../../source/docs/development/msg_json.md
 msgid "update_time"
@@ -1669,4 +1717,7 @@ msgstr "Redis Example:"
 
 #~ msgid "该账号的 OCID"
 #~ msgstr "The OCID of the account"
+
+#~ msgid "该文档默认语言为zh_CN，如果你想要生成其他语言的文档，请修改`source/conf.py`中的`language`配置项 目前支持语言"
+#~ msgstr ""
 

@@ -13,3 +13,4 @@
    user_msg_json
    status_code
    special_string
+   document_contributing.md
