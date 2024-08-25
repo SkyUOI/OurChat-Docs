@@ -23,4 +23,4 @@ jobs:
         uses: DavidAnson/markdownlint-cli2-action@v9
       - name: Sphinx build
         run: |
-          make SPHINXOPTS='--color -W' html
+          cd docs && make SPHINXOPTS='--color -W' html
