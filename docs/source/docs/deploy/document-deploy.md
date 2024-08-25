@@ -43,7 +43,7 @@ make target
 
 即可生成指定类型的文档，生成完毕后请检查`build/target`目录
 
-该文档默认语言为 en，如果你想要生成其他语言的文档，请设置环境变量`READTHEDOCS_LANGUAGE`
+该文档默认语言为 en，如果你想要生成其他语言的文档，请设置环境变量`READTHEDOCS_LANGUAGE`。为了方便，我们提供了`generate.py`脚本。
 目前支持语言:
 
 - zh_CN
@@ -52,6 +52,13 @@ make target
 ### Example
 
 例如: 生成`zh_CN`语言的`html`文档
+使用`generate.py`脚本:
+
+```bash
+python generate.py zh_CN
+```
+
+或者，直接运行命令:
 
 ```bash
 READTHEDOCS_LANGUAGE=zh_CN make html
