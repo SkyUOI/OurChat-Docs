@@ -9,8 +9,9 @@
    :caption: 目录:
    
    server/index
+   contributing
    msg_json
    user_msg_json
    status_code
    special_string
-   document_contributing.md
+   document_contributing

@@ -38,12 +38,12 @@ html        to make standalone HTML files
 使用
 
 ```bash
-./make target
+make target
 ```
 
 即可生成指定类型的文档，生成完毕后请检查`build/target`目录
 
-该文档默认语言为 zh_CN，如果你想要生成其他语言的文档，请修改`source/conf.py`中的`language`配置项
+该文档默认语言为 en，如果你想要生成其他语言的文档，请设置环境变量`READTHEDOCS_LANGUAGE`
 目前支持语言:
 
 - zh_CN
@@ -51,15 +51,10 @@ html        to make standalone HTML files
 
 ### Example
 
-例如: 生成`en`语言的`html`文档
-
-```python
-# conf.py
-language = "en"
-```
+例如: 生成`zh_CN`语言的`html`文档
 
 ```bash
-./make html
+READTHEDOCS_LANGUAGE=zh_CN make html
 ```
 
 文档将会生成在`build/html`目录中

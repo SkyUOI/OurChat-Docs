@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-24 23:29+0800\n"
+"POT-Creation-Date: 2024-08-25 11:11+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -42,7 +42,9 @@ msgstr "Dependencies: see explanation below"
 
 #: ../../source/docs/deploy/document-deploy.md:10
 msgid "首先，请创建一个虚拟环境，接下来的所有操作都在其中进行，例如:"
-msgstr "Firstly, please create a virtual environment, and all subsequent operations should be conducted within it, for example:"
+msgstr ""
+"Firstly, please create a virtual environment, and all subsequent "
+"operations should be conducted within it, for example:"
 
 #: ../../source/docs/deploy/document-deploy.md:16
 msgid "在项目根目录下运行下方命令以安装相关依赖"
@@ -73,9 +75,11 @@ msgstr ""
 "`build/target` directory after generation"
 
 #: ../../source/docs/deploy/document-deploy.md:46
-msgid "该文档默认语言为 zh_CN，如果你想要生成其他语言的文档，请修改`source/conf.py`中的`language`配置项 目前支持语言:"
-msgstr "The default language for this document is zh_CN. If you want to generate documentation in other languages, please modify the `language` configuration item in `source/conf.py`. Currently supported languages are:"
-
+msgid "该文档默认语言为 en，如果你想要生成其他语言的文档，请设置环境变量`READTHEDOCS_LANGUAGE` 目前支持语言:"
+msgstr ""
+"The default language for this document is en. If you want to generate "
+"documentation in other languages, please set the environment variable `READTHEDOCS_LANGUAGE`. Currently supported languages "
+"are:"
 
 #: ../../source/docs/deploy/document-deploy.md:49
 msgid "zh_CN"
@@ -90,10 +94,10 @@ msgid "Example"
 msgstr "Example"
 
 #: ../../source/docs/deploy/document-deploy.md:54
-msgid "例如: 生成`en`语言的`html`文档"
-msgstr "For example: Generate HTML documentation in `en`"
+msgid "例如: 生成`zh_CN`语言的`html`文档"
+msgstr "For example: Generate HTML documentation in `zh_CN`"
 
-#: ../../source/docs/deploy/document-deploy.md:65
+#: ../../source/docs/deploy/document-deploy.md:60
 msgid "文档将会生成在`build/html`目录中"
 msgstr "The documentation will be generated in the `build/html` directory"
 
@@ -256,6 +260,75 @@ msgstr ""
 "Please refer to the [Server Arguments](../run/server_argv.md) for this "
 "step to run the executable file located at ``target/server`"
 
+#: ../../source/docs/development/contributing.md:1
+msgid "贡献指南"
+msgstr "Contribution Guide"
+
+#: ../../source/docs/development/contributing.md:3
+msgid "[概要](#概要)"
+msgstr "[Overview](#概要)"
+
+#: ../../source/docs/development/contributing.md:4
+msgid "[提交更改](#提交更改)"
+msgstr "[Commit Changes](#提交更改)"
+
+#: ../../source/docs/development/contributing.md:6
+msgid "概要"
+msgstr "Overview"
+
+#: ../../source/docs/development/contributing.md:8
+msgid "感谢您愿意为我们做出贡献，由于该项目分为几个不同的部分，以下是贡献指南导引："
+msgstr ""
+"Thank you for your willingness to contribute to us. Since this project is"
+" divided into several different parts, here is a guide to the "
+"contribution guide:"
+
+#: ../../source/docs/development/contributing.md:10
+msgid "[服务器开发指南](./server/server-develop.md)"
+msgstr "[Server Development Guide](./server/server-develop.md)"
+
+#: ../../source/docs/development/contributing.md:12
+msgid "我们对于代码质量的要求并不是那么高，一般来说，只需要您的代码能够正常运行我们就会接受。但是，您依然需要撰写相应的自动化测试来保证您的代码的可维护性和正确性"
+msgstr ""
+"Our requirements for code quality are not that high. Generally speaking, "
+"as long as your code can run normally, we will accept it. However, you "
+"still need to write corresponding automated tests to ensure the "
+"maintainability and correctness of your code."
+
+#: ../../source/docs/development/contributing.md:14
+msgid "衷心的希望您能在参与项目贡献中获得快乐"
+msgstr ""
+"We sincerely hope that you can find joy in participating in the project "
+"contribution."
+
+#: ../../source/docs/development/contributing.md:16
+msgid "提交更改"
+msgstr "Commit Changes"
+
+#: ../../source/docs/development/contributing.md:18
+msgid "如果您想提交代码更改，请遵循以下步骤："
+msgstr "If you want to commit changes,please obey the following steps:"
+
+#: ../../source/docs/development/contributing.md:20
+msgid "从`main`分支 fork 本项目。"
+msgstr "Fork the project from `main`."
+
+#: ../../source/docs/development/contributing.md:21
+msgid "创建一个新的分支来处理您的更改。"
+msgstr "Create a new branch to develop."
+
+#: ../../source/docs/development/contributing.md:22
+msgid "确保您的代码遵循我们的代码风格。"
+msgstr "Make sure that you code follow our code style."
+
+#: ../../source/docs/development/contributing.md:23
+msgid "提交您的更改到您的 fork。"
+msgstr "Commit your changes to your fork."
+
+#: ../../source/docs/development/contributing.md:24
+msgid "创建一个 Pull Request（PR）到我们的主分支。"
+msgstr "Create a Pull Request(PR) to our main branch."
+
 #: ../../source/docs/development/document_contributing.md:1
 msgid "贡献文档"
 msgstr "Documentation Contributing"
@@ -266,7 +339,9 @@ msgstr "Prerequisites"
 
 #: ../../source/docs/development/document_contributing.md:5
 msgid "为该项目做出贡献之前，请先阅读[本地部署文档项目](../deploy/document-deploy.md)"
-msgstr "Before contributing to this project, please read the [Local Deployment Documentation](../deploy/document-deploy.md) first."
+msgstr ""
+"Before contributing to this project, please read the [Local Deployment "
+"Documentation](../deploy/document-deploy.md) first."
 
 #: ../../source/docs/development/document_contributing.md:7
 msgid "本地文档贡献指南"
@@ -277,15 +352,26 @@ msgid ""
 "接下来，你可以正常的编写文档并提交，你可以通过运行`gettext_generator.py`脚本来生成项目文档的翻译字符串，对于母语非中文的用户，我们推荐的是首先使用您熟悉的语言编写文档，然后使用"
 " AI 翻译工具翻译为中文并粘贴到文档，然后将您的翻译内容放在您的语言所对应的翻译中."
 msgstr ""
-"Next, you can write and submit the documentation as usual. You can generate the translation strings for the project documentation by running the `gettext_generator.py` script. For users whose native language is not Chinese, we recommend first writing the documentation in the language you are familiar with, and then using an AI translation tool to translate it into Chinese and paste it into the document. After that, place your translated content in the corresponding translation for your language."
-
+"Next, you can write and submit the documentation as usual. You can "
+"generate the translation strings for the project documentation by running"
+" the `gettext_generator.py` script. For users whose native language is "
+"not Chinese, we recommend first writing the documentation in the language"
+" you are familiar with, and then using an AI translation tool to "
+"translate it into Chinese and paste it into the document. After that, "
+"place your translated content in the corresponding translation for your "
+"language."
 
 #: ../../source/docs/development/document_contributing.md:11
 msgid ""
 "请注意，生成翻译字符串的部分并不是必须的，我们有 github "
 "的定时任务生成翻译字符串，同时，为文档同时编写其所有翻译也是不现实的，您只需要完成其中一种语言的编写即可，剩下的将会由文档项目的开发者补全翻译。"
 msgstr ""
-"Please note that generating translation strings is not mandatory, as we have scheduled tasks on GitHub to generate translation strings. Additionally, it is impractical to write all translations for the documentation at the same time; you only need to complete the writing in one language, and the rest will be completed by the developers of the documentation project."
+"Please note that generating translation strings is not mandatory, as we "
+"have scheduled tasks on GitHub to generate translation strings. "
+"Additionally, it is impractical to write all translations for the "
+"documentation at the same time; you only need to complete the writing in "
+"one language, and the rest will be completed by the developers of the "
+"documentation project."
 
 #: ../../source/docs/development/document_contributing.md:13
 msgid "操作细节"
@@ -295,11 +381,19 @@ msgstr "Operation Details"
 msgid ""
 "如果您要创建一个新的文档部分，您需要将您的文档(md 或 rst "
 "文件都是受到支持的)分门别类的放在`source`文件夹中，并对应修改`index.rst`中的内容，使得你的文档能够被识别到。接下类，构建并检验您的文档是否发挥了作用。"
-msgstr "If you are creating a new section of the documentation, you need to categorize and place your documents (both .md and .rst files are supported) in the source folder, and then modify the contents of index.rst accordingly, to ensure your documentation can be recognized. Next, build and verify that your documentation is functioning properly."
+msgstr ""
+"If you are creating a new section of the documentation, you need to "
+"categorize and place your documents (both .md and .rst files are "
+"supported) in the source folder, and then modify the contents of "
+"index.rst accordingly, to ensure your documentation can be recognized. "
+"Next, build and verify that your documentation is functioning properly."
 
 #: ../../source/docs/development/document_contributing.md:17
 msgid "感谢您的贡献，期待您在文档的贡献中获得乐趣，如果您有任何问题，请随时打开一个 issue!"
-msgstr "Thank you for your contribution, and I hope you find joy in participating in the documentation process. If you encounter any issues, please feel free to open an issue at any time!"
+msgstr ""
+"Thank you for your contribution, and I hope you find joy in participating"
+" in the documentation process. If you encounter any issues, please feel "
+"free to open an issue at any time!"
 
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
@@ -1719,5 +1813,72 @@ msgstr "Redis Example:"
 #~ msgstr "The OCID of the account"
 
 #~ msgid "该文档默认语言为zh_CN，如果你想要生成其他语言的文档，请修改`source/conf.py`中的`language`配置项 目前支持语言"
+#~ msgstr ""
+
+#~ msgid "Contribution Guide"
+#~ msgstr ""
+
+#~ msgid "[Overview](#overview)"
+#~ msgstr ""
+
+#~ msgid "[Commit Changes](#commit-changes)"
+#~ msgstr ""
+
+#~ msgid "Overview"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Thank you for your willingness to "
+#~ "contribute to us. Since this project "
+#~ "is divided into several different parts,"
+#~ " here is a guide to the "
+#~ "contribution guide:"
+#~ msgstr ""
+
+#~ msgid "[Server Guide](https://skyuoi.github.io/OurChat/en/server-develop.html)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Our requirements for code quality are"
+#~ " not that high. Generally speaking, "
+#~ "as long as your code can run "
+#~ "normally, we will accept it. However,"
+#~ " you still need to write "
+#~ "corresponding automated tests to ensure "
+#~ "the maintainability and correctness of "
+#~ "your code."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We sincerely hope that you can "
+#~ "find joy in participating in the "
+#~ "project contribution."
+#~ msgstr ""
+
+#~ msgid "Commit Changes"
+#~ msgstr ""
+
+#~ msgid "If you want to commit changes,please obey the following steps:"
+#~ msgstr ""
+
+#~ msgid "Fork the project from `main`."
+#~ msgstr ""
+
+#~ msgid "Create a new branch to develop."
+#~ msgstr ""
+
+#~ msgid "Make sure that you code follow our code style."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please write your commit message in "
+#~ "[Conventional "
+#~ "Commits](https://www.conventionalcommits.org/en/v1.0.0/)"
+#~ msgstr ""
+
+#~ msgid "Commit your changes to your fork."
+#~ msgstr ""
+
+#~ msgid "Create a Pull Request(PR) to our main branch."
 #~ msgstr ""
 

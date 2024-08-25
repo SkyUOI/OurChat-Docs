@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+    branches: ["main", "dev"]
+  pull_request:
+    branches: ["main", "dev"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo pip3 install -r requirements.txt
+      - name: typos-action
+        uses: crate-ci/typos@master
+        with:
+          files: .
+      - name: mdlint
+        uses: DavidAnson/markdownlint-cli2-action@v9
+      - name: Sphinx build
+        run: |
+          make SPHINXOPTS='--color -W' html

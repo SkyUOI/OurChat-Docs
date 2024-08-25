@@ -6,6 +6,8 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+import os
+
 project = "OurChat-Docs"
 copyright = "2024, OutChat"
 author = "OutChat"
@@ -19,8 +21,12 @@ extensions = ["myst_parser"]
 templates_path = ["_templates"]
 exclude_patterns = []
 
-language = "zh_CN"
-# language = "en"
+default_lang = "en"
+support_languages = ["en", "zh_CN"]
+language = os.getenv("READTHEDOCS_LANGUAGE", default_lang)
+if language not in support_languages:
+    print(f"Unknown Language:{language}")
+    language = default_lang
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
