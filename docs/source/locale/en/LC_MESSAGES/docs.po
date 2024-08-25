@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-25 11:33+0800\n"
+"POT-Creation-Date: 2024-08-25 17:47+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -81,7 +81,8 @@ msgid ""
 msgstr ""
 "The default language for this document is en. If you want to generate "
 "documentation in other languages, please set the environment variable "
-"`READTHEDOCS_LANGUAGE`.To help you, we provide a `generate.py` script. Currently supported languages are:"
+"`READTHEDOCS_LANGUAGE`.To help you, we provide a `generate.py` script. "
+"Currently supported languages are:"
 
 #: ../../source/docs/deploy/document-deploy.md:49
 msgid "zh_CN"
@@ -97,7 +98,9 @@ msgstr "Example"
 
 #: ../../source/docs/deploy/document-deploy.md:54
 msgid "例如: 生成`zh_CN`语言的`html`文档 使用`generate.py`脚本:"
-msgstr "For example: Generate HTML documentation in `zh_CN` using `generate.py` script:"
+msgstr ""
+"For example: Generate HTML documentation in `zh_CN` using `generate.py` "
+"script:"
 
 #: ../../source/docs/deploy/document-deploy.md:61
 msgid "或者，直接运行命令:"
@@ -127,37 +130,49 @@ msgid "服务端部署指南"
 msgstr "Server Deployment Guide"
 
 #: ../../source/docs/deploy/server-deploy.md:3
+msgid "[Docker 部署](#docker推荐)"
+msgstr "[Docker Deployment](#docker推荐)"
+
+#: ../../source/docs/deploy/server-deploy.md:4
+msgid "[手动部署](#手动部署)"
+msgstr "[Manual Deployment](#手动部署)"
+
+#: ../../source/docs/deploy/server-deploy.md:5
+msgid "[Sqlite 便携部署](#sqlite-便携部署)"
+msgstr "[SQLite Portable Deployment](#sqlite-便携部署)"
+
+#: ../../source/docs/deploy/server-deploy.md:7
 msgid "Docker(推荐)"
 msgstr "Docker (Recommended)"
 
-#: ../../source/docs/deploy/server-deploy.md:5
+#: ../../source/docs/deploy/server-deploy.md:9
 msgid "对于该项目，我们提供了一个生产环境中使用的 dockerfile，可以直接构建并运行项目。"
 msgstr ""
 "For this project, we provide a dockerfile for use in a production "
 "environment, which can be used to build and run the project directly."
 
-#: ../../source/docs/deploy/server-deploy.md:7
+#: ../../source/docs/deploy/server-deploy.md:11
 msgid "以下是具体操作步骤："
 msgstr "Here are the specific steps to follow:"
 
-#: ../../source/docs/deploy/server-deploy.md:13
+#: ../../source/docs/deploy/server-deploy.md:17
 msgid "这一步完成只是创建了一个最基本的环境，但是安全性还远远没有达到，为了保证安全性，你需要修改 MySQL 和 Redis 的密码。"
 msgstr ""
 "Completing this step only creates a very basic environment, but the "
 "security is far from adequate. To ensure security, you need to change the"
 " passwords for MySQL and Redis."
 
-#: ../../source/docs/deploy/server-deploy.md:15
+#: ../../source/docs/deploy/server-deploy.md:19
 msgid "具体有以下几步:"
 msgstr "Here are the specific steps:"
 
-#: ../../source/docs/deploy/server-deploy.md:17
+#: ../../source/docs/deploy/server-deploy.md:21
 msgid "修改`compose.prod.yml`中的两个`password`的`123456`为你自己的强密码"
 msgstr ""
 "Change the `123456` for the two `password` fields in `compose.prod.yml` "
 "to your own strong password"
 
-#: ../../source/docs/deploy/server-deploy.md:18
+#: ../../source/docs/deploy/server-deploy.md:22
 msgid ""
 "修改`config/database.json`为改后的 MySQL 密码，`config/redis_connection.json`为改后的 "
 "Redis 密码"
@@ -165,106 +180,127 @@ msgstr ""
 "Change `config/database.json` to the new MySQL password, and "
 "`config/redis_connection.json` to the new Redis password"
 
-#: ../../source/docs/deploy/server-deploy.md:19
+#: ../../source/docs/deploy/server-deploy.md:23
 msgid "再次运行`docker compose -f compose.prod.yml up -d`"
 msgstr "Run `docker compose -f compose.prod.yml up -d` again"
 
-#: ../../source/docs/deploy/server-deploy.md:21
+#: ../../source/docs/deploy/server-deploy.md:25
 msgid "完成这几步之后，你就成功部署了该项目。"
 msgstr "After completing these steps, you have successfully deployed the project."
 
-#: ../../source/docs/deploy/server-deploy.md:23
+#: ../../source/docs/deploy/server-deploy.md:27
 msgid "对于容器中的数据，我们将其映射在了`mysql-data`和`redis-data`中，你可以随时保存数据"
 msgstr ""
 "For data in the container, we have mapped it to `mysql-data` and `redis-"
 "data`, so you can save data at any time"
 
-#: ../../source/docs/deploy/server-deploy.md:25
+#: ../../source/docs/deploy/server-deploy.md:29
 msgid "手动部署"
 msgstr "Manual Deployment"
 
-#: ../../source/docs/deploy/server-deploy.md:27
-msgid "对于性能不高和未安装docker的计算机，我们也提供了手动部署的文档，关于这一点，建议部署在linux环境，其他环境未经过严格的测试。"
+#: ../../source/docs/deploy/server-deploy.md:31
+msgid "对于性能不高和未安装 docker 的计算机，我们也提供了手动部署的文档，关于这一点，建议部署在 linux 环境，其他环境未经过严格的测试。"
 msgstr ""
 "For computers with low performance and no Docker installed, we also "
 "provide documentation for manual deployment. For this, it is recommended "
 "to deploy in a Linux environment, as other environments have not been "
 "rigorously tested."
 
-#: ../../source/docs/deploy/server-deploy.md:29
-msgid "安装mysql"
+#: ../../source/docs/deploy/server-deploy.md:33
+msgid "安装 mysql"
 msgstr "Install MySQL"
 
-#: ../../source/docs/deploy/server-deploy.md:31
-msgid "mysql版本为9.0.1（如果该文档未及时更新可以查看`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)中的mysql版本）"
+#: ../../source/docs/deploy/server-deploy.md:35
+msgid ""
+"mysql 版本为 "
+"9.0.1（如果该文档未及时更新可以查看`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)中的"
+" mysql 版本）"
 msgstr ""
 "MySQL version is 9.0.1 (if this document is not updated in time, you can "
 "check the MySQL version in "
 "`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)`)"
 
-#: ../../source/docs/deploy/server-deploy.md:33
-msgid "安装redis"
+#: ../../source/docs/deploy/server-deploy.md:37
+msgid "安装 redis"
 msgstr "Install Redis"
 
-#: ../../source/docs/deploy/server-deploy.md:35
-msgid "可以直接安装最新版的redis"
+#: ../../source/docs/deploy/server-deploy.md:39
+msgid "可以直接安装最新版的 redis"
 msgstr "You can directly install the latest version of Redis"
 
-#: ../../source/docs/deploy/server-deploy.md:37
-msgid "安装ourchat server"
+#: ../../source/docs/deploy/server-deploy.md:41
+msgid "安装 ourchat server"
 msgstr "Install OurChat server"
 
-#: ../../source/docs/deploy/server-deploy.md:39
+#: ../../source/docs/deploy/server-deploy.md:43
 msgid "此处存在两种备选的方案:"
 msgstr "There are two alternative options here:"
 
-#: ../../source/docs/deploy/server-deploy.md:41
+#: ../../source/docs/deploy/server-deploy.md:45
 msgid ""
-"1.(推荐)从github "
-"release下载最新的linux编译结果，此版本经过官方的pgo优化，性能会更高，如果遇到CPU架构和其他兼容性问题，可能需要手动编译，参见下一节"
-msgstr ""
-"1. (Recommended) Download the latest Linux compilation results from the "
-"GitHub release. This version has been officially optimized with pgo for "
-"higher performance. If you encounter CPU architecture and other "
-"compatibility issues, you may need to compile it manually, see the next "
-"section."
+"1.(推荐)从 github release 下载最新的 linux 编译结果，此版本经过官方的 pgo 优化，性能会更高，如果遇到 CPU "
+"架构和其他兼容性问题，可能需要手动编译，参见下一节"
+msgstr "1. (Recommended) Download the latest Linux compilation results from the GitHub release. This version has been officially optimized with PGO (Profile Guided Optimization), resulting in higher performance. If you encounter CPU architecture and other compatibility issues, manual compilation may be necessary, see the following section.
+"
 
-#: ../../source/docs/deploy/server-deploy.md:43
+#: ../../source/docs/deploy/server-deploy.md:47
 msgid "2.手动编译"
 msgstr "2. Manual Compilation"
 
-#: ../../source/docs/deploy/server-deploy.md:45
+#: ../../source/docs/deploy/server-deploy.md:49
 msgid "拉取源代码:"
 msgstr "Pull the source code:"
 
-#: ../../source/docs/deploy/server-deploy.md:51
-msgid "安装rust工具链"
+#: ../../source/docs/deploy/server-deploy.md:55
+msgid "安装 rust 工具链"
 msgstr "Install the Rust toolchain"
 
-#: ../../source/docs/deploy/server-deploy.md:53
+#: ../../source/docs/deploy/server-deploy.md:57
 msgid "编译项目"
 msgstr "Compile the project"
 
-#: ../../source/docs/deploy/server-deploy.md:59
-msgid "(可选)pgo优化"
+#: ../../source/docs/deploy/server-deploy.md:63
+msgid "(可选)pgo 优化"
 msgstr "(Optional) PGO Optimization"
 
-#: ../../source/docs/deploy/server-deploy.md:61
+#: ../../source/docs/deploy/server-deploy.md:65
 msgid "该步骤会消耗大量时间，收集运行时信息来进行程序的优化，如果对于性能没有苛刻的要求不建议这么做"
 msgstr ""
 "This step will take a lot of time, collecting runtime information to "
 "optimize the program. It is not recommended if there are no stringent "
 "performance requirements."
 
-#: ../../source/docs/deploy/server-deploy.md:67
+#: ../../source/docs/deploy/server-deploy.md:71
 msgid "运行项目"
 msgstr "Run the project"
 
-#: ../../source/docs/deploy/server-deploy.md:69
+#: ../../source/docs/deploy/server-deploy.md:73
 msgid "这一步请参考[服务器参数](../run/server_argv.md)进行运行，可执行文件位于``target/server`"
 msgstr ""
 "Please refer to the [Server Arguments](../run/server_argv.md) for this "
 "step to run the executable file located at ``target/server`"
+
+#: ../../source/docs/deploy/server-deploy.md:75
+msgid "Sqlite 便携部署"
+msgstr "SQLite Portable Deployment"
+
+#: ../../source/docs/deploy/server-deploy.md:77
+msgid ""
+"其余部分都可以参考上一章，但是 mysql "
+"可以无需安装，具体配置方法参考[服务器参数](../run/server_argv.md)或直接参考`config/sqlite`文件夹中的`ourchat.toml`"
+msgstr ""
+"The rest of the section can refer to the previous chapter, but MySQL can "
+"be installed without installation, for specific configuration methods, "
+"refer to [Server Parameters](../run/server_argv.md) or directly refer to "
+"the `ourchat.toml` in the `config/sqlite` folder."
+
+#: ../../source/docs/deploy/server-deploy.md:79
+msgid "注意，sqlite 运行仅限于性能需求不高，需要快速搭建的小型场景，如对性能有要求请使用 Mysql 方式。"
+msgstr ""
+"Please note, SQLite operation is limited to scenarios with low "
+"performance requirements and the need for a quick setup, such as small-"
+"scale environments. If you have performance requirements, please use the "
+"MySQL method"
 
 #: ../../source/docs/development/contributing.md:1
 msgid "贡献指南"
@@ -1004,6 +1040,10 @@ msgstr ""
 "`.gitignore`) and then copy the script into it."
 
 #: ../../source/docs/development/server/basic.md:9
+msgid "(注意：该脚本可以传递参数给服务器，通过命令行参数传递)"
+msgstr ""
+
+#: ../../source/docs/development/server/basic.md:11
 msgid "例如，我们设置了`OURCHAT_CONFIG_FILE`环境变量来读取服务器运行的配置文件，你可以将`script/test_server.py`复制到`local`文件夹，复制`ourchat.toml`等配置文件，然后添加:"
 msgstr ""
 "For example, we have set the `OURCHAT_CONFIG_FILE` environment variable "
@@ -1011,26 +1051,26 @@ msgstr ""
 "`script/test_server.py` to the `local` folder, copy configuration files "
 "such as `ourchat.toml`, and then add:"
 
-#: ../../source/docs/development/server/basic.md:15
+#: ../../source/docs/development/server/basic.md:17
 msgid "从而进行服务端测试的自定义。"
 msgstr "to customize the server testing."
 
-#: ../../source/docs/development/server/basic.md:17
+#: ../../source/docs/development/server/basic.md:19
 msgid "测试"
 msgstr "Testing"
 
-#: ../../source/docs/development/server/basic.md:19
+#: ../../source/docs/development/server/basic.md:21
 msgid "由于服务端测试具有特殊性，我们引入了一个`test_lib`模块用于辅助测试，具体可以参考已有的单元测试。"
 msgstr ""
 "Due to the particularity of server-side testing, we have introduced a "
 "`test_lib` module to assist with testing, which you can reference in the "
 "existing unit tests."
 
-#: ../../source/docs/development/server/basic.md:21
+#: ../../source/docs/development/server/basic.md:23
 msgid "文档"
 msgstr "Documentation"
 
-#: ../../source/docs/development/server/basic.md:23
+#: ../../source/docs/development/server/basic.md:25
 msgid ""
 "请善用`cargo doc`，我们为你提供了详尽的文档参考！调用`cargo doc --document-private-"
 "items`来生成私有的文档"
@@ -1326,13 +1366,13 @@ msgstr "Database"
 
 #: ../../source/docs/development/server/server-develop.md:52
 msgid ""
-"本项目采用 Redis 和 MySQL 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 ORM "
+"本项目采用 Redis, MySQL 和 SQLite 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 ORM "
 "框架，在修改数据库表后，您可以运行`script/regenerate_entity.py`来重新生成 ORM 框架需要的文件"
 msgstr ""
-"This project uses Redis and MySQL as databases, and also uses sea-orm as "
-"the ORM framework. To better use this ORM framework, after modifying the "
-"database tables, you can run `script/regenerate_entity.py` to regenerate "
-"the files needed by the ORM framework"
+"This project uses Redis, MySQL and SQLite as databases, and also uses "
+"sea-orm as the ORM framework. To better use this ORM framework, after "
+"modifying the database tables, you can run `script/regenerate_entity.py` "
+"to regenerate the files needed by the ORM framework"
 
 #: ../../source/docs/development/server/server-develop.md:54
 msgid "为了运行这个脚本，你首先需要运行`cargo install sea-orm-cli`"
@@ -1345,12 +1385,16 @@ msgstr ""
 "version"
 
 #: ../../source/docs/development/server/server-develop.md:58
+msgid "请注意保证您的代码可以同时在两种数据库上运行，我们提供了`#[derive::db_compatibility]`来方便的做到这一点。"
+msgstr ""
+
+#: ../../source/docs/development/server/server-develop.md:60
 msgid "数据库迁移"
 msgstr "Database Migration"
 
-#: ../../source/docs/development/server/server-develop.md:60
+#: ../../source/docs/development/server/server-develop.md:62
 msgid ""
-"`migration`中是数据库迁移模块，在server启动时会自动运行未运行的数据库迁移，为了定义一个新的数据库迁移，请参考[sea "
+"`migration`中是数据库迁移模块，在 server 启动时会自动运行未运行的数据库迁移，为了定义一个新的数据库迁移，请参考[sea "
 "orm](https://www.sea-ql.org/SeaORM/docs/migration/setting-up-migration/)"
 msgstr ""
 "The `migration` directory contains the database migration module, which "
@@ -1719,24 +1763,46 @@ msgstr "IP the server listens on"
 msgid "127.0.0.1"
 msgstr ""
 
-#: ../../source/docs/run/server_argv.md:11
+#: ../../source/docs/run/server_argv.md
+msgid "--db-type"
+msgstr ""
+
+#: ../../source/docs/run/server_argv.md
+msgid "选择数据库类型"
+msgstr "Choose Database Type"
+
+#: ../../source/docs/run/server_argv.md
+msgid "mysql"
+msgstr ""
+
+#: ../../source/docs/run/server_argv.md:12
 msgid "配置文件示例"
 msgstr "Configuration File Example"
 
-#: ../../source/docs/run/server_argv.md:19
+#: ../../source/docs/run/server_argv.md:21
 msgid "注意，当配置文件和命令行参数冲突时，以命令行参数覆盖配置文件参数"
 msgstr ""
 "Note that when there is a conflict between the configuration file and "
 "command line arguments, the command line arguments will override the "
 "configuration file parameters"
 
-#: ../../source/docs/run/server_argv.md:21
-msgid "数据库示例:"
-msgstr "Database Example:"
+#: ../../source/docs/run/server_argv.md:23
+msgid "mysql 数据库配置文件示例:"
+msgstr ""
 
-#: ../../source/docs/run/server_argv.md:33
+#: ../../source/docs/run/server_argv.md:35
+msgid "sqlite 数据库配置文件示例:"
+msgstr ""
+
+#: ../../source/docs/run/server_argv.md:43
 msgid "Redis 示例:"
 msgstr "Redis Example:"
+
+#: ../../source/docs/run/server_argv.md:54
+msgid "所有的配置文件示例[请见](https://github.com/SkyUOI/OurChat/tree/main/config)"
+msgstr ""
+"All configuration file examples [can be found "
+"here](https://github.com/SkyUOI/OurChat/tree/main/config)."
 
 #~ msgid ""
 #~ "The default language of this document"
@@ -1886,5 +1952,11 @@ msgstr "Redis Example:"
 #~ msgstr ""
 
 #~ msgid "Create a Pull Request(PR) to our main branch."
+#~ msgstr ""
+
+#~ msgid "数据库示例:"
+#~ msgstr "Database Example:"
+
+#~ msgid "[Sqlite 便携部署]"
 #~ msgstr ""
 

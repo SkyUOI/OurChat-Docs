@@ -6,6 +6,8 @@
 
 你可以运行`script/test_server.py`来运行服务端的测试。为了您可以自定义设置，您可以新建一个`local`文件夹(该文件夹已经被添加到`.gitignore`)，然后将脚本复制进去。
 
+(注意：该脚本可以传递参数给服务器，通过命令行参数传递)
+
 例如，我们设置了`OURCHAT_CONFIG_FILE`环境变量来读取服务器运行的配置文件，你可以将`script/test_server.py`复制到`local`文件夹，复制`ourchat.toml`等配置文件，然后添加:
 
 ```python
