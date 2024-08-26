@@ -70,10 +70,10 @@ cargo install cargo-pgo
 
 - 运行项目
 
-这一步请参考[服务器参数](../run/server_argv.md)进行运行，可执行文件位于``target/server`
+这一步请参考[服务器参数](../run/server_argv.md)进行运行，可执行文件位于``target/release/server`
 
 ## Sqlite 便携部署
 
-其余部分都可以参考上一章，但是 mysql 可以无需安装，具体配置方法参考[服务器参数](../run/server_argv.md)或直接参考`config/sqlite`文件夹中的`ourchat.toml`
+其余部分都可以参考上一章，但是 mysql 可以无需安装，具体配置方法参考[服务器参数](../run/server_argv.md)或直接参考`config/sqlite/ourchat.toml`
 
 注意，sqlite 运行仅限于性能需求不高，需要快速搭建的小型场景，如对性能有要求请使用 Mysql 方式。
