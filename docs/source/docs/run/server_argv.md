@@ -1,14 +1,14 @@
 # 服务器参数
 
-| name                         |                                  usage |   default |
-| :--------------------------- | -------------------------------------: | --------: |
-| --cfg config file path       |  选择配置文件.[example](#配置文件示例) |    不适用 |
-| --test-mode                  | 以测试模式启动服务器，仅供开发调试使用 |     false |
-| --clear                      |           在启动时清除服务器缓存和日志 |     false |
-| --port=server listening port |                       服务器监听的端口 |      7777 |
-| --ip=server listening ip     |                        服务器监听的 ip | 127.0.0.1 |
-| --db-type                    |                         选择数据库类型 |     mysql |
-| --maintaining                |         启动维护模式，不断发送维护信息 |     false |
+| name                           |                                  usage |   default |
+| :----------------------------- | -------------------------------------: | --------: |
+| `--cfg config file path`       |  选择配置文件.[example](#配置文件示例) |    不适用 |
+| `--test-mode`                  | 以测试模式启动服务器，仅供开发调试使用 |     false |
+| `--clear`                      |           在启动时清除服务器缓存和日志 |     false |
+| `--port=server listening port` |                       服务器监听的端口 |      7777 |
+| `--ip=server listening ip`     |                        服务器监听的 ip | 127.0.0.1 |
+| `--db-type`                    |                         选择数据库类型 |     mysql |
+| `--maintaining`                |         启动维护模式，不断发送维护信息 |     false |
 
 ## 配置文件示例
 

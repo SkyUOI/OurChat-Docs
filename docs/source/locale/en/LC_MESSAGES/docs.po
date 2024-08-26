@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-26 11:47+0800\n"
+"POT-Creation-Date: 2024-08-26 12:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -291,12 +291,12 @@ msgstr "SQLite Portable Deployment"
 #: ../../source/docs/deploy/server-deploy.md:77
 msgid ""
 "其余部分都可以参考上一章，但是 mysql "
-"可以无需安装，具体配置方法参考[服务器参数](../run/server_argv.md)或直接参考`config/sqlite`文件夹中的`ourchat.toml`"
+"可以无需安装，具体配置方法参考[服务器参数](../run/server_argv.md)或直接参考`config/sqlite/ourchat.toml`"
 msgstr ""
 "The rest of the section can refer to the previous chapter, but MySQL can "
 "be installed without installation, for specific configuration methods, "
 "refer to [Server Parameters](../run/server_argv.md) or directly refer to "
-"the `ourchat.toml` in the `config/sqlite` folder."
+"`config/sqlite/ourchat.toml`."
 
 #: ../../source/docs/deploy/server-deploy.md:79
 msgid "注意，sqlite 运行仅限于性能需求不高，需要快速搭建的小型场景，如对性能有要求请使用 Mysql 方式。"
@@ -1712,8 +1712,8 @@ msgid "default"
 msgstr "Default"
 
 #: ../../source/docs/run/server_argv.md
-msgid "--cfg config file path"
-msgstr "--cfg config file path"
+msgid "`--cfg config file path`"
+msgstr "`--cfg config file path`"
 
 #: ../../source/docs/run/server_argv.md
 msgid "选择配置文件.[example](#配置文件示例)"
@@ -1724,8 +1724,8 @@ msgid "不适用"
 msgstr "unsuitable"
 
 #: ../../source/docs/run/server_argv.md
-msgid "--test-mode"
-msgstr "--test-mode"
+msgid "`--test-mode`"
+msgstr "`--test-mode`"
 
 #: ../../source/docs/run/server_argv.md
 msgid "以测试模式启动服务器，仅供开发调试使用"
@@ -1736,16 +1736,16 @@ msgid "false"
 msgstr ""
 
 #: ../../source/docs/run/server_argv.md
-msgid "--clear"
-msgstr "--clear"
+msgid "`--clear`"
+msgstr "`--clear`"
 
 #: ../../source/docs/run/server_argv.md
 msgid "在启动时清除服务器缓存和日志"
 msgstr "Clear server cache and logs on startup"
 
 #: ../../source/docs/run/server_argv.md
-msgid "--port=server listening port"
-msgstr "--port=server listening port"
+msgid "`--port=server listening port`"
+msgstr "`--port=server listening port`"
 
 #: ../../source/docs/run/server_argv.md
 msgid "服务器监听的端口"
@@ -1756,8 +1756,8 @@ msgid "7777"
 msgstr ""
 
 #: ../../source/docs/run/server_argv.md
-msgid "--ip=server listening ip"
-msgstr "--ip=server listening ip"
+msgid "`--ip=server listening ip`"
+msgstr "`--ip=server listening ip`"
 
 #: ../../source/docs/run/server_argv.md
 msgid "服务器监听的 ip"
@@ -1768,7 +1768,7 @@ msgid "127.0.0.1"
 msgstr ""
 
 #: ../../source/docs/run/server_argv.md
-msgid "--db-type"
+msgid "`--db-type`"
 msgstr ""
 
 #: ../../source/docs/run/server_argv.md
@@ -1780,7 +1780,7 @@ msgid "mysql"
 msgstr ""
 
 #: ../../source/docs/run/server_argv.md
-msgid "--maintaining"
+msgid "`--maintaining`"
 msgstr ""
 
 #: ../../source/docs/run/server_argv.md
@@ -1970,5 +1970,11 @@ msgstr ""
 #~ msgstr "Database Example:"
 
 #~ msgid "[Sqlite 便携部署]"
+#~ msgstr ""
+
+#~ msgid "--db-type"
+#~ msgstr ""
+
+#~ msgid "--maintaining"
 #~ msgstr ""
 
