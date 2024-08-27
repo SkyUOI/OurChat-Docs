@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-26 12:04+0800\n"
+"POT-Creation-Date: 2024-08-27 21:59+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -1037,44 +1037,27 @@ msgid "我们提供了一系列脚本，帮助您处理日常简单事物。"
 msgstr "We provide a series of scripts to help you handle daily simple tasks."
 
 #: ../../source/docs/development/server/basic.md:7
-msgid "你可以运行`script/test_server.py`来运行服务端的测试。为了您可以自定义设置，您可以新建一个`local`文件夹(该文件夹已经被添加到`.gitignore`)，然后将脚本复制进去。"
-msgstr ""
-"You can run `script/test_server.py` to test the server. To customize the "
-"settings, you can create a new `local` folder (which has been added to "
-"`.gitignore`) and then copy the script into it."
+msgid ""
+"你可以运行`script/test_server.py`脚本来运行测试，默认会选择同目录下下的`server_test.json`作为配置文件，也可以通过`test_server.py"
+" xxx`的方式来指定，从而进行服务端测试的自定义。**注意：测试不能直接`cargo test`运行！**"
+msgstr "You can run the `script/test_server.py` script to execute tests. By default, it will use the `server_test.json` in the same directory as the configuration file. You can also specify a custom configuration file by running `test_server.py xxx` for customized server testing. **Note: Tests cannot be run directly with `cargo test`!**"
 
 #: ../../source/docs/development/server/basic.md:9
-msgid "(注意：该脚本可以传递参数给服务器，通过命令行参数传递)"
-msgstr ""
-
-#: ../../source/docs/development/server/basic.md:11
-msgid "例如，我们设置了`OURCHAT_CONFIG_FILE`环境变量来读取服务器运行的配置文件，你可以将`script/test_server.py`复制到`local`文件夹，复制`ourchat.toml`等配置文件，然后添加:"
-msgstr ""
-"For example, we have set the `OURCHAT_CONFIG_FILE` environment variable "
-"to read the configuration file for the server operation. You can copy "
-"`script/test_server.py` to the `local` folder, copy configuration files "
-"such as `ourchat.toml`, and then add:"
-
-#: ../../source/docs/development/server/basic.md:17
-msgid "从而进行服务端测试的自定义。"
-msgstr "to customize the server testing."
-
-#: ../../source/docs/development/server/basic.md:19
 msgid "测试"
 msgstr "Testing"
 
-#: ../../source/docs/development/server/basic.md:21
+#: ../../source/docs/development/server/basic.md:11
 msgid "由于服务端测试具有特殊性，我们引入了一个`test_lib`模块用于辅助测试，具体可以参考已有的单元测试。"
 msgstr ""
 "Due to the particularity of server-side testing, we have introduced a "
 "`test_lib` module to assist with testing, which you can reference in the "
 "existing unit tests."
 
-#: ../../source/docs/development/server/basic.md:23
+#: ../../source/docs/development/server/basic.md:13
 msgid "文档"
 msgstr "Documentation"
 
-#: ../../source/docs/development/server/basic.md:25
+#: ../../source/docs/development/server/basic.md:15
 msgid ""
 "请善用`cargo doc`，我们为你提供了详尽的文档参考！调用`cargo doc --document-private-"
 "items`来生成私有的文档"
@@ -1733,7 +1716,7 @@ msgstr "Start the server in test mode, for development and debugging only"
 
 #: ../../source/docs/run/server_argv.md
 msgid "false"
-msgstr ""
+msgstr "false"
 
 #: ../../source/docs/run/server_argv.md
 msgid "`--clear`"
@@ -1753,7 +1736,7 @@ msgstr "Port the server listens on"
 
 #: ../../source/docs/run/server_argv.md
 msgid "7777"
-msgstr ""
+msgstr "7777"
 
 #: ../../source/docs/run/server_argv.md
 msgid "`--ip=server listening ip`"
@@ -1765,11 +1748,11 @@ msgstr "IP the server listens on"
 
 #: ../../source/docs/run/server_argv.md
 msgid "127.0.0.1"
-msgstr ""
+msgstr "127.0.0.1"
 
 #: ../../source/docs/run/server_argv.md
 msgid "`--db-type`"
-msgstr ""
+msgstr "`--db-type`"
 
 #: ../../source/docs/run/server_argv.md
 msgid "选择数据库类型"
@@ -1777,11 +1760,11 @@ msgstr "Choose Database Type"
 
 #: ../../source/docs/run/server_argv.md
 msgid "mysql"
-msgstr ""
+msgstr "mysql"
 
 #: ../../source/docs/run/server_argv.md
 msgid "`--maintaining`"
-msgstr ""
+msgstr "`--maintaining`"
 
 #: ../../source/docs/run/server_argv.md
 msgid "启动维护模式，不断发送维护信息"
@@ -1791,190 +1774,28 @@ msgstr "Enable maintenance mode, continuously send maintenance information"
 msgid "配置文件示例"
 msgstr "Configuration File Example"
 
-#: ../../source/docs/run/server_argv.md:22
+#: ../../source/docs/run/server_argv.md:23
 msgid "注意，当配置文件和命令行参数冲突时，以命令行参数覆盖配置文件参数"
 msgstr ""
 "Note that when there is a conflict between the configuration file and "
 "command line arguments, the command line arguments will override the "
 "configuration file parameters"
 
-#: ../../source/docs/run/server_argv.md:24
+#: ../../source/docs/run/server_argv.md:25
 msgid "mysql 数据库配置文件示例:"
-msgstr ""
+msgstr "mysql Database Config Example:"
 
-#: ../../source/docs/run/server_argv.md:36
+#: ../../source/docs/run/server_argv.md:37
 msgid "sqlite 数据库配置文件示例:"
-msgstr ""
+msgstr "sqlite Database Config Example:"
 
-#: ../../source/docs/run/server_argv.md:44
+#: ../../source/docs/run/server_argv.md:45
 msgid "Redis 示例:"
 msgstr "Redis Example:"
 
-#: ../../source/docs/run/server_argv.md:55
+#: ../../source/docs/run/server_argv.md:56
 msgid "所有的配置文件示例[请见](https://github.com/SkyUOI/OurChat/tree/main/config)"
 msgstr ""
 "All configuration file examples [can be found "
 "here](https://github.com/SkyUOI/OurChat/tree/main/config)."
-
-#~ msgid ""
-#~ "The default language of this document"
-#~ " is zh_CN. If you want to "
-#~ "generate documents in other languages, "
-#~ "please modify the language configuration "
-#~ "item in source/conf.py. Currently supported"
-#~ " languages are:"
-#~ msgstr ""
-
-#~ msgid "该账号数据最后更新的时间戳"
-#~ msgstr "The timestamp of the last update of the account's data"
-
-#~ msgid "服务端返回的状态码"
-#~ msgstr "Status code returned by the server"
-
-#~ msgid "returnCode"
-#~ msgstr "Return Code"
-
-#~ msgid "邮箱重复"
-#~ msgstr "Email Duplicate"
-
-#~ msgid "服务器返回的状态码"
-#~ msgstr "Status code returned by the server"
-
-#~ msgid "账号或密码不正确"
-#~ msgstr "Account or password is incorrect"
-
-#~ msgid "会话状态码"
-#~ msgstr "Session Status Code"
-
-#~ msgid "该账号的 ocid **_注意：在[设置账号信息](#设置账号信息)时，该字段不可用_**"
-#~ msgstr ""
-#~ "The OCID of this account **_Note: "
-#~ "This field is unavailable when [setting"
-#~ " up account information](#设置账号信息)_**."
-
-#~ msgid "private_update_time"
-#~ msgstr "Private Update Time"
-
-#~ msgid "该账号私有(即所有数据)数据最后更新的时间戳**_注意：在[设置账号信息](#设置账号信息)时，该字段不可用_**"
-#~ msgstr ""
-#~ "The last update timestamp for the "
-#~ "private (i.e., all data) data of "
-#~ "this account. **_Note: This field is "
-#~ "unavailable when [setting up account "
-#~ "information](#设置账号信息)._**"
-
-#~ msgid "服务器状态码"
-#~ msgstr "Server Status Code"
-
-#~ msgid "正常运行"
-#~ msgstr "Running Normally"
-
-#~ msgid "验证失败"
-#~ msgstr "Verification Failed"
-
-#~ msgid "**_Server<-Client_**"
-#~ msgstr "**Server<-Client**"
-
-#~ msgid "注销状态码"
-#~ msgstr "Logout Status Code"
-
-#~ msgid "注销失败"
-#~ msgstr "Logout Failed"
-
-#~ msgid "需要更改的账号信息，详情[见上**获取账号信息**`request_value`](#获取账号信息)"
-#~ msgstr ""
-#~ "Account information, details [see above "
-#~ "**Get Account Information** "
-#~ "`request_value`](#获取账号信息)"
-
-#~ msgid "权限不足"
-#~ msgstr "Insufficient Permissions"
-
-#~ msgid "该账号的 OC 号"
-#~ msgstr "The OCID of the account"
-
-#~ msgid "该账号的 OCID"
-#~ msgstr "The OCID of the account"
-
-#~ msgid "该文档默认语言为zh_CN，如果你想要生成其他语言的文档，请修改`source/conf.py`中的`language`配置项 目前支持语言"
-#~ msgstr ""
-
-#~ msgid "Contribution Guide"
-#~ msgstr ""
-
-#~ msgid "[Overview](#overview)"
-#~ msgstr ""
-
-#~ msgid "[Commit Changes](#commit-changes)"
-#~ msgstr ""
-
-#~ msgid "Overview"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Thank you for your willingness to "
-#~ "contribute to us. Since this project "
-#~ "is divided into several different parts,"
-#~ " here is a guide to the "
-#~ "contribution guide:"
-#~ msgstr ""
-
-#~ msgid "[Server Guide](https://skyuoi.github.io/OurChat/en/server-develop.html)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Our requirements for code quality are"
-#~ " not that high. Generally speaking, "
-#~ "as long as your code can run "
-#~ "normally, we will accept it. However,"
-#~ " you still need to write "
-#~ "corresponding automated tests to ensure "
-#~ "the maintainability and correctness of "
-#~ "your code."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "We sincerely hope that you can "
-#~ "find joy in participating in the "
-#~ "project contribution."
-#~ msgstr ""
-
-#~ msgid "Commit Changes"
-#~ msgstr ""
-
-#~ msgid "If you want to commit changes,please obey the following steps:"
-#~ msgstr ""
-
-#~ msgid "Fork the project from `main`."
-#~ msgstr ""
-
-#~ msgid "Create a new branch to develop."
-#~ msgstr ""
-
-#~ msgid "Make sure that you code follow our code style."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Please write your commit message in "
-#~ "[Conventional "
-#~ "Commits](https://www.conventionalcommits.org/en/v1.0.0/)"
-#~ msgstr ""
-
-#~ msgid "Commit your changes to your fork."
-#~ msgstr ""
-
-#~ msgid "Create a Pull Request(PR) to our main branch."
-#~ msgstr ""
-
-#~ msgid "数据库示例:"
-#~ msgstr "Database Example:"
-
-#~ msgid "[Sqlite 便携部署]"
-#~ msgstr ""
-
-#~ msgid "--db-type"
-#~ msgstr ""
-
-#~ msgid "--maintaining"
-#~ msgstr ""
 

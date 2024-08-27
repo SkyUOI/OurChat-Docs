@@ -16,7 +16,8 @@
 dbcfg = "config/database.json"
 rediscfg = "config/redis_connect.json"
 port = 7777
-db_type = "mysql
+db_type = "mysql"
+http_port = 7778
 ```
 
 注意，当配置文件和命令行参数冲突时，以命令行参数覆盖配置文件参数
