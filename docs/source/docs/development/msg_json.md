@@ -18,7 +18,6 @@
 
 | key      | ValueType | comment          |
 |:---------|:----------|:-----------------|
-| code     | Number    | 信息类型         |
 | email    | String    | 注册邮箱         |
 | password | String    | 注册密码(已加密) |
 | name     | String    | 昵称             |
@@ -32,15 +31,14 @@
 {
   "code": 5,
   "ocid": "0000000000", // 注册账号的ocid
-  "status_code":0 // 状态码，返回运行状态
+  "status":0 // 状态码，返回运行状态
 }
 ```
 
 | key         | ValueType | comment                                                                          |
 |:------------|:----------|:---------------------------------------------------------------------------------|
-| code        | Number    | 信息类型                                                                         |
 | ocid        | String    | 该账号的 ocid                                                                   |
-| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#注册返回信息) |
+| status | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#注册返回信息) |
 
 ### 登录信息
 
@@ -58,7 +56,6 @@
 
 | key        | ValueType | comment                     |
 |:-----------|:----------|:----------------------------|
-| code       | Number    | 信息类型                    |
 | login_type | Number    | 0 为邮箱登录，1 为 ocid 登录 |
 | account    | String    | 账号绑定的邮箱或 ocid       |
 | password   | String    | 密码                        |
@@ -72,15 +69,14 @@
 {
   "code": 7,
   "ocid":"0000000000", // 该账号的ocid
-  "status_code":0 // 状态码，返回运行状态
+  "status":0 // 状态码，返回运行状态
 }
 ```
 
 | key         | ValueType | comment                                                                          |
 |:------------|:----------|:---------------------------------------------------------------------------------|
-| code        | Number    | 信息类型                                                                         |
 | ocid        | String    | 该账号的 ocid                                                                    |
-| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#登录返回信息) |
+| status | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#登录返回信息) |
 
 ### 获取账号信息
 
@@ -101,7 +97,6 @@
 
 | key            | ValueType | comment              |
 |:---------------|:----------|:---------------------|
-| code           | Number    | 信息类型             |
 | ocid           | String    | 该账号的 ocid        |
 | request_values | Array     | 需要服务端返回的信息 |
 
@@ -132,15 +127,14 @@
     "nickname": "OurChat", // 该账号的昵称
     // ...
   },
-  "status_code":0 // 状态码，返回运行状态
+  "status":0 // 状态码，返回运行状态
 }
 ```
 
 | key         | ValueType | comment                                                                                  |
 |:------------|:----------|:-----------------------------------------------------------------------------------------|
-| code        | Number    | 信息类型                                                                                 |
 | data        | Object    | 账号信息,详情[见上**获取账号信息**`request_value`](#获取账号信息)                        |
-| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#获取账号信息返回信息) |
+| status | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#获取账号信息返回信息) |
 
 ### 注销
 
@@ -163,14 +157,13 @@
 // E.g.
 {
   "code": 17,
-  "status_code":0 // 状态码，返回运行状态
+  "status":0 // 状态码，返回运行状态
 }
 ```
 
 | key         | ValueType | comment                                                                          |
 |:------------|:----------|:---------------------------------------------------------------------------------|
-| code        | Number    | 信息类型                                                                         |
-| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#注销返回信息) |
+| status | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#注销返回信息) |
 
 ### 设置账号信息
 
@@ -189,7 +182,6 @@
 
 | key  | ValueType | comment                                   |
 |:-----|:----------|:------------------------------------------|
-| code | Number    | 信息类型                                  |
 | data | Object    | 需要更改的账号信息，可设置的字段见下面表格 |
 
 可设置的字段：
@@ -210,14 +202,13 @@
 // E.g.
 {
   "code": 20,
-  "status_code":0 // 状态码，返回运行状态
+  "status":0 // 状态码，返回运行状态
 }
 ```
 
 | key         | ValueType | comment                                                                                  |
 |:------------|:----------|:-----------------------------------------------------------------------------------------|
-| code        | Number    | 信息类型                                                                                 |
-| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#设置账号信息返回信息) |
+| status | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#设置账号信息返回信息) |
 
 ## 会话
 
@@ -239,7 +230,6 @@
 
 | key            | ValueType | comment              |
 |:---------------|:----------|:---------------------|
-| code           | Number    | 信息类型             |
 | session_id     | String    | 该会话的ID           |
 | request_values | Array     | 需要服务端返回的信息 |
 
@@ -267,15 +257,14 @@
     "name": "Session1", // 会话名称
     // ...
   },
-  "status_code":0 // 状态码，返回运行状态
+  "status":0 // 状态码，返回运行状态
 }
 ```
 
 | key         | ValueType | comment                                                                                  |
 |:------------|:----------|:-----------------------------------------------------------------------------------------|
-| code        | Number    | 信息类型                                                                                 |
 | data        | Object    | 账号信息,详情[见上**获取会话信息**`request_value`](#获取会话信息)                        |
-| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#获取会话信息返回信息) |
+| status | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#获取会话信息返回信息) |
 
 ### 新建会话请求信息
 
@@ -310,7 +299,6 @@
 
 | key         | ValueType | comment                                 |
 |:------------|:----------|:----------------------------------------|
-| code        | Number    | 信息类型                                |
 | avatar      | String    | 会话头像,可选(如不填写使用默认头像)     |
 | avatar_hash | String    | 会话头像的哈希值,当`avatar`不为空时必填 |
 | name        | String    | 会话名称,可选(如不填写使用默认名称)     |
@@ -325,15 +313,14 @@
 {
   "code": 9,
   "session_id": "1145141919", // 仅当创建成功时有此字段
-  "status_code":0 // 状态码，返回运行状态
+  "status":0 // 状态码，返回运行状态
 }
 ```
 
 | key         | ValueType | comment                                                                              |
 |:------------|:----------|:-------------------------------------------------------------------------------------|
-| code        | Number    | 信息类型                                                                             |
 | session_id  | Number    | 会话 id                                                                              |
-| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#新建会话返回信息) |
+| status | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#新建会话返回信息) |
 
 ## 服务器
 
@@ -345,14 +332,13 @@
 // E.g.
 {
   "code": 12,
-  "status_code":0 // 状态码，返回运行状态
+  "status":0 // 状态码，返回运行状态
 }
 ```
 
 | key         | ValueType | comment                                                                            |
 |:------------|:----------|:-----------------------------------------------------------------------------------|
-| code        | Number    | 信息类型                                                                           |
-| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#获取服务器状态) |
+| status | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#获取服务器状态) |
 
 ## 验证码
 
@@ -366,10 +352,6 @@
   "code": 13
 }
 ```
-
-| key  | ValueType | comment  |
-|:-----|:----------|:---------|
-| code | Number    | 信息类型 |
 
 ### 生成验证码
 
@@ -385,7 +367,6 @@
 
 | key   | ValueType | comment  |
 |:------|:----------|:---------|
-| code  | Number    | 信息类型 |
 | email | String    | 验证邮箱 |
 
 ### 验证状态
@@ -396,14 +377,13 @@
 // E.g.
 {
   "code": 15,
-  "status_code":0 // 状态码，返回运行状态
+  "status":0 // 状态码，返回运行状态
 }
 ```
 
 | key         | ValueType | comment                                                                      |
 |:------------|:----------|:-----------------------------------------------------------------------------|
-| code        | Number    | 信息类型                                                                     |
-| status_code | Number    | 状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#验证状态) |
+| status | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#验证状态) |
 
 ## 其他信息
 
@@ -433,7 +413,6 @@
 
 | key        | ValueType | comment                                                     |
 |:-----------|:----------|:------------------------------------------------------------|
-| code       | Number    | 信息类型                                                    |
 | time       | Number    | 发消息的时间戳                                              |
 | msg_id     | Number    | message 的 ID，唯一 **(注意：传输给服务器时无此字段)**        |
 | sender     | Object    | 发送者的相关数据                                            |
@@ -456,5 +435,36 @@
 
 | Key     | ValueType | Comment  |
 |:--------|:----------|:---------|
-| code    | Number    | 信息类型 |
 | details | String    | 异常信息 |
+
+### 图片上传请求
+
+```json
+// E.g.
+{
+  "code": 19,
+  "hash": "asdcdfdvdfdvfddf"
+}
+```
+
+|key|ValueType|Comment|
+|:---|:---|:---|
+|hash|String|图片`sha256`哈希|
+
+**注意，此处仅为上传图片的一部分，参见[http部分的上传格式](./http_msg.md#文件上传)**
+
+### 图片上传返回信息
+
+```json
+// E.g.
+{
+  "code": 20,
+  "url": "asdasafdfdafaada",
+  "key": "sdjoqjdoqjodo"
+}
+```
+
+|key|ValueType|Comment|
+|:--|:--|:--|
+|url|String|`/upload/{url}`为可临时访问的http下载服务|
+|key|String|`?key=`的验证参数，用于验证发送者身份|

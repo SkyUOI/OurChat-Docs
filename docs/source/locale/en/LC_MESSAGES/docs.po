@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-27 21:59+0800\n"
+"POT-Creation-Date: 2024-08-29 17:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -441,6 +441,101 @@ msgstr ""
 " in the documentation process. If you encounter any issues, please feel "
 "free to open an issue at any time!"
 
+#: ../../source/docs/development/http_msg.md:1
+msgid "http信息交换格式"
+msgstr "http message exchange format"
+
+#: ../../source/docs/development/http_msg.md:3
+msgid "文件上传"
+msgstr "File upload"
+
+#: ../../source/docs/development/http_msg.md:5
+msgid "接口:`/upload/{url}` 请求类型:`post`"
+msgstr "api:`/upload/{url}` Request type:`post`"
+
+#: ../../source/docs/development/http_msg.md
+msgid "参数"
+msgstr "Parameter"
+
+#: ../../source/docs/development/http_msg.md
+msgid "说明"
+msgstr "Note"
+
+#: ../../source/docs/development/http_msg.md
+msgid "默认值"
+msgstr "default value"
+
+#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/msg_json.md
+#: ../../source/docs/development/user_msg_json.md
+msgid "key"
+msgstr "Key"
+
+#: ../../source/docs/development/http_msg.md
+msgid "验证密钥"
+msgstr "verification key"
+
+#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/run/server_argv.md
+msgid "不适用"
+msgstr "unsuitable"
+
+#: ../../source/docs/development/http_msg.md
+msgid "auto_clean"
+msgstr "auto_clean"
+
+#: ../../source/docs/development/http_msg.md
+msgid "该图片是否自动清理"
+msgstr "whether this file should be cleaned automatically"
+
+#: ../../source/docs/development/http_msg.md
+msgid "true"
+msgstr "true"
+
+#: ../../source/docs/development/http_msg.md
+msgid "状态码"
+msgstr "Status Code"
+
+#: ../../source/docs/development/http_msg.md
+msgid "NotFound"
+msgstr "NotFound"
+
+#: ../../source/docs/development/http_msg.md
+msgid "请求上传的资源不存在"
+msgstr "The requesting resource should be uploaded does not exist"
+
+#: ../../source/docs/development/http_msg.md
+msgid "InternalServerError"
+msgstr "INternalServerError"
+
+#: ../../source/docs/development/http_msg.md
+msgid "服务器内部错误"
+msgstr "Internal Server Error"
+
+#: ../../source/docs/development/http_msg.md
+msgid "BadRequest"
+msgstr "BadRequest"
+
+#: ../../source/docs/development/http_msg.md
+msgid "哈希不匹配等"
+msgstr "Hash does not match"
+
+#: ../../source/docs/development/http_msg.md
+msgid "Ok"
+msgstr "Ok"
+
+#: ../../source/docs/development/http_msg.md
+msgid "成功"
+msgstr "successful"
+
+#: ../../source/docs/development/http_msg.md:20
+msgid "直接上传文件内容即可"
+msgstr "Upload the file content directly"
+
+#: ../../source/docs/development/http_msg.md:22
+msgid "**关于获取该接口，参见[交换格式](./msg_json.md#图片上传请求)**"
+msgstr "**About getting this api, please see [Message Exchange Format](./msg_json.md#图片上传请求)**"
+
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
 msgstr "Development"
@@ -472,20 +567,15 @@ msgid "注册信息"
 msgstr "Registration Information"
 
 #: ../../source/docs/development/msg_json.md:7
-#: ../../source/docs/development/msg_json.md:47
-#: ../../source/docs/development/msg_json.md:87
-#: ../../source/docs/development/msg_json.md:147
-#: ../../source/docs/development/msg_json.md:177
-#: ../../source/docs/development/msg_json.md:226
-#: ../../source/docs/development/msg_json.md:282
-#: ../../source/docs/development/msg_json.md:376
+#: ../../source/docs/development/msg_json.md:45
+#: ../../source/docs/development/msg_json.md:83
+#: ../../source/docs/development/msg_json.md:141
+#: ../../source/docs/development/msg_json.md:170
+#: ../../source/docs/development/msg_json.md:217
+#: ../../source/docs/development/msg_json.md:271
+#: ../../source/docs/development/msg_json.md:358
 msgid "**_Server <- Client_**"
 msgstr "**Server <- Client**"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/user_msg_json.md
-msgid "key"
-msgstr "Key"
 
 #: ../../source/docs/development/msg_json.md
 msgid "ValueType"
@@ -495,21 +585,6 @@ msgstr "Value Type"
 #: ../../source/docs/development/user_msg_json.md
 msgid "comment"
 msgstr "Comment"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/status_code.md
-msgid "code"
-msgstr "Code"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/user_msg_json.md
-msgid "Number"
-msgstr "Number"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/user_msg_json.md
-msgid "信息类型"
-msgstr "Message Type"
 
 #: ../../source/docs/development/msg_json.md
 #: ../../source/docs/development/server/server-database.md
@@ -544,21 +619,21 @@ msgstr "Name"
 msgid "昵称"
 msgstr "Nickname"
 
-#: ../../source/docs/development/msg_json.md:26
+#: ../../source/docs/development/msg_json.md:25
 #: ../../source/docs/development/status_code.md:29
 msgid "注册返回信息"
 msgstr "Registration Return Information"
 
-#: ../../source/docs/development/msg_json.md:28
-#: ../../source/docs/development/msg_json.md:68
-#: ../../source/docs/development/msg_json.md:124
-#: ../../source/docs/development/msg_json.md:160
-#: ../../source/docs/development/msg_json.md:207
-#: ../../source/docs/development/msg_json.md:259
-#: ../../source/docs/development/msg_json.md:321
-#: ../../source/docs/development/msg_json.md:361
-#: ../../source/docs/development/msg_json.md:393
-#: ../../source/docs/development/msg_json.md:447
+#: ../../source/docs/development/msg_json.md:27
+#: ../../source/docs/development/msg_json.md:65
+#: ../../source/docs/development/msg_json.md:119
+#: ../../source/docs/development/msg_json.md:154
+#: ../../source/docs/development/msg_json.md:199
+#: ../../source/docs/development/msg_json.md:249
+#: ../../source/docs/development/msg_json.md:309
+#: ../../source/docs/development/msg_json.md:347
+#: ../../source/docs/development/msg_json.md:374
+#: ../../source/docs/development/msg_json.md:426
 msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
@@ -572,16 +647,21 @@ msgid "该账号的 ocid"
 msgstr "The ocid of the account"
 
 #: ../../source/docs/development/msg_json.md
-msgid "status_code"
-msgstr "Status Code"
+msgid "status"
+msgstr "Status"
 
 #: ../../source/docs/development/msg_json.md
-msgid "状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#注册返回信息)"
+#: ../../source/docs/development/user_msg_json.md
+msgid "Number"
+msgstr "Number"
+
+#: ../../source/docs/development/msg_json.md
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#注册返回信息)"
 msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#注册返回信息)"
 
-#: ../../source/docs/development/msg_json.md:45
+#: ../../source/docs/development/msg_json.md:43
 msgid "登录信息"
 msgstr "Login Information"
 
@@ -605,18 +685,18 @@ msgstr "Email or ocid bound to the account"
 msgid "密码"
 msgstr "Password"
 
-#: ../../source/docs/development/msg_json.md:66
+#: ../../source/docs/development/msg_json.md:63
 #: ../../source/docs/development/status_code.md:40
 msgid "登录返回信息"
 msgstr "Login Return Information"
 
 #: ../../source/docs/development/msg_json.md
-msgid "状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#登录返回信息)"
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#登录返回信息)"
 msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#登录返回信息)"
 
-#: ../../source/docs/development/msg_json.md:85
+#: ../../source/docs/development/msg_json.md:81
 msgid "获取账号信息"
 msgstr "Get Account Information"
 
@@ -643,10 +723,6 @@ msgstr "Email bound to the account"
 #: ../../source/docs/development/msg_json.md
 msgid "nickname"
 msgstr "Nickname"
-
-#: ../../source/docs/development/msg_json.md
-msgid "status"
-msgstr "Status"
 
 #: ../../source/docs/development/msg_json.md
 msgid "该账号的状态"
@@ -714,7 +790,7 @@ msgstr ""
 "The friend list of this account (only accessible to this account, other "
 "accounts will return null)."
 
-#: ../../source/docs/development/msg_json.md:122
+#: ../../source/docs/development/msg_json.md:117
 #: ../../source/docs/development/status_code.md:60
 msgid "获取账号信息返回信息"
 msgstr "Get Account Information Return Information"
@@ -734,33 +810,33 @@ msgstr ""
 "`request_value`](#获取账号信息)"
 
 #: ../../source/docs/development/msg_json.md
-msgid "状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#获取账号信息返回信息)"
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#获取账号信息返回信息)"
 msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取账号信息返回信息)"
 
-#: ../../source/docs/development/msg_json.md:145
+#: ../../source/docs/development/msg_json.md:139
 msgid "注销"
 msgstr "Logout"
 
-#: ../../source/docs/development/msg_json.md:156
+#: ../../source/docs/development/msg_json.md:150
 msgid "**_警告：该注销是删除帐号的意思，请勿误用接口_**"
 msgstr ""
 "**Warning: This logout refers to the deletion of the account, please do "
 "not misuse the interface_**"
 
-#: ../../source/docs/development/msg_json.md:158
+#: ../../source/docs/development/msg_json.md:152
 #: ../../source/docs/development/status_code.md:88
 msgid "注销返回信息"
 msgstr "Logout Return Information"
 
 #: ../../source/docs/development/msg_json.md
-msgid "状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#注销返回信息)"
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#注销返回信息)"
 msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#注销返回信息)"
 
-#: ../../source/docs/development/msg_json.md:175
+#: ../../source/docs/development/msg_json.md:168
 msgid "设置账号信息"
 msgstr "Set Account Information"
 
@@ -770,32 +846,32 @@ msgstr ""
 "The account information that needs to be set, the fields that can be "
 "configured are shown in the table below."
 
-#: ../../source/docs/development/msg_json.md:195
+#: ../../source/docs/development/msg_json.md:187
 msgid "可设置的字段："
 msgstr "the fields that can be configured"
 
-#: ../../source/docs/development/msg_json.md:203
+#: ../../source/docs/development/msg_json.md:195
 msgid "以上字段具体意义见[**获取账号信息**`request_value`](#获取账号信息)"
 msgstr ""
 "Account information, details [see above **Get Account Information** "
 "`request_value`](#获取账号信息)"
 
-#: ../../source/docs/development/msg_json.md:205
+#: ../../source/docs/development/msg_json.md:197
 #: ../../source/docs/development/status_code.md:98
 msgid "设置账号信息返回信息"
 msgstr "Get Account Information Return Information"
 
 #: ../../source/docs/development/msg_json.md
-msgid "状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#设置账号信息返回信息)"
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#设置账号信息返回信息)"
 msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#设置账号信息返回信息)"
 
-#: ../../source/docs/development/msg_json.md:222
+#: ../../source/docs/development/msg_json.md:213
 msgid "会话"
 msgstr "Session"
 
-#: ../../source/docs/development/msg_json.md:224
+#: ../../source/docs/development/msg_json.md:215
 msgid "获取会话信息"
 msgstr "Get Session Information"
 
@@ -848,7 +924,7 @@ msgstr "Owner"
 msgid "该会话拥有者的 ocid"
 msgstr "The OCID of the owner of the session"
 
-#: ../../source/docs/development/msg_json.md:257
+#: ../../source/docs/development/msg_json.md:247
 #: ../../source/docs/development/status_code.md:19
 msgid "获取会话信息返回信息"
 msgstr "Get Session Information Return Information"
@@ -860,12 +936,12 @@ msgstr ""
 " `request_value`](#获取会话信息)"
 
 #: ../../source/docs/development/msg_json.md
-msgid "状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#获取会话信息返回信息)"
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#获取会话信息返回信息)"
 msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取会话信息返回信息)"
 
-#: ../../source/docs/development/msg_json.md:280
+#: ../../source/docs/development/msg_json.md:269
 msgid "新建会话请求信息"
 msgstr "New Session Request Information"
 
@@ -885,7 +961,7 @@ msgstr "Conversation name, optional (use default name if not filled)"
 msgid "会话成员"
 msgstr "Session Members"
 
-#: ../../source/docs/development/msg_json.md:319
+#: ../../source/docs/development/msg_json.md:307
 #: ../../source/docs/development/status_code.md:50
 msgid "新建会话返回信息"
 msgstr "New Session Return Information"
@@ -895,40 +971,40 @@ msgid "会话 id"
 msgstr "Session ID"
 
 #: ../../source/docs/development/msg_json.md
-msgid "状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#新建会话返回信息)"
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#新建会话返回信息)"
 msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#新建会话返回信息)"
 
-#: ../../source/docs/development/msg_json.md:338
+#: ../../source/docs/development/msg_json.md:325
 msgid "服务器"
 msgstr "Server"
 
-#: ../../source/docs/development/msg_json.md:340
+#: ../../source/docs/development/msg_json.md:327
 #: ../../source/docs/development/status_code.md:70
 msgid "获取服务器状态"
 msgstr "Get Server Status"
 
-#: ../../source/docs/development/msg_json.md:342
-#: ../../source/docs/development/msg_json.md:412
+#: ../../source/docs/development/msg_json.md:329
+#: ../../source/docs/development/msg_json.md:392
 msgid "**_Server <-> Client_**"
 msgstr "**Server <-> Client**"
 
 #: ../../source/docs/development/msg_json.md
-msgid "状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#获取服务器状态)"
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#获取服务器状态)"
 msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取服务器状态)"
 
-#: ../../source/docs/development/msg_json.md:357
+#: ../../source/docs/development/msg_json.md:343
 msgid "验证码"
 msgstr "Verification Status Code"
 
-#: ../../source/docs/development/msg_json.md:359
+#: ../../source/docs/development/msg_json.md:345
 msgid "发起验证"
 msgstr "Initiate Verification"
 
-#: ../../source/docs/development/msg_json.md:374
+#: ../../source/docs/development/msg_json.md:356
 msgid "生成验证码"
 msgstr "Generate Verification Code"
 
@@ -936,22 +1012,22 @@ msgstr "Generate Verification Code"
 msgid "验证邮箱"
 msgstr "Email to be verified"
 
-#: ../../source/docs/development/msg_json.md:391
+#: ../../source/docs/development/msg_json.md:372
 #: ../../source/docs/development/status_code.md:78
 msgid "验证状态"
 msgstr "Verification Status"
 
 #: ../../source/docs/development/msg_json.md
-msgid "状态码，返回运行状态，详情见[**状态码**`status_code`](status_code.md#验证状态)"
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#验证状态)"
 msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#验证状态)"
 
-#: ../../source/docs/development/msg_json.md:408
+#: ../../source/docs/development/msg_json.md:388
 msgid "其他信息"
 msgstr "Other Information"
 
-#: ../../source/docs/development/msg_json.md:410
+#: ../../source/docs/development/msg_json.md:390
 msgid "用户发送信息"
 msgstr "User Information"
 
@@ -1004,7 +1080,7 @@ msgstr ""
 "User message type, see [User Message Passing Format](user_msg_json.md) "
 "for details"
 
-#: ../../source/docs/development/msg_json.md:445
+#: ../../source/docs/development/msg_json.md:424
 msgid "错误信息"
 msgstr "Error Information"
 
@@ -1024,6 +1100,38 @@ msgstr "Details"
 msgid "异常信息"
 msgstr "Exception Information"
 
+#: ../../source/docs/development/msg_json.md:440
+msgid "图片上传请求"
+msgstr "Picture Upload Request"
+
+#: ../../source/docs/development/msg_json.md
+msgid "hash"
+msgstr "hash"
+
+#: ../../source/docs/development/msg_json.md
+msgid "图片`sha256`哈希"
+msgstr "Picture `sha256` hash"
+
+#: ../../source/docs/development/msg_json.md:454
+msgid "**注意，此处仅为上传图片的一部分，参见[http部分的上传格式](./http_msg.md#文件上传)**"
+msgstr "**Note, this is only a part of the upload of the picture, see [http part of upload format](./http_msg.md#文件上传)**"
+
+#: ../../source/docs/development/msg_json.md:456
+msgid "图片上传返回信息"
+msgstr "The return information of the picture upload"
+
+#: ../../source/docs/development/msg_json.md
+msgid "url"
+msgstr "url"
+
+#: ../../source/docs/development/msg_json.md
+msgid "`/upload/{url}`为可临时访问的http下载服务"
+msgstr "/upload/{url} is a temporary http download service"
+
+#: ../../source/docs/development/msg_json.md
+msgid "`?key=`的验证参数，用于验证发送者身份"
+msgstr "`?key=` the verification parameter, used to verify the identity of the sender"
+
 #: ../../source/docs/development/server/basic.md:1
 msgid "开发基本注意事项"
 msgstr "Basic Development Precautions"
@@ -1040,7 +1148,12 @@ msgstr "We provide a series of scripts to help you handle daily simple tasks."
 msgid ""
 "你可以运行`script/test_server.py`脚本来运行测试，默认会选择同目录下下的`server_test.json`作为配置文件，也可以通过`test_server.py"
 " xxx`的方式来指定，从而进行服务端测试的自定义。**注意：测试不能直接`cargo test`运行！**"
-msgstr "You can run the `script/test_server.py` script to execute tests. By default, it will use the `server_test.json` in the same directory as the configuration file. You can also specify a custom configuration file by running `test_server.py xxx` for customized server testing. **Note: Tests cannot be run directly with `cargo test`!**"
+msgstr ""
+"You can run the `script/test_server.py` script to execute tests. By "
+"default, it will use the `server_test.json` in the same directory as the "
+"configuration file. You can also specify a custom configuration file by "
+"running `test_server.py xxx` for customized server testing. **Note: Tests"
+" cannot be run directly with `cargo test`!**"
 
 #: ../../source/docs/development/server/basic.md:9
 msgid "测试"
@@ -1416,6 +1529,10 @@ msgid "状态码表格"
 msgstr "Status Code Table"
 
 #: ../../source/docs/development/status_code.md
+msgid "code"
+msgstr "Code"
+
+#: ../../source/docs/development/status_code.md
 msgid "meaning"
 msgstr "Meaning"
 
@@ -1572,6 +1689,10 @@ msgid "文本消息"
 msgstr "Text Message"
 
 #: ../../source/docs/development/user_msg_json.md
+msgid "信息类型"
+msgstr "Message Type"
+
+#: ../../source/docs/development/user_msg_json.md
 msgid "text"
 msgstr "Text"
 
@@ -1703,10 +1824,6 @@ msgid "选择配置文件.[example](#配置文件示例)"
 msgstr "Select the configuration file. [example](#配置文件示例)"
 
 #: ../../source/docs/run/server_argv.md
-msgid "不适用"
-msgstr "unsuitable"
-
-#: ../../source/docs/run/server_argv.md
 msgid "`--test-mode`"
 msgstr "`--test-mode`"
 
@@ -1798,4 +1915,7 @@ msgid "所有的配置文件示例[请见](https://github.com/SkyUOI/OurChat/tre
 msgstr ""
 "All configuration file examples [can be found "
 "here](https://github.com/SkyUOI/OurChat/tree/main/config)."
+
+#~ msgid "status_code"
+#~ msgstr "Status Code"
 
