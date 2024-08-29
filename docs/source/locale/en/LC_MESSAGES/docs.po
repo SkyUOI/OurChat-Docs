@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 17:03+0800\n"
+"POT-Creation-Date: 2024-08-29 18:26+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -534,7 +534,9 @@ msgstr "Upload the file content directly"
 
 #: ../../source/docs/development/http_msg.md:22
 msgid "**关于获取该接口，参见[交换格式](./msg_json.md#图片上传请求)**"
-msgstr "**About getting this api, please see [Message Exchange Format](./msg_json.md#图片上传请求)**"
+msgstr ""
+"**About getting this api, please see [Message Exchange "
+"Format](./msg_json.md#图片上传请求)**"
 
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
@@ -574,6 +576,7 @@ msgstr "Registration Information"
 #: ../../source/docs/development/msg_json.md:217
 #: ../../source/docs/development/msg_json.md:271
 #: ../../source/docs/development/msg_json.md:358
+#: ../../source/docs/development/msg_json.md:442
 msgid "**_Server <- Client_**"
 msgstr "**Server <- Client**"
 
@@ -634,6 +637,7 @@ msgstr "Registration Return Information"
 #: ../../source/docs/development/msg_json.md:347
 #: ../../source/docs/development/msg_json.md:374
 #: ../../source/docs/development/msg_json.md:426
+#: ../../source/docs/development/msg_json.md:460
 msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
@@ -1112,11 +1116,13 @@ msgstr "hash"
 msgid "图片`sha256`哈希"
 msgstr "Picture `sha256` hash"
 
-#: ../../source/docs/development/msg_json.md:454
-msgid "**注意，此处仅为上传图片的一部分，参见[http部分的上传格式](./http_msg.md#文件上传)**"
-msgstr "**Note, this is only a part of the upload of the picture, see [http part of upload format](./http_msg.md#文件上传)**"
-
 #: ../../source/docs/development/msg_json.md:456
+msgid "**注意，此处仅为上传图片的一部分，参见[http部分的上传格式](./http_msg.md#文件上传)**"
+msgstr ""
+"**Note, this is only a part of the upload of the picture, see [http part "
+"of upload format](./http_msg.md#文件上传)**"
+
+#: ../../source/docs/development/msg_json.md:458
 msgid "图片上传返回信息"
 msgstr "The return information of the picture upload"
 
@@ -1125,12 +1131,14 @@ msgid "url"
 msgstr "url"
 
 #: ../../source/docs/development/msg_json.md
-msgid "`/upload/{url}`为可临时访问的http下载服务"
-msgstr "/upload/{url} is a temporary http download service"
+msgid "`/upload/{url}`为可临时访问的http上传服务"
+msgstr "/upload/{url} is a temporary http upload service"
 
 #: ../../source/docs/development/msg_json.md
 msgid "`?key=`的验证参数，用于验证发送者身份"
-msgstr "`?key=` the verification parameter, used to verify the identity of the sender"
+msgstr ""
+"`?key=` the verification parameter, used to verify the identity of the "
+"sender"
 
 #: ../../source/docs/development/server/basic.md:1
 msgid "开发基本注意事项"
