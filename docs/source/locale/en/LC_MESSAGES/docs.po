@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-30 21:00+0800\n"
+"POT-Creation-Date: 2024-08-30 22:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -466,18 +466,6 @@ msgid "默认值"
 msgstr "default value"
 
 #: ../../source/docs/development/http_msg.md
-msgid "auto_clean"
-msgstr "auto_clean"
-
-#: ../../source/docs/development/http_msg.md
-msgid "该图片是否自动清理"
-msgstr "whether this file should be cleaned automatically"
-
-#: ../../source/docs/development/http_msg.md
-msgid "true"
-msgstr "true"
-
-#: ../../source/docs/development/http_msg.md
 msgid "请求头"
 msgstr "Request Header"
 
@@ -507,6 +495,7 @@ msgid "InternalServerError"
 msgstr "INternalServerError"
 
 #: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/status_code.md
 msgid "服务器内部错误"
 msgstr "Internal Server Error"
 
@@ -526,15 +515,15 @@ msgstr "Ok"
 msgid "成功"
 msgstr "successful"
 
-#: ../../source/docs/development/http_msg.md:23
+#: ../../source/docs/development/http_msg.md:22
 msgid "直接上传文件内容即可"
 msgstr "Upload the file content directly"
 
-#: ../../source/docs/development/http_msg.md:25
-msgid "**关于获取该接口，参见[交换格式](./msg_json.md#图片上传请求)**"
+#: ../../source/docs/development/http_msg.md:24
+msgid "**关于获取该接口，参见[交换格式](./msg_json.md#文件上传请求)**"
 msgstr ""
 "**About getting this api, please see [Message Exchange "
-"Format](./msg_json.md#图片上传请求)**"
+"Format](./msg_json.md#文件上传请求)**"
 
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
@@ -640,7 +629,7 @@ msgstr "Registration Return Information"
 #: ../../source/docs/development/msg_json.md:347
 #: ../../source/docs/development/msg_json.md:374
 #: ../../source/docs/development/msg_json.md:426
-#: ../../source/docs/development/msg_json.md:460
+#: ../../source/docs/development/msg_json.md:462
 msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
@@ -1104,27 +1093,38 @@ msgid "异常信息"
 msgstr "Exception Information"
 
 #: ../../source/docs/development/msg_json.md:440
-msgid "图片上传请求"
-msgstr "Picture Upload Request"
+msgid "文件上传请求"
+msgstr "File upload request"
 
 #: ../../source/docs/development/msg_json.md
 msgid "hash"
 msgstr "hash"
 
 #: ../../source/docs/development/msg_json.md
-msgid "图片`sha256`哈希"
-msgstr "Picture `sha256` hash"
+msgid "文件`sha256`哈希"
+msgstr "File `sha256` hash"
 
-#: ../../source/docs/development/msg_json.md:456
-#, fuzzy
-msgid "**注意，此处仅为上传图片的一部分，参见[http 部分的上传格式](./http_msg.md#文件上传)**"
-msgstr ""
-"**Note, this is only a part of the upload of the picture, see [http part "
-"of upload format](./http_msg.md#文件上传)**"
+#: ../../source/docs/development/msg_json.md
+msgid "auto_clean(optional)"
+msgstr "auto_clean(optional)"
+
+#: ../../source/docs/development/msg_json.md
+msgid "Boolean"
+msgstr "Boolean"
+
+#: ../../source/docs/development/msg_json.md
+msgid "该文件是否自动清理,默认为 false"
+msgstr "whether the file should be cleaned automatically,default is false"
 
 #: ../../source/docs/development/msg_json.md:458
-msgid "图片上传返回信息"
-msgstr "The return information of the picture upload"
+msgid "**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_msg.md#文件上传)**"
+msgstr ""
+"**Note, this is only a part of the upload of the file, see [http part "
+"of upload format](./http_msg.md#文件上传)**"
+
+#: ../../source/docs/development/msg_json.md:460
+msgid "文件上传返回信息"
+msgstr "The return information of the file upload"
 
 #: ../../source/docs/development/msg_json.md
 msgid "url"
@@ -1136,11 +1136,19 @@ msgstr "/upload/{url} is a temporary http upload service"
 
 #: ../../source/docs/development/msg_json.md
 msgid "验证参数，用于请求头`Key:`中，验证发送者身份"
-msgstr "Verification parameters, used in the `Key:` header of the request, to verify the identity of the sender"
+msgstr ""
+"Verification parameters, used in the `Key:` header of the request, to "
+"verify the identity of the sender"
 
 #: ../../source/docs/development/msg_json.md
-msgid "图片的`sha256`哈希"
-msgstr "Picture `sha256` hash"
+msgid "文件的`sha256`哈希"
+msgstr "File `sha256` hash"
+
+#: ../../source/docs/development/msg_json.md
+msgid "状态码，非零时其余字段不存在，参考[**状态码**](./status_code.md#上传文件返回信息)"
+msgstr ""
+"Status code, other fields do not exist when non-zero, refer to "
+"[`status_code`](./status_code.md#上传文件返回信息)"
 
 #: ../../source/docs/development/server/basic.md:1
 msgid "开发基本注意事项"
@@ -1681,6 +1689,18 @@ msgstr "Logout Successful"
 #: ../../source/docs/development/status_code.md
 msgid "设置成功"
 msgstr "Set Successfully"
+
+#: ../../source/docs/development/status_code.md:107
+msgid "上传文件返回信息"
+msgstr "The return information of the file upload"
+
+#: ../../source/docs/development/status_code.md
+msgid "上传成功"
+msgstr "Upload successful"
+
+#: ../../source/docs/development/status_code.md
+msgid "请求被拒绝"
+msgstr ""
 
 #: ../../source/docs/development/user_msg_json.md:1
 msgid "OurChat 用户消息传递格式"

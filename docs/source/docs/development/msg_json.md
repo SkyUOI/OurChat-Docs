@@ -437,7 +437,7 @@
 | :------ | :-------- | :------- |
 | details | String    | 异常信息 |
 
-### 图片上传请求
+### 文件上传请求
 
 **_Server <- Client_**
 
@@ -445,17 +445,19 @@
 // E.g.
 {
   "code": 21,
-  "hash": "asdcdfdvdfdvfddf"
+  "hash": "asdcdfdvdfdvfddf",
+  "auto_clean": true
 }
 ```
 
-| key  | ValueType | Comment          |
-| :--- | :-------- | :--------------- |
-| hash | String    | 图片`sha256`哈希 |
+| key                  | ValueType | Comment                         |
+| :------------------- | :-------- | :------------------------------ |
+| hash                 | String    | 文件`sha256`哈希                |
+| auto_clean(optional) | Boolean   | 该文件是否自动清理,默认为 false |
 
-**注意，此处仅为上传图片的一部分，参见[http 部分的上传格式](./http_msg.md#文件上传)**
+**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_msg.md#文件上传)**
 
-### 图片上传返回信息
+### 文件上传返回信息
 
 **_Server -> Client_**
 
@@ -463,14 +465,16 @@
 // E.g.
 {
   "code": 22,
+  "status": 0,
   "url": "asdasafdfdafaada",
   "key": "sdjoqjdoqjodo",
   "hash": "dsodjsodjosjdoshdowho"
 }
 ```
 
-| key  | ValueType | Comment                                      |
-| :--- | :-------- | :------------------------------------------- |
-| url  | String    | `/upload/{url}`为可临时访问的 http 上传服务  |
-| key  | String    | 验证参数，用于请求头`Key:`中，验证发送者身份 |
-| hash | String    | 图片的`sha256`哈希                           |
+| key    | ValueType | Comment                                                                           |
+| :----- | :-------- | :-------------------------------------------------------------------------------- |
+| url    | String    | `/upload/{url}`为可临时访问的 http 上传服务                                       |
+| key    | String    | 验证参数，用于请求头`Key:`中，验证发送者身份                                      |
+| hash   | String    | 文件的`sha256`哈希                                                                |
+| status | Number    | 状态码，非零时其余字段不存在，参考[**状态码**](./status_code.md#上传文件返回信息) |
