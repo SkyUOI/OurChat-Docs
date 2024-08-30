@@ -444,7 +444,7 @@
 ```json
 // E.g.
 {
-  "code": 19,
+  "code": 21,
   "hash": "asdcdfdvdfdvfddf"
 }
 ```
@@ -462,7 +462,7 @@
 ```json
 // E.g.
 {
-  "code": 20,
+  "code": 22,
   "url": "asdasafdfdafaada",
   "key": "sdjoqjdoqjodo"
 }
