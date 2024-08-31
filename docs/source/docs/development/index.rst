@@ -12,7 +12,7 @@
    contributing
    msg_json
    user_msg_json
-   http_msg
+   http_api
    status_code
    special_string
    document_contributing

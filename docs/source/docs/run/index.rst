@@ -8,3 +8,4 @@
    
    build
    server_argv
+   server_cmd

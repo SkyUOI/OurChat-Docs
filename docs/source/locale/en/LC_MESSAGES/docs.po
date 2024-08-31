@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-30 22:17+0800\n"
+"POT-Creation-Date: 2024-08-31 14:59+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -441,89 +441,105 @@ msgstr ""
 " in the documentation process. If you encounter any issues, please feel "
 "free to open an issue at any time!"
 
-#: ../../source/docs/development/http_msg.md:1
-msgid "http 信息交换格式"
-msgstr "http message exchange format"
+#: ../../source/docs/development/http_api.md:1
+msgid "Http Api"
+msgstr "Http Api"
 
-#: ../../source/docs/development/http_msg.md:3
+#: ../../source/docs/development/http_api.md:3
 msgid "文件上传"
 msgstr "File upload"
 
-#: ../../source/docs/development/http_msg.md:5
-msgid "接口:`/upload/{url}` 请求类型:`post`"
-msgstr "api:`/upload/{url}` Request type:`post`"
+#: ../../source/docs/development/http_api.md:5
+msgid "接口:`/upload/{url}` 请求类型:`POST`"
+msgstr "api:`/upload/{url}` Request type:`POST`"
 
-#: ../../source/docs/development/http_msg.md
-msgid "参数"
-msgstr "Parameter"
-
-#: ../../source/docs/development/http_msg.md
-msgid "说明"
-msgstr "Note"
-
-#: ../../source/docs/development/http_msg.md
-msgid "默认值"
-msgstr "default value"
-
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
 msgid "请求头"
 msgstr "Request Header"
 
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
+msgid "说明"
+msgstr "Note"
+
+#: ../../source/docs/development/http_api.md
 #: ../../source/docs/development/msg_json.md
 msgid "Key"
 msgstr "Key"
 
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
 msgid "验证密钥"
 msgstr "verification key"
 
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
 msgid "状态码"
 msgstr "Status Code"
 
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
 msgid "NotFound"
 msgstr "NotFound"
 
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
 msgid "请求上传的资源不存在"
 msgstr "The requesting resource should be uploaded does not exist"
 
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
 msgid "InternalServerError"
 msgstr "INternalServerError"
 
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
 #: ../../source/docs/development/status_code.md
 msgid "服务器内部错误"
 msgstr "Internal Server Error"
 
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
 msgid "BadRequest"
 msgstr "BadRequest"
 
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
 msgid "哈希不匹配等"
 msgstr "Hash does not match"
 
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
 msgid "Ok"
 msgstr "Ok"
 
-#: ../../source/docs/development/http_msg.md
+#: ../../source/docs/development/http_api.md
 msgid "成功"
 msgstr "successful"
 
-#: ../../source/docs/development/http_msg.md:22
+#: ../../source/docs/development/http_api.md:19
 msgid "直接上传文件内容即可"
 msgstr "Upload the file content directly"
 
-#: ../../source/docs/development/http_msg.md:24
+#: ../../source/docs/development/http_api.md:21
 msgid "**关于获取该接口，参见[交换格式](./msg_json.md#文件上传请求)**"
 msgstr ""
 "**About getting this api, please see [Message Exchange "
 "Format](./msg_json.md#文件上传请求)**"
+
+#: ../../source/docs/development/http_api.md:23
+msgid "文件下载"
+msgstr "File download"
+
+#: ../../source/docs/development/http_api.md:25
+msgid "接口:`/download/{url}` 请求类型:`POST`"
+msgstr "api:`/download/{url}` Request type:`POST`"
+
+#: ../../source/docs/development/http_api.md
+msgid "密钥不匹配等"
+msgstr "Key does not match"
+
+#: ../../source/docs/development/http_api.md:39
+msgid "body 中包含了文件的数据"
+msgstr "body contains the file data"
+
+#: ../../source/docs/development/http_api.md:41
+msgid "服务器状态"
+msgstr "Server Status"
+
+#: ../../source/docs/development/http_api.md:43
+msgid "接口:`/status` 请求类型: `GET`"
+msgstr "Api:`/status` Request Type: `GET`"
 
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
@@ -648,6 +664,7 @@ msgstr "Status"
 
 #: ../../source/docs/development/msg_json.md
 #: ../../source/docs/development/user_msg_json.md
+#: ../../source/docs/run/server_cmd.md
 msgid "Number"
 msgstr "Number"
 
@@ -1117,10 +1134,10 @@ msgid "该文件是否自动清理,默认为 false"
 msgstr "whether the file should be cleaned automatically,default is false"
 
 #: ../../source/docs/development/msg_json.md:458
-msgid "**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_msg.md#文件上传)**"
+msgid "**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_api.md#文件上传)**"
 msgstr ""
-"**Note, this is only a part of the upload of the file, see [http part "
-"of upload format](./http_msg.md#文件上传)**"
+"**Note, this is only a part of the upload of the file, see [http part of "
+"upload format](./http_api.md#文件上传)**"
 
 #: ../../source/docs/development/msg_json.md:460
 msgid "文件上传返回信息"
@@ -1925,28 +1942,161 @@ msgstr "Enable maintenance mode, continuously send maintenance information"
 msgid "配置文件示例"
 msgstr "Configuration File Example"
 
-#: ../../source/docs/run/server_argv.md:23
+#: ../../source/docs/run/server_argv.md:24
 msgid "注意，当配置文件和命令行参数冲突时，以命令行参数覆盖配置文件参数"
 msgstr ""
 "Note that when there is a conflict between the configuration file and "
 "command line arguments, the command line arguments will override the "
 "configuration file parameters"
 
-#: ../../source/docs/run/server_argv.md:25
+#: ../../source/docs/run/server_argv.md:26
 msgid "mysql 数据库配置文件示例:"
 msgstr "mysql Database Config Example:"
 
-#: ../../source/docs/run/server_argv.md:37
+#: ../../source/docs/run/server_argv.md:36
 msgid "sqlite 数据库配置文件示例:"
 msgstr "sqlite Database Config Example:"
 
-#: ../../source/docs/run/server_argv.md:45
+#: ../../source/docs/run/server_argv.md:42
 msgid "Redis 示例:"
 msgstr "Redis Example:"
 
-#: ../../source/docs/run/server_argv.md:56
+#: ../../source/docs/run/server_argv.md:51
 msgid "所有的配置文件示例[请见](https://github.com/SkyUOI/OurChat/tree/main/config)"
 msgstr ""
 "All configuration file examples [can be found "
 "here](https://github.com/SkyUOI/OurChat/tree/main/config)."
 
+#: ../../source/docs/run/server_cmd.md:1
+msgid "服务器控制台指令"
+msgstr "Server Console Commands"
+
+#: ../../source/docs/run/server_cmd.md:3
+msgid "概览"
+msgstr "Overview"
+
+#: ../../source/docs/run/server_cmd.md:5
+msgid "指令是大小写不敏感的，例如`help`,`HeLp`实际上是一个指令"
+msgstr "Commands are case insensitive, such as `help`, `HELP` actually is a command"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "指令"
+msgstr "Command"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "概要说明"
+msgstr "Overview Description"
+
+#: ../../source/docs/run/server_cmd.md ../../source/docs/run/server_cmd.md:17
+msgid "Help"
+msgstr "Help"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "显示帮助信息"
+msgstr "Display help information"
+
+#: ../../source/docs/run/server_cmd.md ../../source/docs/run/server_cmd.md:22
+msgid "Set"
+msgstr "Set"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "设置服务器变量"
+msgstr "Set server variables"
+
+#: ../../source/docs/run/server_cmd.md ../../source/docs/run/server_cmd.md:28
+msgid "Get"
+msgstr "Get"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "获取服务器变量的值"
+msgstr "Get Server Variable Value"
+
+#: ../../source/docs/run/server_cmd.md ../../source/docs/run/server_cmd.md:38
+msgid "CleanFS"
+msgstr "CleanFS"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "立刻运行清理命令清理服务器过期文件"
+msgstr "Run clean command to clean server expired files immediately"
+
+#: ../../source/docs/run/server_cmd.md ../../source/docs/run/server_cmd.md:34
+msgid "Exit"
+msgstr "Exit"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "优雅地关闭服务器"
+msgstr "Shut down the server gracefully"
+
+#: ../../source/docs/run/server_cmd.md:15
+msgid "详细使用方法"
+msgstr "Usage Details"
+
+#: ../../source/docs/run/server_cmd.md:19
+msgid "参数: 任意个指令的名字 输出：各个指令的用法和详细信息"
+msgstr "Argument: Any command name. Output: Each command's usage and detailed information"
+
+#: ../../source/docs/run/server_cmd.md:24
+msgid "参数:变量+变量值"
+msgstr "Argument: Variable + Variable Value"
+
+#: ../../source/docs/run/server_cmd.md:26
+#: ../../source/docs/run/server_cmd.md:32
+msgid "[变量表](#变量表)"
+msgstr "[Variable Table](#变量表)"
+
+#: ../../source/docs/run/server_cmd.md:30
+msgid "参数:变量名"
+msgstr "Argument: Variable Name"
+
+#: ../../source/docs/run/server_cmd.md:36
+#: ../../source/docs/run/server_cmd.md:40
+msgid "无参数"
+msgstr "No Parameter"
+
+#: ../../source/docs/run/server_cmd.md:42
+msgid "附录"
+msgstr "Appendix"
+
+#: ../../source/docs/run/server_cmd.md:44
+msgid "变量表"
+msgstr "Variable Table"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "变量"
+msgstr "Variable"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "描述"
+msgstr "Description"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "值"
+msgstr "Value"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "Status"
+msgstr "Status"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "服务器运行状态"
+msgstr "Server Running Status"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "normal(n)或 maintaining(m)"
+msgstr "normal(n) or maintaining(m)"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "AutoCleanCycle"
+msgstr "AutoCleanCycle"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "自动清理过期文件周期"
+msgstr "Cycle of auto clean expired files"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "FileSaveDays"
+msgstr "FileSaveDays"
+
+#: ../../source/docs/run/server_cmd.md
+msgid "文件保存天数"
+msgstr "File Save Days"

@@ -455,7 +455,7 @@
 | hash                 | String    | 文件`sha256`哈希                |
 | auto_clean(optional) | Boolean   | 该文件是否自动清理,默认为 false |
 
-**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_msg.md#文件上传)**
+**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_api.md#文件上传)**
 
 ### 文件上传返回信息
 
