@@ -13,12 +13,12 @@
 ## 配置文件示例
 
 ```toml
-dbcfg = "config/database.json" // 数据库配置文件
-rediscfg = "config/redis_connect.json" // redis配置文件
-port = 7777  // 服务器监听的端口
-db_type = "mysql" // 数据库类型
-http_port = 7778  // http服务器端口
-auto_clean_duration = 1 // 文件清理周期
+dbcfg = "config/database.toml" # 数据库配置文件
+rediscfg = "config/redis_connect.toml" # redis配置文件
+port = 7777  # 服务器监听的端口
+db_type = "mysql" # 数据库类型
+http_port = 7778  # http服务器端口
+auto_clean_duration = 1 # 文件清理周期
 ```
 
 注意，当配置文件和命令行参数冲突时，以命令行参数覆盖配置文件参数
