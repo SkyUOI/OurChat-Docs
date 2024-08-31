@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-31 20:33+0800\n"
+"POT-Creation-Date: 2024-08-31 22:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -750,12 +750,12 @@ msgid "该账号头像的 url 链接"
 msgstr "The URL link of the account's avatar"
 
 #: ../../source/docs/development/msg_json.md
-msgid "avatar_hash"
-msgstr "Avatar Hash"
+msgid "avatar_key"
+msgstr "avatar_key"
 
 #: ../../source/docs/development/msg_json.md
-msgid "该账号头像的 hash"
-msgstr "The hash of the account's avatar"
+msgid "获取头像时需要用到的密钥"
+msgstr ""
 
 #: ../../source/docs/development/msg_json.md
 msgid "time"
@@ -910,10 +910,6 @@ msgid "该会话头像的 url 链接"
 msgstr "The URL link of the session avatar"
 
 #: ../../source/docs/development/msg_json.md
-msgid "该会话头像的哈希值"
-msgstr "The hash value of the session avatar"
-
-#: ../../source/docs/development/msg_json.md
 msgid "该会话创建的时间戳"
 msgstr "The timestamp when the session was created"
 
@@ -963,8 +959,8 @@ msgid "会话头像,可选(如不填写使用默认头像)"
 msgstr "Conversation avatar, optional (use default avatar if not filled)"
 
 #: ../../source/docs/development/msg_json.md
-msgid "会话头像的哈希值,当`avatar`不为空时必填"
-msgstr "Hash value of the conversation avatar, required when `avatar` is not empty"
+msgid "获取头像时需要用到的密钥,当`avatar`不为空时必填"
+msgstr "The key required when obtaining the avatar; it is mandatory when `avatar` is not empty."
 
 #: ../../source/docs/development/msg_json.md
 msgid "会话名称,可选(如不填写使用默认名称)"
@@ -1146,8 +1142,9 @@ msgstr "The return information of the file upload"
 #: ../../source/docs/development/msg_json.md
 msgid "资源密钥，用于请求头`Key:`中，验证发送者身份并且是资源访问唯一标识符"
 msgstr ""
-"Resource key, used in the `Key:` header of the request, to "
-"verify the identity of the sender and is the unique identifier of the access to the resource"
+"Resource key, used in the `Key:` header of the request, to verify the "
+"identity of the sender and is the unique identifier of the access to the "
+"resource"
 
 #: ../../source/docs/development/msg_json.md
 msgid "文件的`sha256`哈希"
@@ -2105,4 +2102,13 @@ msgstr "File Save Days"
 
 #~ msgid "`/upload/{url}`为可临时访问的 http 上传服务"
 #~ msgstr "/upload/{url} is a temporary http upload service"
+
+#~ msgid "avatar_hash"
+#~ msgstr "Avatar Hash"
+
+#~ msgid "该账号头像的 hash"
+#~ msgstr "The hash of the account's avatar"
+
+#~ msgid "该会话头像的哈希值"
+#~ msgstr "The hash value of the session avatar"
 
