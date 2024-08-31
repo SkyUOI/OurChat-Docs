@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-31 14:59+0800\n"
+"POT-Creation-Date: 2024-08-31 20:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -450,8 +450,8 @@ msgid "文件上传"
 msgstr "File upload"
 
 #: ../../source/docs/development/http_api.md:5
-msgid "接口:`/upload/{url}` 请求类型:`POST`"
-msgstr "api:`/upload/{url}` Request type:`POST`"
+msgid "接口:`/upload` 请求类型:`POST`"
+msgstr "api:`/upload` Request type:`POST`"
 
 #: ../../source/docs/development/http_api.md
 msgid "请求头"
@@ -467,8 +467,8 @@ msgid "Key"
 msgstr "Key"
 
 #: ../../source/docs/development/http_api.md
-msgid "验证密钥"
-msgstr "verification key"
+msgid "资源密钥"
+msgstr ""
 
 #: ../../source/docs/development/http_api.md
 msgid "状态码"
@@ -522,8 +522,8 @@ msgid "文件下载"
 msgstr "File download"
 
 #: ../../source/docs/development/http_api.md:25
-msgid "接口:`/download/{url}` 请求类型:`POST`"
-msgstr "api:`/download/{url}` Request type:`POST`"
+msgid "接口:`/download` 请求类型:`POST`"
+msgstr "api:`/download` Request type:`POST`"
 
 #: ../../source/docs/development/http_api.md
 msgid "密钥不匹配等"
@@ -1144,18 +1144,10 @@ msgid "文件上传返回信息"
 msgstr "The return information of the file upload"
 
 #: ../../source/docs/development/msg_json.md
-msgid "url"
-msgstr "url"
-
-#: ../../source/docs/development/msg_json.md
-msgid "`/upload/{url}`为可临时访问的 http 上传服务"
-msgstr "/upload/{url} is a temporary http upload service"
-
-#: ../../source/docs/development/msg_json.md
-msgid "验证参数，用于请求头`Key:`中，验证发送者身份"
+msgid "资源密钥，用于请求头`Key:`中，验证发送者身份并且是资源访问唯一标识符"
 msgstr ""
-"Verification parameters, used in the `Key:` header of the request, to "
-"verify the identity of the sender"
+"Resource key, used in the `Key:` header of the request, to "
+"verify the identity of the sender and is the unique identifier of the access to the resource"
 
 #: ../../source/docs/development/msg_json.md
 msgid "文件的`sha256`哈希"
@@ -1977,7 +1969,9 @@ msgstr "Overview"
 
 #: ../../source/docs/run/server_cmd.md:5
 msgid "指令是大小写不敏感的，例如`help`,`HeLp`实际上是一个指令"
-msgstr "Commands are case insensitive, such as `help`, `HELP` actually is a command"
+msgstr ""
+"Commands are case insensitive, such as `help`, `HELP` actually is a "
+"command"
 
 #: ../../source/docs/run/server_cmd.md
 msgid "指令"
@@ -2033,7 +2027,9 @@ msgstr "Usage Details"
 
 #: ../../source/docs/run/server_cmd.md:19
 msgid "参数: 任意个指令的名字 输出：各个指令的用法和详细信息"
-msgstr "Argument: Any command name. Output: Each command's usage and detailed information"
+msgstr ""
+"Argument: Any command name. Output: Each command's usage and detailed "
+"information"
 
 #: ../../source/docs/run/server_cmd.md:24
 msgid "参数:变量+变量值"
@@ -2100,3 +2096,13 @@ msgstr "FileSaveDays"
 #: ../../source/docs/run/server_cmd.md
 msgid "文件保存天数"
 msgstr "File Save Days"
+
+#~ msgid "验证密钥"
+#~ msgstr "verification key"
+
+#~ msgid "url"
+#~ msgstr "url"
+
+#~ msgid "`/upload/{url}`为可临时访问的 http 上传服务"
+#~ msgstr "/upload/{url} is a temporary http upload service"
+

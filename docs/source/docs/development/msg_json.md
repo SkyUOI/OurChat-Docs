@@ -466,7 +466,6 @@
 {
   "code": 22,
   "status": 0,
-  "url": "asdasafdfdafaada",
   "key": "sdjoqjdoqjodo",
   "hash": "dsodjsodjosjdoshdowho"
 }
@@ -474,7 +473,6 @@
 
 | key    | ValueType | Comment                                                                           |
 | :----- | :-------- | :-------------------------------------------------------------------------------- |
-| url    | String    | `/upload/{url}`为可临时访问的 http 上传服务                                       |
-| key    | String    | 验证参数，用于请求头`Key:`中，验证发送者身份                                      |
+| key    | String    | 资源密钥，用于请求头`Key:`中，验证发送者身份并且是资源访问唯一标识符              |
 | hash   | String    | 文件的`sha256`哈希                                                                |
 | status | Number    | 状态码，非零时其余字段不存在，参考[**状态码**](./status_code.md#上传文件返回信息) |
