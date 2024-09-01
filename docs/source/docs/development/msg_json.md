@@ -107,7 +107,7 @@
 | nickname           | String    | 昵称                                                              |
 | status             | Number    | 该账号的状态                                                      |
 | avatar             | String    | 该账号头像的 url 链接                                             |
-| avatar_hash        | String    | 该账号头像的 hash                                                 |
+| avatar_key        | String    | 获取头像时需要用到的密钥                                                 |
 | time               | Number    | 该账号注册的时间戳                                                |
 | public_update_time | Number    | 该账号公共(即不包括**sessions**和**friends**)数据最后更新的时间戳 |
 | update_time        | Number    | 该账号所有数据最后更新的时间戳                                    |
@@ -189,7 +189,7 @@
 |:------------|:----------|
 | nickname | String |
 | avatar | String |
-| avatar_hash | String |
+| avatar_key | String |
 | status | Number |
 
 以上字段具体意义见[**获取账号信息**`request_value`](#获取账号信息)
@@ -238,7 +238,7 @@
 | session_id    | String    | 该会话的 ID                |
 | name          | String    | 会话名称                   |
 | avatar        | String    | 该会话头像的 url 链接      |
-| avatar_hash   | String    | 该会话头像的哈希值         |
+| avatar_key   | String    | 获取头像时需要用到的密钥         |
 | time          | Number    | 该会话创建的时间戳         |
 | update_time   | Number    | 该会话数据最后更新的时间戳 |
 | members       | Array     | 该会话的成员列表           |
@@ -287,7 +287,7 @@
 {
   "code": 8,
   "avatar": "url", // 会话头像,可选
-  "avatar_hash": "hash", // 会话头像的哈希值,当 avatar 不为空时必填
+  "avatar_key": "key", // 获取头像时需要用到的密钥,当 avatar 不为空时必填
   "name": "OurChat Session", // 会话名称,可选
   "members": [
     "0000000000",
@@ -300,7 +300,7 @@
 | key         | ValueType | comment                                 |
 | :---------- | :-------- | :-------------------------------------- |
 | avatar      | String    | 会话头像,可选(如不填写使用默认头像)     |
-| avatar_hash | String    | 会话头像的哈希值,当`avatar`不为空时必填 |
+| avatar_key | String    | 获取头像时需要用到的密钥,当`avatar`不为空时必填 |
 | name        | String    | 会话名称,可选(如不填写使用默认名称)     |
 | members     | Array     | 会话成员                                |
 

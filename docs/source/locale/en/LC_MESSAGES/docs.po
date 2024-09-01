@@ -754,12 +754,12 @@ msgid "该账号头像的 url 链接"
 msgstr "The URL link of the account's avatar"
 
 #: ../../source/docs/development/msg_json.md
-msgid "avatar_hash"
-msgstr "Avatar Hash"
+msgid "avatar_key"
+msgstr "avatar_key"
 
 #: ../../source/docs/development/msg_json.md
-msgid "该账号头像的 hash"
-msgstr "The hash of the account's avatar"
+msgid "获取头像时需要用到的密钥"
+msgstr ""
 
 #: ../../source/docs/development/msg_json.md
 msgid "time"
@@ -914,10 +914,6 @@ msgid "该会话头像的 url 链接"
 msgstr "The URL link of the session avatar"
 
 #: ../../source/docs/development/msg_json.md
-msgid "该会话头像的哈希值"
-msgstr "The hash value of the session avatar"
-
-#: ../../source/docs/development/msg_json.md
 msgid "该会话创建的时间戳"
 msgstr "The timestamp when the session was created"
 
@@ -967,8 +963,8 @@ msgid "会话头像,可选(如不填写使用默认头像)"
 msgstr "Conversation avatar, optional (use default avatar if not filled)"
 
 #: ../../source/docs/development/msg_json.md
-msgid "会话头像的哈希值,当`avatar`不为空时必填"
-msgstr "Hash value of the conversation avatar, required when `avatar` is not empty"
+msgid "获取头像时需要用到的密钥,当`avatar`不为空时必填"
+msgstr "The key required when obtaining the avatar; it is mandatory when `avatar` is not empty."
 
 #: ../../source/docs/development/msg_json.md
 msgid "会话名称,可选(如不填写使用默认名称)"
@@ -2113,4 +2109,12 @@ msgstr "File Save Days"
 
 #~ msgid "密钥不匹配等"
 #~ msgstr "Key does not match"
+#~ msgid "avatar_hash"
+#~ msgstr "Avatar Hash"
+
+#~ msgid "该账号头像的 hash"
+#~ msgstr "The hash of the account's avatar"
+
+#~ msgid "该会话头像的哈希值"
+#~ msgstr "The hash value of the session avatar"
 
