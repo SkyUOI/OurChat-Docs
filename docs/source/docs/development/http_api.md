@@ -31,9 +31,9 @@
 
 | 状态码              | 说明                 |
 | :------------------ | :------------------- |
-| NotFound            | 请求上传的资源不存在 |
+| NotFound            | 请求下载的资源不存在 |
 | InternalServerError | 服务器内部错误       |
-| BadRequest          | 密钥不匹配等         |
+| BadRequest          | 资源密钥不存在       |
 | Ok                  | 成功                 |
 
 body 中包含了文件的数据
