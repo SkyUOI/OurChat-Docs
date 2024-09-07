@@ -12,40 +12,8 @@
 
 ## 配置文件示例
 
-```toml
-dbcfg = "config/database.toml" # 数据库配置文件
-rediscfg = "config/redis_connect.toml" # redis配置文件
-port = 7777  # 服务器监听的端口
-db_type = "mysql" # 数据库类型
-http_port = 7778  # http服务器端口
-auto_clean_duration = 1 # 文件清理周期
-```
-
 注意，当配置文件和命令行参数冲突时，以命令行参数覆盖配置文件参数
 
-mysql 数据库配置文件示例:
-
-```toml
-host = "db"
-user = "root"
-passwd = "123456"
-db = "OurChat"
-port = 3306
-```
-
-sqlite 数据库配置文件示例:
-
-```toml
-path = "ourchat.db"
-```
-
-Redis 示例:
-
-```toml
-host = "127.0.0.1"
-port = 6379
-passwd = "123456"
-user = "root"
-```
-
-所有的配置文件示例[请见](https://github.com/SkyUOI/OurChat/tree/main/config)
+- [所有的配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)
+  - [Mysql 示例](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)
+  - [Sqlite 示例](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)

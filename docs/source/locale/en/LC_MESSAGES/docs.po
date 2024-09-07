@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-01 11:23+0800\n"
+"POT-Creation-Date: 2024-09-07 13:52+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -964,7 +964,9 @@ msgstr "Conversation avatar, optional (use default avatar if not filled)"
 
 #: ../../source/docs/development/msg_json.md
 msgid "获取头像时需要用到的密钥,当`avatar`不为空时必填"
-msgstr "The key required when obtaining the avatar; it is mandatory when `avatar` is not empty."
+msgstr ""
+"The key required when obtaining the avatar; it is mandatory when `avatar`"
+" is not empty."
 
 #: ../../source/docs/development/msg_json.md
 msgid "会话名称,可选(如不填写使用默认名称)"
@@ -1935,30 +1937,27 @@ msgstr "Enable maintenance mode, continuously send maintenance information"
 msgid "配置文件示例"
 msgstr "Configuration File Example"
 
-#: ../../source/docs/run/server_argv.md:24
+#: ../../source/docs/run/server_argv.md:15
 msgid "注意，当配置文件和命令行参数冲突时，以命令行参数覆盖配置文件参数"
 msgstr ""
 "Note that when there is a conflict between the configuration file and "
 "command line arguments, the command line arguments will override the "
 "configuration file parameters"
 
-#: ../../source/docs/run/server_argv.md:26
-msgid "mysql 数据库配置文件示例:"
-msgstr "mysql Database Config Example:"
-
-#: ../../source/docs/run/server_argv.md:36
-msgid "sqlite 数据库配置文件示例:"
-msgstr "sqlite Database Config Example:"
-
-#: ../../source/docs/run/server_argv.md:42
-msgid "Redis 示例:"
-msgstr "Redis Example:"
-
-#: ../../source/docs/run/server_argv.md:51
-msgid "所有的配置文件示例[请见](https://github.com/SkyUOI/OurChat/tree/main/config)"
+#: ../../source/docs/run/server_argv.md:17
+msgid "[所有的配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)"
 msgstr ""
-"All configuration file examples [can be found "
-"here](https://github.com/SkyUOI/OurChat/tree/main/config)."
+"[All configuration file examples](https://github.com/SkyUOI/OurChat/tree/main/config)."
+
+#: ../../source/docs/run/server_argv.md:18
+msgid "[Mysql 示例](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)"
+msgstr ""
+"[Mysql Example](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)."
+
+#: ../../source/docs/run/server_argv.md:19
+msgid "[Sqlite 示例](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)"
+msgstr ""
+"[Sqlite Example](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)."
 
 #: ../../source/docs/run/server_cmd.md:1
 msgid "服务器控制台指令"
@@ -2109,6 +2108,7 @@ msgstr "File Save Days"
 
 #~ msgid "密钥不匹配等"
 #~ msgstr "Key does not match"
+
 #~ msgid "avatar_hash"
 #~ msgstr "Avatar Hash"
 
@@ -2117,4 +2117,13 @@ msgstr "File Save Days"
 
 #~ msgid "该会话头像的哈希值"
 #~ msgstr "The hash value of the session avatar"
+
+#~ msgid "mysql 数据库配置文件示例:"
+#~ msgstr "mysql Database Config Example:"
+
+#~ msgid "sqlite 数据库配置文件示例:"
+#~ msgstr "sqlite Database Config Example:"
+
+#~ msgid "Redis 示例:"
+#~ msgstr "Redis Example:"
 
