@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-07 13:52+0800\n"
+"POT-Creation-Date: 2024-09-08 11:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -649,7 +649,7 @@ msgstr "Registration Return Information"
 #: ../../source/docs/development/msg_json.md:347
 #: ../../source/docs/development/msg_json.md:374
 #: ../../source/docs/development/msg_json.md:426
-#: ../../source/docs/development/msg_json.md:462
+#: ../../source/docs/development/msg_json.md:464
 msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
@@ -1135,13 +1135,21 @@ msgstr "Boolean"
 msgid "该文件是否自动清理,默认为 false"
 msgstr "whether the file should be cleaned automatically,default is false"
 
-#: ../../source/docs/development/msg_json.md:458
+#: ../../source/docs/development/msg_json.md
+msgid "size"
+msgstr "size"
+
+#: ../../source/docs/development/msg_json.md
+msgid "上传文件的字节数"
+msgstr "Bytes of the uploaded file"
+
+#: ../../source/docs/development/msg_json.md:460
 msgid "**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_api.md#文件上传)**"
 msgstr ""
 "**Note, this is only a part of the upload of the file, see [http part of "
 "upload format](./http_api.md#文件上传)**"
 
-#: ../../source/docs/development/msg_json.md:460
+#: ../../source/docs/development/msg_json.md:462
 msgid "文件上传返回信息"
 msgstr "The return information of the file upload"
 
@@ -1947,17 +1955,18 @@ msgstr ""
 #: ../../source/docs/run/server_argv.md:17
 msgid "[所有的配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)"
 msgstr ""
-"[All configuration file examples](https://github.com/SkyUOI/OurChat/tree/main/config)."
+"[All configuration file "
+"examples](https://github.com/SkyUOI/OurChat/tree/main/config)."
 
 #: ../../source/docs/run/server_argv.md:18
 msgid "[Mysql 示例](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)"
-msgstr ""
-"[Mysql Example](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)."
+msgstr "[Mysql Example](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)."
 
 #: ../../source/docs/run/server_argv.md:19
 msgid "[Sqlite 示例](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)"
 msgstr ""
-"[Sqlite Example](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)."
+"[Sqlite "
+"Example](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)."
 
 #: ../../source/docs/run/server_cmd.md:1
 msgid "服务器控制台指令"
