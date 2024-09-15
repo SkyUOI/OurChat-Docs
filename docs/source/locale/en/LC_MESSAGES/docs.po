@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-08 11:28+0800\n"
+"POT-Creation-Date: 2024-09-15 22:34+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -1953,20 +1953,46 @@ msgstr ""
 "configuration file parameters"
 
 #: ../../source/docs/run/server_argv.md:17
+msgid "注意，配置文件格式支持多样，包括`toml`,`json`,`json5`,`yaml`,`ini`等，请自行选择熟悉的配置文件格式"
+msgstr ""
+"Noto,the supported type of config file is various,including "
+"`toml`,`json`,`json5`,`yaml`,`ini`,etc.Please choose your familiar format"
+
+#: ../../source/docs/run/server_argv.md:19
 msgid "[所有的配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)"
 msgstr ""
 "[All configuration file "
 "examples](https://github.com/SkyUOI/OurChat/tree/main/config)."
 
-#: ../../source/docs/run/server_argv.md:18
+#: ../../source/docs/run/server_argv.md:20
 msgid "[Mysql 示例](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)"
 msgstr "[Mysql Example](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)."
 
-#: ../../source/docs/run/server_argv.md:19
+#: ../../source/docs/run/server_argv.md:21
 msgid "[Sqlite 示例](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)"
 msgstr ""
 "[Sqlite "
 "Example](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)."
+
+#: ../../source/docs/run/server_argv.md:23
+msgid "日志"
+msgstr "log"
+
+#: ../../source/docs/run/server_argv.md:25
+msgid "默认日志等级为`info`，可以通过`RUST_LOG`环境变量配置，支持的等级为`tracing`,`debug`,`info`,`warn`,`error`，与正常的rust程序并没有不同，日志储存路径在`log`文件夹下，以时间命名日志文件"
+msgstr "The default log level is `info`, which can be configured through the `RUST_LOG` environment variable. Supported levels are `tracing`, `debug`, `info`, `warn`, `error`, and this is no different from normal Rust programs. Log files are stored in the `log` directory, with filenames based on timestamps."
+
+#: ../../source/docs/run/server_argv.md:27
+msgid "日志会定时清理，清理时间设定在`auto_clean_duration`中，也可以通过控制台指令更改"
+msgstr "Logs will be cleaned up periodically, with the cleanup interval set in `auto_clean_duration`. It can also be changed through console commands."
+
+#: ../../source/docs/run/server_argv.md:29
+msgid "测试日志"
+msgstr "Testing Log"
+
+#: ../../source/docs/run/server_argv.md:31
+msgid "`test_mode`启用时，所有日志都会被输出到`test.log`中，并且测试等级会被默认调整到`tracing`"
+msgstr "When `test_mode` is enabled, all logs will be output to `test.log`, and the test level will be automatically adjusted to `tracing`."
 
 #: ../../source/docs/run/server_cmd.md:1
 msgid "服务器控制台指令"

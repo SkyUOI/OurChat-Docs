@@ -14,6 +14,18 @@
 
 注意，当配置文件和命令行参数冲突时，以命令行参数覆盖配置文件参数
 
+注意，配置文件格式支持多样，包括`toml`,`json`,`json5`,`yaml`,`ini`等，请自行选择熟悉的配置文件格式
+
 - [所有的配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)
   - [Mysql 示例](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)
   - [Sqlite 示例](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)
+
+## 日志
+
+默认日志等级为`info`，可以通过`RUST_LOG`环境变量配置，支持的等级为`tracing`,`debug`,`info`,`warn`,`error`，与正常的rust程序并没有不同，日志储存路径在`log`文件夹下，以时间命名日志文件
+
+日志会定时清理，清理时间设定在`auto_clean_duration`中，也可以通过控制台指令更改
+
+### 测试日志
+
+`test_mode`启用时，所有日志都会被输出到`test.log`中，并且测试等级会被默认调整到`tracing`
