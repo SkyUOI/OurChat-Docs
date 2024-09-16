@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-16 16:12+0800\n"
+"POT-Creation-Date: 2024-09-16 16:14+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -1036,15 +1036,21 @@ msgid "返回消息"
 msgstr "Return Information"
 
 #: ../../source/docs/development/msg_json.md
-msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#验证状态)"
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#邮件发送)"
 msgstr ""
 "Status code, returns the operational status, for details, see "
-"[`status_code`](status_code.md#验证状态)"
+"[`status_code`](status_code.md#邮件发送)"
 
 #: ../../source/docs/development/msg_json.md:389
 #: ../../source/docs/development/status_code.md:78
 msgid "验证状态"
 msgstr "Verification Status"
+
+#: ../../source/docs/development/msg_json.md
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#验证状态)"
+msgstr ""
+"Status code, returns the operational status, for details, see "
+"[`status_code`](status_code.md#验证状态)"
 
 #: ../../source/docs/development/msg_json.md:405
 msgid "其他信息"
@@ -1729,6 +1735,14 @@ msgstr "Upload successful"
 #: ../../source/docs/development/status_code.md
 msgid "请求被拒绝"
 msgstr ""
+
+#: ../../source/docs/development/status_code.md:116
+msgid "邮件发送"
+msgstr "Email Sent"
+
+#: ../../source/docs/development/status_code.md
+msgid "请求邮箱无法发送成功"
+msgstr "Send Email Failed"
 
 #: ../../source/docs/development/user_msg_json.md:1
 msgid "OurChat 用户消息传递格式"
