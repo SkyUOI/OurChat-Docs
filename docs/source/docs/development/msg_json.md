@@ -185,12 +185,13 @@
 | data | Object    | 需要更改的账号信息，可设置的字段见下面表格 |
 
 可设置的字段：
-| key | ValueType |
-|:------------|:----------|
-| nickname | String |
-| avatar | String |
-| avatar_key | String |
-| status | Number |
+
+| key        | ValueType |
+| :--------- | :-------- |
+| nickname   | String    |
+| avatar     | String    |
+| avatar_key | String    |
+| status     | Number    |
 
 以上字段具体意义见[**获取账号信息**`request_value`](#获取账号信息)
 
@@ -355,6 +356,8 @@
 
 ### 生成验证码
 
+#### 请求生成
+
 **_Server <- Client_**
 
 ```json
@@ -368,6 +371,20 @@
 | key   | ValueType | comment  |
 | :---- | :-------- | :------- |
 | email | String    | 验证邮箱 |
+
+#### 返回消息
+
+```json
+// E.g.
+{
+  "code": 23,
+  "status": 0
+}
+```
+
+| key    | ValueType | comment                                                                   |
+| :----- | :-------- | :------------------------------------------------------------------------ |
+| status | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#验证状态) |
 
 ### 验证状态
 

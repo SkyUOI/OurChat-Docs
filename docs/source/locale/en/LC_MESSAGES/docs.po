@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 22:34+0800\n"
+"POT-Creation-Date: 2024-09-16 16:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -580,10 +580,10 @@ msgstr "Registration Information"
 #: ../../source/docs/development/msg_json.md:83
 #: ../../source/docs/development/msg_json.md:141
 #: ../../source/docs/development/msg_json.md:170
-#: ../../source/docs/development/msg_json.md:217
-#: ../../source/docs/development/msg_json.md:271
-#: ../../source/docs/development/msg_json.md:358
-#: ../../source/docs/development/msg_json.md:442
+#: ../../source/docs/development/msg_json.md:218
+#: ../../source/docs/development/msg_json.md:272
+#: ../../source/docs/development/msg_json.md:361
+#: ../../source/docs/development/msg_json.md:459
 msgid "**_Server <- Client_**"
 msgstr "**Server <- Client**"
 
@@ -643,13 +643,13 @@ msgstr "Registration Return Information"
 #: ../../source/docs/development/msg_json.md:65
 #: ../../source/docs/development/msg_json.md:119
 #: ../../source/docs/development/msg_json.md:154
-#: ../../source/docs/development/msg_json.md:199
-#: ../../source/docs/development/msg_json.md:249
-#: ../../source/docs/development/msg_json.md:309
-#: ../../source/docs/development/msg_json.md:347
-#: ../../source/docs/development/msg_json.md:374
-#: ../../source/docs/development/msg_json.md:426
-#: ../../source/docs/development/msg_json.md:464
+#: ../../source/docs/development/msg_json.md:200
+#: ../../source/docs/development/msg_json.md:250
+#: ../../source/docs/development/msg_json.md:310
+#: ../../source/docs/development/msg_json.md:348
+#: ../../source/docs/development/msg_json.md:391
+#: ../../source/docs/development/msg_json.md:443
+#: ../../source/docs/development/msg_json.md:481
 msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
@@ -867,13 +867,13 @@ msgstr ""
 msgid "可设置的字段："
 msgstr "the fields that can be configured"
 
-#: ../../source/docs/development/msg_json.md:195
+#: ../../source/docs/development/msg_json.md:196
 msgid "以上字段具体意义见[**获取账号信息**`request_value`](#获取账号信息)"
 msgstr ""
 "Account information, details [see above **Get Account Information** "
 "`request_value`](#获取账号信息)"
 
-#: ../../source/docs/development/msg_json.md:197
+#: ../../source/docs/development/msg_json.md:198
 #: ../../source/docs/development/status_code.md:98
 msgid "设置账号信息返回信息"
 msgstr "Get Account Information Return Information"
@@ -884,11 +884,11 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#设置账号信息返回信息)"
 
-#: ../../source/docs/development/msg_json.md:213
+#: ../../source/docs/development/msg_json.md:214
 msgid "会话"
 msgstr "Session"
 
-#: ../../source/docs/development/msg_json.md:215
+#: ../../source/docs/development/msg_json.md:216
 msgid "获取会话信息"
 msgstr "Get Session Information"
 
@@ -937,7 +937,7 @@ msgstr "Owner"
 msgid "该会话拥有者的 ocid"
 msgstr "The OCID of the owner of the session"
 
-#: ../../source/docs/development/msg_json.md:247
+#: ../../source/docs/development/msg_json.md:248
 #: ../../source/docs/development/status_code.md:19
 msgid "获取会话信息返回信息"
 msgstr "Get Session Information Return Information"
@@ -954,7 +954,7 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取会话信息返回信息)"
 
-#: ../../source/docs/development/msg_json.md:269
+#: ../../source/docs/development/msg_json.md:270
 msgid "新建会话请求信息"
 msgstr "New Session Request Information"
 
@@ -976,7 +976,7 @@ msgstr "Conversation name, optional (use default name if not filled)"
 msgid "会话成员"
 msgstr "Session Members"
 
-#: ../../source/docs/development/msg_json.md:307
+#: ../../source/docs/development/msg_json.md:308
 #: ../../source/docs/development/status_code.md:50
 msgid "新建会话返回信息"
 msgstr "New Session Return Information"
@@ -991,17 +991,17 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#新建会话返回信息)"
 
-#: ../../source/docs/development/msg_json.md:325
+#: ../../source/docs/development/msg_json.md:326
 msgid "服务器"
 msgstr "Server"
 
-#: ../../source/docs/development/msg_json.md:327
+#: ../../source/docs/development/msg_json.md:328
 #: ../../source/docs/development/status_code.md:70
 msgid "获取服务器状态"
 msgstr "Get Server Status"
 
-#: ../../source/docs/development/msg_json.md:329
-#: ../../source/docs/development/msg_json.md:392
+#: ../../source/docs/development/msg_json.md:330
+#: ../../source/docs/development/msg_json.md:409
 msgid "**_Server <-> Client_**"
 msgstr "**Server <-> Client**"
 
@@ -1011,26 +1011,29 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取服务器状态)"
 
-#: ../../source/docs/development/msg_json.md:343
+#: ../../source/docs/development/msg_json.md:344
 msgid "验证码"
 msgstr "Verification Status Code"
 
-#: ../../source/docs/development/msg_json.md:345
+#: ../../source/docs/development/msg_json.md:346
 msgid "发起验证"
 msgstr "Initiate Verification"
 
-#: ../../source/docs/development/msg_json.md:356
+#: ../../source/docs/development/msg_json.md:357
 msgid "生成验证码"
 msgstr "Generate Verification Code"
+
+#: ../../source/docs/development/msg_json.md:359
+msgid "请求生成"
+msgstr ""
 
 #: ../../source/docs/development/msg_json.md
 msgid "验证邮箱"
 msgstr "Email to be verified"
 
-#: ../../source/docs/development/msg_json.md:372
-#: ../../source/docs/development/status_code.md:78
-msgid "验证状态"
-msgstr "Verification Status"
+#: ../../source/docs/development/msg_json.md:375
+msgid "返回消息"
+msgstr "Return Information"
 
 #: ../../source/docs/development/msg_json.md
 msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#验证状态)"
@@ -1038,11 +1041,16 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#验证状态)"
 
-#: ../../source/docs/development/msg_json.md:388
+#: ../../source/docs/development/msg_json.md:389
+#: ../../source/docs/development/status_code.md:78
+msgid "验证状态"
+msgstr "Verification Status"
+
+#: ../../source/docs/development/msg_json.md:405
 msgid "其他信息"
 msgstr "Other Information"
 
-#: ../../source/docs/development/msg_json.md:390
+#: ../../source/docs/development/msg_json.md:407
 msgid "用户发送信息"
 msgstr "User Information"
 
@@ -1095,7 +1103,7 @@ msgstr ""
 "User message type, see [User Message Passing Format](user_msg_json.md) "
 "for details"
 
-#: ../../source/docs/development/msg_json.md:424
+#: ../../source/docs/development/msg_json.md:441
 msgid "错误信息"
 msgstr "Error Information"
 
@@ -1111,7 +1119,7 @@ msgstr "Details"
 msgid "异常信息"
 msgstr "Exception Information"
 
-#: ../../source/docs/development/msg_json.md:440
+#: ../../source/docs/development/msg_json.md:457
 msgid "文件上传请求"
 msgstr "File upload request"
 
@@ -1143,13 +1151,13 @@ msgstr "size"
 msgid "上传文件的字节数"
 msgstr "Bytes of the uploaded file"
 
-#: ../../source/docs/development/msg_json.md:460
+#: ../../source/docs/development/msg_json.md:477
 msgid "**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_api.md#文件上传)**"
 msgstr ""
 "**Note, this is only a part of the upload of the file, see [http part of "
 "upload format](./http_api.md#文件上传)**"
 
-#: ../../source/docs/development/msg_json.md:462
+#: ../../source/docs/development/msg_json.md:479
 msgid "文件上传返回信息"
 msgstr "The return information of the file upload"
 
@@ -1980,11 +1988,18 @@ msgstr "log"
 
 #: ../../source/docs/run/server_argv.md:25
 msgid "默认日志等级为`info`，可以通过`RUST_LOG`环境变量配置，支持的等级为`tracing`,`debug`,`info`,`warn`,`error`，与正常的rust程序并没有不同，日志储存路径在`log`文件夹下，以时间命名日志文件"
-msgstr "The default log level is `info`, which can be configured through the `RUST_LOG` environment variable. Supported levels are `tracing`, `debug`, `info`, `warn`, `error`, and this is no different from normal Rust programs. Log files are stored in the `log` directory, with filenames based on timestamps."
+msgstr ""
+"The default log level is `info`, which can be configured through the "
+"`RUST_LOG` environment variable. Supported levels are `tracing`, `debug`,"
+" `info`, `warn`, `error`, and this is no different from normal Rust "
+"programs. Log files are stored in the `log` directory, with filenames "
+"based on timestamps."
 
 #: ../../source/docs/run/server_argv.md:27
 msgid "日志会定时清理，清理时间设定在`auto_clean_duration`中，也可以通过控制台指令更改"
-msgstr "Logs will be cleaned up periodically, with the cleanup interval set in `auto_clean_duration`. It can also be changed through console commands."
+msgstr ""
+"Logs will be cleaned up periodically, with the cleanup interval set in "
+"`auto_clean_duration`. It can also be changed through console commands."
 
 #: ../../source/docs/run/server_argv.md:29
 msgid "测试日志"
@@ -1992,7 +2007,9 @@ msgstr "Testing Log"
 
 #: ../../source/docs/run/server_argv.md:31
 msgid "`test_mode`启用时，所有日志都会被输出到`test.log`中，并且测试等级会被默认调整到`tracing`"
-msgstr "When `test_mode` is enabled, all logs will be output to `test.log`, and the test level will be automatically adjusted to `tracing`."
+msgstr ""
+"When `test_mode` is enabled, all logs will be output to `test.log`, and "
+"the test level will be automatically adjusted to `tracing`."
 
 #: ../../source/docs/run/server_cmd.md:1
 msgid "服务器控制台指令"
