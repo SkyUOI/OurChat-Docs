@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-16 16:14+0800\n"
+"POT-Creation-Date: 2024-09-17 10:54+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -1793,79 +1793,29 @@ msgstr ""
 "Guide](../deploy/server-deploy.md)"
 
 #: ../../source/docs/run/build.md:9
-msgid "Web"
-msgstr "Web"
-
-#: ../../source/docs/run/build.md:11
-msgid "首先，你需要运行:"
-msgstr "Firstly, you need to run:"
-
-#: ../../source/docs/run/build.md:17
-msgid "来添加 wasm 支持."
-msgstr "to add wasm support."
-
-#: ../../source/docs/run/build.md:19
-msgid "然后你应该运行:"
-msgstr "Then you should run:"
-
-#: ../../source/docs/run/build.md:25
-msgid "来安装用于构建和运行 web 应用的[trunk](https://github.com/trunk-rs/trunk)."
-msgstr ""
-"to install [trunk](https://github.com/trunk-rs/trunk) for building and "
-"running web applications."
-
-#: ../../source/docs/run/build.md:27
-msgid "接着运行`trunk serve`和`trunk build` 来构建和运行 web 应用."
-msgstr ""
-"Then run `trunk serve` and `trunk build` to build and run the web "
-"application."
-
-#: ../../source/docs/run/build.md:29
-msgid "Tauri-client"
-msgstr "Tauri-client"
-
-#: ../../source/docs/run/build.md:31
-msgid "Tauri-client 使用 Rust 开发.使用与 web 端相同的前端."
-msgstr ""
-"Tauri-client is developed using Rust. It uses the same front end as the "
-"web version."
-
-#: ../../source/docs/run/build.md:33
-msgid "首先你应当运行:"
-msgstr "First, you should run:"
-
-#: ../../source/docs/run/build.md:39
-msgid "来安装一个管理 tauri 项目的工具."
-msgstr "to install a tool for managing tauri projects."
-
-#: ../../source/docs/run/build.md:41
-msgid "然后运行:"
-msgstr "Then run:"
-
-#: ../../source/docs/run/build.md:47
-msgid "来构建和运行 Tauri 应用."
-msgstr "to build and run the Tauri application."
-
-#: ../../source/docs/run/build.md:49
 msgid "client-pc"
 msgstr "client-pc"
 
-#: ../../source/docs/run/build.md:51
-msgid "client-pc 部分由 python 编写，无需编译，要求是 python3 以上,通过以下命令进行安装和运行"
-msgstr ""
-"The client-pc part is written in python, no compilation is required, "
-"python3 or higher is required, install and run with the following "
-"commands"
+#: ../../source/docs/run/build.md:11
+msgid "**_考虑到性能和人力成本问题，我们决定终止py客户端的开发，改用Flutter开发客户端_**"
+msgstr "Considering performance and labor cost issues, we have decided to terminate the development of the Py client and switch to developing the client with Flutter."
 
-#: ../../source/docs/run/build.md:53 ../../source/docs/run/index.rst:2
+#: ../../source/docs/run/build.md:13
+msgid ""
+"client-pc 部分由 python 编写，要求是 python3 以上以及[rust环境](https://www.rust-"
+"lang.org/tools/install)(编译rmodule库),通过以下命令进行安装和运行"
+msgstr ""
+"The client-pc part is written in Python, requiring Python 3 or above as well as a [Rust environment](https://www.rust-lang.org/tools/install) (to compile the rmodule library). Installation and execution can be done through the following commands."
+
+#: ../../source/docs/run/build.md:15 ../../source/docs/run/index.rst:2
 msgid "运行"
 msgstr "Run"
 
-#: ../../source/docs/run/build.md:62
+#: ../../source/docs/run/build.md:26
 msgid "打包为可执行文件"
 msgstr "Package as an Executable"
 
-#: ../../source/docs/run/build.md:68
+#: ../../source/docs/run/build.md:34
 msgid "等待脚本运行完毕后，`client/pc/src/out/main.dist`目录中即为可执行文件及其依赖文件"
 msgstr ""
 "After the script has finished running, the `client/pc/src/out/main.dist` "
@@ -2192,4 +2142,49 @@ msgstr "File Save Days"
 
 #~ msgid "Redis 示例:"
 #~ msgstr "Redis Example:"
+
+#~ msgid "Web"
+#~ msgstr "Web"
+
+#~ msgid "首先，你需要运行:"
+#~ msgstr "Firstly, you need to run:"
+
+#~ msgid "来添加 wasm 支持."
+#~ msgstr "to add wasm support."
+
+#~ msgid "然后你应该运行:"
+#~ msgstr "Then you should run:"
+
+#~ msgid "来安装用于构建和运行 web 应用的[trunk](https://github.com/trunk-rs/trunk)."
+#~ msgstr ""
+#~ "to install [trunk](https://github.com/trunk-"
+#~ "rs/trunk) for building and running web"
+#~ " applications."
+
+#~ msgid "接着运行`trunk serve`和`trunk build` 来构建和运行 web 应用."
+#~ msgstr ""
+#~ "Then run `trunk serve` and `trunk "
+#~ "build` to build and run the web"
+#~ " application."
+
+#~ msgid "Tauri-client"
+#~ msgstr "Tauri-client"
+
+#~ msgid "Tauri-client 使用 Rust 开发.使用与 web 端相同的前端."
+#~ msgstr ""
+#~ "Tauri-client is developed using Rust."
+#~ " It uses the same front end as"
+#~ " the web version."
+
+#~ msgid "首先你应当运行:"
+#~ msgstr "First, you should run:"
+
+#~ msgid "来安装一个管理 tauri 项目的工具."
+#~ msgstr "to install a tool for managing tauri projects."
+
+#~ msgid "然后运行:"
+#~ msgstr "Then run:"
+
+#~ msgid "来构建和运行 Tauri 应用."
+#~ msgstr "to build and run the Tauri application."
 
