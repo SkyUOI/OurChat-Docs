@@ -8,7 +8,8 @@
 ## 项目构建依赖
 
 Server 部分由 Rust 语言编写.你首先应当安装 Rust.
-开发和部署都在 Docker 中完成，所以你也应当安装 Docker.
+开发在本地或是在 docker 中都是可行的。
+部署在 Docker 中完成，所以你也应当安装 Docker.
 docker-buildx 和 docker-compose 同样也需要安装.
 
 ## 服务器配置文件

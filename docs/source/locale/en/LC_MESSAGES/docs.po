@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-17 10:54+0800\n"
+"POT-Creation-Date: 2024-10-02 18:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -1198,31 +1198,15 @@ msgstr "We provide a series of scripts to help you handle daily simple tasks."
 
 #: ../../source/docs/development/server/basic.md:7
 msgid ""
-"你可以运行`script/test_server.py`脚本来运行测试，默认会选择同目录下下的`server_test.json`作为配置文件，也可以通过`test_server.py"
-" xxx`的方式来指定，从而进行服务端测试的自定义。**注意：测试不能直接`cargo test`运行！**"
-msgstr ""
-"You can run the `script/test_server.py` script to execute tests. By "
-"default, it will use the `server_test.json` in the same directory as the "
-"configuration file. You can also specify a custom configuration file by "
-"running `test_server.py xxx` for customized server testing. **Note: Tests"
-" cannot be run directly with `cargo test`!**"
+"你可以运行`script/test_server.py`脚本来运行测试，默认会将`mysql`和`sqlite`的测试都运行一遍，可以通过指定第二个参数为特定数据库名称来运行特定的测试集，第三个参数为自定义化的测试命令，默认为`cargo"
+" test`。**测试使用`cargo test`运行前，要先设置好 OURCHAT_CONFIG_PATH 环境变量**"
+msgstr "You can run the script `script/test_server.py` to execute tests, which by default will run both the `mysql` and `sqlite` test suites. You can specify a particular database name as the second argument to run a specific set of tests, and the third argument is for a customized test command, with the default being `cargo test`. **Before running tests with `cargo test`, you must set the OURCHAT_CONFIG_PATH environment variable.**"
 
 #: ../../source/docs/development/server/basic.md:9
-msgid "测试"
-msgstr "Testing"
-
-#: ../../source/docs/development/server/basic.md:11
-msgid "由于服务端测试具有特殊性，我们引入了一个`test_lib`模块用于辅助测试，具体可以参考已有的单元测试。"
-msgstr ""
-"Due to the particularity of server-side testing, we have introduced a "
-"`test_lib` module to assist with testing, which you can reference in the "
-"existing unit tests."
-
-#: ../../source/docs/development/server/basic.md:13
 msgid "文档"
 msgstr "Documentation"
 
-#: ../../source/docs/development/server/basic.md:15
+#: ../../source/docs/development/server/basic.md:11
 msgid ""
 "请善用`cargo doc`，我们为你提供了详尽的文档参考！调用`cargo doc --document-private-"
 "items`来生成私有的文档"
@@ -1444,79 +1428,80 @@ msgstr "Project Build Dependencies"
 
 #: ../../source/docs/development/server/server-develop.md:10
 msgid ""
-"Server 部分由 Rust 语言编写.你首先应当安装 Rust. 开发和部署都在 Docker 中完成，所以你也应当安装 Docker. "
-"docker-buildx 和 docker-compose 同样也需要安装."
+"Server 部分由 Rust 语言编写.你首先应当安装 Rust. 开发在本地或是在 docker 中都是可行的。 部署在 Docker "
+"中完成，所以你也应当安装 Docker. docker-buildx 和 docker-compose 同样也需要安装."
 msgstr ""
 "The Server part is written in Rust. You should first install Rust. "
-"Development and deployment are both done in Docker, so you should also "
+"Development can be done locally or in docker."
+"Deployment are done in Docker, so you should also "
 "install Docker. docker-buildx and docker-compose also need to be "
 "installed."
 
-#: ../../source/docs/development/server/server-develop.md:14
+#: ../../source/docs/development/server/server-develop.md:15
 msgid "服务器配置文件"
 msgstr "Server Configuration File"
 
-#: ../../source/docs/development/server/server-develop.md:16
+#: ../../source/docs/development/server/server-develop.md:17
 msgid "于`config`目录下存放了所有配置文件的示例，在开发阶段请最好不要更改这些配置文件。"
 msgstr ""
 "Examples of all configuration files are stored in the `config` directory."
 " It is best not to change these configuration files during the "
 "development phase."
 
-#: ../../source/docs/development/server/server-develop.md:18
+#: ../../source/docs/development/server/server-develop.md:19
 msgid "容器开发"
 msgstr "Container Development"
 
-#: ../../source/docs/development/server/server-develop.md:20
+#: ../../source/docs/development/server/server-develop.md:21
 msgid "我们提供了一个用于开发环境的 Dockerfile"
 msgstr "We provide a Dockerfile for the development environment"
 
-#: ../../source/docs/development/server/server-develop.md:22
+#: ../../source/docs/development/server/server-develop.md:23
 msgid "你可以运行:"
 msgstr "You can run:"
 
-#: ../../source/docs/development/server/server-develop.md:28
+#: ../../source/docs/development/server/server-develop.md:29
 msgid "来配置开发环境"
 msgstr "to configure the development environment"
 
-#: ../../source/docs/development/server/server-develop.md:30
+#: ../../source/docs/development/server/server-develop.md:31
 msgid "如果 Dockerfile 改变了，你可以运行`script/rebuild_dev_container.py`来重新构建镜像。"
 msgstr ""
 "If the Dockerfile has changed, you can run "
 "`script/rebuild_dev_container.py` to rebuild the image."
 
-#: ../../source/docs/development/server/server-develop.md:32
+#: ../../source/docs/development/server/server-develop.md:33
 msgid "我们直接将本地文件夹映射到了容器中的`/app`文件夹，这使得你可以放心地重置容器而不用担心数据丢失。"
 msgstr ""
 "We directly map the local folder to the `/app` folder in the container, "
 "which allows you to reset the container without worrying about data loss."
 
-#: ../../source/docs/development/server/server-develop.md:34
+#: ../../source/docs/development/server/server-develop.md:35
 msgid "推荐的开发方式是在本地使用编辑器编辑，同时使用`docker exec -it OurChatServer bash`进入容器运行并观察结果"
 msgstr ""
 "The recommended development method is to edit locally with an editor, "
 "while using `docker exec -it OurChatServer bash` to enter the container "
 "to run and observe the results."
 
-#: ../../source/docs/development/server/server-develop.md:36
+#: ../../source/docs/development/server/server-develop.md:37
 msgid "首先，切换进`server`目录中，开发都将在这里进行。"
 msgstr ""
 "First, switch to the `server` directory, all development will be done "
 "here."
 
-#: ../../source/docs/development/server/server-develop.md:38
+#: ../../source/docs/development/server/server-develop.md:39
 msgid "启动时使用"
 msgstr "Use when starting up"
 
-#: ../../source/docs/development/server/server-develop.md:44
+#: ../../source/docs/development/server/server-develop.md:45
 msgid "启动测试:"
 msgstr "Start testing:"
 
-#: ../../source/docs/development/server/server-develop.md:50
+#: ../../source/docs/development/server/server-develop.md:51
 msgid "数据库"
 msgstr "Database"
 
-#: ../../source/docs/development/server/server-develop.md:52
+#: ../../source/docs/development/server/server-develop.md:53
 msgid ""
 "本项目采用 Redis, MySQL 和 SQLite 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 ORM "
 "框架，在修改数据库表后，您可以运行`script/regenerate_entity.py`来重新生成 ORM 框架需要的文件"
@@ -1526,25 +1511,25 @@ msgstr ""
 "modifying the database tables, you can run `script/regenerate_entity.py` "
 "to regenerate the files needed by the ORM framework"
 
-#: ../../source/docs/development/server/server-develop.md:54
+#: ../../source/docs/development/server/server-develop.md:55
 msgid "为了运行这个脚本，你首先需要运行`cargo install sea-orm-cli`"
 msgstr "To run this script, you first need to run `cargo install sea-orm-cli`"
 
-#: ../../source/docs/development/server/server-develop.md:56
+#: ../../source/docs/development/server/server-develop.md:57
 msgid "注意：如果可以，请最好保证`sea-orm-cli`是最新的"
 msgstr ""
 "Note: If possible, please make sure that `sea-orm-cli` is the latest "
 "version"
 
-#: ../../source/docs/development/server/server-develop.md:58
+#: ../../source/docs/development/server/server-develop.md:59
 msgid "请注意保证您的代码可以同时在两种数据库上运行，我们提供了`#[derive::db_compatibility]`来方便的做到这一点。"
 msgstr ""
 
-#: ../../source/docs/development/server/server-develop.md:60
+#: ../../source/docs/development/server/server-develop.md:61
 msgid "数据库迁移"
 msgstr "Database Migration"
 
-#: ../../source/docs/development/server/server-develop.md:62
+#: ../../source/docs/development/server/server-develop.md:63
 msgid ""
 "`migration`中是数据库迁移模块，在 server 启动时会自动运行未运行的数据库迁移，为了定义一个新的数据库迁移，请参考[sea "
 "orm](https://www.sea-ql.org/SeaORM/docs/migration/setting-up-migration/)"
@@ -1798,14 +1783,20 @@ msgstr "client-pc"
 
 #: ../../source/docs/run/build.md:11
 msgid "**_考虑到性能和人力成本问题，我们决定终止py客户端的开发，改用Flutter开发客户端_**"
-msgstr "Considering performance and labor cost issues, we have decided to terminate the development of the Py client and switch to developing the client with Flutter."
+msgstr ""
+"Considering performance and labor cost issues, we have decided to "
+"terminate the development of the Py client and switch to developing the "
+"client with Flutter."
 
 #: ../../source/docs/run/build.md:13
 msgid ""
 "client-pc 部分由 python 编写，要求是 python3 以上以及[rust环境](https://www.rust-"
 "lang.org/tools/install)(编译rmodule库),通过以下命令进行安装和运行"
 msgstr ""
-"The client-pc part is written in Python, requiring Python 3 or above as well as a [Rust environment](https://www.rust-lang.org/tools/install) (to compile the rmodule library). Installation and execution can be done through the following commands."
+"The client-pc part is written in Python, requiring Python 3 or above as "
+"well as a [Rust environment](https://www.rust-lang.org/tools/install) (to"
+" compile the rmodule library). Installation and execution can be done "
+"through the following commands."
 
 #: ../../source/docs/run/build.md:15 ../../source/docs/run/index.rst:2
 msgid "运行"
@@ -1838,8 +1829,8 @@ msgid "default"
 msgstr "Default"
 
 #: ../../source/docs/run/server_argv.md
-msgid "`--cfg config file path`"
-msgstr "`--cfg config file path`"
+msgid "`--config config file path`"
+msgstr "`--config config file path`"
 
 #: ../../source/docs/run/server_argv.md
 msgid "选择配置文件.[example](#配置文件示例)"
@@ -1882,6 +1873,18 @@ msgid "7777"
 msgstr "7777"
 
 #: ../../source/docs/run/server_argv.md
+msgid "`--http-port=http server listening port`"
+msgstr "`--http-port=http server listening port`"
+
+#: ../../source/docs/run/server_argv.md
+msgid "http 服务器监听的端口"
+msgstr "Port the http server listens on"
+
+#: ../../source/docs/run/server_argv.md
+msgid "7778"
+msgstr "7778"
+
+#: ../../source/docs/run/server_argv.md
 msgid "`--ip=server listening ip`"
 msgstr "`--ip=server listening ip`"
 
@@ -1913,67 +1916,81 @@ msgstr "`--maintaining`"
 msgid "启动维护模式，不断发送维护信息"
 msgstr "Enable maintenance mode, continuously send maintenance information"
 
-#: ../../source/docs/run/server_argv.md:13
+#: ../../source/docs/run/server_argv.md
+msgid "`--enable-cmd`"
+msgstr "`--enable-cmd`"
+
+#: ../../source/docs/run/server_argv.md
+msgid "是否启用 cmd"
+msgstr "whether to enable cmd"
+
+#: ../../source/docs/run/server_argv.md
+msgid "true"
+msgstr "true"
+
+#: ../../source/docs/run/server_argv.md:15
 msgid "配置文件示例"
 msgstr "Configuration File Example"
 
-#: ../../source/docs/run/server_argv.md:15
+#: ../../source/docs/run/server_argv.md:17
 msgid "注意，当配置文件和命令行参数冲突时，以命令行参数覆盖配置文件参数"
 msgstr ""
 "Note that when there is a conflict between the configuration file and "
 "command line arguments, the command line arguments will override the "
 "configuration file parameters"
 
-#: ../../source/docs/run/server_argv.md:17
+#: ../../source/docs/run/server_argv.md:19
 msgid "注意，配置文件格式支持多样，包括`toml`,`json`,`json5`,`yaml`,`ini`等，请自行选择熟悉的配置文件格式"
 msgstr ""
 "Noto,the supported type of config file is various,including "
 "`toml`,`json`,`json5`,`yaml`,`ini`,etc.Please choose your familiar format"
 
-#: ../../source/docs/run/server_argv.md:19
+#: ../../source/docs/run/server_argv.md:21
 msgid "[所有的配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)"
 msgstr ""
 "[All configuration file "
 "examples](https://github.com/SkyUOI/OurChat/tree/main/config)."
 
-#: ../../source/docs/run/server_argv.md:20
+#: ../../source/docs/run/server_argv.md:22
 msgid "[Mysql 示例](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)"
 msgstr "[Mysql Example](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)."
 
-#: ../../source/docs/run/server_argv.md:21
+#: ../../source/docs/run/server_argv.md:23
 msgid "[Sqlite 示例](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)"
 msgstr ""
 "[Sqlite "
 "Example](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)."
 
-#: ../../source/docs/run/server_argv.md:23
+#: ../../source/docs/run/server_argv.md:25
 msgid "日志"
 msgstr "log"
 
-#: ../../source/docs/run/server_argv.md:25
-msgid "默认日志等级为`info`，可以通过`RUST_LOG`环境变量配置，支持的等级为`tracing`,`debug`,`info`,`warn`,`error`，与正常的rust程序并没有不同，日志储存路径在`log`文件夹下，以时间命名日志文件"
+#: ../../source/docs/run/server_argv.md:27
+msgid ""
+"默认日志等级为`info`，可以通过`RUST_LOG`环境变量配置，支持的等级为`trace`,`debug`,`info`,`warn`,`error`，与正常的"
+" rust 程序并没有不同，日志储存路径在`log`文件夹下，以时间命名日志文件"
 msgstr ""
 "The default log level is `info`, which can be configured through the "
-"`RUST_LOG` environment variable. Supported levels are `tracing`, `debug`,"
+"`RUST_LOG` environment variable. Supported levels are `trace`, `debug`,"
 " `info`, `warn`, `error`, and this is no different from normal Rust "
 "programs. Log files are stored in the `log` directory, with filenames "
 "based on timestamps."
 
-#: ../../source/docs/run/server_argv.md:27
+#: ../../source/docs/run/server_argv.md:29
 msgid "日志会定时清理，清理时间设定在`auto_clean_duration`中，也可以通过控制台指令更改"
 msgstr ""
 "Logs will be cleaned up periodically, with the cleanup interval set in "
 "`auto_clean_duration`. It can also be changed through console commands."
 
-#: ../../source/docs/run/server_argv.md:29
+#: ../../source/docs/run/server_argv.md:31
 msgid "测试日志"
 msgstr "Testing Log"
 
-#: ../../source/docs/run/server_argv.md:31
-msgid "`test_mode`启用时，所有日志都会被输出到`test.log`中，并且测试等级会被默认调整到`tracing`"
+#: ../../source/docs/run/server_argv.md:33
+msgid "`test_mode`启用时，日志不会被输出到文件中，并且测试等级会被默认调整到`trace`"
 msgstr ""
-"When `test_mode` is enabled, all logs will be output to `test.log`, and "
-"the test level will be automatically adjusted to `tracing`."
+"When `test_mode` is enabled, logs will not be output to files, and "
+"the test level will be automatically adjusted to `trace`."
 
 #: ../../source/docs/run/server_cmd.md:1
 msgid "服务器控制台指令"
@@ -2187,4 +2204,29 @@ msgstr "File Save Days"
 
 #~ msgid "来构建和运行 Tauri 应用."
 #~ msgstr "to build and run the Tauri application."
+
+#~ msgid ""
+#~ "你可以运行`script/test_server.py`脚本来运行测试，默认会选择同目录下下的`server_test.json`作为配置文件，也可以通过`test_server.py"
+#~ " xxx`的方式来指定，从而进行服务端测试的自定义。**注意：测试不能直接`cargo test`运行！**"
+#~ msgstr ""
+#~ "You can run the `script/test_server.py` "
+#~ "script to execute tests. By default, "
+#~ "it will use the `server_test.json` in"
+#~ " the same directory as the "
+#~ "configuration file. You can also specify"
+#~ " a custom configuration file by "
+#~ "running `test_server.py xxx` for customized"
+#~ " server testing. **Note: Tests cannot "
+#~ "be run directly with `cargo test`!**"
+
+#~ msgid "测试"
+#~ msgstr "Testing"
+
+#~ msgid "由于服务端测试具有特殊性，我们引入了一个`test_lib`模块用于辅助测试，具体可以参考已有的单元测试。"
+#~ msgstr ""
+#~ "Due to the particularity of server-"
+#~ "side testing, we have introduced a "
+#~ "`test_lib` module to assist with "
+#~ "testing, which you can reference in "
+#~ "the existing unit tests."
 
