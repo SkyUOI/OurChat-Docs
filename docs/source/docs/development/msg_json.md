@@ -323,6 +323,61 @@
 | session_id | Number    | 会话 id                                                                           |
 | status     | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#新建会话返回信息) |
 
+## 邀请加入会话
+
+**_Server -> Client_**
+
+```json
+{
+  "code": 24,
+  "session_id": "1145141919",
+  "inviter_id": "0000000000",
+  "message": "邀请加入会话",
+  "expire_timestamp": 10000
+}
+```
+
+| key              | valueType | comment    |
+| :--------------- | :-------- | :--------- |
+| session_id       | String    | 会话 id    |
+| inviter_id       | String    | 邀请者 id  |
+| message          | String    | 留言       |
+| expire_timestamp | Number    | 失效时间戳 |
+
+## 邀请加入会话返回信息
+
+**_Server <- Client_**
+
+```json
+// E.g.
+{
+  "code": 25,
+  "session_id": "1145141919",
+  "accept": true
+}
+```
+
+| key        | ValueType | comment          |
+| :--------- | :-------- | :--------------- |
+| session_id | String    | 会话 id          |
+| accept     | Boolean   | 对邀请的同意情况 |
+
+## 同意加入会话返回信息
+
+**_Server -> Client_**
+
+```json
+// E.g.
+{
+  "code": 26,
+  "status": 0
+}
+```
+
+| key    | ValueType | comment                                                                               |
+| :----- | :-------- | :------------------------------------------------------------------------------------ |
+| status | Number    | 状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#同意加入会话返回信息) |
+
 ## 服务器
 
 ### 获取服务器状态

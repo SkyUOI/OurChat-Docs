@@ -8,12 +8,12 @@
 
 ```json
 {
-    "type": 0,
-    "text": "文本消息内容"
+  "type": 0,
+  "text": "文本消息内容"
 }
 ```
 
-| key        | valueType | comment                      |
-| :--------- | :-------- | :--------------------------- |
-| type       | Number    | 信息类型                     |
-| text       | String    | 文本消息内容 |
+| key  | valueType | comment      |
+| :--- | :-------- | :----------- |
+| type | Number    | 信息类型     |
+| text | String    | 文本消息内容 |

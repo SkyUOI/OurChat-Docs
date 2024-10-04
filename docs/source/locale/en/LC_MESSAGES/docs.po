@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-02 18:48+0800\n"
+"POT-Creation-Date: 2024-10-04 18:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -545,6 +545,15 @@ msgstr "Server Status"
 msgid "接口:`/status` 请求类型: `GET`"
 msgstr "Api:`/status` Request Type: `GET`"
 
+#: ../../source/docs/development/http_api.md:50
+#: ../../source/docs/development/server/server-database.md
+msgid "时间戳"
+msgstr "Timestamp"
+
+#: ../../source/docs/development/http_api.md:52
+msgid "接口:`/timestamp` 请求类型: `GET`"
+msgstr "Api:`/timestamp` Request Type: `GET`"
+
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
 msgstr "Development"
@@ -582,8 +591,9 @@ msgstr "Registration Information"
 #: ../../source/docs/development/msg_json.md:170
 #: ../../source/docs/development/msg_json.md:218
 #: ../../source/docs/development/msg_json.md:272
-#: ../../source/docs/development/msg_json.md:361
-#: ../../source/docs/development/msg_json.md:459
+#: ../../source/docs/development/msg_json.md:349
+#: ../../source/docs/development/msg_json.md:400
+#: ../../source/docs/development/msg_json.md:498
 msgid "**_Server <- Client_**"
 msgstr "**Server <- Client**"
 
@@ -646,10 +656,11 @@ msgstr "Registration Return Information"
 #: ../../source/docs/development/msg_json.md:200
 #: ../../source/docs/development/msg_json.md:250
 #: ../../source/docs/development/msg_json.md:310
-#: ../../source/docs/development/msg_json.md:348
-#: ../../source/docs/development/msg_json.md:391
-#: ../../source/docs/development/msg_json.md:443
-#: ../../source/docs/development/msg_json.md:481
+#: ../../source/docs/development/msg_json.md:328
+#: ../../source/docs/development/msg_json.md:387
+#: ../../source/docs/development/msg_json.md:430
+#: ../../source/docs/development/msg_json.md:482
+#: ../../source/docs/development/msg_json.md:520
 msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
@@ -992,16 +1003,60 @@ msgstr ""
 "[`status_code`](status_code.md#新建会话返回信息)"
 
 #: ../../source/docs/development/msg_json.md:326
+msgid "邀请加入会话"
+msgstr ""
+
+#: ../../source/docs/development/msg_json.md
+msgid "inviter_id"
+msgstr "inviter_id"
+
+#: ../../source/docs/development/msg_json.md
+msgid "邀请者 id"
+msgstr "Inviter ID"
+
+#: ../../source/docs/development/msg_json.md
+msgid "message"
+msgstr "message"
+
+#: ../../source/docs/development/msg_json.md
+msgid "留言"
+msgstr "Message"
+
+#: ../../source/docs/development/msg_json.md
+msgid "expire_timestamp"
+msgstr "expire_timestamp"
+
+#: ../../source/docs/development/msg_json.md
+msgid "失效时间戳"
+msgstr "Expire Timestamp"
+
+#: ../../source/docs/development/msg_json.md:347
+msgid "邀请加入会话返回信息"
+msgstr "Invite to Session Return Information"
+
+#: ../../source/docs/development/msg_json.md
+msgid "accept"
+msgstr "accept"
+
+#: ../../source/docs/development/msg_json.md
+msgid "Boolean"
+msgstr "Boolean"
+
+#: ../../source/docs/development/msg_json.md
+msgid "对邀请的同意情况"
+msgstr "The acceptance of the invitation"
+
+#: ../../source/docs/development/msg_json.md:365
 msgid "服务器"
 msgstr "Server"
 
-#: ../../source/docs/development/msg_json.md:328
+#: ../../source/docs/development/msg_json.md:367
 #: ../../source/docs/development/status_code.md:70
 msgid "获取服务器状态"
 msgstr "Get Server Status"
 
-#: ../../source/docs/development/msg_json.md:330
-#: ../../source/docs/development/msg_json.md:409
+#: ../../source/docs/development/msg_json.md:369
+#: ../../source/docs/development/msg_json.md:448
 msgid "**_Server <-> Client_**"
 msgstr "**Server <-> Client**"
 
@@ -1011,19 +1066,19 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取服务器状态)"
 
-#: ../../source/docs/development/msg_json.md:344
+#: ../../source/docs/development/msg_json.md:383
 msgid "验证码"
 msgstr "Verification Status Code"
 
-#: ../../source/docs/development/msg_json.md:346
+#: ../../source/docs/development/msg_json.md:385
 msgid "发起验证"
 msgstr "Initiate Verification"
 
-#: ../../source/docs/development/msg_json.md:357
+#: ../../source/docs/development/msg_json.md:396
 msgid "生成验证码"
 msgstr "Generate Verification Code"
 
-#: ../../source/docs/development/msg_json.md:359
+#: ../../source/docs/development/msg_json.md:398
 msgid "请求生成"
 msgstr ""
 
@@ -1031,7 +1086,7 @@ msgstr ""
 msgid "验证邮箱"
 msgstr "Email to be verified"
 
-#: ../../source/docs/development/msg_json.md:375
+#: ../../source/docs/development/msg_json.md:414
 msgid "返回消息"
 msgstr "Return Information"
 
@@ -1041,7 +1096,7 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#邮件发送)"
 
-#: ../../source/docs/development/msg_json.md:389
+#: ../../source/docs/development/msg_json.md:428
 #: ../../source/docs/development/status_code.md:78
 msgid "验证状态"
 msgstr "Verification Status"
@@ -1052,11 +1107,11 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#验证状态)"
 
-#: ../../source/docs/development/msg_json.md:405
+#: ../../source/docs/development/msg_json.md:444
 msgid "其他信息"
 msgstr "Other Information"
 
-#: ../../source/docs/development/msg_json.md:407
+#: ../../source/docs/development/msg_json.md:446
 msgid "用户发送信息"
 msgstr "User Information"
 
@@ -1109,7 +1164,7 @@ msgstr ""
 "User message type, see [User Message Passing Format](user_msg_json.md) "
 "for details"
 
-#: ../../source/docs/development/msg_json.md:441
+#: ../../source/docs/development/msg_json.md:480
 msgid "错误信息"
 msgstr "Error Information"
 
@@ -1125,7 +1180,7 @@ msgstr "Details"
 msgid "异常信息"
 msgstr "Exception Information"
 
-#: ../../source/docs/development/msg_json.md:457
+#: ../../source/docs/development/msg_json.md:496
 msgid "文件上传请求"
 msgstr "File upload request"
 
@@ -1142,10 +1197,6 @@ msgid "auto_clean(optional)"
 msgstr "auto_clean(optional)"
 
 #: ../../source/docs/development/msg_json.md
-msgid "Boolean"
-msgstr "Boolean"
-
-#: ../../source/docs/development/msg_json.md
 msgid "该文件是否自动清理,默认为 false"
 msgstr "whether the file should be cleaned automatically,default is false"
 
@@ -1157,13 +1208,13 @@ msgstr "size"
 msgid "上传文件的字节数"
 msgstr "Bytes of the uploaded file"
 
-#: ../../source/docs/development/msg_json.md:477
+#: ../../source/docs/development/msg_json.md:516
 msgid "**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_api.md#文件上传)**"
 msgstr ""
 "**Note, this is only a part of the upload of the file, see [http part of "
 "upload format](./http_api.md#文件上传)**"
 
-#: ../../source/docs/development/msg_json.md:479
+#: ../../source/docs/development/msg_json.md:518
 msgid "文件上传返回信息"
 msgstr "The return information of the file upload"
 
@@ -1200,7 +1251,14 @@ msgstr "We provide a series of scripts to help you handle daily simple tasks."
 msgid ""
 "你可以运行`script/test_server.py`脚本来运行测试，默认会将`mysql`和`sqlite`的测试都运行一遍，可以通过指定第二个参数为特定数据库名称来运行特定的测试集，第三个参数为自定义化的测试命令，默认为`cargo"
 " test`。**测试使用`cargo test`运行前，要先设置好 OURCHAT_CONFIG_PATH 环境变量**"
-msgstr "You can run the script `script/test_server.py` to execute tests, which by default will run both the `mysql` and `sqlite` test suites. You can specify a particular database name as the second argument to run a specific set of tests, and the third argument is for a customized test command, with the default being `cargo test`. **Before running tests with `cargo test`, you must set the OURCHAT_CONFIG_PATH environment variable.**"
+msgstr ""
+"You can run the script `script/test_server.py` to execute tests, which by"
+" default will run both the `mysql` and `sqlite` test suites. You can "
+"specify a particular database name as the second argument to run a "
+"specific set of tests, and the third argument is for a customized test "
+"command, with the default being `cargo test`. **Before running tests with"
+" `cargo test`, you must set the OURCHAT_CONFIG_PATH environment "
+"variable.**"
 
 #: ../../source/docs/development/server/basic.md:9
 msgid "文档"
@@ -1277,10 +1335,6 @@ msgstr "Email"
 #: ../../source/docs/development/server/server-database.md
 msgid "date"
 msgstr "Date"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "时间戳"
-msgstr "Timestamp"
 
 #: ../../source/docs/development/server/server-database.md:16
 msgid "好友表(friend)"
@@ -1432,10 +1486,9 @@ msgid ""
 "中完成，所以你也应当安装 Docker. docker-buildx 和 docker-compose 同样也需要安装."
 msgstr ""
 "The Server part is written in Rust. You should first install Rust. "
-"Development can be done locally or in docker."
-"Deployment are done in Docker, so you should also "
-"install Docker. docker-buildx and docker-compose also need to be "
-"installed."
+"Development can be done locally or in docker.Deployment are done in "
+"Docker, so you should also install Docker. docker-buildx and docker-"
+"compose also need to be installed."
 
 #: ../../source/docs/development/server/server-develop.md:15
 msgid "服务器配置文件"
@@ -1729,6 +1782,14 @@ msgstr "Email Sent"
 msgid "请求邮箱无法发送成功"
 msgstr "Send Email Failed"
 
+#: ../../source/docs/development/status_code.md:125
+msgid "同意加入会话返回信息"
+msgstr "Agree to Join Session Return Information"
+
+#: ../../source/docs/development/status_code.md
+msgid "同意成功"
+msgstr "Agree Successfully"
+
 #: ../../source/docs/development/user_msg_json.md:1
 msgid "OurChat 用户消息传递格式"
 msgstr "OurChat User Message Passing Format"
@@ -1971,8 +2032,8 @@ msgid ""
 " rust 程序并没有不同，日志储存路径在`log`文件夹下，以时间命名日志文件"
 msgstr ""
 "The default log level is `info`, which can be configured through the "
-"`RUST_LOG` environment variable. Supported levels are `trace`, `debug`,"
-" `info`, `warn`, `error`, and this is no different from normal Rust "
+"`RUST_LOG` environment variable. Supported levels are `trace`, `debug`, "
+"`info`, `warn`, `error`, and this is no different from normal Rust "
 "programs. Log files are stored in the `log` directory, with filenames "
 "based on timestamps."
 
@@ -1989,8 +2050,8 @@ msgstr "Testing Log"
 #: ../../source/docs/run/server_argv.md:33
 msgid "`test_mode`启用时，日志不会被输出到文件中，并且测试等级会被默认调整到`trace`"
 msgstr ""
-"When `test_mode` is enabled, logs will not be output to files, and "
-"the test level will be automatically adjusted to `trace`."
+"When `test_mode` is enabled, logs will not be output to files, and the "
+"test level will be automatically adjusted to `trace`."
 
 #: ../../source/docs/run/server_cmd.md:1
 msgid "服务器控制台指令"
