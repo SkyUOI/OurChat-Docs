@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-02 18:48+0800\n"
+"POT-Creation-Date: 2024-10-04 11:44+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -578,12 +578,12 @@ msgstr "Registration Information"
 #: ../../source/docs/development/msg_json.md:7
 #: ../../source/docs/development/msg_json.md:45
 #: ../../source/docs/development/msg_json.md:83
-#: ../../source/docs/development/msg_json.md:141
-#: ../../source/docs/development/msg_json.md:170
-#: ../../source/docs/development/msg_json.md:218
-#: ../../source/docs/development/msg_json.md:272
-#: ../../source/docs/development/msg_json.md:361
-#: ../../source/docs/development/msg_json.md:459
+#: ../../source/docs/development/msg_json.md:140
+#: ../../source/docs/development/msg_json.md:169
+#: ../../source/docs/development/msg_json.md:216
+#: ../../source/docs/development/msg_json.md:269
+#: ../../source/docs/development/msg_json.md:356
+#: ../../source/docs/development/msg_json.md:454
 msgid "**_Server <- Client_**"
 msgstr "**Server <- Client**"
 
@@ -641,15 +641,15 @@ msgstr "Registration Return Information"
 
 #: ../../source/docs/development/msg_json.md:27
 #: ../../source/docs/development/msg_json.md:65
-#: ../../source/docs/development/msg_json.md:119
-#: ../../source/docs/development/msg_json.md:154
-#: ../../source/docs/development/msg_json.md:200
-#: ../../source/docs/development/msg_json.md:250
-#: ../../source/docs/development/msg_json.md:310
-#: ../../source/docs/development/msg_json.md:348
-#: ../../source/docs/development/msg_json.md:391
-#: ../../source/docs/development/msg_json.md:443
-#: ../../source/docs/development/msg_json.md:481
+#: ../../source/docs/development/msg_json.md:118
+#: ../../source/docs/development/msg_json.md:153
+#: ../../source/docs/development/msg_json.md:198
+#: ../../source/docs/development/msg_json.md:247
+#: ../../source/docs/development/msg_json.md:305
+#: ../../source/docs/development/msg_json.md:343
+#: ../../source/docs/development/msg_json.md:386
+#: ../../source/docs/development/msg_json.md:438
+#: ../../source/docs/development/msg_json.md:476
 msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
@@ -746,14 +746,6 @@ msgid "该账号的状态"
 msgstr "The status of the account"
 
 #: ../../source/docs/development/msg_json.md
-msgid "avatar"
-msgstr "Avatar"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该账号头像的 url 链接"
-msgstr "The URL link of the account's avatar"
-
-#: ../../source/docs/development/msg_json.md
 msgid "avatar_key"
 msgstr "avatar_key"
 
@@ -807,7 +799,7 @@ msgstr ""
 "The friend list of this account (only accessible to this account, other "
 "accounts will return null)."
 
-#: ../../source/docs/development/msg_json.md:117
+#: ../../source/docs/development/msg_json.md:116
 #: ../../source/docs/development/status_code.md:60
 msgid "获取账号信息返回信息"
 msgstr "Get Account Information Return Information"
@@ -832,17 +824,17 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取账号信息返回信息)"
 
-#: ../../source/docs/development/msg_json.md:139
+#: ../../source/docs/development/msg_json.md:138
 msgid "注销"
 msgstr "Logout"
 
-#: ../../source/docs/development/msg_json.md:150
+#: ../../source/docs/development/msg_json.md:149
 msgid "**_警告：该注销是删除帐号的意思，请勿误用接口_**"
 msgstr ""
 "**Warning: This logout refers to the deletion of the account, please do "
 "not misuse the interface_**"
 
-#: ../../source/docs/development/msg_json.md:152
+#: ../../source/docs/development/msg_json.md:151
 #: ../../source/docs/development/status_code.md:88
 msgid "注销返回信息"
 msgstr "Logout Return Information"
@@ -853,7 +845,7 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#注销返回信息)"
 
-#: ../../source/docs/development/msg_json.md:168
+#: ../../source/docs/development/msg_json.md:167
 msgid "设置账号信息"
 msgstr "Set Account Information"
 
@@ -863,17 +855,17 @@ msgstr ""
 "The account information that needs to be set, the fields that can be "
 "configured are shown in the table below."
 
-#: ../../source/docs/development/msg_json.md:187
+#: ../../source/docs/development/msg_json.md:186
 msgid "可设置的字段："
 msgstr "the fields that can be configured"
 
-#: ../../source/docs/development/msg_json.md:196
+#: ../../source/docs/development/msg_json.md:194
 msgid "以上字段具体意义见[**获取账号信息**`request_value`](#获取账号信息)"
 msgstr ""
 "Account information, details [see above **Get Account Information** "
 "`request_value`](#获取账号信息)"
 
-#: ../../source/docs/development/msg_json.md:198
+#: ../../source/docs/development/msg_json.md:196
 #: ../../source/docs/development/status_code.md:98
 msgid "设置账号信息返回信息"
 msgstr "Get Account Information Return Information"
@@ -884,11 +876,11 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#设置账号信息返回信息)"
 
-#: ../../source/docs/development/msg_json.md:214
+#: ../../source/docs/development/msg_json.md:212
 msgid "会话"
 msgstr "Session"
 
-#: ../../source/docs/development/msg_json.md:216
+#: ../../source/docs/development/msg_json.md:214
 msgid "获取会话信息"
 msgstr "Get Session Information"
 
@@ -908,10 +900,6 @@ msgstr "Value Type"
 #: ../../source/docs/development/msg_json.md
 msgid "会话名称"
 msgstr "Session Name"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该会话头像的 url 链接"
-msgstr "The URL link of the session avatar"
 
 #: ../../source/docs/development/msg_json.md
 msgid "该会话创建的时间戳"
@@ -937,7 +925,7 @@ msgstr "Owner"
 msgid "该会话拥有者的 ocid"
 msgstr "The OCID of the owner of the session"
 
-#: ../../source/docs/development/msg_json.md:248
+#: ../../source/docs/development/msg_json.md:245
 #: ../../source/docs/development/status_code.md:19
 msgid "获取会话信息返回信息"
 msgstr "Get Session Information Return Information"
@@ -954,19 +942,9 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取会话信息返回信息)"
 
-#: ../../source/docs/development/msg_json.md:270
+#: ../../source/docs/development/msg_json.md:267
 msgid "新建会话请求信息"
 msgstr "New Session Request Information"
-
-#: ../../source/docs/development/msg_json.md
-msgid "会话头像,可选(如不填写使用默认头像)"
-msgstr "Conversation avatar, optional (use default avatar if not filled)"
-
-#: ../../source/docs/development/msg_json.md
-msgid "获取头像时需要用到的密钥,当`avatar`不为空时必填"
-msgstr ""
-"The key required when obtaining the avatar; it is mandatory when `avatar`"
-" is not empty."
 
 #: ../../source/docs/development/msg_json.md
 msgid "会话名称,可选(如不填写使用默认名称)"
@@ -976,7 +954,7 @@ msgstr "Conversation name, optional (use default name if not filled)"
 msgid "会话成员"
 msgstr "Session Members"
 
-#: ../../source/docs/development/msg_json.md:308
+#: ../../source/docs/development/msg_json.md:303
 #: ../../source/docs/development/status_code.md:50
 msgid "新建会话返回信息"
 msgstr "New Session Return Information"
@@ -991,17 +969,17 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#新建会话返回信息)"
 
-#: ../../source/docs/development/msg_json.md:326
+#: ../../source/docs/development/msg_json.md:321
 msgid "服务器"
 msgstr "Server"
 
-#: ../../source/docs/development/msg_json.md:328
+#: ../../source/docs/development/msg_json.md:323
 #: ../../source/docs/development/status_code.md:70
 msgid "获取服务器状态"
 msgstr "Get Server Status"
 
-#: ../../source/docs/development/msg_json.md:330
-#: ../../source/docs/development/msg_json.md:409
+#: ../../source/docs/development/msg_json.md:325
+#: ../../source/docs/development/msg_json.md:404
 msgid "**_Server <-> Client_**"
 msgstr "**Server <-> Client**"
 
@@ -1011,19 +989,19 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取服务器状态)"
 
-#: ../../source/docs/development/msg_json.md:344
+#: ../../source/docs/development/msg_json.md:339
 msgid "验证码"
 msgstr "Verification Status Code"
 
-#: ../../source/docs/development/msg_json.md:346
+#: ../../source/docs/development/msg_json.md:341
 msgid "发起验证"
 msgstr "Initiate Verification"
 
-#: ../../source/docs/development/msg_json.md:357
+#: ../../source/docs/development/msg_json.md:352
 msgid "生成验证码"
 msgstr "Generate Verification Code"
 
-#: ../../source/docs/development/msg_json.md:359
+#: ../../source/docs/development/msg_json.md:354
 msgid "请求生成"
 msgstr ""
 
@@ -1031,7 +1009,7 @@ msgstr ""
 msgid "验证邮箱"
 msgstr "Email to be verified"
 
-#: ../../source/docs/development/msg_json.md:375
+#: ../../source/docs/development/msg_json.md:370
 msgid "返回消息"
 msgstr "Return Information"
 
@@ -1041,7 +1019,7 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#邮件发送)"
 
-#: ../../source/docs/development/msg_json.md:389
+#: ../../source/docs/development/msg_json.md:384
 #: ../../source/docs/development/status_code.md:78
 msgid "验证状态"
 msgstr "Verification Status"
@@ -1052,11 +1030,11 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#验证状态)"
 
-#: ../../source/docs/development/msg_json.md:405
+#: ../../source/docs/development/msg_json.md:400
 msgid "其他信息"
 msgstr "Other Information"
 
-#: ../../source/docs/development/msg_json.md:407
+#: ../../source/docs/development/msg_json.md:402
 msgid "用户发送信息"
 msgstr "User Information"
 
@@ -1109,7 +1087,7 @@ msgstr ""
 "User message type, see [User Message Passing Format](user_msg_json.md) "
 "for details"
 
-#: ../../source/docs/development/msg_json.md:441
+#: ../../source/docs/development/msg_json.md:436
 msgid "错误信息"
 msgstr "Error Information"
 
@@ -1125,7 +1103,7 @@ msgstr "Details"
 msgid "异常信息"
 msgstr "Exception Information"
 
-#: ../../source/docs/development/msg_json.md:457
+#: ../../source/docs/development/msg_json.md:452
 msgid "文件上传请求"
 msgstr "File upload request"
 
@@ -1157,13 +1135,13 @@ msgstr "size"
 msgid "上传文件的字节数"
 msgstr "Bytes of the uploaded file"
 
-#: ../../source/docs/development/msg_json.md:477
+#: ../../source/docs/development/msg_json.md:472
 msgid "**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_api.md#文件上传)**"
 msgstr ""
 "**Note, this is only a part of the upload of the file, see [http part of "
 "upload format](./http_api.md#文件上传)**"
 
-#: ../../source/docs/development/msg_json.md:479
+#: ../../source/docs/development/msg_json.md:474
 msgid "文件上传返回信息"
 msgstr "The return information of the file upload"
 
@@ -1200,7 +1178,14 @@ msgstr "We provide a series of scripts to help you handle daily simple tasks."
 msgid ""
 "你可以运行`script/test_server.py`脚本来运行测试，默认会将`mysql`和`sqlite`的测试都运行一遍，可以通过指定第二个参数为特定数据库名称来运行特定的测试集，第三个参数为自定义化的测试命令，默认为`cargo"
 " test`。**测试使用`cargo test`运行前，要先设置好 OURCHAT_CONFIG_PATH 环境变量**"
-msgstr "You can run the script `script/test_server.py` to execute tests, which by default will run both the `mysql` and `sqlite` test suites. You can specify a particular database name as the second argument to run a specific set of tests, and the third argument is for a customized test command, with the default being `cargo test`. **Before running tests with `cargo test`, you must set the OURCHAT_CONFIG_PATH environment variable.**"
+msgstr ""
+"You can run the script `script/test_server.py` to execute tests, which by"
+" default will run both the `mysql` and `sqlite` test suites. You can "
+"specify a particular database name as the second argument to run a "
+"specific set of tests, and the third argument is for a customized test "
+"command, with the default being `cargo test`. **Before running tests with"
+" `cargo test`, you must set the OURCHAT_CONFIG_PATH environment "
+"variable.**"
 
 #: ../../source/docs/development/server/basic.md:9
 msgid "文档"
@@ -1432,10 +1417,9 @@ msgid ""
 "中完成，所以你也应当安装 Docker. docker-buildx 和 docker-compose 同样也需要安装."
 msgstr ""
 "The Server part is written in Rust. You should first install Rust. "
-"Development can be done locally or in docker."
-"Deployment are done in Docker, so you should also "
-"install Docker. docker-buildx and docker-compose also need to be "
-"installed."
+"Development can be done locally or in docker.Deployment are done in "
+"Docker, so you should also install Docker. docker-buildx and docker-"
+"compose also need to be installed."
 
 #: ../../source/docs/development/server/server-develop.md:15
 msgid "服务器配置文件"
@@ -1971,8 +1955,8 @@ msgid ""
 " rust 程序并没有不同，日志储存路径在`log`文件夹下，以时间命名日志文件"
 msgstr ""
 "The default log level is `info`, which can be configured through the "
-"`RUST_LOG` environment variable. Supported levels are `trace`, `debug`,"
-" `info`, `warn`, `error`, and this is no different from normal Rust "
+"`RUST_LOG` environment variable. Supported levels are `trace`, `debug`, "
+"`info`, `warn`, `error`, and this is no different from normal Rust "
 "programs. Log files are stored in the `log` directory, with filenames "
 "based on timestamps."
 
@@ -1989,8 +1973,8 @@ msgstr "Testing Log"
 #: ../../source/docs/run/server_argv.md:33
 msgid "`test_mode`启用时，日志不会被输出到文件中，并且测试等级会被默认调整到`trace`"
 msgstr ""
-"When `test_mode` is enabled, logs will not be output to files, and "
-"the test level will be automatically adjusted to `trace`."
+"When `test_mode` is enabled, logs will not be output to files, and the "
+"test level will be automatically adjusted to `trace`."
 
 #: ../../source/docs/run/server_cmd.md:1
 msgid "服务器控制台指令"
@@ -2229,4 +2213,22 @@ msgstr "File Save Days"
 #~ "`test_lib` module to assist with "
 #~ "testing, which you can reference in "
 #~ "the existing unit tests."
+
+#~ msgid "avatar"
+#~ msgstr "Avatar"
+
+#~ msgid "该账号头像的 url 链接"
+#~ msgstr "The URL link of the account's avatar"
+
+#~ msgid "该会话头像的 url 链接"
+#~ msgstr "The URL link of the session avatar"
+
+#~ msgid "会话头像,可选(如不填写使用默认头像)"
+#~ msgstr "Conversation avatar, optional (use default avatar if not filled)"
+
+#~ msgid "获取头像时需要用到的密钥,当`avatar`不为空时必填"
+#~ msgstr ""
+#~ "The key required when obtaining the "
+#~ "avatar; it is mandatory when `avatar`"
+#~ " is not empty."
 
