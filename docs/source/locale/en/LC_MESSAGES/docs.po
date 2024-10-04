@@ -757,14 +757,6 @@ msgid "该账号的状态"
 msgstr "The status of the account"
 
 #: ../../source/docs/development/msg_json.md
-msgid "avatar"
-msgstr "Avatar"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该账号头像的 url 链接"
-msgstr "The URL link of the account's avatar"
-
-#: ../../source/docs/development/msg_json.md
 msgid "avatar_key"
 msgstr "avatar_key"
 
@@ -818,7 +810,7 @@ msgstr ""
 "The friend list of this account (only accessible to this account, other "
 "accounts will return null)."
 
-#: ../../source/docs/development/msg_json.md:117
+#: ../../source/docs/development/msg_json.md:116
 #: ../../source/docs/development/status_code.md:60
 msgid "获取账号信息返回信息"
 msgstr "Get Account Information Return Information"
@@ -843,17 +835,17 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取账号信息返回信息)"
 
-#: ../../source/docs/development/msg_json.md:139
+#: ../../source/docs/development/msg_json.md:138
 msgid "注销"
 msgstr "Logout"
 
-#: ../../source/docs/development/msg_json.md:150
+#: ../../source/docs/development/msg_json.md:149
 msgid "**_警告：该注销是删除帐号的意思，请勿误用接口_**"
 msgstr ""
 "**Warning: This logout refers to the deletion of the account, please do "
 "not misuse the interface_**"
 
-#: ../../source/docs/development/msg_json.md:152
+#: ../../source/docs/development/msg_json.md:151
 #: ../../source/docs/development/status_code.md:88
 msgid "注销返回信息"
 msgstr "Logout Return Information"
@@ -864,7 +856,7 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#注销返回信息)"
 
-#: ../../source/docs/development/msg_json.md:168
+#: ../../source/docs/development/msg_json.md:167
 msgid "设置账号信息"
 msgstr "Set Account Information"
 
@@ -874,17 +866,17 @@ msgstr ""
 "The account information that needs to be set, the fields that can be "
 "configured are shown in the table below."
 
-#: ../../source/docs/development/msg_json.md:187
+#: ../../source/docs/development/msg_json.md:186
 msgid "可设置的字段："
 msgstr "the fields that can be configured"
 
-#: ../../source/docs/development/msg_json.md:196
+#: ../../source/docs/development/msg_json.md:194
 msgid "以上字段具体意义见[**获取账号信息**`request_value`](#获取账号信息)"
 msgstr ""
 "Account information, details [see above **Get Account Information** "
 "`request_value`](#获取账号信息)"
 
-#: ../../source/docs/development/msg_json.md:198
+#: ../../source/docs/development/msg_json.md:196
 #: ../../source/docs/development/status_code.md:98
 msgid "设置账号信息返回信息"
 msgstr "Get Account Information Return Information"
@@ -895,11 +887,11 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#设置账号信息返回信息)"
 
-#: ../../source/docs/development/msg_json.md:214
+#: ../../source/docs/development/msg_json.md:212
 msgid "会话"
 msgstr "Session"
 
-#: ../../source/docs/development/msg_json.md:216
+#: ../../source/docs/development/msg_json.md:214
 msgid "获取会话信息"
 msgstr "Get Session Information"
 
@@ -919,10 +911,6 @@ msgstr "Value Type"
 #: ../../source/docs/development/msg_json.md
 msgid "会话名称"
 msgstr "Session Name"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该会话头像的 url 链接"
-msgstr "The URL link of the session avatar"
 
 #: ../../source/docs/development/msg_json.md
 msgid "该会话创建的时间戳"
@@ -948,7 +936,7 @@ msgstr "Owner"
 msgid "该会话拥有者的 ocid"
 msgstr "The OCID of the owner of the session"
 
-#: ../../source/docs/development/msg_json.md:248
+#: ../../source/docs/development/msg_json.md:245
 #: ../../source/docs/development/status_code.md:19
 msgid "获取会话信息返回信息"
 msgstr "Get Session Information Return Information"
@@ -965,19 +953,9 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取会话信息返回信息)"
 
-#: ../../source/docs/development/msg_json.md:270
+#: ../../source/docs/development/msg_json.md:267
 msgid "新建会话请求信息"
 msgstr "New Session Request Information"
-
-#: ../../source/docs/development/msg_json.md
-msgid "会话头像,可选(如不填写使用默认头像)"
-msgstr "Conversation avatar, optional (use default avatar if not filled)"
-
-#: ../../source/docs/development/msg_json.md
-msgid "获取头像时需要用到的密钥,当`avatar`不为空时必填"
-msgstr ""
-"The key required when obtaining the avatar; it is mandatory when `avatar`"
-" is not empty."
 
 #: ../../source/docs/development/msg_json.md
 msgid "会话名称,可选(如不填写使用默认名称)"
@@ -987,7 +965,7 @@ msgstr "Conversation name, optional (use default name if not filled)"
 msgid "会话成员"
 msgstr "Session Members"
 
-#: ../../source/docs/development/msg_json.md:308
+#: ../../source/docs/development/msg_json.md:303
 #: ../../source/docs/development/status_code.md:50
 msgid "新建会话返回信息"
 msgstr "New Session Return Information"
@@ -1259,6 +1237,14 @@ msgstr ""
 "command, with the default being `cargo test`. **Before running tests with"
 " `cargo test`, you must set the OURCHAT_CONFIG_PATH environment "
 "variable.**"
+msgstr ""
+"You can run the script `script/test_server.py` to execute tests, which by"
+" default will run both the `mysql` and `sqlite` test suites. You can "
+"specify a particular database name as the second argument to run a "
+"specific set of tests, and the third argument is for a customized test "
+"command, with the default being `cargo test`. **Before running tests with"
+" `cargo test`, you must set the OURCHAT_CONFIG_PATH environment "
+"variable.**"
 
 #: ../../source/docs/development/server/basic.md:9
 msgid "文档"
@@ -1486,6 +1472,9 @@ msgid ""
 "中完成，所以你也应当安装 Docker. docker-buildx 和 docker-compose 同样也需要安装."
 msgstr ""
 "The Server part is written in Rust. You should first install Rust. "
+"Development can be done locally or in docker.Deployment are done in "
+"Docker, so you should also install Docker. docker-buildx and docker-"
+"compose also need to be installed."
 "Development can be done locally or in docker.Deployment are done in "
 "Docker, so you should also install Docker. docker-buildx and docker-"
 "compose also need to be installed."
@@ -2034,6 +2023,8 @@ msgstr ""
 "The default log level is `info`, which can be configured through the "
 "`RUST_LOG` environment variable. Supported levels are `trace`, `debug`, "
 "`info`, `warn`, `error`, and this is no different from normal Rust "
+"`RUST_LOG` environment variable. Supported levels are `trace`, `debug`, "
+"`info`, `warn`, `error`, and this is no different from normal Rust "
 "programs. Log files are stored in the `log` directory, with filenames "
 "based on timestamps."
 
@@ -2050,6 +2041,8 @@ msgstr "Testing Log"
 #: ../../source/docs/run/server_argv.md:33
 msgid "`test_mode`启用时，日志不会被输出到文件中，并且测试等级会被默认调整到`trace`"
 msgstr ""
+"When `test_mode` is enabled, logs will not be output to files, and the "
+"test level will be automatically adjusted to `trace`."
 "When `test_mode` is enabled, logs will not be output to files, and the "
 "test level will be automatically adjusted to `trace`."
 
@@ -2290,4 +2283,22 @@ msgstr "File Save Days"
 #~ "`test_lib` module to assist with "
 #~ "testing, which you can reference in "
 #~ "the existing unit tests."
+
+#~ msgid "avatar"
+#~ msgstr "Avatar"
+
+#~ msgid "该账号头像的 url 链接"
+#~ msgstr "The URL link of the account's avatar"
+
+#~ msgid "该会话头像的 url 链接"
+#~ msgstr "The URL link of the session avatar"
+
+#~ msgid "会话头像,可选(如不填写使用默认头像)"
+#~ msgstr "Conversation avatar, optional (use default avatar if not filled)"
+
+#~ msgid "获取头像时需要用到的密钥,当`avatar`不为空时必填"
+#~ msgstr ""
+#~ "The key required when obtaining the "
+#~ "avatar; it is mandatory when `avatar`"
+#~ " is not empty."
 
