@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-04 18:33+0800\n"
+"POT-Creation-Date: 2024-10-05 10:35+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -28,6 +28,7 @@ msgid "该文档使用 Sphinx 作为文档生成器"
 msgstr "This document uses Sphinx as the document generator"
 
 #: ../../source/docs/deploy/document-deploy.md:5
+#: ../../source/docs/run/build.md:38
 msgid "环境配置"
 msgstr "Environment Configuration"
 
@@ -275,6 +276,7 @@ msgstr ""
 "performance requirements."
 
 #: ../../source/docs/deploy/server-deploy.md:71
+#: ../../source/docs/run/build.md:53
 msgid "运行项目"
 msgstr "Run the project"
 
@@ -587,13 +589,13 @@ msgstr "Registration Information"
 #: ../../source/docs/development/msg_json.md:7
 #: ../../source/docs/development/msg_json.md:45
 #: ../../source/docs/development/msg_json.md:83
-#: ../../source/docs/development/msg_json.md:141
-#: ../../source/docs/development/msg_json.md:170
-#: ../../source/docs/development/msg_json.md:218
-#: ../../source/docs/development/msg_json.md:272
-#: ../../source/docs/development/msg_json.md:349
-#: ../../source/docs/development/msg_json.md:400
-#: ../../source/docs/development/msg_json.md:498
+#: ../../source/docs/development/msg_json.md:140
+#: ../../source/docs/development/msg_json.md:169
+#: ../../source/docs/development/msg_json.md:216
+#: ../../source/docs/development/msg_json.md:269
+#: ../../source/docs/development/msg_json.md:344
+#: ../../source/docs/development/msg_json.md:411
+#: ../../source/docs/development/msg_json.md:509
 msgid "**_Server <- Client_**"
 msgstr "**Server <- Client**"
 
@@ -651,16 +653,17 @@ msgstr "Registration Return Information"
 
 #: ../../source/docs/development/msg_json.md:27
 #: ../../source/docs/development/msg_json.md:65
-#: ../../source/docs/development/msg_json.md:119
-#: ../../source/docs/development/msg_json.md:154
-#: ../../source/docs/development/msg_json.md:200
-#: ../../source/docs/development/msg_json.md:250
-#: ../../source/docs/development/msg_json.md:310
-#: ../../source/docs/development/msg_json.md:328
-#: ../../source/docs/development/msg_json.md:387
-#: ../../source/docs/development/msg_json.md:430
-#: ../../source/docs/development/msg_json.md:482
-#: ../../source/docs/development/msg_json.md:520
+#: ../../source/docs/development/msg_json.md:118
+#: ../../source/docs/development/msg_json.md:153
+#: ../../source/docs/development/msg_json.md:198
+#: ../../source/docs/development/msg_json.md:247
+#: ../../source/docs/development/msg_json.md:305
+#: ../../source/docs/development/msg_json.md:323
+#: ../../source/docs/development/msg_json.md:362
+#: ../../source/docs/development/msg_json.md:398
+#: ../../source/docs/development/msg_json.md:441
+#: ../../source/docs/development/msg_json.md:493
+#: ../../source/docs/development/msg_json.md:531
 msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
@@ -980,7 +983,7 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#新建会话返回信息)"
 
-#: ../../source/docs/development/msg_json.md:326
+#: ../../source/docs/development/msg_json.md:321
 msgid "邀请加入会话"
 msgstr ""
 
@@ -1008,7 +1011,7 @@ msgstr "expire_timestamp"
 msgid "失效时间戳"
 msgstr "Expire Timestamp"
 
-#: ../../source/docs/development/msg_json.md:347
+#: ../../source/docs/development/msg_json.md:342
 msgid "邀请加入会话返回信息"
 msgstr "Invite to Session Return Information"
 
@@ -1024,17 +1027,28 @@ msgstr "Boolean"
 msgid "对邀请的同意情况"
 msgstr "The acceptance of the invitation"
 
-#: ../../source/docs/development/msg_json.md:365
+#: ../../source/docs/development/msg_json.md:360
+#: ../../source/docs/development/status_code.md:125
+msgid "同意加入会话返回信息"
+msgstr "Agree to Join Session Return Information"
+
+#: ../../source/docs/development/msg_json.md
+msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#同意加入会话返回信息)"
+msgstr ""
+"Status code, returns the operation status, details see [**Status Code** "
+"`status`](status_code.md#同意加入会话返回信息)"
+
+#: ../../source/docs/development/msg_json.md:376
 msgid "服务器"
 msgstr "Server"
 
-#: ../../source/docs/development/msg_json.md:367
+#: ../../source/docs/development/msg_json.md:378
 #: ../../source/docs/development/status_code.md:70
 msgid "获取服务器状态"
 msgstr "Get Server Status"
 
-#: ../../source/docs/development/msg_json.md:369
-#: ../../source/docs/development/msg_json.md:448
+#: ../../source/docs/development/msg_json.md:380
+#: ../../source/docs/development/msg_json.md:459
 msgid "**_Server <-> Client_**"
 msgstr "**Server <-> Client**"
 
@@ -1044,19 +1058,19 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#获取服务器状态)"
 
-#: ../../source/docs/development/msg_json.md:383
+#: ../../source/docs/development/msg_json.md:394
 msgid "验证码"
 msgstr "Verification Status Code"
 
-#: ../../source/docs/development/msg_json.md:385
+#: ../../source/docs/development/msg_json.md:396
 msgid "发起验证"
 msgstr "Initiate Verification"
 
-#: ../../source/docs/development/msg_json.md:396
+#: ../../source/docs/development/msg_json.md:407
 msgid "生成验证码"
 msgstr "Generate Verification Code"
 
-#: ../../source/docs/development/msg_json.md:398
+#: ../../source/docs/development/msg_json.md:409
 msgid "请求生成"
 msgstr ""
 
@@ -1064,7 +1078,7 @@ msgstr ""
 msgid "验证邮箱"
 msgstr "Email to be verified"
 
-#: ../../source/docs/development/msg_json.md:414
+#: ../../source/docs/development/msg_json.md:425
 msgid "返回消息"
 msgstr "Return Information"
 
@@ -1074,7 +1088,7 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#邮件发送)"
 
-#: ../../source/docs/development/msg_json.md:428
+#: ../../source/docs/development/msg_json.md:439
 #: ../../source/docs/development/status_code.md:78
 msgid "验证状态"
 msgstr "Verification Status"
@@ -1085,11 +1099,11 @@ msgstr ""
 "Status code, returns the operational status, for details, see "
 "[`status_code`](status_code.md#验证状态)"
 
-#: ../../source/docs/development/msg_json.md:444
+#: ../../source/docs/development/msg_json.md:455
 msgid "其他信息"
 msgstr "Other Information"
 
-#: ../../source/docs/development/msg_json.md:446
+#: ../../source/docs/development/msg_json.md:457
 msgid "用户发送信息"
 msgstr "User Information"
 
@@ -1142,7 +1156,7 @@ msgstr ""
 "User message type, see [User Message Passing Format](user_msg_json.md) "
 "for details"
 
-#: ../../source/docs/development/msg_json.md:480
+#: ../../source/docs/development/msg_json.md:491
 msgid "错误信息"
 msgstr "Error Information"
 
@@ -1158,7 +1172,7 @@ msgstr "Details"
 msgid "异常信息"
 msgstr "Exception Information"
 
-#: ../../source/docs/development/msg_json.md:496
+#: ../../source/docs/development/msg_json.md:507
 msgid "文件上传请求"
 msgstr "File upload request"
 
@@ -1186,13 +1200,13 @@ msgstr "size"
 msgid "上传文件的字节数"
 msgstr "Bytes of the uploaded file"
 
-#: ../../source/docs/development/msg_json.md:516
+#: ../../source/docs/development/msg_json.md:527
 msgid "**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_api.md#文件上传)**"
 msgstr ""
 "**Note, this is only a part of the upload of the file, see [http part of "
 "upload format](./http_api.md#文件上传)**"
 
-#: ../../source/docs/development/msg_json.md:518
+#: ../../source/docs/development/msg_json.md:529
 msgid "文件上传返回信息"
 msgstr "The return information of the file upload"
 
@@ -1229,14 +1243,6 @@ msgstr "We provide a series of scripts to help you handle daily simple tasks."
 msgid ""
 "你可以运行`script/test_server.py`脚本来运行测试，默认会将`mysql`和`sqlite`的测试都运行一遍，可以通过指定第二个参数为特定数据库名称来运行特定的测试集，第三个参数为自定义化的测试命令，默认为`cargo"
 " test`。**测试使用`cargo test`运行前，要先设置好 OURCHAT_CONFIG_PATH 环境变量**"
-msgstr ""
-"You can run the script `script/test_server.py` to execute tests, which by"
-" default will run both the `mysql` and `sqlite` test suites. You can "
-"specify a particular database name as the second argument to run a "
-"specific set of tests, and the third argument is for a customized test "
-"command, with the default being `cargo test`. **Before running tests with"
-" `cargo test`, you must set the OURCHAT_CONFIG_PATH environment "
-"variable.**"
 msgstr ""
 "You can run the script `script/test_server.py` to execute tests, which by"
 " default will run both the `mysql` and `sqlite` test suites. You can "
@@ -1474,10 +1480,9 @@ msgstr ""
 "The Server part is written in Rust. You should first install Rust. "
 "Development can be done locally or in docker.Deployment are done in "
 "Docker, so you should also install Docker. docker-buildx and docker-"
-"compose also need to be installed."
-"Development can be done locally or in docker.Deployment are done in "
-"Docker, so you should also install Docker. docker-buildx and docker-"
-"compose also need to be installed."
+"compose also need to be installed.Development can be done locally or in "
+"docker.Deployment are done in Docker, so you should also install Docker. "
+"docker-buildx and docker-compose also need to be installed."
 
 #: ../../source/docs/development/server/server-develop.md:15
 msgid "服务器配置文件"
@@ -1771,10 +1776,6 @@ msgstr "Email Sent"
 msgid "请求邮箱无法发送成功"
 msgstr "Send Email Failed"
 
-#: ../../source/docs/development/status_code.md:125
-msgid "同意加入会话返回信息"
-msgstr "Agree to Join Session Return Information"
-
 #: ../../source/docs/development/status_code.md
 msgid "同意成功"
 msgstr "Agree Successfully"
@@ -1832,11 +1833,11 @@ msgid "client-pc"
 msgstr "client-pc"
 
 #: ../../source/docs/run/build.md:11
-msgid "**_考虑到性能和人力成本问题，我们决定终止py客户端的开发，改用Flutter开发客户端_**"
+msgid "**_考虑到性能和人力成本问题，我们决定终止py客户端的开发，改用[Flutter开发客户端](#flutter版客户端)_**"
 msgstr ""
 "Considering performance and labor cost issues, we have decided to "
 "terminate the development of the Py client and switch to developing the "
-"client with Flutter."
+"[client with Flutter](#flutter版客户端)."
 
 #: ../../source/docs/run/build.md:13
 msgid ""
@@ -1861,6 +1862,40 @@ msgid "等待脚本运行完毕后，`client/pc/src/out/main.dist`目录中即�
 msgstr ""
 "After the script has finished running, the `client/pc/src/out/main.dist` "
 "directory will contain the executable file and its dependent files"
+
+#: ../../source/docs/run/build.md:36
+msgid "Flutter版客户端"
+msgstr "Flutter client"
+
+#: ../../source/docs/run/build.md:40
+msgid "在下面选择你的操作系统进入配置教程安装Flutter"
+msgstr ""
+"Select your operating system below to go to the setup tutorial to install"
+" Flutter"
+
+#: ../../source/docs/run/build.md:42
+msgid "[Windows](https://docs.flutter.cn/get-started/install/windows/desktop)"
+msgstr ""
+
+#: ../../source/docs/run/build.md:43
+msgid "[Linux](https://docs.flutter.cn/get-started/install/linux/desktop)"
+msgstr ""
+
+#: ../../source/docs/run/build.md:44
+msgid "[MacOS](https://docs.flutter.cn/get-started/install/macos/desktop)"
+msgstr ""
+
+#: ../../source/docs/run/build.md:46
+msgid "接下来进入客户端目录安装依赖包"
+msgstr "Next, go to the client directory to install the dependency packages"
+
+#: ../../source/docs/run/build.md:55 ../../source/docs/run/build.md:74
+msgid "进入客户端目录并运行项目"
+msgstr "Go to the client directory and run the project"
+
+#: ../../source/docs/run/build.md:72
+msgid "构建为可执行文件"
+msgstr "Build as an executable file"
 
 #: ../../source/docs/run/index.rst:3
 msgid "此部分是关于运行该项目的文档"
@@ -2042,9 +2077,9 @@ msgstr "Testing Log"
 msgid "`test_mode`启用时，日志不会被输出到文件中，并且测试等级会被默认调整到`trace`"
 msgstr ""
 "When `test_mode` is enabled, logs will not be output to files, and the "
-"test level will be automatically adjusted to `trace`."
-"When `test_mode` is enabled, logs will not be output to files, and the "
-"test level will be automatically adjusted to `trace`."
+"test level will be automatically adjusted to `trace`.When `test_mode` is "
+"enabled, logs will not be output to files, and the test level will be "
+"automatically adjusted to `trace`."
 
 #: ../../source/docs/run/server_cmd.md:1
 msgid "服务器控制台指令"
