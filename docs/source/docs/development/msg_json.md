@@ -103,13 +103,13 @@
 | request_value      | ValueType | comment                                                           |
 | :----------------- | :-------- | :---------------------------------------------------------------- |
 | ocid               | String    | 该账号的 ocid                                                     |
-| email              | String    | 该账号绑定的邮箱                                                  |
+| email              | String    | 该账号绑定的邮箱(仅本账号可获取，非本账号返回 null)               |
 | nickname           | String    | 昵称                                                              |
 | status             | Number    | 该账号的状态                                                      |
 | avatar_key         | String    | 获取头像时需要用到的密钥                                          |
-| time               | Number    | 该账号注册的时间戳                                                |
-| public_update_time | Number    | 该账号公共(即不包括**sessions**和**friends**)数据最后更新的时间戳 |
-| update_time        | Number    | 该账号所有数据最后更新的时间戳                                    |
+| time               | String    | 该账号注册的时间戳                                                |
+| public_update_time | String    | 该账号公共(即不包括**sessions**和**friends**)数据最后更新的时间戳 |
+| update_time        | String    | 该账号所有数据最后更新的时间戳(仅本账号可获取，非本账号返回 null) |
 | sessions           | Array     | 该账号加入/创建的会话列表(仅本账号可获取，非本账号返回 null)      |
 | friends            | Array     | 该账号的好友列表 (仅本账号可获取，非本账号返回 null)              |
 
@@ -237,8 +237,8 @@
 | session_id    | String    | 该会话的 ID                |
 | name          | String    | 会话名称                   |
 | avatar_key    | String    | 获取头像时需要用到的密钥   |
-| time          | Number    | 该会话创建的时间戳         |
-| update_time   | Number    | 该会话数据最后更新的时间戳 |
+| time          | String    | 该会话创建的时间戳         |
+| update_time   | String    | 该会话数据最后更新的时间戳 |
 | members       | Array     | 该会话的成员列表           |
 | owner         | Array     | 该会话拥有者的 ocid        |
 
@@ -294,11 +294,11 @@
 }
 ```
 
-| key        | ValueType | comment                                         |
-| :--------- | :-------- | :---------------------------------------------- |
-| avatar_key | String    | 获取头像时需要用到的密钥 |
-| name       | String    | 会话名称,可选(如不填写使用默认名称)             |
-| members    | Array     | 会话成员                                        |
+| key        | ValueType | comment                             |
+| :--------- | :-------- | :---------------------------------- |
+| avatar_key | String    | 获取头像时需要用到的密钥            |
+| name       | String    | 会话名称,可选(如不填写使用默认名称) |
+| members    | Array     | 会话成员                            |
 
 ### 新建会话返回信息
 
@@ -328,7 +328,7 @@
   "session_id": "1145141919",
   "inviter_id": "0000000000",
   "message": "邀请加入会话",
-  "expire_timestamp": 10000
+  "expire_timestamp": "2024-10-19T11:29:06.392122930+00:00"
 }
 ```
 
@@ -337,7 +337,7 @@
 | session_id       | String    | 会话 id    |
 | inviter_id       | String    | 邀请者 id  |
 | message          | String    | 留言       |
-| expire_timestamp | Number    | 失效时间戳 |
+| expire_timestamp | String    | 失效时间戳 |
 
 ## 邀请加入会话返回信息
 
@@ -462,7 +462,7 @@
 // E.g.
 {
   "code": 0,
-  "time": 114514, // 发送消息的时间戳
+  "time": "2024-10-19T11:29:06.392122930+00:00", // 发送消息的时间戳
   "msg_id": "1643212388", //传输给服务器时无此字段
   "sender": {
     "ocid": "0000000000",
@@ -480,7 +480,7 @@
 
 | key        | ValueType | comment                                                      |
 | :--------- | :-------- | :----------------------------------------------------------- |
-| time       | Number    | 发消息的时间戳                                               |
+| time       | String    | 发消息的时间戳                                               |
 | msg_id     | Number    | message 的 ID，唯一 **(注意：传输给服务器时无此字段)**       |
 | sender     | Object    | 发送者的相关数据                                             |
 | ocid       | String    | 发送者的 ocid                                                |
