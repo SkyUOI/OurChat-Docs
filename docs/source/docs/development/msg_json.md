@@ -89,7 +89,7 @@
   "ocid": "0000000000", //该账号的ocid
   "request_values": [
     "ocid",
-    "nickname"
+    "display_name"
     // ...
   ]
 }
@@ -104,7 +104,8 @@
 | :----------------- | :-------- | :---------------------------------------------------------------- |
 | ocid               | String    | 该账号的 ocid                                                     |
 | email              | String    | 该账号绑定的邮箱(仅本账号可获取，非本账号返回 null)               |
-| nickname           | String    | 昵称                                                              |
+| user_name          | String    | 用户名                                                            |
+| display_name       | String    | 备注名                                                            |
 | status             | Number    | 该账号的状态                                                      |
 | avatar_key         | String    | 获取头像时需要用到的密钥                                          |
 | time               | String    | 该账号注册的时间戳                                                |
