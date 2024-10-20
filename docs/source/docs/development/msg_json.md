@@ -174,7 +174,7 @@
 {
   "code": 19,
   "data": {
-    "nickname": "OurChat1" // 更改后的账号昵称
+    "user_name": "OurChat1" // 更改后的账号昵称
     // ...
   }
 }
