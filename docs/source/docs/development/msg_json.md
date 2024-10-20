@@ -247,7 +247,7 @@
 // E.g.
 {
   "code": 1,
-  "session_id": "1145141919", // 该会话的ID,
+  "session_id": 1145141919, // 该会话的ID,
   "request_values": [
     "name"
     // ...
@@ -257,12 +257,12 @@
 
 | key            | ValueType | comment              |
 | :------------- | :-------- | :------------------- |
-| session_id     | String    | 该会话的 ID          |
+| session_id     | Number    | 该会话的 ID          |
 | request_values | Array     | 需要服务端返回的信息 |
 
 | request_value | valueType | comment                    |
 | :------------ | :-------- | :------------------------- |
-| session_id    | String    | 该会话的 ID                |
+| session_id    | Number    | 该会话的 ID                |
 | name          | String    | 会话名称                   |
 | avatar_key    | String    | 获取头像时需要用到的密钥   |
 | time          | String    | 该会话创建的时间戳         |
@@ -279,7 +279,7 @@
 {
   "code": 2,
   "data": {
-    "session_id": "1145141919", // 该会话的ID
+    "session_id": 1145141919, // 该会话的ID
     "name": "Session1" // 会话名称
     // ...
   },
@@ -336,7 +336,7 @@
 // E.g.
 {
   "code": 9,
-  "session_id": "1145141919", // 仅当创建成功时有此字段
+  "session_id": 1145141919, // 仅当创建成功时有此字段
   "status": 0 // 状态码，返回运行状态
 }
 ```
@@ -353,7 +353,7 @@
 ```json
 {
   "code": 24,
-  "session_id": "1145141919",
+  "session_id": 1145141919,
   "inviter_id": "0000000000",
   "message": "邀请加入会话",
   "expire_timestamp": "2024-10-19T11:29:06.392122930+00:00"
@@ -362,7 +362,7 @@
 
 | key              | valueType | comment    |
 | :--------------- | :-------- | :--------- |
-| session_id       | String    | 会话 id    |
+| session_id       | Number    | 会话 id    |
 | inviter_id       | String    | 邀请者 id  |
 | message          | String    | 留言       |
 | expire_timestamp | String    | 失效时间戳 |
@@ -375,14 +375,14 @@
 // E.g.
 {
   "code": 25,
-  "session_id": "1145141919",
+  "session_id": 1145141919,
   "accept": true
 }
 ```
 
 | key        | ValueType | comment          |
 | :--------- | :-------- | :--------------- |
-| session_id | String    | 会话 id          |
+| session_id | Number    | 会话 id          |
 | accept     | Boolean   | 对邀请的同意情况 |
 
 ## 同意加入会话返回信息
@@ -482,29 +482,88 @@
 
 ## 其他信息
 
-### 用户发送信息
+### 获取信息
 
-**_Server <-> Client_**
+**_Server -> Client_**
 
 ```json
 // E.g.
 {
   "code": 0,
-  "time": "2024-10-19T11:29:06.392122930+00:00", // 发送消息的时间戳
-  "msg_id": "1643212388", //传输给服务器时无此字段
-  "sender": {
-    "ocid": "0000000000",
-    "session_id": "1145141919" //发送此消息的会话id
-  },
-  "msg": [
+  "session_id": 1145141919, //发送此消息的会话id
+  "msgs": [
     {
-      "type": 0 // 用户消息类型
-      // ...相关数据
+      "time": "2024-10-19T11:29:06.392122930+00:00", // 发送消息的时间戳
+      "sender_id": "0000000000",
+      "msg_id": "1643212388",
+      "bundle_msg": [
+        {
+          "type": 0 // 用户消息类型
+          // ...相关数据
+        }
+      ]
     }
     // ...
   ]
 }
 ```
+
+| key        | ValueType | comment               |
+| :--------- | :-------- | :-------------------- |
+| msgs       | Array     | 发送的消息列表        |
+| session_id | Number    | 消息全部属于该会话 id |
+| msgs       | Array     | 消息列表              |
+
+### 用户发送信息
+
+**_Server <- Client_**
+
+```json
+{
+  "code": 29,
+  "session_id": 1145141919,
+  "time": "2024-10-19T11:29:06.392122930+00:00",
+  "bundle_msg": [
+    {
+      "type": 0
+      // ...
+    }
+    // ...
+  ]
+}
+```
+
+### 发送信息返回信息
+
+**_Server -> Client_**
+
+```json
+{
+  "code": 30,
+  "status": 0,
+  "msg_id": "1643212388"
+}
+```
+
+### 请求获取消息
+
+**_Server <- Client_**
+
+```json
+// E.g.
+{
+  "code": 28,
+  "time": "2024-10-19T11:29:06.392122930+00:00"
+}
+```
+
+返回[用户发送消息](#获取信息)
+
+**_Warning:该接口调用后，考虑到消息可能有很多，可能不会一次性返回所有信息，注意分批接收！_**
+
+| key  | ValueType | comment                    |
+| :--- | :-------- | :------------------------- |
+| time | String    | 接收来自该时间戳之后的消息 |
 
 | key        | ValueType | comment                                                      |
 | :--------- | :-------- | :----------------------------------------------------------- |
