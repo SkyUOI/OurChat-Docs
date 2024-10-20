@@ -124,7 +124,7 @@
   "code": 11,
   "data": {
     "ocid": "0000000000", // 该账号的 ocid
-    "nickname": "OurChat" // 该账号的昵称
+    "user_name": "OurChat" // 该账号的昵称
     // ...
   },
   "status": 0 // 状态码，返回运行状态
@@ -188,11 +188,38 @@
 
 | key        | ValueType |
 | :--------- | :-------- |
-| nickname   | String    |
+| user_name  | String    |
 | avatar_key | String    |
 | status     | Number    |
 
 以上字段具体意义见[**获取账号信息**`request_value`](#获取账号信息)
+
+### 设置好友信息
+
+**_Server <- Client_**
+
+```json
+// E.g.
+{
+  "code": 27,
+  "ocid": "0000000000",
+  "data": {
+    "display_name": "OurChat1" // 更改后的好友昵称
+    // ...
+  }
+}
+```
+
+| key  | ValueType | comment                                    |
+| :--- | :-------- | :----------------------------------------- |
+| ocid | String    | 需要更改的好友的 ocid                      |
+| data | Object    | 需要更改的好友信息，可设置的字段见下面表格 |
+
+可设置的字段：
+
+| key          | ValueType |
+| :----------- | :-------- |
+| display_name | String    |
 
 ### 设置账号信息返回信息
 
