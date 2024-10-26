@@ -30,9 +30,9 @@ docker compose -f compose.prod.yml up -d
 
 对于性能不高和未安装 docker 的计算机，我们也提供了手动部署的文档，关于这一点，建议部署在 linux 环境，其他环境未经过严格的测试。
 
-### 安装 mysql
+### 安装 PostgreSQL
 
-mysql 版本为 9.0.1（如果该文档未及时更新可以查看`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)中的 mysql 版本）
+postgres 版本为 17（如果该文档未及时更新可以查看`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)中的 posgres 版本）
 
 ### 安装 redis
 

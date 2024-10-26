@@ -23,14 +23,14 @@ docker-buildx 和 docker-compose 同样也需要安装.
 你可以运行:
 
 ```bash
-docker compose up -d
+docker compose -f compose.dev.yml up -d
 ```
 
 来配置开发环境
 
-如果 Dockerfile 改变了，你可以运行`script/rebuild_dev_container.py`来重新构建镜像。
+如果 Dockerfile.dev 改变了，你可以运行`script/rebuild_dev_container.py`来重新构建镜像。
 
-我们直接将本地文件夹映射到了容器中的`/app`文件夹，这使得你可以放心地重置容器而不用担心数据丢失。
+我们将数据直接复制到了`/app`文件夹，因此你**_不能随意重置容器_**，但这样可以使您的数据之间不会相互干扰。
 
 推荐的开发方式是在本地使用编辑器编辑，同时使用`docker exec -it OurChatServer bash`进入容器运行并观察结果
 
@@ -39,7 +39,7 @@ docker compose up -d
 启动时使用
 
 ```bash
-cargo run -- --cfg=cfg.toml
+cargo run -- --config=cfg.toml
 ```
 
 启动测试:
@@ -50,13 +50,13 @@ cargo test
 
 ## 数据库
 
-本项目采用 Redis, MySQL 和 SQLite 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 ORM 框架，在修改数据库表后，您可以运行`script/regenerate_entity.py`来重新生成 ORM 框架需要的文件
+本项目采用 Redis, PostgreSQL 和 SQLite 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 ORM 框架，在修改数据库表后，您可以运行`script/regenerate_entity.py`来重新生成 ORM 框架需要的文件
 
 为了运行这个脚本，你首先需要运行`cargo install sea-orm-cli`
 
-注意：如果可以，请最好保证`sea-orm-cli`是最新的
+注意：请保证`sea-orm-cli`是最新的，否则会被脚本拦截，若脚本的版本更旧，请随时打开一个 issue
 
-请注意保证您的代码可以同时在两种数据库上运行，我们提供了`#[derive::db_compatibility]`来方便的做到这一点。
+请注意保证您的代码可以同时在两种数据库上运行，我们提供了`#[derive::db_compatibility]`来方便的做到这一点，并且将数据库 Model 映射到了公共类型上，也提供了一些 trait 来实现兼容。
 
 ### 数据库迁移
 
