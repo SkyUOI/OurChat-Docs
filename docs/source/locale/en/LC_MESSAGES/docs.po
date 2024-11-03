@@ -212,16 +212,12 @@ msgid "安装 PostgreSQL"
 msgstr ""
 
 #: ../../source/docs/deploy/server-deploy.md:35
-#, fuzzy
 msgid ""
 "postgres 版本为 "
 "17（如果该文档未及时更新可以查看`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)中的"
 " posgres 版本）"
 msgstr ""
-"MySQL version is 9.0.1 (if this document is not updated in time, you can "
-"check the MySQL version in "
-"`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)`)"
-
+"The postgres version is 17 (If this document is not updated in time, you can check the 'postgres version' in the `[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)` file)"
 #: ../../source/docs/deploy/server-deploy.md:37
 msgid "安装 redis"
 msgstr "Install Redis"
@@ -282,11 +278,8 @@ msgid "运行项目"
 msgstr "Run the project"
 
 #: ../../source/docs/deploy/server-deploy.md:73
-#, fuzzy
 msgid "这一步请参考[服务器参数](../run/server_argv.md)进行运行，可执行文件位于`target/release/server`"
-msgstr ""
-"Please refer to the [Server Arguments](../run/server_argv.md) for this "
-"step to run the executable file located at ``target/release/server`"
+msgstr "Please refer to the [Server Arguments](../run/server_argv.md) for this step, and the executable file is located at `target/release/server`"
 
 #: ../../source/docs/deploy/server-deploy.md:75
 msgid "Sqlite 便携部署"
@@ -684,11 +677,8 @@ msgid "**_Server -> Client_**"
 msgstr "**Server -> Client**"
 
 #: ../../source/docs/development/msg_json.md:39
-#, fuzzy
 msgid "失败：请参考[**注册状态码**](status_code.md#注册返回信息)"
-msgstr ""
-"Status code, other fields do not exist when non-zero, refer to "
-"[`status_code`](./status_code.md#上传文件返回信息)"
+msgstr "Failure: Please refer to [**Registration Status Codes**](status_code.md#注册返回信息)"
 
 #: ../../source/docs/development/msg_json.md
 #: ../../source/docs/development/server/server-database.md
@@ -735,11 +725,8 @@ msgid "登录返回信息"
 msgstr "Login Return Information"
 
 #: ../../source/docs/development/msg_json.md:78
-#, fuzzy
 msgid "失败：请参考[**登录状态码**](status_code.md#登录返回信息)"
-msgstr ""
-"Status code, other fields do not exist when non-zero, refer to "
-"[`status_code`](./status_code.md#上传文件返回信息)"
+msgstr "Failure: Please refer to [**Login Status Codes**](status_code.md#登录返回信息)"
 
 #: ../../source/docs/development/msg_json.md
 msgid "status"
@@ -857,11 +844,8 @@ msgid "获取账号信息返回信息"
 msgstr "Get Account Information Return Information"
 
 #: ../../source/docs/development/msg_json.md:137
-#, fuzzy
 msgid "失败:请参考[**获取账号信息状态码**](status_code.md#获取账号信息返回信息)"
-msgstr ""
-"Status code, returns the operational status, for details, see "
-"[`status_code`](status_code.md#获取账号信息返回信息)"
+msgstr "Failure: Please refer to [**Account Information Status Codes**](status_code.md#获取账号信息返回信息)"
 
 #: ../../source/docs/development/msg_json.md
 msgid "data"
@@ -893,11 +877,8 @@ msgid "注销返回信息"
 msgstr "Logout Return Information"
 
 #: ../../source/docs/development/msg_json.md:167
-#, fuzzy
 msgid "失败:请参考[**注销状态码**](status_code.md#注销返回信息)"
-msgstr ""
-"Status code, other fields do not exist when non-zero, refer to "
-"[`status_code`](./status_code.md#上传文件返回信息)"
+msgstr "Failure: Please refer to [**Logout Status Codes**](status_code.md#注销返回信息)"
 
 #: ../../source/docs/development/msg_json.md:172
 msgid "设置账号信息"
@@ -921,20 +902,16 @@ msgstr ""
 "`request_value`](#获取账号信息)"
 
 #: ../../source/docs/development/msg_json.md:201
-#, fuzzy
 msgid "设置好友信息"
-msgstr "Set Account Information"
+msgstr "Set Friend Information"
 
 #: ../../source/docs/development/msg_json.md
 msgid "需要更改的好友的 ocid"
 msgstr ""
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "需要更改的好友信息，可设置的字段见下面表格"
-msgstr ""
-"The account information that needs to be set, the fields that can be "
-"configured are shown in the table below."
+msgstr "The friend information that needs to be changed, the fields that can be set are shown in the table below"
 
 #: ../../source/docs/development/msg_json.md:228
 #: ../../source/docs/development/status_code.md:86
@@ -942,11 +919,8 @@ msgid "设置账号信息返回信息"
 msgstr "Get Account Information Return Information"
 
 #: ../../source/docs/development/msg_json.md:239
-#, fuzzy
 msgid "失败：请参考[**设置账号信息状态码**](status_code.md#设置账号信息返回信息)"
-msgstr ""
-"Status code, returns the operational status, for details, see "
-"[`status_code`](status_code.md#设置账号信息返回信息)"
+msgstr "Failure: Please refer to [**Set Account Information Status Codes**](status_code.md#设置账号信息返回信息)"
 
 #: ../../source/docs/development/msg_json.md:244
 msgid "会话"
@@ -1003,11 +977,8 @@ msgid "获取会话信息返回信息"
 msgstr "Get Session Information Return Information"
 
 #: ../../source/docs/development/msg_json.md:293
-#, fuzzy
 msgid "失败:请参考[**获取会话信息状态码**](status_code.md#获取会话信息返回信息)"
-msgstr ""
-"Status code, returns the operational status, for details, see "
-"[`status_code`](status_code.md#获取会话信息返回信息)"
+msgstr "Failure: Please refer to [**New Session Status Codes**](status_code.md#新建会话返回信息)"
 
 #: ../../source/docs/development/msg_json.md
 msgid "账号信息,详情[见上**获取会话信息**`request_value`](#获取会话信息)"
@@ -1033,11 +1004,8 @@ msgid "新建会话返回信息"
 msgstr "New Session Return Information"
 
 #: ../../source/docs/development/msg_json.md:347
-#, fuzzy
 msgid "失败:请参考[**新建会话状态码**](status_code.md#新建会话返回信息)"
-msgstr ""
-"Status code, returns the operational status, for details, see "
-"[`status_code`](status_code.md#新建会话返回信息)"
+msgstr "Failure: Please refer to [**New Session Status Codes**](status_code.md#新建会话返回信息)"
 
 #: ../../source/docs/development/msg_json.md
 msgid "会话 id"
@@ -1093,11 +1061,8 @@ msgid "同意加入会话返回信息"
 msgstr "Agree to Join Session Return Information"
 
 #: ../../source/docs/development/msg_json.md:403
-#, fuzzy
 msgid "失败:请参考[**同意加入会话状态码**](status_code.md#同意加入会话返回信息)"
-msgstr ""
-"Status code, returns the operational status, for details, see "
-"[`status_code`](status_code.md#同意加入会话返回信息)"
+msgstr "Failure: Please refer to [**Agree to Join Session Status Codes**](status_code.md#同意加入会话返回信息)"
 
 #: ../../source/docs/development/msg_json.md:408
 msgid "服务器"
@@ -1112,11 +1077,8 @@ msgid "**_Server <-> Client_**"
 msgstr "**Server <-> Client**"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#获取服务器状态)，预期的状态码为 0 或 2"
-msgstr ""
-"Status code, returns the operational status, for details, see "
-"[`status_code`](status_code.md#获取服务器状态)"
+msgstr "Status code, returns the operational status, for details, see [**Status Code** `status`](status_code.md#获取服务器状态), expected status codes are 0 or 2"
 
 #: ../../source/docs/development/msg_json.md
 msgid "http_port"
@@ -1168,11 +1130,8 @@ msgid "返回消息"
 msgstr "Return Information"
 
 #: ../../source/docs/development/msg_json.md:472
-#, fuzzy
 msgid "失败:请参考[**邮件发送状态码**](status_code.md#邮件发送)"
-msgstr ""
-"Status code, returns the operational status, for details, see "
-"[`status_code`](status_code.md#邮件发送)"
+msgstr "Failure: Please refer to [**Email Sending Status Codes**](status_code.md#邮件发送)"
 
 #: ../../source/docs/development/msg_json.md:477
 #: ../../source/docs/development/status_code.md:72
@@ -1180,35 +1139,28 @@ msgid "验证状态"
 msgstr "Verification Status"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "状态码，详情见[**状态码**`status`](status_code.md#验证状态)，预期的状态码为 0 或 7"
-msgstr ""
-"Status code, returns the operational status, for details, see "
-"[`status_code`](status_code.md#验证状态)"
+msgstr "Status code, for details see [**Status Code** `status`](status_code.md#验证状态), expected status codes are 0 or 7"
 
 #: ../../source/docs/development/msg_json.md:493
 msgid "其他信息"
 msgstr "Other Information"
 
 #: ../../source/docs/development/msg_json.md:495
-#, fuzzy
 msgid "获取信息"
-msgstr "Get Account Information"
+msgstr "Get Message"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "msgs"
-msgstr "Message"
+msgstr "msgs"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "发送的消息列表"
-msgstr "Message List"
+msgstr "Sent Message List"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "消息全部属于该会话 id"
-msgstr "The ID of this session"
+msgstr "All messages belong to this session ID"
 
 #: ../../source/docs/development/msg_json.md
 msgid "消息列表"
@@ -1219,25 +1171,24 @@ msgid "用户发送信息"
 msgstr "User Information"
 
 #: ../../source/docs/development/msg_json.md:546
-#, fuzzy
 msgid "发送信息返回信息"
-msgstr "Get Account Information Return Information"
+msgstr "Send Message Return Information"
 
 #: ../../source/docs/development/msg_json.md:557
 msgid "请求获取消息"
-msgstr ""
+msgstr "Request to Retrieve Messages"
 
 #: ../../source/docs/development/msg_json.md:569
 msgid "返回[用户发送消息](#获取信息)"
-msgstr ""
+msgstr "Return [User Sent Messages](#获取信息)"
 
 #: ../../source/docs/development/msg_json.md:571
 msgid "**_Warning:该接口调用后，考虑到消息可能有很多，可能不会一次性返回所有信息，注意分批接收！_**"
-msgstr ""
+msgstr "**_Warning: After calling this interface, considering there may be many messages, not all information may be returned at once, please be aware to receive in batches!_**"
 
 #: ../../source/docs/development/msg_json.md
 msgid "接收来自该时间戳之后的消息"
-msgstr ""
+msgstr "Receive messages from after this timestamp"
 
 #: ../../source/docs/development/msg_json.md
 msgid "发消息的时间戳"
@@ -1245,7 +1196,7 @@ msgstr "Timestamp of the message sent"
 
 #: ../../source/docs/development/msg_json.md
 msgid "msg_id"
-msgstr "Message ID"
+msgstr "msg_id"
 
 #: ../../source/docs/development/msg_json.md
 msgid "message 的 ID，唯一 **(注意：传输给服务器时无此字段)**"
@@ -1293,9 +1244,8 @@ msgid "Comment"
 msgstr "Comment"
 
 #: ../../source/docs/development/msg_json.md
-#, fuzzy
 msgid "异常状态码"
-msgstr "Status Code"
+msgstr "Exception Status Code"
 
 #: ../../source/docs/development/msg_json.md
 msgid "details"
@@ -1344,11 +1294,8 @@ msgid "文件上传返回信息"
 msgstr "The return information of the file upload"
 
 #: ../../source/docs/development/msg_json.md:640
-#, fuzzy
 msgid "失败:请参考[**上传文件状态码**](./status_code.md#上传文件返回信息)"
-msgstr ""
-"Status code, other fields do not exist when non-zero, refer to "
-"[`status_code`](./status_code.md#上传文件返回信息)"
+msgstr "Failure: Please refer to [**File Upload Status Codes**](./status_code.md#上传文件返回信息)"
 
 #: ../../source/docs/development/msg_json.md
 msgid "资源密钥，用于请求头`Key:`中，验证发送者身份并且是资源访问唯一标识符"
@@ -1374,18 +1321,10 @@ msgid "我们提供了一系列脚本，帮助您处理日常简单事物。"
 msgstr "We provide a series of scripts to help you handle daily simple tasks."
 
 #: ../../source/docs/development/server/basic.md:7
-#, fuzzy
 msgid ""
 "你可以运行`script/test_server.py`脚本来运行测试，默认会将`postgres`和`sqlite`的测试都运行一遍，可以通过指定第二个参数为特定数据库名称来运行特定的测试集，第三个参数为自定义化的测试命令，默认为`cargo"
 " test`。**测试使用`cargo test`运行前，要先设置好 OURCHAT_CONFIG_PATH 环境变量**"
-msgstr ""
-"You can run the script `script/test_server.py` to execute tests, which by"
-" default will run both the `mysql` and `sqlite` test suites. You can "
-"specify a particular database name as the second argument to run a "
-"specific set of tests, and the third argument is for a customized test "
-"command, with the default being `cargo test`. **Before running tests with"
-" `cargo test`, you must set the OURCHAT_CONFIG_PATH environment "
-"variable.**"
+msgstr "You can run the `script/test_server.py` script to execute tests, which by default will run tests for both `postgres` and `sqlite`. You can specify a particular database name as the second argument to run a specific set of tests, and the third argument is for a customized test command, with the default being `cargo test`. **Before running tests with `cargo test`, you must set the OURCHAT_CONFIG_PATH environment variable**"
 
 #: ../../source/docs/development/server/basic.md:9
 msgid "文档"
@@ -1647,11 +1586,8 @@ msgid "来配置开发环境"
 msgstr "to configure the development environment"
 
 #: ../../source/docs/development/server/server-develop.md:31
-#, fuzzy
 msgid "如果 Dockerfile.dev 改变了，你可以运行`script/rebuild_dev_container.py`来重新构建镜像。"
-msgstr ""
-"If the Dockerfile has changed, you can run "
-"`script/rebuild_dev_container.py` to rebuild the image."
+msgstr "If Dockerfile.dev has changed, you can run `script/rebuild_dev_container.py` to rebuild the image."
 
 #: ../../source/docs/development/server/server-develop.md:33
 msgid "我们将数据直接复制到了`/app`文件夹，因此你**_不能随意重置容器_**，但这样可以使您的数据之间不会相互干扰。"
@@ -1683,15 +1619,11 @@ msgid "数据库"
 msgstr "Database"
 
 #: ../../source/docs/development/server/server-develop.md:53
-#, fuzzy
 msgid ""
 "本项目采用 Redis, PostgreSQL 和 SQLite 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 "
 "ORM 框架，在修改数据库表后，您可以运行`script/regenerate_entity.py`来重新生成 ORM 框架需要的文件"
 msgstr ""
-"This project uses Redis, MySQL and SQLite as databases, and also uses "
-"sea-orm as the ORM framework. To better use this ORM framework, after "
-"modifying the database tables, you can run `script/regenerate_entity.py` "
-"to regenerate the files needed by the ORM framework"
+"This project uses Redis, PostgreSQL, and SQLite as databases, and uses sea-orm as the ORM framework. To better utilize this ORM framework, after modifying the database tables, you can run `script/regenerate_entity.py` to regenerate the files required by the ORM framework."
 
 #: ../../source/docs/development/server/server-develop.md:55
 msgid "为了运行这个脚本，你首先需要运行`cargo install sea-orm-cli`"
@@ -1847,9 +1779,8 @@ msgid "请求被拒绝"
 msgstr ""
 
 #: ../../source/docs/development/status_code.md
-#, fuzzy
 msgid "10"
-msgstr "0"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "验证失败"
@@ -1864,9 +1795,8 @@ msgid "对应功能不可用"
 msgstr ""
 
 #: ../../source/docs/development/status_code.md:27
-#, fuzzy
 msgid "各种信息下的状态码具体解释"
-msgstr "Explanation of status codes under various information conditions"
+msgstr "Specific explanations of status codes under various information conditions"
 
 #: ../../source/docs/development/status_code.md
 msgid "获取成功"
