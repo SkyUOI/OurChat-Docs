@@ -209,7 +209,7 @@ msgstr ""
 
 #: ../../source/docs/deploy/server-deploy.md:33
 msgid "安装 PostgreSQL"
-msgstr ""
+msgstr "install PostgreSQL"
 
 #: ../../source/docs/deploy/server-deploy.md:35
 msgid ""
@@ -465,7 +465,7 @@ msgstr "Key"
 
 #: ../../source/docs/development/http_api.md
 msgid "资源密钥"
-msgstr ""
+msgstr "Resource Key"
 
 #: ../../source/docs/development/http_api.md
 msgid "状态码"
@@ -527,7 +527,7 @@ msgstr "The resource which is requested to download does not exist"
 
 #: ../../source/docs/development/http_api.md
 msgid "资源密钥不存在"
-msgstr ""
+msgstr "Resource Key does not exist"
 
 #: ../../source/docs/development/http_api.md:39
 msgid "body 中包含了文件的数据"
@@ -552,7 +552,7 @@ msgstr "Api:`/timestamp` Request Type: `GET`"
 
 #: ../../source/docs/development/http_api.md:55
 msgid "返回 rfc3339 格式的时间戳"
-msgstr ""
+msgstr "Return a timestamp in RFC3339 format"
 
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
@@ -560,7 +560,7 @@ msgstr "Development"
 
 #: ../../source/docs/development/index.rst:3
 msgid "此部分是对开发具有帮助的文档，包括实现细节和参考文档。"
-msgstr ""
+msgstr "This section is a helpful document for development, including implementation details and reference documentation."
 "This section is documentation that is helpful for development, including "
 "implementation details and reference documents."
 
@@ -580,7 +580,7 @@ msgstr "OurChat Message Passing Format"
 msgid ""
 "**_注意：失败则返回 18 号信息，除去某些验证性质的消息，在预期之内会返回对应的返回信息，出现预料之外的错误则依然返回 18 "
 "号信息，具体状态码含义在对应消息阐释_**"
-msgstr ""
+msgstr "Attention: If the operation fails, message number 18 will be returned. Except for certain verification-related messages, which are expected to return corresponding response information, any unexpected errors will still result in the return of message number 18. The specific meanings of the status codes are explained in the corresponding message descriptions."
 
 #: ../../source/docs/development/msg_json.md:5
 msgid "账号"
@@ -734,7 +734,7 @@ msgstr "Status"
 
 #: ../../source/docs/development/msg_json.md
 msgid "预期的状态码为 0 或 10"
-msgstr ""
+msgstr "Expected status codes are 0 or 10."
 
 #: ../../source/docs/development/msg_json.md:85
 msgid "获取账号信息"
@@ -788,7 +788,7 @@ msgstr "avatar_key"
 
 #: ../../source/docs/development/msg_json.md
 msgid "获取头像时需要用到的密钥"
-msgstr ""
+msgstr "get the key needed to retrieve the avatar"
 
 #: ../../source/docs/development/msg_json.md
 msgid "time"
@@ -907,7 +907,7 @@ msgstr "Set Friend Information"
 
 #: ../../source/docs/development/msg_json.md
 msgid "需要更改的好友的 ocid"
-msgstr ""
+msgstr "The OCID of the friend that needs to be changed"
 
 #: ../../source/docs/development/msg_json.md
 msgid "需要更改的好友信息，可设置的字段见下面表格"
@@ -1013,7 +1013,7 @@ msgstr "Session ID"
 
 #: ../../source/docs/development/msg_json.md:353
 msgid "邀请加入会话"
-msgstr ""
+msgstr "Inviting to join the session"
 
 #: ../../source/docs/development/msg_json.md
 msgid "inviter_id"
@@ -1119,7 +1119,7 @@ msgstr "Generate Verification Code"
 
 #: ../../source/docs/development/msg_json.md:447
 msgid "请求生成"
-msgstr ""
+msgstr Request to generate"
 
 #: ../../source/docs/development/msg_json.md
 msgid "验证邮箱"
@@ -1591,7 +1591,7 @@ msgstr "If Dockerfile.dev has changed, you can run `script/rebuild_dev_container
 
 #: ../../source/docs/development/server/server-develop.md:33
 msgid "我们将数据直接复制到了`/app`文件夹，因此你**_不能随意重置容器_**，但这样可以使您的数据之间不会相互干扰。"
-msgstr ""
+msgstr "We have directly copied the data to the `/app` folder, so you **_cannot arbitrarily reset the container_**, but this ensures that your data will not interfere with each other."
 
 #: ../../source/docs/development/server/server-develop.md:35
 msgid "推荐的开发方式是在本地使用编辑器编辑，同时使用`docker exec -it OurChatServer bash`进入容器运行并观察结果"
@@ -1631,13 +1631,13 @@ msgstr "To run this script, you first need to run `cargo install sea-orm-cli`"
 
 #: ../../source/docs/development/server/server-develop.md:57
 msgid "注意：请保证`sea-orm-cli`是最新的，否则会被脚本拦截，若脚本的版本更旧，请随时打开一个 issue"
-msgstr ""
+msgstr "Note: Please ensure that `sea-orm-cli` is up to date, otherwise it will be blocked by the script. If the script version is older, feel free to open an issue at any time."
 
 #: ../../source/docs/development/server/server-develop.md:59
 msgid ""
 "请注意保证您的代码可以同时在两种数据库上运行，我们提供了`#[derive::db_compatibility]`来方便的做到这一点，并且将数据库"
 " Model 映射到了公共类型上，也提供了一些 trait 来实现兼容。"
-msgstr ""
+msgstr "Please ensure that your code can run on both databases simultaneously. We have provided `#[derive::db_compatibility]` to facilitate this, and have mapped the database models to a common type. Additionally, we have provided some traits to achieve compatibility."
 
 #: ../../source/docs/development/server/server-develop.md:61
 msgid "数据库迁移"
@@ -1681,10 +1681,14 @@ msgid ""
 "**_由于服务器随时可能进入维护状态，状态 2 随时可能出现_** **_服务器任何请求都可能出现服务器错误，因此状态 1 "
 "在任何情况下都可能出现_**"
 msgstr ""
+"**Note: Unknown error 8 may be present in any status, so please ensure to perform checks.** "
+"**Similarly, status 5 may be present in any status to indicate that the JSON is unrecognizable.** "
+"**Due to the server potentially entering maintenance mode at any time, status 2 may appear at any moment.** "
+**Server errors can occur with any request, hence status 1 can appear under any circumstances.**"
 
 #: ../../source/docs/development/status_code.md:8
 msgid "**_以上特殊信息不再赘述_**"
-msgstr ""
+msgstr "**_No further elaboration on the above special information_**"
 
 #: ../../source/docs/development/status_code.md:10
 msgid "状态码表格"
@@ -1744,7 +1748,7 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "参数错误，指令错误，参数不存在，指令不存在等错误"
-msgstr ""
+msgstr "Parameter error, command error, parameter does not exist, command does not exist, and other such errors."
 
 #: ../../source/docs/development/status_code.md
 msgid "6"
@@ -1776,7 +1780,7 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "请求被拒绝"
-msgstr ""
+msgstr "Request denied."
 
 #: ../../source/docs/development/status_code.md
 msgid "10"
@@ -1784,7 +1788,7 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "验证失败"
-msgstr ""
+msgstr "Verification failed."
 
 #: ../../source/docs/development/status_code.md
 msgid "11"
@@ -1792,7 +1796,7 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "对应功能不可用"
-msgstr ""
+msgstr "The corresponding feature is not available."
 
 #: ../../source/docs/development/status_code.md:27
 msgid "各种信息下的状态码具体解释"
@@ -1872,7 +1876,7 @@ msgstr "Upload successful"
 
 #: ../../source/docs/development/status_code.md
 msgid "因账号相关限制导致请求被拒绝"
-msgstr ""
+msgstr "The request was denied due to account-related restrictions"
 
 #: ../../source/docs/development/status_code.md:99
 msgid "邮件发送"
@@ -1884,7 +1888,7 @@ msgstr "Send Email Failed"
 
 #: ../../source/docs/development/status_code.md
 msgid "对应功能不存在或无法启用"
-msgstr ""
+msgstr "The corresponding feature does not exist or cannot be enabled"
 
 #: ../../source/docs/development/status_code.md
 msgid "同意成功"
