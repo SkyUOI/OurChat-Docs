@@ -50,13 +50,11 @@ cargo test
 
 ## 数据库
 
-本项目采用 Redis, PostgreSQL 和 SQLite 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 ORM 框架，在修改数据库表后，您可以运行`script/regenerate_entity.py`来重新生成 ORM 框架需要的文件
+本项目采用 Redis, PostgreSQL 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 ORM 框架，在修改数据库表后，您可以运行`script/regenerate_entity.py`来重新生成 ORM 框架需要的文件
 
 为了运行这个脚本，你首先需要运行`cargo install sea-orm-cli`
 
 注意：请保证`sea-orm-cli`是最新的，否则会被脚本拦截，若脚本的版本更旧，请随时打开一个 issue
-
-请注意保证您的代码可以同时在两种数据库上运行，我们提供了`#[derive::db_compatibility]`来方便的做到这一点，并且将数据库 Model 映射到了公共类型上，也提供了一些 trait 来实现兼容。
 
 ### 数据库迁移
 

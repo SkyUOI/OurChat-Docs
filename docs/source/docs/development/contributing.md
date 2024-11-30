@@ -22,3 +22,5 @@
 3. 确保您的代码遵循我们的代码风格。
 4. 提交您的更改到您的 fork。
 5. 创建一个 Pull Request（PR）到我们的主分支。
+
+代码规范请遵循[约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)
