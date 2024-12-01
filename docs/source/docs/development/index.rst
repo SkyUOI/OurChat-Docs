@@ -10,7 +10,6 @@
    
    server/index
    contributing
-   msg_json
    http_api
    status_code
    special_string

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-03 15:21+0800\n"
+"POT-Creation-Date: 2024-12-01 14:38+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -87,11 +87,11 @@ msgstr ""
 
 #: ../../source/docs/deploy/document-deploy.md:49
 msgid "zh_CN"
-msgstr ""
+msgstr "zh_CN"
 
 #: ../../source/docs/deploy/document-deploy.md:50
 msgid "en"
-msgstr ""
+msgstr "en"
 
 #: ../../source/docs/deploy/document-deploy.md:52
 msgid "Example"
@@ -138,42 +138,38 @@ msgstr "[Docker Deployment](#docker推荐)"
 msgid "[手动部署](#手动部署)"
 msgstr "[Manual Deployment](#手动部署)"
 
-#: ../../source/docs/deploy/server-deploy.md:5
-msgid "[Sqlite 便携部署](#sqlite-便携部署)"
-msgstr "[SQLite Portable Deployment](#sqlite-便携部署)"
-
-#: ../../source/docs/deploy/server-deploy.md:7
+#: ../../source/docs/deploy/server-deploy.md:6
 msgid "Docker(推荐)"
 msgstr "Docker (Recommended)"
 
-#: ../../source/docs/deploy/server-deploy.md:9
+#: ../../source/docs/deploy/server-deploy.md:8
 msgid "对于该项目，我们提供了一个生产环境中使用的 dockerfile，可以直接构建并运行项目。"
 msgstr ""
 "For this project, we provide a dockerfile for use in a production "
 "environment, which can be used to build and run the project directly."
 
-#: ../../source/docs/deploy/server-deploy.md:11
+#: ../../source/docs/deploy/server-deploy.md:10
 msgid "以下是具体操作步骤："
 msgstr "Here are the specific steps to follow:"
 
-#: ../../source/docs/deploy/server-deploy.md:17
+#: ../../source/docs/deploy/server-deploy.md:16
 msgid "这一步完成只是创建了一个最基本的环境，但是安全性还远远没有达到，为了保证安全性，你需要修改 MySQL 和 Redis 的密码。"
 msgstr ""
 "Completing this step only creates a very basic environment, but the "
 "security is far from adequate. To ensure security, you need to change the"
 " passwords for MySQL and Redis."
 
-#: ../../source/docs/deploy/server-deploy.md:19
+#: ../../source/docs/deploy/server-deploy.md:18
 msgid "具体有以下几步:"
 msgstr "Here are the specific steps:"
 
-#: ../../source/docs/deploy/server-deploy.md:21
-msgid "修改`compose.prod.yml`中的两个`password`的`123456`为你自己的强密码"
+#: ../../source/docs/deploy/server-deploy.md:20
+msgid "修改`compose.yml`中的两个`password`的`123456`为你自己的强密码"
 msgstr ""
-"Change the `123456` for the two `password` fields in `compose.prod.yml` "
-"to your own strong password"
+"Change the `123456` for the two `password` fields in `compose.yml` to "
+"your own strong password"
 
-#: ../../source/docs/deploy/server-deploy.md:22
+#: ../../source/docs/deploy/server-deploy.md:21
 msgid ""
 "修改`config/database.json`为改后的 MySQL 密码，`config/redis_connection.json`为改后的 "
 "Redis 密码"
@@ -181,25 +177,25 @@ msgstr ""
 "Change `config/database.json` to the new MySQL password, and "
 "`config/redis_connection.json` to the new Redis password"
 
-#: ../../source/docs/deploy/server-deploy.md:23
-msgid "再次运行`docker compose -f compose.prod.yml up -d`"
-msgstr "Run `docker compose -f compose.prod.yml up -d` again"
+#: ../../source/docs/deploy/server-deploy.md:22
+msgid "再次运行`docker compose up -d`"
+msgstr "Run `docker compose up -d` again"
 
-#: ../../source/docs/deploy/server-deploy.md:25
+#: ../../source/docs/deploy/server-deploy.md:24
 msgid "完成这几步之后，你就成功部署了该项目。"
 msgstr "After completing these steps, you have successfully deployed the project."
 
-#: ../../source/docs/deploy/server-deploy.md:27
-msgid "对于容器中的数据，我们将其映射在了`mysql-data`和`redis-data`中，你可以随时保存数据"
+#: ../../source/docs/deploy/server-deploy.md:26
+msgid "对于容器中的数据，我们将其映射在了`data`中，你可以随时保存数据"
 msgstr ""
-"For data in the container, we have mapped it to `mysql-data` and `redis-"
-"data`, so you can save data at any time"
+"For data in the container, we have mapped it to `data`, so you can save "
+"data at any time"
 
-#: ../../source/docs/deploy/server-deploy.md:29
+#: ../../source/docs/deploy/server-deploy.md:28
 msgid "手动部署"
 msgstr "Manual Deployment"
 
-#: ../../source/docs/deploy/server-deploy.md:31
+#: ../../source/docs/deploy/server-deploy.md:30
 msgid "对于性能不高和未安装 docker 的计算机，我们也提供了手动部署的文档，关于这一点，建议部署在 linux 环境，其他环境未经过严格的测试。"
 msgstr ""
 "For computers with low performance and no Docker installed, we also "
@@ -207,101 +203,70 @@ msgstr ""
 "to deploy in a Linux environment, as other environments have not been "
 "rigorously tested."
 
-#: ../../source/docs/deploy/server-deploy.md:33
+#: ../../source/docs/deploy/server-deploy.md:32
 msgid "安装 PostgreSQL"
 msgstr "install PostgreSQL"
 
-#: ../../source/docs/deploy/server-deploy.md:35
+#: ../../source/docs/deploy/server-deploy.md:34
 msgid ""
 "postgres 版本为 "
 "17（如果该文档未及时更新可以查看`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)中的"
 " posgres 版本）"
 msgstr ""
-"The postgres version is 17 (If this document is not updated in time, you can check the 'postgres version' in the `[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)` file)"
-#: ../../source/docs/deploy/server-deploy.md:37
+"The postgres version is 17 (If this document is not updated in time, you "
+"can check the 'postgres version' in the "
+"`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)` "
+"file)"
+
+#: ../../source/docs/deploy/server-deploy.md:36
 msgid "安装 redis"
 msgstr "Install Redis"
 
-#: ../../source/docs/deploy/server-deploy.md:39
+#: ../../source/docs/deploy/server-deploy.md:38
 msgid "可以直接安装最新版的 redis"
 msgstr "You can directly install the latest version of Redis"
 
-#: ../../source/docs/deploy/server-deploy.md:41
+#: ../../source/docs/deploy/server-deploy.md:40
 msgid "安装 ourchat server"
 msgstr "Install OurChat server"
 
-#: ../../source/docs/deploy/server-deploy.md:43
+#: ../../source/docs/deploy/server-deploy.md:42
 msgid "此处存在两种备选的方案:"
 msgstr "There are two alternative options here:"
 
-#: ../../source/docs/deploy/server-deploy.md:45
-msgid ""
-"1.(推荐)从 github release 下载最新的 linux 编译结果，此版本经过官方的 pgo 优化，性能会更高，如果遇到 CPU "
-"架构和其他兼容性问题，可能需要手动编译，参见下一节"
+#: ../../source/docs/deploy/server-deploy.md:44
+msgid "1.(推荐)从 github release 下载最新的 linux 编译结果，如果遇到 CPU 架构和其他兼容性问题，可能需要手动编译，参见下一节"
 msgstr ""
 "1. (Recommended) Download the latest Linux compilation results from the "
-"GitHub release. This version has been officially optimized with PGO "
-"(Profile Guided Optimization), resulting in higher performance. If you "
-"encounter CPU architecture and other compatibility issues, manual "
-"compilation may be necessary, see the following section"
+"GitHub release. If you encounter CPU architecture and other compatibility"
+" issues, manual compilation may be necessary, see the following section"
 
-#: ../../source/docs/deploy/server-deploy.md:47
+#: ../../source/docs/deploy/server-deploy.md:46
 msgid "2.手动编译"
 msgstr "2. Manual Compilation"
 
-#: ../../source/docs/deploy/server-deploy.md:49
+#: ../../source/docs/deploy/server-deploy.md:48
 msgid "拉取源代码:"
 msgstr "Pull the source code:"
 
-#: ../../source/docs/deploy/server-deploy.md:55
+#: ../../source/docs/deploy/server-deploy.md:54
 msgid "安装 rust 工具链"
 msgstr "Install the Rust toolchain"
 
-#: ../../source/docs/deploy/server-deploy.md:57
+#: ../../source/docs/deploy/server-deploy.md:56
 msgid "编译项目"
 msgstr "Compile the project"
 
-#: ../../source/docs/deploy/server-deploy.md:63
-msgid "(可选)pgo 优化"
-msgstr "(Optional) PGO Optimization"
-
-#: ../../source/docs/deploy/server-deploy.md:65
-msgid "该步骤会消耗大量时间，收集运行时信息来进行程序的优化，如果对于性能没有苛刻的要求不建议这么做"
-msgstr ""
-"This step will take a lot of time, collecting runtime information to "
-"optimize the program. It is not recommended if there are no stringent "
-"performance requirements."
-
-#: ../../source/docs/deploy/server-deploy.md:71
+#: ../../source/docs/deploy/server-deploy.md:62
 #: ../../source/docs/run/build.md:53
 msgid "运行项目"
 msgstr "Run the project"
 
-#: ../../source/docs/deploy/server-deploy.md:73
+#: ../../source/docs/deploy/server-deploy.md:64
 msgid "这一步请参考[服务器参数](../run/server_argv.md)进行运行，可执行文件位于`target/release/server`"
-msgstr "Please refer to the [Server Arguments](../run/server_argv.md) for this step, and the executable file is located at `target/release/server`"
-
-#: ../../source/docs/deploy/server-deploy.md:75
-msgid "Sqlite 便携部署"
-msgstr "SQLite Portable Deployment"
-
-#: ../../source/docs/deploy/server-deploy.md:77
-msgid ""
-"其余部分都可以参考上一章，但是 mysql "
-"可以无需安装，具体配置方法参考[服务器参数](../run/server_argv.md)或直接参考`config/sqlite/ourchat.toml`"
 msgstr ""
-"The rest of the section can refer to the previous chapter, but MySQL can "
-"be installed without installation, for specific configuration methods, "
-"refer to [Server Parameters](../run/server_argv.md) or directly refer to "
-"`config/sqlite/ourchat.toml`."
-
-#: ../../source/docs/deploy/server-deploy.md:79
-msgid "注意，sqlite 运行仅限于性能需求不高，需要快速搭建的小型场景，如对性能有要求请使用 Mysql 方式。"
-msgstr ""
-"Please note, SQLite operation is limited to scenarios with low "
-"performance requirements and the need for a quick setup, such as small-"
-"scale environments. If you have performance requirements, please use the "
-"MySQL method"
+"Please refer to the [Server Arguments](../run/server_argv.md) for this "
+"step, and the executable file is located at `target/release/server`"
 
 #: ../../source/docs/development/contributing.md:1
 msgid "贡献指南"
@@ -371,6 +336,10 @@ msgstr "Commit your changes to your fork."
 #: ../../source/docs/development/contributing.md:24
 msgid "创建一个 Pull Request（PR）到我们的主分支。"
 msgstr "Create a Pull Request(PR) to our main branch."
+
+#: ../../source/docs/development/contributing.md:26
+msgid "代码规范请遵循[约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)"
+msgstr "Code conventions please follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)"
 
 #: ../../source/docs/development/document_contributing.md:1
 msgid "贡献文档"
@@ -447,112 +416,12 @@ msgid "文件上传"
 msgstr "File upload"
 
 #: ../../source/docs/development/http_api.md:5
-msgid "接口:`/upload` 请求类型:`POST`"
-msgstr "api:`/upload` Request type:`POST`"
+msgid "接口:`/verify` 请求类型:`GET`"
+msgstr "Api:`/verify` Request Type: `GET`"
 
-#: ../../source/docs/development/http_api.md
-msgid "请求头"
-msgstr "Request Header"
-
-#: ../../source/docs/development/http_api.md
-msgid "说明"
-msgstr "Note"
-
-#: ../../source/docs/development/http_api.md
-#: ../../source/docs/development/msg_json.md
-msgid "Key"
-msgstr "Key"
-
-#: ../../source/docs/development/http_api.md
-msgid "资源密钥"
-msgstr "Resource Key"
-
-#: ../../source/docs/development/http_api.md
-msgid "状态码"
-msgstr "Status Code"
-
-#: ../../source/docs/development/http_api.md
-msgid "NotFound"
-msgstr "NotFound"
-
-#: ../../source/docs/development/http_api.md
-msgid "请求上传的资源不存在"
-msgstr "The requesting resource should be uploaded does not exist"
-
-#: ../../source/docs/development/http_api.md
-msgid "InternalServerError"
-msgstr "INternalServerError"
-
-#: ../../source/docs/development/http_api.md
-msgid "服务器内部错误"
-msgstr "Internal Server Error"
-
-#: ../../source/docs/development/http_api.md
-msgid "BadRequest"
-msgstr "BadRequest"
-
-#: ../../source/docs/development/http_api.md
-msgid "哈希不匹配等"
-msgstr "Hash does not match"
-
-#: ../../source/docs/development/http_api.md
-msgid "Ok"
-msgstr "Ok"
-
-#: ../../source/docs/development/http_api.md
-msgid "成功"
-msgstr "successful"
-
-#: ../../source/docs/development/http_api.md:19
-msgid "直接上传文件内容即可"
-msgstr "Upload the file content directly"
-
-#: ../../source/docs/development/http_api.md:21
-msgid "**关于获取该接口，参见[交换格式](./msg_json.md#文件上传请求)**"
+#: ../../source/docs/development/http_api.md:8
+msgid "参数:token=verify_token 该接口供邮件验证使用，一般不需要客户端直接操作"
 msgstr ""
-"**About getting this api, please see [Message Exchange "
-"Format](./msg_json.md#文件上传请求)**"
-
-#: ../../source/docs/development/http_api.md:23
-msgid "文件下载"
-msgstr "File download"
-
-#: ../../source/docs/development/http_api.md:25
-msgid "接口:`/download` 请求类型:`POST`"
-msgstr "api:`/download` Request type:`POST`"
-
-#: ../../source/docs/development/http_api.md
-msgid "请求下载的资源不存在"
-msgstr "The resource which is requested to download does not exist"
-
-#: ../../source/docs/development/http_api.md
-msgid "资源密钥不存在"
-msgstr "Resource Key does not exist"
-
-#: ../../source/docs/development/http_api.md:39
-msgid "body 中包含了文件的数据"
-msgstr "body contains the file data"
-
-#: ../../source/docs/development/http_api.md:41
-msgid "服务器状态"
-msgstr "Server Status"
-
-#: ../../source/docs/development/http_api.md:43
-msgid "接口:`/status` 请求类型: `GET`"
-msgstr "Api:`/status` Request Type: `GET`"
-
-#: ../../source/docs/development/http_api.md:50
-#: ../../source/docs/development/server/server-database.md
-msgid "时间戳"
-msgstr "Timestamp"
-
-#: ../../source/docs/development/http_api.md:52
-msgid "接口:`/timestamp` 请求类型: `GET`"
-msgstr "Api:`/timestamp` Request Type: `GET`"
-
-#: ../../source/docs/development/http_api.md:55
-msgid "返回 rfc3339 格式的时间戳"
-msgstr "Return a timestamp in RFC3339 format"
 
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
@@ -560,9 +429,11 @@ msgstr "Development"
 
 #: ../../source/docs/development/index.rst:3
 msgid "此部分是对开发具有帮助的文档，包括实现细节和参考文档。"
-msgstr "This section is a helpful document for development, including implementation details and reference documentation."
-"This section is documentation that is helpful for development, including "
-"implementation details and reference documents."
+msgstr ""
+"This section is a helpful document for development, including "
+"implementation details and reference documentation.This section is "
+"documentation that is helpful for development, including implementation "
+"details and reference documents."
 
 #: ../../source/docs/development/index.rst:5
 msgid ""
@@ -571,742 +442,6 @@ msgid ""
 msgstr ""
 "For development, please refer to `CONTRIBUTING "
 "<https://github.com/SkyUOI/OurChat/blob/main/CONTRIBUTING.md>`_"
-
-#: ../../source/docs/development/msg_json.md:1
-msgid "OurChat 信息传递格式"
-msgstr "OurChat Message Passing Format"
-
-#: ../../source/docs/development/msg_json.md:3
-msgid ""
-"**_注意：失败则返回 18 号信息，除去某些验证性质的消息，在预期之内会返回对应的返回信息，出现预料之外的错误则依然返回 18 "
-"号信息，具体状态码含义在对应消息阐释_**"
-msgstr "Attention: If the operation fails, message number 18 will be returned. Except for certain verification-related messages, which are expected to return corresponding response information, any unexpected errors will still result in the return of message number 18. The specific meanings of the status codes are explained in the corresponding message descriptions."
-
-#: ../../source/docs/development/msg_json.md:5
-msgid "账号"
-msgstr "Account"
-
-#: ../../source/docs/development/msg_json.md:7
-msgid "注册信息"
-msgstr "Registration Information"
-
-#: ../../source/docs/development/msg_json.md:9
-#: ../../source/docs/development/msg_json.md:47
-#: ../../source/docs/development/msg_json.md:87
-#: ../../source/docs/development/msg_json.md:145
-#: ../../source/docs/development/msg_json.md:174
-#: ../../source/docs/development/msg_json.md:203
-#: ../../source/docs/development/msg_json.md:248
-#: ../../source/docs/development/msg_json.md:301
-#: ../../source/docs/development/msg_json.md:376
-#: ../../source/docs/development/msg_json.md:449
-#: ../../source/docs/development/msg_json.md:529
-#: ../../source/docs/development/msg_json.md:559
-#: ../../source/docs/development/msg_json.md:607
-msgid "**_Server <- Client_**"
-msgstr "**Server <- Client**"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/user_msg_json.md
-msgid "key"
-msgstr "key"
-
-#: ../../source/docs/development/msg_json.md
-msgid "ValueType"
-msgstr "Value Type"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/user_msg_json.md
-msgid "comment"
-msgstr "Comment"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/server/server-database.md
-msgid "email"
-msgstr "Email"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/user_msg_json.md
-msgid "String"
-msgstr "String"
-
-#: ../../source/docs/development/msg_json.md
-msgid "注册邮箱"
-msgstr "Registered Email"
-
-#: ../../source/docs/development/msg_json.md
-msgid "password"
-msgstr "Password"
-
-#: ../../source/docs/development/msg_json.md
-msgid "注册密码(已加密)"
-msgstr "Registration Password (Encrypted)"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/server/server-database.md
-#: ../../source/docs/run/server_argv.md
-msgid "name"
-msgstr "Name"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/server/server-database.md
-msgid "昵称"
-msgstr "Nickname"
-
-#: ../../source/docs/development/msg_json.md:27
-#: ../../source/docs/development/status_code.md:36
-msgid "注册返回信息"
-msgstr "Registration Return Information"
-
-#: ../../source/docs/development/msg_json.md:29
-#: ../../source/docs/development/msg_json.md:67
-#: ../../source/docs/development/msg_json.md:123
-#: ../../source/docs/development/msg_json.md:158
-#: ../../source/docs/development/msg_json.md:230
-#: ../../source/docs/development/msg_json.md:279
-#: ../../source/docs/development/msg_json.md:337
-#: ../../source/docs/development/msg_json.md:355
-#: ../../source/docs/development/msg_json.md:394
-#: ../../source/docs/development/msg_json.md:436
-#: ../../source/docs/development/msg_json.md:479
-#: ../../source/docs/development/msg_json.md:497
-#: ../../source/docs/development/msg_json.md:548
-#: ../../source/docs/development/msg_json.md:589
-#: ../../source/docs/development/msg_json.md:629
-msgid "**_Server -> Client_**"
-msgstr "**Server -> Client**"
-
-#: ../../source/docs/development/msg_json.md:39
-msgid "失败：请参考[**注册状态码**](status_code.md#注册返回信息)"
-msgstr "Failure: Please refer to [**Registration Status Codes**](status_code.md#注册返回信息)"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/server/server-database.md
-msgid "ocid"
-msgstr "OCID"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该账号的 ocid"
-msgstr "The ocid of the account"
-
-#: ../../source/docs/development/msg_json.md:45
-msgid "登录信息"
-msgstr "Login Information"
-
-#: ../../source/docs/development/msg_json.md
-msgid "login_type"
-msgstr "Login Type"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/user_msg_json.md
-#: ../../source/docs/run/server_cmd.md
-msgid "Number"
-msgstr "Number"
-
-#: ../../source/docs/development/msg_json.md
-msgid "0 为邮箱登录，1 为 ocid 登录"
-msgstr "0 for email login, 1 for ocid login"
-
-#: ../../source/docs/development/msg_json.md
-msgid "account"
-msgstr "Account"
-
-#: ../../source/docs/development/msg_json.md
-msgid "账号绑定的邮箱或 ocid"
-msgstr "Email or ocid bound to the account"
-
-#: ../../source/docs/development/msg_json.md
-msgid "密码"
-msgstr "Password"
-
-#: ../../source/docs/development/msg_json.md:65
-#: ../../source/docs/development/status_code.md:44
-msgid "登录返回信息"
-msgstr "Login Return Information"
-
-#: ../../source/docs/development/msg_json.md:78
-msgid "失败：请参考[**登录状态码**](status_code.md#登录返回信息)"
-msgstr "Failure: Please refer to [**Login Status Codes**](status_code.md#登录返回信息)"
-
-#: ../../source/docs/development/msg_json.md
-msgid "status"
-msgstr "Status"
-
-#: ../../source/docs/development/msg_json.md
-msgid "预期的状态码为 0 或 10"
-msgstr "Expected status codes are 0 or 10."
-
-#: ../../source/docs/development/msg_json.md:85
-msgid "获取账号信息"
-msgstr "Get Account Information"
-
-#: ../../source/docs/development/msg_json.md
-msgid "request_values"
-msgstr "Requested Values"
-
-#: ../../source/docs/development/msg_json.md
-msgid "Array"
-msgstr "Array"
-
-#: ../../source/docs/development/msg_json.md
-msgid "需要服务端返回的信息"
-msgstr "Information required to be returned by the server"
-
-#: ../../source/docs/development/msg_json.md
-msgid "request_value"
-msgstr "Requested Value"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该账号绑定的邮箱(仅本账号可获取，非本账号返回 null)"
-msgstr ""
-"The email bound to the account (only accessible to this account, other "
-"accounts will return null)."
-
-#: ../../source/docs/development/msg_json.md
-msgid "user_name"
-msgstr "user_name"
-
-#: ../../source/docs/development/msg_json.md
-msgid "用户名"
-msgstr "User Name"
-
-#: ../../source/docs/development/msg_json.md
-msgid "display_name"
-msgstr "display_name"
-
-#: ../../source/docs/development/msg_json.md
-msgid "备注名"
-msgstr "the alias name of the user"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该账号的状态"
-msgstr "The status of the account"
-
-#: ../../source/docs/development/msg_json.md
-msgid "avatar_key"
-msgstr "avatar_key"
-
-#: ../../source/docs/development/msg_json.md
-msgid "获取头像时需要用到的密钥"
-msgstr "get the key needed to retrieve the avatar"
-
-#: ../../source/docs/development/msg_json.md
-msgid "time"
-msgstr "Time"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该账号注册的时间戳"
-msgstr "The timestamp when the account was registered"
-
-#: ../../source/docs/development/msg_json.md
-msgid "public_update_time"
-msgstr "Public Update Time"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该账号公共(即不包括**sessions**和**friends**)数据最后更新的时间戳"
-msgstr ""
-"The last update timestamp of the public (i.e., excluding **_sessions_** "
-"and **_friends_**) data for this account.**"
-
-#: ../../source/docs/development/msg_json.md
-msgid "update_time"
-msgstr "Update Time"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该账号所有数据最后更新的时间戳(仅本账号可获取，非本账号返回 null)"
-msgstr ""
-"The timestamp of the last update of the data (only accessible to this "
-"account, other accounts will return null)."
-
-#: ../../source/docs/development/msg_json.md
-msgid "sessions"
-msgstr "Sessions"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该账号加入/创建的会话列表(仅本账号可获取，非本账号返回 null)"
-msgstr ""
-"The session list that this account has joined/created (only this account "
-"can obtain it, other accounts will return null)."
-
-#: ../../source/docs/development/msg_json.md
-msgid "friends"
-msgstr "Friends"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该账号的好友列表 (仅本账号可获取，非本账号返回 null)"
-msgstr ""
-"The friend list of this account (only accessible to this account, other "
-"accounts will return null)."
-
-#: ../../source/docs/development/msg_json.md:121
-#: ../../source/docs/development/status_code.md:58
-msgid "获取账号信息返回信息"
-msgstr "Get Account Information Return Information"
-
-#: ../../source/docs/development/msg_json.md:137
-msgid "失败:请参考[**获取账号信息状态码**](status_code.md#获取账号信息返回信息)"
-msgstr "Failure: Please refer to [**Account Information Status Codes**](status_code.md#获取账号信息返回信息)"
-
-#: ../../source/docs/development/msg_json.md
-msgid "data"
-msgstr "Data"
-
-#: ../../source/docs/development/msg_json.md
-msgid "Object"
-msgstr "Object"
-
-#: ../../source/docs/development/msg_json.md
-msgid "账号信息,详情[见上**获取账号信息**`request_value`](#获取账号信息)"
-msgstr ""
-"Account information, details [see above **Get Account Information** "
-"`request_value`](#获取账号信息)"
-
-#: ../../source/docs/development/msg_json.md:143
-msgid "注销"
-msgstr "Logout"
-
-#: ../../source/docs/development/msg_json.md:154
-msgid "**_警告：该注销是删除帐号的意思，请勿误用接口_**"
-msgstr ""
-"**Warning: This logout refers to the deletion of the account, please do "
-"not misuse the interface_**"
-
-#: ../../source/docs/development/msg_json.md:156
-#: ../../source/docs/development/status_code.md:79
-msgid "注销返回信息"
-msgstr "Logout Return Information"
-
-#: ../../source/docs/development/msg_json.md:167
-msgid "失败:请参考[**注销状态码**](status_code.md#注销返回信息)"
-msgstr "Failure: Please refer to [**Logout Status Codes**](status_code.md#注销返回信息)"
-
-#: ../../source/docs/development/msg_json.md:172
-msgid "设置账号信息"
-msgstr "Set Account Information"
-
-#: ../../source/docs/development/msg_json.md
-msgid "需要更改的账号信息，可设置的字段见下面表格"
-msgstr ""
-"The account information that needs to be set, the fields that can be "
-"configured are shown in the table below."
-
-#: ../../source/docs/development/msg_json.md:191
-#: ../../source/docs/development/msg_json.md:222
-msgid "可设置的字段："
-msgstr "the fields that can be configured"
-
-#: ../../source/docs/development/msg_json.md:199
-msgid "以上字段具体意义见[**获取账号信息**`request_value`](#获取账号信息)"
-msgstr ""
-"Account information, details [see above **Get Account Information** "
-"`request_value`](#获取账号信息)"
-
-#: ../../source/docs/development/msg_json.md:201
-msgid "设置好友信息"
-msgstr "Set Friend Information"
-
-#: ../../source/docs/development/msg_json.md
-msgid "需要更改的好友的 ocid"
-msgstr "The OCID of the friend that needs to be changed"
-
-#: ../../source/docs/development/msg_json.md
-msgid "需要更改的好友信息，可设置的字段见下面表格"
-msgstr "The friend information that needs to be changed, the fields that can be set are shown in the table below"
-
-#: ../../source/docs/development/msg_json.md:228
-#: ../../source/docs/development/status_code.md:86
-msgid "设置账号信息返回信息"
-msgstr "Get Account Information Return Information"
-
-#: ../../source/docs/development/msg_json.md:239
-msgid "失败：请参考[**设置账号信息状态码**](status_code.md#设置账号信息返回信息)"
-msgstr "Failure: Please refer to [**Set Account Information Status Codes**](status_code.md#设置账号信息返回信息)"
-
-#: ../../source/docs/development/msg_json.md:244
-msgid "会话"
-msgstr "Session"
-
-#: ../../source/docs/development/msg_json.md:246
-msgid "获取会话信息"
-msgstr "Get Session Information"
-
-#: ../../source/docs/development/msg_json.md
-msgid "session_id"
-msgstr "Session ID"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该会话的 ID"
-msgstr "The ID of this session"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/user_msg_json.md
-msgid "valueType"
-msgstr "Value Type"
-
-#: ../../source/docs/development/msg_json.md
-msgid "会话名称"
-msgstr "Session Name"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该会话创建的时间戳"
-msgstr "The timestamp when the session was created"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该会话数据最后更新的时间戳"
-msgstr "The timestamp of the last update of the data"
-
-#: ../../source/docs/development/msg_json.md
-msgid "members"
-msgstr "Members"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该会话的成员列表"
-msgstr "The member list of the session"
-
-#: ../../source/docs/development/msg_json.md
-msgid "owner"
-msgstr "Owner"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该会话拥有者的 ocid"
-msgstr "The OCID of the owner of the session"
-
-#: ../../source/docs/development/msg_json.md:277
-#: ../../source/docs/development/status_code.md:29
-msgid "获取会话信息返回信息"
-msgstr "Get Session Information Return Information"
-
-#: ../../source/docs/development/msg_json.md:293
-msgid "失败:请参考[**获取会话信息状态码**](status_code.md#获取会话信息返回信息)"
-msgstr "Failure: Please refer to [**New Session Status Codes**](status_code.md#新建会话返回信息)"
-
-#: ../../source/docs/development/msg_json.md
-msgid "账号信息,详情[见上**获取会话信息**`request_value`](#获取会话信息)"
-msgstr ""
-"Account information, details [see above **Session Information Retrieval**"
-" `request_value`](#获取会话信息)"
-
-#: ../../source/docs/development/msg_json.md:299
-msgid "新建会话请求信息"
-msgstr "New Session Request Information"
-
-#: ../../source/docs/development/msg_json.md
-msgid "会话名称,可选(如不填写使用默认名称)"
-msgstr "Conversation name, optional (use default name if not filled)"
-
-#: ../../source/docs/development/msg_json.md
-msgid "会话成员"
-msgstr "Session Members"
-
-#: ../../source/docs/development/msg_json.md:335
-#: ../../source/docs/development/status_code.md:51
-msgid "新建会话返回信息"
-msgstr "New Session Return Information"
-
-#: ../../source/docs/development/msg_json.md:347
-msgid "失败:请参考[**新建会话状态码**](status_code.md#新建会话返回信息)"
-msgstr "Failure: Please refer to [**New Session Status Codes**](status_code.md#新建会话返回信息)"
-
-#: ../../source/docs/development/msg_json.md
-msgid "会话 id"
-msgstr "Session ID"
-
-#: ../../source/docs/development/msg_json.md:353
-msgid "邀请加入会话"
-msgstr "Inviting to join the session"
-
-#: ../../source/docs/development/msg_json.md
-msgid "inviter_id"
-msgstr "inviter_id"
-
-#: ../../source/docs/development/msg_json.md
-msgid "邀请者 id"
-msgstr "Inviter ID"
-
-#: ../../source/docs/development/msg_json.md
-msgid "message"
-msgstr "message"
-
-#: ../../source/docs/development/msg_json.md
-msgid "留言"
-msgstr "Message"
-
-#: ../../source/docs/development/msg_json.md
-msgid "expire_timestamp"
-msgstr "expire_timestamp"
-
-#: ../../source/docs/development/msg_json.md
-msgid "失效时间戳"
-msgstr "Expire Timestamp"
-
-#: ../../source/docs/development/msg_json.md:374
-msgid "邀请加入会话返回信息"
-msgstr "Invite to Session Return Information"
-
-#: ../../source/docs/development/msg_json.md
-msgid "accept"
-msgstr "accept"
-
-#: ../../source/docs/development/msg_json.md
-msgid "Boolean"
-msgstr "Boolean"
-
-#: ../../source/docs/development/msg_json.md
-msgid "对邀请的同意情况"
-msgstr "The acceptance of the invitation"
-
-#: ../../source/docs/development/msg_json.md:392
-#: ../../source/docs/development/status_code.md:108
-msgid "同意加入会话返回信息"
-msgstr "Agree to Join Session Return Information"
-
-#: ../../source/docs/development/msg_json.md:403
-msgid "失败:请参考[**同意加入会话状态码**](status_code.md#同意加入会话返回信息)"
-msgstr "Failure: Please refer to [**Agree to Join Session Status Codes**](status_code.md#同意加入会话返回信息)"
-
-#: ../../source/docs/development/msg_json.md:408
-msgid "服务器"
-msgstr "Server"
-
-#: ../../source/docs/development/msg_json.md:410
-msgid "获取服务器信息"
-msgstr "Get Server Information"
-
-#: ../../source/docs/development/msg_json.md:412
-msgid "**_Server <-> Client_**"
-msgstr "**Server <-> Client**"
-
-#: ../../source/docs/development/msg_json.md
-msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#获取服务器状态)，预期的状态码为 0 或 2"
-msgstr "Status code, returns the operational status, for details, see [**Status Code** `status`](status_code.md#获取服务器状态), expected status codes are 0 or 2"
-
-#: ../../source/docs/development/msg_json.md
-msgid "http_port"
-msgstr ""
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/run/server_argv.md
-msgid "http 服务器监听的端口"
-msgstr "Port the http server listens on"
-
-#: ../../source/docs/development/msg_json.md
-msgid "server_version"
-msgstr "server_version"
-
-#: ../../source/docs/development/msg_json.md
-msgid "服务器版本"
-msgstr "Server Version"
-
-#: ../../source/docs/development/msg_json.md
-msgid "unique_identifier"
-msgstr "unique_identifier"
-
-#: ../../source/docs/development/msg_json.md
-msgid "服务器唯一标识符，用于客户端区分服务器"
-msgstr "Server unique identifier, used by the client to distinguish between servers"
-
-#: ../../source/docs/development/msg_json.md:432
-msgid "验证码"
-msgstr "Verification Status Code"
-
-#: ../../source/docs/development/msg_json.md:434
-msgid "发起验证"
-msgstr "Initiate Verification"
-
-#: ../../source/docs/development/msg_json.md:445
-msgid "生成验证码"
-msgstr "Generate Verification Code"
-
-#: ../../source/docs/development/msg_json.md:447
-msgid "请求生成"
-msgstr Request to generate"
-
-#: ../../source/docs/development/msg_json.md
-msgid "验证邮箱"
-msgstr "Email to be verified"
-
-#: ../../source/docs/development/msg_json.md:463
-msgid "返回消息"
-msgstr "Return Information"
-
-#: ../../source/docs/development/msg_json.md:472
-msgid "失败:请参考[**邮件发送状态码**](status_code.md#邮件发送)"
-msgstr "Failure: Please refer to [**Email Sending Status Codes**](status_code.md#邮件发送)"
-
-#: ../../source/docs/development/msg_json.md:477
-#: ../../source/docs/development/status_code.md:72
-msgid "验证状态"
-msgstr "Verification Status"
-
-#: ../../source/docs/development/msg_json.md
-msgid "状态码，详情见[**状态码**`status`](status_code.md#验证状态)，预期的状态码为 0 或 7"
-msgstr "Status code, for details see [**Status Code** `status`](status_code.md#验证状态), expected status codes are 0 or 7"
-
-#: ../../source/docs/development/msg_json.md:493
-msgid "其他信息"
-msgstr "Other Information"
-
-#: ../../source/docs/development/msg_json.md:495
-msgid "获取信息"
-msgstr "Get Message"
-
-#: ../../source/docs/development/msg_json.md
-msgid "msgs"
-msgstr "msgs"
-
-#: ../../source/docs/development/msg_json.md
-msgid "发送的消息列表"
-msgstr "Sent Message List"
-
-#: ../../source/docs/development/msg_json.md
-msgid "消息全部属于该会话 id"
-msgstr "All messages belong to this session ID"
-
-#: ../../source/docs/development/msg_json.md
-msgid "消息列表"
-msgstr "Message List"
-
-#: ../../source/docs/development/msg_json.md:527
-msgid "用户发送信息"
-msgstr "User Information"
-
-#: ../../source/docs/development/msg_json.md:546
-msgid "发送信息返回信息"
-msgstr "Send Message Return Information"
-
-#: ../../source/docs/development/msg_json.md:557
-msgid "请求获取消息"
-msgstr "Request to Retrieve Messages"
-
-#: ../../source/docs/development/msg_json.md:569
-msgid "返回[用户发送消息](#获取信息)"
-msgstr "Return [User Sent Messages](#获取信息)"
-
-#: ../../source/docs/development/msg_json.md:571
-msgid "**_Warning:该接口调用后，考虑到消息可能有很多，可能不会一次性返回所有信息，注意分批接收！_**"
-msgstr "**_Warning: After calling this interface, considering there may be many messages, not all information may be returned at once, please be aware to receive in batches!_**"
-
-#: ../../source/docs/development/msg_json.md
-msgid "接收来自该时间戳之后的消息"
-msgstr "Receive messages from after this timestamp"
-
-#: ../../source/docs/development/msg_json.md
-msgid "发消息的时间戳"
-msgstr "Timestamp of the message sent"
-
-#: ../../source/docs/development/msg_json.md
-msgid "msg_id"
-msgstr "msg_id"
-
-#: ../../source/docs/development/msg_json.md
-msgid "message 的 ID，唯一 **(注意：传输给服务器时无此字段)**"
-msgstr ""
-"Message ID, unique **_(Note: This field is not present when transmitted "
-"to the server)_**"
-
-#: ../../source/docs/development/msg_json.md
-msgid "sender"
-msgstr "Sender"
-
-#: ../../source/docs/development/msg_json.md
-msgid "发送者的相关数据"
-msgstr "Relevant data of the sender"
-
-#: ../../source/docs/development/msg_json.md
-msgid "发送者的 ocid"
-msgstr "Sender's OCID"
-
-#: ../../source/docs/development/msg_json.md
-msgid "发送者的会话 id"
-msgstr "Sender's session ID"
-
-#: ../../source/docs/development/msg_json.md
-msgid "msg"
-msgstr "Message"
-
-#: ../../source/docs/development/msg_json.md
-#: ../../source/docs/development/user_msg_json.md
-msgid "type"
-msgstr "Type"
-
-#: ../../source/docs/development/msg_json.md
-msgid "用户消息类型，详细见[**用户消息传递格式**](user_msg_json.md)"
-msgstr ""
-"User message type, see [User Message Passing Format](user_msg_json.md) "
-"for details"
-
-#: ../../source/docs/development/msg_json.md:587
-msgid "错误信息"
-msgstr "Error Information"
-
-#: ../../source/docs/development/msg_json.md
-msgid "Comment"
-msgstr "Comment"
-
-#: ../../source/docs/development/msg_json.md
-msgid "异常状态码"
-msgstr "Exception Status Code"
-
-#: ../../source/docs/development/msg_json.md
-msgid "details"
-msgstr "Details"
-
-#: ../../source/docs/development/msg_json.md
-msgid "异常信息"
-msgstr "Exception Information"
-
-#: ../../source/docs/development/msg_json.md:605
-msgid "文件上传请求"
-msgstr "File upload request"
-
-#: ../../source/docs/development/msg_json.md
-msgid "hash"
-msgstr "hash"
-
-#: ../../source/docs/development/msg_json.md
-msgid "文件`sha256`哈希"
-msgstr "File `sha256` hash"
-
-#: ../../source/docs/development/msg_json.md
-msgid "auto_clean(optional)"
-msgstr "auto_clean(optional)"
-
-#: ../../source/docs/development/msg_json.md
-msgid "该文件是否自动清理,默认为 false"
-msgstr "whether the file should be cleaned automatically,default is false"
-
-#: ../../source/docs/development/msg_json.md
-msgid "size"
-msgstr "size"
-
-#: ../../source/docs/development/msg_json.md
-msgid "上传文件的字节数"
-msgstr "Bytes of the uploaded file"
-
-#: ../../source/docs/development/msg_json.md:625
-msgid "**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_api.md#文件上传)**"
-msgstr ""
-"**Note, this is only a part of the upload of the file, see [http part of "
-"upload format](./http_api.md#文件上传)**"
-
-#: ../../source/docs/development/msg_json.md:627
-msgid "文件上传返回信息"
-msgstr "The return information of the file upload"
-
-#: ../../source/docs/development/msg_json.md:640
-msgid "失败:请参考[**上传文件状态码**](./status_code.md#上传文件返回信息)"
-msgstr "Failure: Please refer to [**File Upload Status Codes**](./status_code.md#上传文件返回信息)"
-
-#: ../../source/docs/development/msg_json.md
-msgid "资源密钥，用于请求头`Key:`中，验证发送者身份并且是资源访问唯一标识符"
-msgstr ""
-"Resource key, used in the `Key:` header of the request, to verify the "
-"identity of the sender and is the unique identifier of the access to the "
-"resource"
-
-#: ../../source/docs/development/msg_json.md
-msgid "文件的`sha256`哈希"
-msgstr "File `sha256` hash"
 
 #: ../../source/docs/development/server/basic.md:1
 msgid "开发基本注意事项"
@@ -1322,9 +457,13 @@ msgstr "We provide a series of scripts to help you handle daily simple tasks."
 
 #: ../../source/docs/development/server/basic.md:7
 msgid ""
-"你可以运行`script/test_server.py`脚本来运行测试，默认会将`postgres`和`sqlite`的测试都运行一遍，可以通过指定第二个参数为特定数据库名称来运行特定的测试集，第三个参数为自定义化的测试命令，默认为`cargo"
-" test`。**测试使用`cargo test`运行前，要先设置好 OURCHAT_CONFIG_PATH 环境变量**"
-msgstr "You can run the `script/test_server.py` script to execute tests, which by default will run tests for both `postgres` and `sqlite`. You can specify a particular database name as the second argument to run a specific set of tests, and the third argument is for a customized test command, with the default being `cargo test`. **Before running tests with `cargo test`, you must set the OURCHAT_CONFIG_PATH environment variable**"
+"你可以运行`script/test_server.py`脚本来运行测试，第二个参数为自定义化的测试命令，默认为`cargo "
+"test`。**如果不使用该脚本，使用`cargo test`运行前，要先设置好 OURCHAT_CONFIG_PATH 环境变量**"
+msgstr ""
+"You can run the `script/test_server.py` script to execute tests, with the"
+" second parameter being a customized test command, defaulting to `cargo "
+"test`. **If you do not use this script, before running `cargo test`, you "
+"must set the `OURCHAT_CONFIG_PATH` environment variable.**"
 
 #: ../../source/docs/development/server/basic.md:9
 msgid "文档"
@@ -1338,6 +477,22 @@ msgstr ""
 "Please make good use of `cargo doc`, we have provided you with detailed "
 "documentation! Call `cargo doc --document-private-items` to generate "
 "private documentation."
+
+#: ../../source/docs/development/server/basic.md:13
+msgid "前置依赖"
+msgstr ""
+
+#: ../../source/docs/development/server/basic.md:15
+msgid "[Rust Compiler](https://rust-lang.org)"
+msgstr ""
+
+#: ../../source/docs/development/server/basic.md:16
+msgid "[buf](https://buf.build/)"
+msgstr ""
+
+#: ../../source/docs/development/server/basic.md:17
+msgid "[protobuf compiler](https://github.com/protocolbuffers/protobuf)"
+msgstr ""
 
 #: ../../source/docs/development/server/index.rst:2
 msgid "开发-服务器"
@@ -1381,6 +536,10 @@ msgid "主键，唯一的标识符(使用雪花 id)"
 msgstr "Primary key, unique identifier (using Snowflake ID)"
 
 #: ../../source/docs/development/server/server-database.md
+msgid "ocid"
+msgstr "OCID"
+
+#: ../../source/docs/development/server/server-database.md
 msgid "显示给用户的唯一 id 号(使用随机生成的 10 位字符串)"
 msgstr ""
 "Unique ID number displayed to the user (using a randomly generated "
@@ -1395,12 +554,29 @@ msgid "用户的密码，经过 sha256 加密，不可还原"
 msgstr "User's password, encrypted with sha256, irreversible"
 
 #: ../../source/docs/development/server/server-database.md
+#: ../../source/docs/run/server_argv.md
+msgid "name"
+msgstr "Name"
+
+#: ../../source/docs/development/server/server-database.md
+msgid "昵称"
+msgstr "Nickname"
+
+#: ../../source/docs/development/server/server-database.md
+msgid "email"
+msgstr "Email"
+
+#: ../../source/docs/development/server/server-database.md
 msgid "邮箱"
 msgstr "Email"
 
 #: ../../source/docs/development/server/server-database.md
 msgid "date"
 msgstr "Date"
+
+#: ../../source/docs/development/server/server-database.md
+msgid "时间戳"
+msgstr "Timestamp"
 
 #: ../../source/docs/development/server/server-database.md:16
 msgid "好友表(friend)"
@@ -1587,11 +763,16 @@ msgstr "to configure the development environment"
 
 #: ../../source/docs/development/server/server-develop.md:31
 msgid "如果 Dockerfile.dev 改变了，你可以运行`script/rebuild_dev_container.py`来重新构建镜像。"
-msgstr "If Dockerfile.dev has changed, you can run `script/rebuild_dev_container.py` to rebuild the image."
+msgstr ""
+"If Dockerfile.dev has changed, you can run "
+"`script/rebuild_dev_container.py` to rebuild the image."
 
 #: ../../source/docs/development/server/server-develop.md:33
 msgid "我们将数据直接复制到了`/app`文件夹，因此你**_不能随意重置容器_**，但这样可以使您的数据之间不会相互干扰。"
-msgstr "We have directly copied the data to the `/app` folder, so you **_cannot arbitrarily reset the container_**, but this ensures that your data will not interfere with each other."
+msgstr ""
+"We have directly copied the data to the `/app` folder, so you **_cannot "
+"arbitrarily reset the container_**, but this ensures that your data will "
+"not interfere with each other."
 
 #: ../../source/docs/development/server/server-develop.md:35
 msgid "推荐的开发方式是在本地使用编辑器编辑，同时使用`docker exec -it OurChatServer bash`进入容器运行并观察结果"
@@ -1620,10 +801,13 @@ msgstr "Database"
 
 #: ../../source/docs/development/server/server-develop.md:53
 msgid ""
-"本项目采用 Redis, PostgreSQL 和 SQLite 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 "
-"ORM 框架，在修改数据库表后，您可以运行`script/regenerate_entity.py`来重新生成 ORM 框架需要的文件"
+"本项目采用 Redis, PostgreSQL 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 ORM "
+"框架，在修改数据库表后，您可以运行`script/regenerate_entity.py`来重新生成 ORM 框架需要的文件"
 msgstr ""
-"This project uses Redis, PostgreSQL, and SQLite as databases, and uses sea-orm as the ORM framework. To better utilize this ORM framework, after modifying the database tables, you can run `script/regenerate_entity.py` to regenerate the files required by the ORM framework."
+"This project uses Redis, PostgreSQL as databases, and uses sea-orm as the"
+" ORM framework. To better utilize this ORM framework, after modifying the"
+" database tables, you can run `script/regenerate_entity.py` to regenerate"
+" the files required by the ORM framework."
 
 #: ../../source/docs/development/server/server-develop.md:55
 msgid "为了运行这个脚本，你首先需要运行`cargo install sea-orm-cli`"
@@ -1631,19 +815,16 @@ msgstr "To run this script, you first need to run `cargo install sea-orm-cli`"
 
 #: ../../source/docs/development/server/server-develop.md:57
 msgid "注意：请保证`sea-orm-cli`是最新的，否则会被脚本拦截，若脚本的版本更旧，请随时打开一个 issue"
-msgstr "Note: Please ensure that `sea-orm-cli` is up to date, otherwise it will be blocked by the script. If the script version is older, feel free to open an issue at any time."
+msgstr ""
+"Note: Please ensure that `sea-orm-cli` is up to date, otherwise it will "
+"be blocked by the script. If the script version is older, feel free to "
+"open an issue at any time."
 
 #: ../../source/docs/development/server/server-develop.md:59
-msgid ""
-"请注意保证您的代码可以同时在两种数据库上运行，我们提供了`#[derive::db_compatibility]`来方便的做到这一点，并且将数据库"
-" Model 映射到了公共类型上，也提供了一些 trait 来实现兼容。"
-msgstr "Please ensure that your code can run on both databases simultaneously. We have provided `#[derive::db_compatibility]` to facilitate this, and have mapped the database models to a common type. Additionally, we have provided some traits to achieve compatibility."
-
-#: ../../source/docs/development/server/server-develop.md:61
 msgid "数据库迁移"
 msgstr "Database Migration"
 
-#: ../../source/docs/development/server/server-develop.md:63
+#: ../../source/docs/development/server/server-develop.md:61
 msgid ""
 "`migration`中是数据库迁移模块，在 server 启动时会自动运行未运行的数据库迁移，为了定义一个新的数据库迁移，请参考[sea "
 "orm](https://www.sea-ql.org/SeaORM/docs/migration/setting-up-migration/)"
@@ -1677,22 +858,30 @@ msgstr "OurChat Status Code"
 
 #: ../../source/docs/development/status_code.md:3
 msgid ""
-"**_注：任何状态中都可能包含未知错误 8,请务必做好校验_** **_同样，任何状态中都可能包含状态 5，以标识 json 无法被识别_** "
-"**_由于服务器随时可能进入维护状态，状态 2 随时可能出现_** **_服务器任何请求都可能出现服务器错误，因此状态 1 "
-"在任何情况下都可能出现_**"
-msgstr ""
-"**Note: Unknown error 8 may be present in any status, so please ensure to perform checks.** "
-"**Similarly, status 5 may be present in any status to indicate that the JSON is unrecognizable.** "
-"**Due to the server potentially entering maintenance mode at any time, status 2 may appear at any moment.** "
-**Server errors can occur with any request, hence status 1 can appear under any circumstances.**"
+"**_注：任何状态中都可能包含INTERNAL,请务必做好校验_** **_由于服务器随时可能进入维护状态，FAILED_PRECONDITION"
+" 随时可能出现_**"
+msgstr "**_ Note: Any status may contain INTERNAL, please make sure to "
+"perform checks._** **_Due to the server potentially entering maintenance "
 
-#: ../../source/docs/development/status_code.md:8
+#: ../../source/docs/development/status_code.md:6
 msgid "**_以上特殊信息不再赘述_**"
 msgstr "**_No further elaboration on the above special information_**"
 
+#: ../../source/docs/development/status_code.md:8
+msgid "状态码"
+msgstr "Status Code"
+
 #: ../../source/docs/development/status_code.md:10
-msgid "状态码表格"
-msgstr "Status Code Table"
+msgid "请参考 [grpc 文档](https://grpc.io/docs/guides/status-codes/)"
+msgstr "Please refer to [grpc documentation](https://grpc.io/docs/guides/status-codes/)"
+
+#: ../../source/docs/development/status_code.md:12
+msgid "各种信息下的状态码具体解释"
+msgstr "Specific explanations of status codes under various information conditions"
+
+#: ../../source/docs/development/status_code.md:14
+msgid "获取会话信息返回信息"
+msgstr "Get Session Information Return Information"
 
 #: ../../source/docs/development/status_code.md
 msgid "code"
@@ -1707,120 +896,44 @@ msgid "0"
 msgstr "0"
 
 #: ../../source/docs/development/status_code.md
-msgid "运行成功"
-msgstr "Operation successful"
-
-#: ../../source/docs/development/status_code.md
-msgid "1"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "服务器错误"
-msgstr "Server Error"
-
-#: ../../source/docs/development/status_code.md
-msgid "2"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "服务器维护中"
-msgstr "Under Maintenance"
-
-#: ../../source/docs/development/status_code.md
-msgid "3"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "请求信息不存在"
-msgstr "Request information does not exist"
-
-#: ../../source/docs/development/status_code.md
-msgid "4"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "新增信息已存在"
-msgstr "The new information already exists"
-
-#: ../../source/docs/development/status_code.md
-msgid "5"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "参数错误，指令错误，参数不存在，指令不存在等错误"
-msgstr "Parameter error, command error, parameter does not exist, command does not exist, and other such errors."
-
-#: ../../source/docs/development/status_code.md
-msgid "6"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "账号限制"
-msgstr "Account restriction"
-
-#: ../../source/docs/development/status_code.md
-msgid "7"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "等待超时"
-msgstr "Timeout"
-
-#: ../../source/docs/development/status_code.md
-msgid "8"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "未知错误"
-msgstr "Unknown Error"
-
-#: ../../source/docs/development/status_code.md
-msgid "9"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "请求被拒绝"
-msgstr "Request denied."
-
-#: ../../source/docs/development/status_code.md
-msgid "10"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "验证失败"
-msgstr "Verification failed."
-
-#: ../../source/docs/development/status_code.md
-msgid "11"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "对应功能不可用"
-msgstr "The corresponding feature is not available."
-
-#: ../../source/docs/development/status_code.md:27
-msgid "各种信息下的状态码具体解释"
-msgstr "Specific explanations of status codes under various information conditions"
-
-#: ../../source/docs/development/status_code.md
 msgid "获取成功"
 msgstr "Retrieved successfully"
 
 #: ../../source/docs/development/status_code.md
+msgid "3"
+msgstr "3"
+
+#: ../../source/docs/development/status_code.md
 msgid "该会话不存在"
 msgstr "The session does not exist"
+
+#: ../../source/docs/development/status_code.md:21
+msgid "注册返回信息"
+msgstr "Registration Return Information"
 
 #: ../../source/docs/development/status_code.md
 msgid "注册成功"
 msgstr "Registration Successful"
 
 #: ../../source/docs/development/status_code.md
+msgid "4"
+msgstr "4"
+
+#: ../../source/docs/development/status_code.md
 msgid "邮箱已存在"
 msgstr "Email already exists"
 
 #: ../../source/docs/development/status_code.md
+msgid "10"
+msgstr "10"
+
+#: ../../source/docs/development/status_code.md
 msgid "未完成验证"
 msgstr "Verification not completed"
+
+#: ../../source/docs/development/status_code.md:29
+msgid "登录返回信息"
+msgstr "Login Return Information"
 
 #: ../../source/docs/development/status_code.md
 msgid "登录成功"
@@ -1830,19 +943,31 @@ msgstr "Login Successful"
 msgid "账号/密码错误"
 msgstr "Account/password is incorrect"
 
+#: ../../source/docs/development/status_code.md:36
+msgid "新建会话返回信息"
+msgstr "New Session Return Information"
+
 #: ../../source/docs/development/status_code.md
 msgid "新建成功"
 msgstr "Created Successfully"
 
 #: ../../source/docs/development/status_code.md
+msgid "6"
+msgstr "6"
+
+#: ../../source/docs/development/status_code.md
 msgid "到达创建会话数量上限"
 msgstr "Reached the maximum number of sessions"
+
+#: ../../source/docs/development/status_code.md:43
+msgid "获取账号信息返回信息"
+msgstr "Get Account Information Return Information"
 
 #: ../../source/docs/development/status_code.md
 msgid "该账号不存在"
 msgstr "The account does not exist"
 
-#: ../../source/docs/development/status_code.md:65
+#: ../../source/docs/development/status_code.md:50
 msgid "获取服务器状态"
 msgstr "Get Server Status"
 
@@ -1851,22 +976,46 @@ msgid "服务器正常"
 msgstr "Server is running normally"
 
 #: ../../source/docs/development/status_code.md
+msgid "2"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "服务器维护中"
+msgstr "Under Maintenance"
+
+#: ../../source/docs/development/status_code.md:57
+msgid "验证状态"
+msgstr "Verification Status"
+
+#: ../../source/docs/development/status_code.md
 msgid "验证通过"
 msgstr "Verification Passed"
+
+#: ../../source/docs/development/status_code.md
+msgid "7"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "验证超时"
 msgstr "Verification Timeout"
 
+#: ../../source/docs/development/status_code.md:64
+msgid "注销返回信息"
+msgstr "Logout Return Information"
+
 #: ../../source/docs/development/status_code.md
 msgid "注销成功"
 msgstr "Logout Successful"
+
+#: ../../source/docs/development/status_code.md:71
+msgid "设置账号信息返回信息"
+msgstr "Get Account Information Return Information"
 
 #: ../../source/docs/development/status_code.md
 msgid "设置成功"
 msgstr "Set Successfully"
 
-#: ../../source/docs/development/status_code.md:92
+#: ../../source/docs/development/status_code.md:77
 msgid "上传文件返回信息"
 msgstr "The return information of the file upload"
 
@@ -1878,7 +1027,7 @@ msgstr "Upload successful"
 msgid "因账号相关限制导致请求被拒绝"
 msgstr "The request was denied due to account-related restrictions"
 
-#: ../../source/docs/development/status_code.md:99
+#: ../../source/docs/development/status_code.md:84
 msgid "邮件发送"
 msgstr "Email Sent"
 
@@ -1887,40 +1036,24 @@ msgid "请求邮箱无法发送成功"
 msgstr "Send Email Failed"
 
 #: ../../source/docs/development/status_code.md
+msgid "请求被拒绝"
+msgstr "Request denied."
+
+#: ../../source/docs/development/status_code.md
+msgid "11"
+msgstr "11"
+
+#: ../../source/docs/development/status_code.md
 msgid "对应功能不存在或无法启用"
 msgstr "The corresponding feature does not exist or cannot be enabled"
+
+#: ../../source/docs/development/status_code.md:93
+msgid "同意加入会话返回信息"
+msgstr "Agree to Join Session Return Information"
 
 #: ../../source/docs/development/status_code.md
 msgid "同意成功"
 msgstr "Agree Successfully"
-
-#: ../../source/docs/development/user_msg_json.md:1
-msgid "OurChat 用户消息传递格式"
-msgstr "OurChat User Message Passing Format"
-
-#: ../../source/docs/development/user_msg_json.md:3
-msgid "目录"
-msgstr "Table of Contents"
-
-#: ../../source/docs/development/user_msg_json.md:5
-msgid "[文本消息](#文本消息)"
-msgstr "[Text Message](#文本消息)"
-
-#: ../../source/docs/development/user_msg_json.md:7
-msgid "文本消息"
-msgstr "Text Message"
-
-#: ../../source/docs/development/user_msg_json.md
-msgid "信息类型"
-msgstr "Message Type"
-
-#: ../../source/docs/development/user_msg_json.md
-msgid "text"
-msgstr "Text"
-
-#: ../../source/docs/development/user_msg_json.md
-msgid "文本消息内容"
-msgstr "Text Message Content"
 
 #: ../../source/docs/run/build.md:1
 msgid "如何构建该项目"
@@ -1989,15 +1122,15 @@ msgstr ""
 
 #: ../../source/docs/run/build.md:42
 msgid "[Windows](https://docs.flutter.cn/get-started/install/windows/desktop)"
-msgstr ""
+msgstr "[Windows](https://docs.flutter.dev/get-started/install/windows/desktop)"
 
 #: ../../source/docs/run/build.md:43
 msgid "[Linux](https://docs.flutter.cn/get-started/install/linux/desktop)"
-msgstr ""
+msgstr "[Linux](https://docs.flutter.dev/get-started/install/linux/desktop)"
 
 #: ../../source/docs/run/build.md:44
 msgid "[MacOS](https://docs.flutter.cn/get-started/install/macos/desktop)"
-msgstr ""
+msgstr "[MacOS](https://docs.flutter.dev/get-started/install/macos/desktop)"
 
 #: ../../source/docs/run/build.md:46
 msgid "接下来进入客户端目录安装依赖包"
@@ -2074,6 +1207,10 @@ msgstr "7777"
 #: ../../source/docs/run/server_argv.md
 msgid "`--http-port=http server listening port`"
 msgstr "`--http-port=http server listening port`"
+
+#: ../../source/docs/run/server_argv.md
+msgid "http 服务器监听的端口"
+msgstr "Port the http server listens on"
 
 #: ../../source/docs/run/server_argv.md
 msgid "7778"
@@ -2322,6 +1459,10 @@ msgid "自动清理过期文件周期"
 msgstr "Cycle of auto clean expired files"
 
 #: ../../source/docs/run/server_cmd.md
+msgid "Number"
+msgstr "Number"
+
+#: ../../source/docs/run/server_cmd.md
 msgid "FileSaveDays"
 msgstr "FileSaveDays"
 
@@ -2496,4 +1637,755 @@ msgstr "File Save Days"
 
 #~ msgid "参数错误"
 #~ msgstr "Parameter error"
+
+#~ msgid "[Sqlite 便携部署](#sqlite-便携部署)"
+#~ msgstr "[SQLite Portable Deployment](#sqlite-便携部署)"
+
+#~ msgid "(可选)pgo 优化"
+#~ msgstr "(Optional) PGO Optimization"
+
+#~ msgid "该步骤会消耗大量时间，收集运行时信息来进行程序的优化，如果对于性能没有苛刻的要求不建议这么做"
+#~ msgstr ""
+#~ "This step will take a lot of "
+#~ "time, collecting runtime information to "
+#~ "optimize the program. It is not "
+#~ "recommended if there are no stringent"
+#~ " performance requirements."
+
+#~ msgid "Sqlite 便携部署"
+#~ msgstr "SQLite Portable Deployment"
+
+#~ msgid ""
+#~ "其余部分都可以参考上一章，但是 mysql "
+#~ "可以无需安装，具体配置方法参考[服务器参数](../run/server_argv.md)或直接参考`config/sqlite/ourchat.toml`"
+#~ msgstr ""
+#~ "The rest of the section can refer"
+#~ " to the previous chapter, but MySQL"
+#~ " can be installed without installation, "
+#~ "for specific configuration methods, refer "
+#~ "to [Server Parameters](../run/server_argv.md) or "
+#~ "directly refer to `config/sqlite/ourchat.toml`."
+
+#~ msgid "注意，sqlite 运行仅限于性能需求不高，需要快速搭建的小型场景，如对性能有要求请使用 Mysql 方式。"
+#~ msgstr ""
+#~ "Please note, SQLite operation is limited"
+#~ " to scenarios with low performance "
+#~ "requirements and the need for a "
+#~ "quick setup, such as small-scale "
+#~ "environments. If you have performance "
+#~ "requirements, please use the MySQL "
+#~ "method"
+
+#~ msgid "接口:`/upload` 请求类型:`POST`"
+#~ msgstr "api:`/upload` Request type:`POST`"
+
+#~ msgid "请求头"
+#~ msgstr "Request Header"
+
+#~ msgid "说明"
+#~ msgstr "Note"
+
+#~ msgid "资源密钥"
+#~ msgstr "Resource Key"
+
+#~ msgid "状态码"
+#~ msgstr "Status Code"
+
+#~ msgid "NotFound"
+#~ msgstr "NotFound"
+
+#~ msgid "请求上传的资源不存在"
+#~ msgstr "The requesting resource should be uploaded does not exist"
+
+#~ msgid "InternalServerError"
+#~ msgstr "INternalServerError"
+
+#~ msgid "服务器内部错误"
+#~ msgstr "Internal Server Error"
+
+#~ msgid "BadRequest"
+#~ msgstr "BadRequest"
+
+#~ msgid "哈希不匹配等"
+#~ msgstr "Hash does not match"
+
+#~ msgid "Ok"
+#~ msgstr "Ok"
+
+#~ msgid "成功"
+#~ msgstr "successful"
+
+#~ msgid "直接上传文件内容即可"
+#~ msgstr "Upload the file content directly"
+
+#~ msgid "**关于获取该接口，参见[交换格式](./msg_json.md#文件上传请求)**"
+#~ msgstr ""
+#~ "**About getting this api, please see "
+#~ "[Message Exchange Format](./msg_json.md#文件上传请求)**"
+
+#~ msgid "文件下载"
+#~ msgstr "File download"
+
+#~ msgid "接口:`/download` 请求类型:`POST`"
+#~ msgstr "api:`/download` Request type:`POST`"
+
+#~ msgid "请求下载的资源不存在"
+#~ msgstr "The resource which is requested to download does not exist"
+
+#~ msgid "资源密钥不存在"
+#~ msgstr "Resource Key does not exist"
+
+#~ msgid "body 中包含了文件的数据"
+#~ msgstr "body contains the file data"
+
+#~ msgid "服务器状态"
+#~ msgstr "Server Status"
+
+#~ msgid "接口:`/timestamp` 请求类型: `GET`"
+#~ msgstr "Api:`/timestamp` Request Type: `GET`"
+
+#~ msgid "返回 rfc3339 格式的时间戳"
+#~ msgstr "Return a timestamp in RFC3339 format"
+
+#~ msgid ""
+#~ "**_注意：失败则返回 18 "
+#~ "号信息，除去某些验证性质的消息，在预期之内会返回对应的返回信息，出现预料之外的错误则依然返回 18 "
+#~ "号信息，具体状态码含义在对应消息阐释_**"
+#~ msgstr ""
+#~ "Attention: If the operation fails, "
+#~ "message number 18 will be returned. "
+#~ "Except for certain verification-related "
+#~ "messages, which are expected to return"
+#~ " corresponding response information, any "
+#~ "unexpected errors will still result in"
+#~ " the return of message number 18. "
+#~ "The specific meanings of the status "
+#~ "codes are explained in the corresponding"
+#~ " message descriptions."
+
+#~ msgid "注册邮箱"
+#~ msgstr "Registered Email"
+
+#~ msgid "password"
+#~ msgstr "Password"
+
+#~ msgid "注册密码(已加密)"
+#~ msgstr "Registration Password (Encrypted)"
+
+#~ msgid "失败：请参考[**注册状态码**](status_code.md#注册返回信息)"
+#~ msgstr ""
+#~ "Failure: Please refer to [**Registration "
+#~ "Status Codes**](status_code.md#注册返回信息)"
+
+#~ msgid "登录信息"
+#~ msgstr "Login Information"
+
+#~ msgid "login_type"
+#~ msgstr "Login Type"
+
+#~ msgid "0 为邮箱登录，1 为 ocid 登录"
+#~ msgstr "0 for email login, 1 for ocid login"
+
+#~ msgid "account"
+#~ msgstr "Account"
+
+#~ msgid "账号绑定的邮箱或 ocid"
+#~ msgstr "Email or ocid bound to the account"
+
+#~ msgid "密码"
+#~ msgstr "Password"
+
+#~ msgid "失败：请参考[**登录状态码**](status_code.md#登录返回信息)"
+#~ msgstr ""
+#~ "Failure: Please refer to [**Login Status"
+#~ " Codes**](status_code.md#登录返回信息)"
+
+#~ msgid "预期的状态码为 0 或 10"
+#~ msgstr "Expected status codes are 0 or 10."
+
+#~ msgid ""
+#~ "请注意保证您的代码可以同时在两种数据库上运行，我们提供了`#[derive::db_compatibility]`来方便的做到这一点，并且将数据库"
+#~ " Model 映射到了公共类型上，也提供了一些 trait 来实现兼容。"
+#~ msgstr ""
+#~ "Please ensure that your code can "
+#~ "run on both databases simultaneously. We"
+#~ " have provided `#[derive::db_compatibility]` to"
+#~ " facilitate this, and have mapped the"
+#~ " database models to a common type."
+#~ " Additionally, we have provided some "
+#~ "traits to achieve compatibility."
+
+#~ msgid "OurChat 用户消息传递格式"
+#~ msgstr "OurChat User Message Passing Format"
+
+#~ msgid "目录"
+#~ msgstr "Table of Contents"
+
+#~ msgid "[文本消息](#文本消息)"
+#~ msgstr "[Text Message](#文本消息)"
+
+#~ msgid "文本消息"
+#~ msgstr "Text Message"
+
+#~ msgid "信息类型"
+#~ msgstr "Message Type"
+
+#~ msgid "text"
+#~ msgstr "Text"
+
+#~ msgid "文本消息内容"
+#~ msgstr "Text Message Content"
+
+#~ msgid "注册信息"
+#~ msgstr "Registration Information"
+
+#~ msgid "获取账号信息"
+#~ msgstr "Get Account Information"
+
+#~ msgid "该账号的 ocid"
+#~ msgstr "The ocid of the account"
+
+#~ msgid "该账号绑定的邮箱(仅本账号可获取，非本账号返回 null)"
+#~ msgstr ""
+#~ "The email bound to the account "
+#~ "(only accessible to this account, other"
+#~ " accounts will return null)."
+
+#~ msgid "user_name"
+#~ msgstr "user_name"
+
+#~ msgid "用户名"
+#~ msgstr "User Name"
+
+#~ msgid "display_name"
+#~ msgstr "display_name"
+
+#~ msgid "备注名"
+#~ msgstr "the alias name of the user"
+
+#~ msgid "该账号的状态"
+#~ msgstr "The status of the account"
+
+#~ msgid "该账号注册的时间戳"
+#~ msgstr "The timestamp when the account was registered"
+
+#~ msgid "public_update_time"
+#~ msgstr "Public Update Time"
+
+#~ msgid "该账号公共(即不包括**sessions**和**friends**)数据最后更新的时间戳"
+#~ msgstr ""
+#~ "The last update timestamp of the "
+#~ "public (i.e., excluding **_sessions_** and "
+#~ "**_friends_**) data for this account.**"
+
+#~ msgid "该账号所有数据最后更新的时间戳(仅本账号可获取，非本账号返回 null)"
+#~ msgstr ""
+#~ "The timestamp of the last update "
+#~ "of the data (only accessible to "
+#~ "this account, other accounts will return"
+#~ " null)."
+
+#~ msgid "sessions"
+#~ msgstr "Sessions"
+
+#~ msgid "该账号加入/创建的会话列表(仅本账号可获取，非本账号返回 null)"
+#~ msgstr ""
+#~ "The session list that this account "
+#~ "has joined/created (only this account "
+#~ "can obtain it, other accounts will "
+#~ "return null)."
+
+#~ msgid "friends"
+#~ msgstr "Friends"
+
+#~ msgid "该账号的好友列表 (仅本账号可获取，非本账号返回 null)"
+#~ msgstr ""
+#~ "The friend list of this account "
+#~ "(only accessible to this account, other"
+#~ " accounts will return null)."
+
+#~ msgid "失败:请参考[**获取账号信息状态码**](status_code.md#获取账号信息返回信息)"
+#~ msgstr ""
+#~ "Failure: Please refer to [**Account "
+#~ "Information Status Codes**](status_code.md#获取账号信息返回信息)"
+
+#~ msgid "账号信息,详情[见上**获取账号信息**`request_value`](#获取账号信息)"
+#~ msgstr ""
+#~ "Account information, details [see above "
+#~ "**Get Account Information** "
+#~ "`request_value`](#获取账号信息)"
+
+#~ msgid "注销"
+#~ msgstr "Logout"
+
+#~ msgid "**_警告：该注销是删除帐号的意思，请勿误用接口_**"
+#~ msgstr ""
+#~ "**Warning: This logout refers to the "
+#~ "deletion of the account, please do "
+#~ "not misuse the interface_**"
+
+#~ msgid "失败:请参考[**注销状态码**](status_code.md#注销返回信息)"
+#~ msgstr ""
+#~ "Failure: Please refer to [**Logout "
+#~ "Status Codes**](status_code.md#注销返回信息)"
+
+#~ msgid "设置账号信息"
+#~ msgstr "Set Account Information"
+
+#~ msgid "需要更改的账号信息，可设置的字段见下面表格"
+#~ msgstr ""
+#~ "The account information that needs to"
+#~ " be set, the fields that can be"
+#~ " configured are shown in the table"
+#~ " below."
+
+#~ msgid "可设置的字段："
+#~ msgstr "the fields that can be configured"
+
+#~ msgid "以上字段具体意义见[**获取账号信息**`request_value`](#获取账号信息)"
+#~ msgstr ""
+#~ "Account information, details [see above "
+#~ "**Get Account Information** "
+#~ "`request_value`](#获取账号信息)"
+
+#~ msgid "设置好友信息"
+#~ msgstr "Set Friend Information"
+
+#~ msgid "需要更改的好友的 ocid"
+#~ msgstr "The OCID of the friend that needs to be changed"
+
+#~ msgid "需要更改的好友信息，可设置的字段见下面表格"
+#~ msgstr ""
+#~ "The friend information that needs to "
+#~ "be changed, the fields that can be"
+#~ " set are shown in the table "
+#~ "below"
+
+#~ msgid "失败：请参考[**设置账号信息状态码**](status_code.md#设置账号信息返回信息)"
+#~ msgstr ""
+#~ "Failure: Please refer to [**Set Account"
+#~ " Information Status Codes**](status_code.md#设置账号信息返回信息)"
+
+#~ msgid "会话"
+#~ msgstr "Session"
+
+#~ msgid "获取会话信息"
+#~ msgstr "Get Session Information"
+
+#~ msgid "该会话的 ID"
+#~ msgstr "The ID of this session"
+
+#~ msgid "request_values"
+#~ msgstr "Requested Values"
+
+#~ msgid "需要服务端返回的信息"
+#~ msgstr "Information required to be returned by the server"
+
+#~ msgid "request_value"
+#~ msgstr "Requested Value"
+
+#~ msgid "会话名称"
+#~ msgstr "Session Name"
+
+#~ msgid "该会话创建的时间戳"
+#~ msgstr "The timestamp when the session was created"
+
+#~ msgid "update_time"
+#~ msgstr "Update Time"
+
+#~ msgid "该会话数据最后更新的时间戳"
+#~ msgstr "The timestamp of the last update of the data"
+
+#~ msgid "该会话的成员列表"
+#~ msgstr "The member list of the session"
+
+#~ msgid "owner"
+#~ msgstr "Owner"
+
+#~ msgid "该会话拥有者的 ocid"
+#~ msgstr "The OCID of the owner of the session"
+
+#~ msgid "失败:请参考[**获取会话信息状态码**](status_code.md#获取会话信息返回信息)"
+#~ msgstr ""
+#~ "Failure: Please refer to [**New Session"
+#~ " Status Codes**](status_code.md#新建会话返回信息)"
+
+#~ msgid "data"
+#~ msgstr "Data"
+
+#~ msgid "账号信息,详情[见上**获取会话信息**`request_value`](#获取会话信息)"
+#~ msgstr ""
+#~ "Account information, details [see above "
+#~ "**Session Information Retrieval** "
+#~ "`request_value`](#获取会话信息)"
+
+#~ msgid "新建会话请求信息"
+#~ msgstr "New Session Request Information"
+
+#~ msgid "avatar_key"
+#~ msgstr "avatar_key"
+
+#~ msgid "获取头像时需要用到的密钥"
+#~ msgstr "get the key needed to retrieve the avatar"
+
+#~ msgid "会话名称,可选(如不填写使用默认名称)"
+#~ msgstr "Conversation name, optional (use default name if not filled)"
+
+#~ msgid "members"
+#~ msgstr "Members"
+
+#~ msgid "会话成员"
+#~ msgstr "Session Members"
+
+#~ msgid "失败:请参考[**新建会话状态码**](status_code.md#新建会话返回信息)"
+#~ msgstr ""
+#~ "Failure: Please refer to [**New Session"
+#~ " Status Codes**](status_code.md#新建会话返回信息)"
+
+#~ msgid "账号"
+#~ msgstr "Account"
+
+#~ msgid "邀请加入会话"
+#~ msgstr "Inviting to join the session"
+
+#~ msgid "valueType"
+#~ msgstr "Value Type"
+
+#~ msgid "会话 id"
+#~ msgstr "Session ID"
+
+#~ msgid "inviter_id"
+#~ msgstr "inviter_id"
+
+#~ msgid "邀请者 id"
+#~ msgstr "Inviter ID"
+
+#~ msgid "message"
+#~ msgstr "message"
+
+#~ msgid "留言"
+#~ msgstr "Message"
+
+#~ msgid "expire_timestamp"
+#~ msgstr "expire_timestamp"
+
+#~ msgid "失效时间戳"
+#~ msgstr "Expire Timestamp"
+
+#~ msgid "邀请加入会话返回信息"
+#~ msgstr "Invite to Session Return Information"
+
+#~ msgid "accept"
+#~ msgstr "accept"
+
+#~ msgid "对邀请的同意情况"
+#~ msgstr "The acceptance of the invitation"
+
+#~ msgid "失败:请参考[**同意加入会话状态码**](status_code.md#同意加入会话返回信息)"
+#~ msgstr ""
+#~ "Failure: Please refer to [**Agree to "
+#~ "Join Session Status "
+#~ "Codes**](status_code.md#同意加入会话返回信息)"
+
+#~ msgid "服务器"
+#~ msgstr "Server"
+
+#~ msgid "获取服务器信息"
+#~ msgstr "Get Server Information"
+
+#~ msgid "**_Server <-> Client_**"
+#~ msgstr "**Server <-> Client**"
+
+#~ msgid "状态码，返回运行状态，详情见[**状态码**`status`](status_code.md#获取服务器状态)，预期的状态码为 0 或 2"
+#~ msgstr ""
+#~ "Status code, returns the operational "
+#~ "status, for details, see [**Status "
+#~ "Code** `status`](status_code.md#获取服务器状态), expected "
+#~ "status codes are 0 or 2"
+
+#~ msgid "http_port"
+#~ msgstr ""
+
+#~ msgid "server_version"
+#~ msgstr "server_version"
+
+#~ msgid "服务器版本"
+#~ msgstr "Server Version"
+
+#~ msgid "unique_identifier"
+#~ msgstr "unique_identifier"
+
+#~ msgid "服务器唯一标识符，用于客户端区分服务器"
+#~ msgstr ""
+#~ "Server unique identifier, used by the"
+#~ " client to distinguish between servers"
+
+#~ msgid "验证码"
+#~ msgstr "Verification Status Code"
+
+#~ msgid "发起验证"
+#~ msgstr "Initiate Verification"
+
+#~ msgid "生成验证码"
+#~ msgstr "Generate Verification Code"
+
+#~ msgid "请求生成"
+#~ msgstr "equest to generate"
+
+#~ msgid "验证邮箱"
+#~ msgstr "Email to be verified"
+
+#~ msgid "返回消息"
+#~ msgstr "Return Information"
+
+#~ msgid "失败:请参考[**邮件发送状态码**](status_code.md#邮件发送)"
+#~ msgstr ""
+#~ "Failure: Please refer to [**Email "
+#~ "Sending Status Codes**](status_code.md#邮件发送)"
+
+#~ msgid "状态码，详情见[**状态码**`status`](status_code.md#验证状态)，预期的状态码为 0 或 7"
+#~ msgstr ""
+#~ "Status code, for details see [**Status"
+#~ " Code** `status`](status_code.md#验证状态), expected "
+#~ "status codes are 0 or 7"
+
+#~ msgid "OurChat 信息传递格式"
+#~ msgstr "OurChat Message Passing Format"
+
+#~ msgid "其他信息"
+#~ msgstr "Other Information"
+
+#~ msgid "获取信息"
+#~ msgstr "Get Message"
+
+#~ msgid "**_Server -> Client_**"
+#~ msgstr "**Server -> Client**"
+
+#~ msgid "key"
+#~ msgstr "key"
+
+#~ msgid "ValueType"
+#~ msgstr "Value Type"
+
+#~ msgid "comment"
+#~ msgstr "Comment"
+
+#~ msgid "msgs"
+#~ msgstr "msgs"
+
+#~ msgid "Array"
+#~ msgstr "Array"
+
+#~ msgid "发送的消息列表"
+#~ msgstr "Sent Message List"
+
+#~ msgid "session_id"
+#~ msgstr "Session ID"
+
+#~ msgid "消息全部属于该会话 id"
+#~ msgstr "All messages belong to this session ID"
+
+#~ msgid "消息列表"
+#~ msgstr "Message List"
+
+#~ msgid "用户发送信息"
+#~ msgstr "User Information"
+
+#~ msgid "**_Server <- Client_**"
+#~ msgstr "**Server <- Client**"
+
+#~ msgid "发送信息返回信息"
+#~ msgstr "Send Message Return Information"
+
+#~ msgid "请求获取消息"
+#~ msgstr "Request to Retrieve Messages"
+
+#~ msgid "返回[用户发送消息](#获取信息)"
+#~ msgstr "Return [User Sent Messages](#获取信息)"
+
+#~ msgid "**_Warning:该接口调用后，考虑到消息可能有很多，可能不会一次性返回所有信息，注意分批接收！_**"
+#~ msgstr ""
+#~ "**_Warning: After calling this interface, "
+#~ "considering there may be many messages,"
+#~ " not all information may be returned"
+#~ " at once, please be aware to "
+#~ "receive in batches!_**"
+
+#~ msgid "time"
+#~ msgstr "Time"
+
+#~ msgid "String"
+#~ msgstr "String"
+
+#~ msgid "接收来自该时间戳之后的消息"
+#~ msgstr "Receive messages from after this timestamp"
+
+#~ msgid "发消息的时间戳"
+#~ msgstr "Timestamp of the message sent"
+
+#~ msgid "msg_id"
+#~ msgstr "msg_id"
+
+#~ msgid "message 的 ID，唯一 **(注意：传输给服务器时无此字段)**"
+#~ msgstr ""
+#~ "Message ID, unique **_(Note: This field"
+#~ " is not present when transmitted to"
+#~ " the server)_**"
+
+#~ msgid "sender"
+#~ msgstr "Sender"
+
+#~ msgid "Object"
+#~ msgstr "Object"
+
+#~ msgid "发送者的相关数据"
+#~ msgstr "Relevant data of the sender"
+
+#~ msgid "发送者的 ocid"
+#~ msgstr "Sender's OCID"
+
+#~ msgid "发送者的会话 id"
+#~ msgstr "Sender's session ID"
+
+#~ msgid "msg"
+#~ msgstr "Message"
+
+#~ msgid "type"
+#~ msgstr "Type"
+
+#~ msgid "用户消息类型，详细见[**用户消息传递格式**](user_msg_json.md)"
+#~ msgstr ""
+#~ "User message type, see [User Message "
+#~ "Passing Format](user_msg_json.md) for details"
+
+#~ msgid "错误信息"
+#~ msgstr "Error Information"
+
+#~ msgid "Key"
+#~ msgstr "Key"
+
+#~ msgid "Comment"
+#~ msgstr "Comment"
+
+#~ msgid "status"
+#~ msgstr "Status"
+
+#~ msgid "异常状态码"
+#~ msgstr "Exception Status Code"
+
+#~ msgid "details"
+#~ msgstr "Details"
+
+#~ msgid "异常信息"
+#~ msgstr "Exception Information"
+
+#~ msgid "文件上传请求"
+#~ msgstr "File upload request"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "文件`sha256`哈希"
+#~ msgstr "File `sha256` hash"
+
+#~ msgid "auto_clean(optional)"
+#~ msgstr "auto_clean(optional)"
+
+#~ msgid "Boolean"
+#~ msgstr "Boolean"
+
+#~ msgid "该文件是否自动清理,默认为 false"
+#~ msgstr "whether the file should be cleaned automatically,default is false"
+
+#~ msgid "size"
+#~ msgstr "size"
+
+#~ msgid "上传文件的字节数"
+#~ msgstr "Bytes of the uploaded file"
+
+#~ msgid "**注意，此处仅为上传文件的一部分，参见[http 部分的上传格式](./http_api.md#文件上传)**"
+#~ msgstr ""
+#~ "**Note, this is only a part of "
+#~ "the upload of the file, see [http"
+#~ " part of upload format](./http_api.md#文件上传)**"
+
+#~ msgid "文件上传返回信息"
+#~ msgstr "The return information of the file upload"
+
+#~ msgid "失败:请参考[**上传文件状态码**](./status_code.md#上传文件返回信息)"
+#~ msgstr ""
+#~ "Failure: Please refer to [**File Upload"
+#~ " Status Codes**](./status_code.md#上传文件返回信息)"
+
+#~ msgid "资源密钥，用于请求头`Key:`中，验证发送者身份并且是资源访问唯一标识符"
+#~ msgstr ""
+#~ "Resource key, used in the `Key:` "
+#~ "header of the request, to verify "
+#~ "the identity of the sender and is"
+#~ " the unique identifier of the access"
+#~ " to the resource"
+
+#~ msgid "文件的`sha256`哈希"
+#~ msgstr "File `sha256` hash"
+
+#~ msgid ""
+#~ "**_注：任何状态中都可能包含未知错误 8,请务必做好校验_** **_同样，任何状态中都可能包含状态 "
+#~ "5，以标识 json 无法被识别_** **_由于服务器随时可能进入维护状态，状态 2"
+#~ " 随时可能出现_** **_服务器任何请求都可能出现服务器错误，因此状态 1 "
+#~ "在任何情况下都可能出现_**"
+#~ msgstr ""
+#~ "**Note: Unknown error 8 may be "
+#~ "present in any status, so please "
+#~ "ensure to perform checks.** **Similarly, "
+#~ "status 5 may be present in any "
+#~ "status to indicate that the JSON "
+#~ "is unrecognizable.** **Due to the server"
+#~ " potentially entering maintenance mode at"
+#~ " any time, status 2 may appear "
+#~ "at any moment.** "
+
+#~ msgid "运行成功"
+#~ msgstr "Operation successful"
+
+#~ msgid "1"
+#~ msgstr ""
+
+#~ msgid "服务器错误"
+#~ msgstr "Server Error"
+
+#~ msgid "请求信息不存在"
+#~ msgstr "Request information does not exist"
+
+#~ msgid "新增信息已存在"
+#~ msgstr "The new information already exists"
+
+#~ msgid "5"
+#~ msgstr ""
+
+#~ msgid "参数错误，指令错误，参数不存在，指令不存在等错误"
+#~ msgstr ""
+#~ "Parameter error, command error, parameter "
+#~ "does not exist, command does not "
+#~ "exist, and other such errors."
+
+#~ msgid "账号限制"
+#~ msgstr "Account restriction"
+
+#~ msgid "等待超时"
+#~ msgstr "Timeout"
+
+#~ msgid "8"
+#~ msgstr ""
+
+#~ msgid "未知错误"
+#~ msgstr "Unknown Error"
+
+#~ msgid "9"
+#~ msgstr ""
+
+#~ msgid "验证失败"
+#~ msgstr "Verification failed."
+
+#~ msgid "对应功能不可用"
+#~ msgstr "The corresponding feature is not available."
 

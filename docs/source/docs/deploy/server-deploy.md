@@ -2,7 +2,6 @@
 
 - [Docker 部署](#docker推荐)
 - [手动部署](#手动部署)
-- [Sqlite 便携部署](#sqlite-便携部署)
 
 ## Docker(推荐)
 
