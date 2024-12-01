@@ -2129,9 +2129,6 @@ msgstr "File Save Days"
 #~ msgid "生成验证码"
 #~ msgstr "Generate Verification Code"
 
-#~ msgid "请求生成"
-#~ msgstr "equest to generate"
-
 #~ msgid "验证邮箱"
 #~ msgstr "Email to be verified"
 
