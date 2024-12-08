@@ -9,8 +9,8 @@
 import os
 
 project = "OurChat-Docs"
-copyright = "2024, OutChat"
-author = "OutChat"
+copyright = "2024, OurChat"
+author = "OurChat"
 release = "0.1.0"
 
 # -- General configuration ---------------------------------------------------
