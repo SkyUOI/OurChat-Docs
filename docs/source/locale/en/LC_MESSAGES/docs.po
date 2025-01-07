@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-07 18:21+0800\n"
+"POT-Creation-Date: 2025-01-07 18:40+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -209,14 +209,14 @@ msgstr "install PostgreSQL"
 
 #: ../../source/docs/deploy/server-deploy.md:34
 msgid ""
-"postgres 版本为 "
-"17（如果该文档未及时更新可以查看`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的"
+"postgres 版本为 17（如果该文档未及时更新可以查看 "
+"[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的"
 " posgres 版本）"
 msgstr ""
 "The postgres version is 17 (If this document is not updated in time, you "
 "can check the 'postgres version' in the "
-"`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)` "
-"file)"
+"[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)"
+" file)"
 
 #: ../../source/docs/deploy/server-deploy.md:36
 msgid "安装 redis"
@@ -531,7 +531,84 @@ msgstr ""
 
 #: ../../source/docs/development/server/server-database.md:7
 msgid "关于我们使用的ORM框架，请直接参考[sea orm](https://www.sea-ql.org/SeaORM/)"
-msgstr "For our ORM framework, please refer directly to [sea orm](https://www.sea-ql.org/SeaORM/)"
+msgstr ""
+"For our ORM framework, please refer directly to [sea orm](https://www"
+".sea-ql.org/SeaORM/)"
+
+#: ../../source/docs/development/server/server-design.md:1
+msgid "服务端架构"
+msgstr "Server Architecture"
+
+#: ../../source/docs/development/server/server-design.md:3
+msgid "服务端并不是单个程序，而是由多个程序共同构成的分布式服务，涉及到的服务如下："
+msgstr ""
+"Server is not a single program, but a distributed service composed of "
+"multiple programs involved. The following services are involved:"
+
+#: ../../source/docs/development/server/server-design.md:5
+msgid "主服务: OurChatServer"
+msgstr "Main Service: OurChat server"
+
+#: ../../source/docs/development/server/server-design.md:7
+msgid "这是单个节点，可以处理几乎所有的基本请求，在舍弃其它组件的情况下也可以正常运行，是组成分布式系统的主要核心服务，同时也可以单独部署"
+msgstr ""
+"This is a single node, which can handle almost all basic requests, can "
+"run normally without discarding other components, is the main core "
+"service of the distributed system, and can also be deployed separately"
+
+#: ../../source/docs/development/server/server-design.md:9
+msgid "HttpServer: HTTP 服务"
+msgstr "HttpServer: HTTP service"
+
+#: ../../source/docs/development/server/server-design.md:11
+msgid "负责处理 HTTP 请求,如邮件验证等"
+msgstr "Is responsible for handling HTTP requests, such as email verification"
+
+#: ../../source/docs/development/server/server-design.md:13
+msgid "负载均衡器：LoadBalancer"
+msgstr "Load Balancer"
+
+#: ../../source/docs/development/server/server-design.md:15
+msgid "负责将请求和流量均摊到节点上"
+msgstr "Is responsible for evenly distributing requests and traffic to nodes"
+
+#: ../../source/docs/development/server/server-design.md:17
+msgid "Consul: 服务发现和注册中心"
+msgstr "Consul: Service discovery and registration center"
+
+#: ../../source/docs/development/server/server-design.md:19
+msgid "负责注册各个节点，并提供服务发现的能力"
+msgstr "Is responsible for registering nodes and providing service discovery"
+
+#: ../../source/docs/development/server/server-design.md:21
+msgid "Redis: 内存数据库"
+msgstr "Redis: In-memory database"
+
+#: ../../source/docs/development/server/server-design.md:23
+msgid "用于高性能的缓存"
+msgstr "For high-performance caching"
+
+#: ../../source/docs/development/server/server-design.md:25
+msgid "PostgreSQL: 数据库"
+msgstr "PostgreSQL: Database"
+
+#: ../../source/docs/development/server/server-design.md:27
+msgid "用于持久化数据"
+msgstr "For persistent data"
+
+#: ../../source/docs/development/server/server-design.md:29
+msgid "JuiceFS: 分布式文件系统"
+msgstr "JuiceFS: Distributed file system"
+
+#: ../../source/docs/development/server/server-design.md:31
+msgid "具体参考其官网 [JuiceFS](https://juicefs.com)"
+msgstr "Please refer to the official website [JuiceFS](https://juicefs.com)"
+
+#: ../../source/docs/development/server/server-design.md:33
+msgid "组件之间可以通过 RPC 的方式进行通信，通过非对称加密签名来签名 JWT 进行身份验证"
+msgstr ""
+"Components can communicate with each other through RPC, and authenticate "
+"identity by signing JWT with non-asymmetric encryption"
 
 #: ../../source/docs/development/server/server-develop.md:1
 msgid "服务端开发指南"
@@ -586,7 +663,9 @@ msgstr "Container Development"
 
 #: ../../source/docs/development/server/server-develop.md:21
 msgid "我们提供了一个用于开发环境的 docker-compose 文件模板，你可以根据需要修改"
-msgstr "We provide a docker compose file template for the development environment, you can modify it according to your needs"
+msgstr ""
+"We provide a docker compose file template for the development "
+"environment, you can modify it according to your needs"
 
 #: ../../source/docs/development/server/server-develop.md:23
 msgid "你可以运行:"
@@ -672,78 +751,6 @@ msgstr ""
 "will automatically run pending database migrations when the server "
 "starts. To define a new database migration, please refer to [sea "
 "orm](https://www.sea-ql.org/SeaORM/docs/migration/setting-up-migration/)"
-
-#: ../../source/docs/development/server/server_design.md:1
-msgid "服务端架构"
-msgstr "Server Architecture"
-
-#: ../../source/docs/development/server/server_design.md:3
-msgid "服务端并不是单个程序，而是由多个程序共同构成的分布式服务，涉及到的服务如下："
-msgstr "Server is not a single program, but a distributed service composed of"
-" multiple programs involved. The following services are involved:"
-
-#: ../../source/docs/development/server/server_design.md:5
-msgid "主服务: OurChatServer"
-msgstr "Main Service: OurChat server"
-
-#: ../../source/docs/development/server/server_design.md:7
-msgid "这是单个节点，可以处理几乎所有的基本请求，在舍弃其它组件的情况下也可以正常运行，是组成分布式系统的主要核心服务，同时也可以单独部署"
-msgstr "This is a single node, which can handle almost all basic requests, "
-"can run normally without discarding other components, is the main core "
-"service of the distributed system, and can also be deployed separately"
-
-#: ../../source/docs/development/server/server_design.md:9
-msgid "HttpServer: HTTP 服务"
-msgstr "HttpServer: HTTP service"
-
-#: ../../source/docs/development/server/server_design.md:11
-msgid "负责处理 HTTP 请求,如邮件验证等"
-msgstr "Is responsible for handling HTTP requests, such as email verification"
-
-#: ../../source/docs/development/server/server_design.md:13
-msgid "负载均衡器：LoadBalancer"
-msgstr "Load Balancer"
-
-#: ../../source/docs/development/server/server_design.md:15
-msgid "负责将请求和流量均摊到节点上"
-msgstr "Is responsible for evenly distributing requests and traffic to nodes"
-
-#: ../../source/docs/development/server/server_design.md:17
-msgid "Consul: 服务发现和注册中心"
-msgstr "Consul: Service discovery and registration center"
-
-#: ../../source/docs/development/server/server_design.md:19
-msgid "负责注册各个节点，并提供服务发现的能力"
-msgstr "Is responsible for registering nodes and providing service discovery"
-
-#: ../../source/docs/development/server/server_design.md:21
-msgid "Redis: 内存数据库"
-msgstr "Redis: In-memory database"
-
-#: ../../source/docs/development/server/server_design.md:23
-msgid "用于高性能的缓存"
-msgstr "For high-performance caching"
-
-#: ../../source/docs/development/server/server_design.md:25
-msgid "PostgreSQL: 数据库"
-msgstr "PostgreSQL: Database"
-
-#: ../../source/docs/development/server/server_design.md:27
-msgid "用于持久化数据"
-msgstr "For persistent data"
-
-#: ../../source/docs/development/server/server_design.md:29
-msgid "JuiceFS: 分布式文件系统"
-msgstr "JuiceFS: Distributed file system"
-
-#: ../../source/docs/development/server/server_design.md:31
-msgid "具体参考其官网 [JuiceFS](https://juicefs.com)"
-msgstr "Please refer to the official website [JuiceFS](https://juicefs.com)"
-
-#: ../../source/docs/development/server/server_design.md:33
-msgid "组件之间可以通过 RPC 的方式进行通信，通过非对称加密签名来签名 JWT 进行身份验证"
-msgstr "Components can communicate with each other through RPC, and "
-"authenticate identity by signing JWT with non-asymmetric encryption"
 
 #: ../../source/docs/development/special_string.md:1
 msgid "特殊字符串字面量"
@@ -1189,9 +1196,9 @@ msgstr "log"
 msgid "默认日志等级为`info`，可以通过`OURCHAT_LOG`环境变量配置，支持的等级为`trace`,`debug`,`info`,`warn`,`error`，日志储存路径在`log`文件夹下，以时间命名日志文件"
 msgstr ""
 "The default log level is `info`, which can be configured through the "
-"`OURCHAT_LOG` environment variable. Supported levels are `trace`, `debug`, "
-"`info`, `warn`, `error`. Log files are stored in the `log` directory, with filenames "
-"based on timestamps."
+"`OURCHAT_LOG` environment variable. Supported levels are `trace`, "
+"`debug`, `info`, `warn`, `error`. Log files are stored in the `log` "
+"directory, with filenames based on timestamps."
 
 #: ../../source/docs/run/server_argv.md:27
 msgid "日志会定时清理，清理时间设定在`auto_clean_duration`中，也可以通过控制台指令更改"

@@ -31,7 +31,7 @@ cd docker && docker compose up -d
 
 ### 安装 PostgreSQL
 
-postgres 版本为 17（如果该文档未及时更新可以查看`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的 posgres 版本）
+postgres 版本为 17（如果该文档未及时更新可以查看 [compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的 posgres 版本）
 
 ### 安装 redis
 
