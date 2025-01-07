@@ -891,7 +891,7 @@ msgstr "Server is running normally"
 
 #: ../../source/docs/development/status_code.md
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../../source/docs/development/status_code.md
 msgid "服务器维护中"
@@ -907,7 +907,7 @@ msgstr "Verification Passed"
 
 #: ../../source/docs/development/status_code.md
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../../source/docs/development/status_code.md
 msgid "验证超时"
@@ -1570,9 +1570,6 @@ msgstr "File Save Days"
 
 #~ msgid "资源密钥"
 #~ msgstr "Resource Key"
-
-#~ msgid "状态码"
-#~ msgstr "Status Code"
 
 #~ msgid "NotFound"
 #~ msgstr "NotFound"
