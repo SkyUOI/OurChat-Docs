@@ -18,7 +18,7 @@ docker-buildx 和 docker-compose 同样也需要安装.
 
 ## 容器开发
 
-我们提供了一个用于开发环境的 Dockerfile
+我们提供了一个用于开发环境的 docker-compose 文件模板，你可以根据需要修改
 
 你可以运行:
 
@@ -44,9 +44,7 @@ cargo run -- --config=cfg.toml
 
 启动测试:
 
-```bash
-cargo test
-```
+参见[测试](./basic.md#运行集成测试)
 
 ## 数据库
 

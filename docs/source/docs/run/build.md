@@ -8,36 +8,13 @@
 
 ## client-pc
 
-**_考虑到性能和人力成本问题，我们决定终止py客户端的开发，改用[Flutter开发客户端](#flutter版客户端)_**
+**_考虑到性能和人力成本问题，我们决定终止 py 客户端的开发，改用[Flutter 开发客户端](#flutter-版客户端)_**
 
-client-pc 部分由 python 编写，要求是 python3 以上以及[rust环境](https://www.rust-lang.org/tools/install)(编译rmodule库),通过以下命令进行安装和运行
-
-### 运行
-
-```bash
-python -m pip install -r client/pc/requirement.txt # 安装依赖库
-python script/export_themes.py # 导出主题到client/pc/src/theme中
-cd ./client/pc/src/rmodule
-maturin develop # 编译rmodule库
-cd ..
-python main.py # 运行
-```
-
-### 打包为可执行文件
-
-```bash
-cd ./client/pc/src/rmodule
-maturin build --release # 编译rmodule库
-python script/build_pc.py
-```
-
-等待脚本运行完毕后，`client/pc/src/out/main.dist`目录中即为可执行文件及其依赖文件
-
-## Flutter版客户端
+## Flutter 版客户端
 
 ### 环境配置
 
-在下面选择你的操作系统进入配置教程安装Flutter
+在下面选择你的操作系统进入配置教程安装 Flutter
 
 - [Windows](https://docs.flutter.cn/get-started/install/windows/desktop)
 - [Linux](https://docs.flutter.cn/get-started/install/linux/desktop)

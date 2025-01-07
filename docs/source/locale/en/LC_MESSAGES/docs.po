@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 14:38+0800\n"
+"POT-Creation-Date: 2025-01-07 18:21+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -28,7 +28,7 @@ msgid "该文档使用 Sphinx 作为文档生成器"
 msgstr "This document uses Sphinx as the document generator"
 
 #: ../../source/docs/deploy/document-deploy.md:5
-#: ../../source/docs/run/build.md:38
+#: ../../source/docs/run/build.md:15
 msgid "环境配置"
 msgstr "Environment Configuration"
 
@@ -143,9 +143,9 @@ msgid "Docker(推荐)"
 msgstr "Docker (Recommended)"
 
 #: ../../source/docs/deploy/server-deploy.md:8
-msgid "对于该项目，我们提供了一个生产环境中使用的 dockerfile，可以直接构建并运行项目。"
+msgid "对于该项目，我们提供了一个生产环境中使用的 docker 镜像，可以直接构建并运行项目。"
 msgstr ""
-"For this project, we provide a dockerfile for use in a production "
+"For this project, we provide a docker image for use in a production "
 "environment, which can be used to build and run the project directly."
 
 #: ../../source/docs/deploy/server-deploy.md:10
@@ -153,11 +153,11 @@ msgid "以下是具体操作步骤："
 msgstr "Here are the specific steps to follow:"
 
 #: ../../source/docs/deploy/server-deploy.md:16
-msgid "这一步完成只是创建了一个最基本的环境，但是安全性还远远没有达到，为了保证安全性，你需要修改 MySQL 和 Redis 的密码。"
+msgid "这一步完成只是创建了一个最基本的环境，但是安全性还远远没有达到，为了保证安全性，你需要修改 PostgreSQL 和 Redis 的密码。"
 msgstr ""
 "Completing this step only creates a very basic environment, but the "
 "security is far from adequate. To ensure security, you need to change the"
-" passwords for MySQL and Redis."
+" passwords for PostgreSQL and Redis."
 
 #: ../../source/docs/deploy/server-deploy.md:18
 msgid "具体有以下几步:"
@@ -171,10 +171,10 @@ msgstr ""
 
 #: ../../source/docs/deploy/server-deploy.md:21
 msgid ""
-"修改`config/database.json`为改后的 MySQL 密码，`config/redis_connection.json`为改后的 "
-"Redis 密码"
+"修改`config/database.json`为改后的 PostgreSQL "
+"密码，`config/redis_connection.json`为改后的 Redis 密码"
 msgstr ""
-"Change `config/database.json` to the new MySQL password, and "
+"Change `config/database.json` to the new PostgreSQL password, and "
 "`config/redis_connection.json` to the new Redis password"
 
 #: ../../source/docs/deploy/server-deploy.md:22
@@ -210,12 +210,12 @@ msgstr "install PostgreSQL"
 #: ../../source/docs/deploy/server-deploy.md:34
 msgid ""
 "postgres 版本为 "
-"17（如果该文档未及时更新可以查看`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)中的"
+"17（如果该文档未及时更新可以查看`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的"
 " posgres 版本）"
 msgstr ""
 "The postgres version is 17 (If this document is not updated in time, you "
 "can check the 'postgres version' in the "
-"`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/compose.yml)` "
+"`[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)` "
 "file)"
 
 #: ../../source/docs/deploy/server-deploy.md:36
@@ -258,7 +258,7 @@ msgid "编译项目"
 msgstr "Compile the project"
 
 #: ../../source/docs/deploy/server-deploy.md:62
-#: ../../source/docs/run/build.md:53
+#: ../../source/docs/run/build.md:30
 msgid "运行项目"
 msgstr "Run the project"
 
@@ -339,7 +339,9 @@ msgstr "Create a Pull Request(PR) to our main branch."
 
 #: ../../source/docs/development/contributing.md:26
 msgid "代码规范请遵循[约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)"
-msgstr "Code conventions please follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)"
+msgstr ""
+"Code conventions please follow [Conventional "
+"Commits](https://www.conventionalcommits.org/en/v1.0.0/)"
 
 #: ../../source/docs/development/document_contributing.md:1
 msgid "贡献文档"
@@ -421,7 +423,7 @@ msgstr "Api:`/verify` Request Type: `GET`"
 
 #: ../../source/docs/development/http_api.md:8
 msgid "参数:token=verify_token 该接口供邮件验证使用，一般不需要客户端直接操作"
-msgstr ""
+msgstr "Arguments: token=verify_token This interface is used for email "
 
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
@@ -456,6 +458,10 @@ msgid "我们提供了一系列脚本，帮助您处理日常简单事物。"
 msgstr "We provide a series of scripts to help you handle daily simple tasks."
 
 #: ../../source/docs/development/server/basic.md:7
+msgid "运行集成测试"
+msgstr "Run Integration Tests"
+
+#: ../../source/docs/development/server/basic.md:9
 msgid ""
 "你可以运行`script/test_server.py`脚本来运行测试，第二个参数为自定义化的测试命令，默认为`cargo "
 "test`。**如果不使用该脚本，使用`cargo test`运行前，要先设置好 OURCHAT_CONFIG_PATH 环境变量**"
@@ -465,11 +471,11 @@ msgstr ""
 "test`. **If you do not use this script, before running `cargo test`, you "
 "must set the `OURCHAT_CONFIG_PATH` environment variable.**"
 
-#: ../../source/docs/development/server/basic.md:9
+#: ../../source/docs/development/server/basic.md:11
 msgid "文档"
 msgstr "Documentation"
 
-#: ../../source/docs/development/server/basic.md:11
+#: ../../source/docs/development/server/basic.md:13
 msgid ""
 "请善用`cargo doc`，我们为你提供了详尽的文档参考！调用`cargo doc --document-private-"
 "items`来生成私有的文档"
@@ -478,21 +484,21 @@ msgstr ""
 "documentation! Call `cargo doc --document-private-items` to generate "
 "private documentation."
 
-#: ../../source/docs/development/server/basic.md:13
-msgid "前置依赖"
-msgstr ""
-
 #: ../../source/docs/development/server/basic.md:15
-msgid "[Rust Compiler](https://rust-lang.org)"
-msgstr ""
-
-#: ../../source/docs/development/server/basic.md:16
-msgid "[buf](https://buf.build/)"
-msgstr ""
+msgid "前置依赖"
+msgstr "Pre-requisites"
 
 #: ../../source/docs/development/server/basic.md:17
+msgid "[Rust Compiler](https://rust-lang.org)"
+msgstr "[Rust Compiler](https://rust-lang.org)"
+
+#: ../../source/docs/development/server/basic.md:18
+msgid "[buf](https://buf.build/)"
+msgstr "[buf](https://buf.build/)"
+
+#: ../../source/docs/development/server/basic.md:19
 msgid "[protobuf compiler](https://github.com/protocolbuffers/protobuf)"
-msgstr ""
+msgstr "[protobuf compiler](https://github.com/protocolbuffers/protobuf)"
 
 #: ../../source/docs/development/server/index.rst:2
 msgid "开发-服务器"
@@ -508,195 +514,24 @@ msgstr "Server Database Design"
 
 #: ../../source/docs/development/server/server-database.md:3
 msgid ""
-"注意：为了方便和文档的准确性，具体数据类型请直接参考[orm "
-"entities](https://github.com/SkyUOI/OurChat/tree/main/server/src/entities)"
+"为了方便和文档的准确性，具体设计请直接参考[orm "
+"entities](https://github.com/SkyUOI/OurChat/tree/main/server/entities)"
 msgstr ""
 "Note: For convenience and accuracy of the documentation, please refer to "
 "the specific data types directly in the [ORM "
-"entities](https://github.com/SkyUOI/OurChat/tree/main/server/src/entities)"
+"entities](https://github.com/SkyUOI/OurChat/tree/main/server/entities)"
 
 #: ../../source/docs/development/server/server-database.md:5
-msgid "用户表(user)"
-msgstr "User Table (user)"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "列名"
-msgstr "Column Name"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "用处"
-msgstr "Purpose"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "id"
-msgstr "ID"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "主键，唯一的标识符(使用雪花 id)"
-msgstr "Primary key, unique identifier (using Snowflake ID)"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "ocid"
-msgstr "OCID"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "显示给用户的唯一 id 号(使用随机生成的 10 位字符串)"
+msgid ""
+"数据库迁移编写请参考[orm "
+"migration](https://github.com/SkyUOI/OurChat/tree/main/server/migration)"
 msgstr ""
-"Unique ID number displayed to the user (using a randomly generated "
-"10-character string)"
+"Database migration please refer to [ORM "
+"migration](https://github.com/SkyUOI/OurChat/tree/main/server/migration)"
 
-#: ../../source/docs/development/server/server-database.md
-msgid "passwd"
-msgstr "Password"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "用户的密码，经过 sha256 加密，不可还原"
-msgstr "User's password, encrypted with sha256, irreversible"
-
-#: ../../source/docs/development/server/server-database.md
-#: ../../source/docs/run/server_argv.md
-msgid "name"
-msgstr "Name"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "昵称"
-msgstr "Nickname"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "email"
-msgstr "Email"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "邮箱"
-msgstr "Email"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "date"
-msgstr "Date"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "时间戳"
-msgstr "Timestamp"
-
-#: ../../source/docs/development/server/server-database.md:16
-msgid "好友表(friend)"
-msgstr "Friends Table (friend)"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "user_id"
-msgstr "User ID"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "用户"
-msgstr "User"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "friend_id"
-msgstr "Friend ID"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "用户的好友"
-msgstr "User's friend"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "用户给好友起的备注名"
-msgstr "Alias given to the friend by the user"
-
-#: ../../source/docs/development/server/server-database.md:24
-msgid "聊天表(chat)"
-msgstr "Chat Table (chat)"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "group_id"
-msgstr "Group ID"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "群聊"
-msgstr "Group chat"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "标记用户在该群中"
-msgstr "Mark the user in this group"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "标记用户在群里的昵称"
-msgstr "Mark the user's nickname in the group"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "group_name"
-msgstr "Group Name"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "标记用户对群聊的备注，默认为空"
-msgstr "Mark the user's note for the group chat, default is empty"
-
-#: ../../source/docs/development/server/server-database.md:33
-msgid "群聊表(groupchat)"
-msgstr "Group Chat Table (groupchat)"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "群聊 id"
-msgstr "Group chat ID"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "群聊名称"
-msgstr "Group chat name"
-
-#: ../../source/docs/development/server/server-database.md:40
-msgid "用户聊天信息表(user_chat_msg)"
-msgstr "User Chat Information Table (user_chat_msg)"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "用户的 id"
-msgstr "User's ID"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "chat_msg_id"
-msgstr "Chat message ID"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "信息的 id"
-msgstr "Information's ID"
-
-#: ../../source/docs/development/server/server-database.md:47
-msgid "聊天信息表(user_chat_id)"
-msgstr "Chat Information Table (user_chat_id)"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "char_msg_id"
-msgstr "Character message ID"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "聊天信息的 id"
-msgstr "Chat information's ID"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "msg_type"
-msgstr "Message type"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "信息的类型"
-msgstr "Type of information"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "msg_data"
-msgstr "Message data"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "信息的数据"
-msgstr "Data of the message"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "属于哪个群"
-msgstr "Which group it belongs to"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "sender_id"
-msgstr "Sender ID"
-
-#: ../../source/docs/development/server/server-database.md
-msgid "发送者的 id"
-msgstr "Sender's ID"
+#: ../../source/docs/development/server/server-database.md:7
+msgid "关于我们使用的ORM框架，请直接参考[sea orm](https://www.sea-ql.org/SeaORM/)"
+msgstr "For our ORM framework, please refer directly to [sea orm](https://www.sea-ql.org/SeaORM/)"
 
 #: ../../source/docs/development/server/server-develop.md:1
 msgid "服务端开发指南"
@@ -750,8 +585,8 @@ msgid "容器开发"
 msgstr "Container Development"
 
 #: ../../source/docs/development/server/server-develop.md:21
-msgid "我们提供了一个用于开发环境的 Dockerfile"
-msgstr "We provide a Dockerfile for the development environment"
+msgid "我们提供了一个用于开发环境的 docker-compose 文件模板，你可以根据需要修改"
+msgstr "We provide a docker compose file template for the development environment, you can modify it according to your needs"
 
 #: ../../source/docs/development/server/server-develop.md:23
 msgid "你可以运行:"
@@ -795,11 +630,15 @@ msgstr "Use when starting up"
 msgid "启动测试:"
 msgstr "Start testing:"
 
-#: ../../source/docs/development/server/server-develop.md:51
+#: ../../source/docs/development/server/server-develop.md:47
+msgid "参见[测试](./basic.md#运行集成测试)"
+msgstr "Please refer to [Testing](./basic.md#运行集成测试)"
+
+#: ../../source/docs/development/server/server-develop.md:49
 msgid "数据库"
 msgstr "Database"
 
-#: ../../source/docs/development/server/server-develop.md:53
+#: ../../source/docs/development/server/server-develop.md:51
 msgid ""
 "本项目采用 Redis, PostgreSQL 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 ORM "
 "框架，在修改数据库表后，您可以运行`script/regenerate_entity.py`来重新生成 ORM 框架需要的文件"
@@ -809,22 +648,22 @@ msgstr ""
 " database tables, you can run `script/regenerate_entity.py` to regenerate"
 " the files required by the ORM framework."
 
-#: ../../source/docs/development/server/server-develop.md:55
+#: ../../source/docs/development/server/server-develop.md:53
 msgid "为了运行这个脚本，你首先需要运行`cargo install sea-orm-cli`"
 msgstr "To run this script, you first need to run `cargo install sea-orm-cli`"
 
-#: ../../source/docs/development/server/server-develop.md:57
+#: ../../source/docs/development/server/server-develop.md:55
 msgid "注意：请保证`sea-orm-cli`是最新的，否则会被脚本拦截，若脚本的版本更旧，请随时打开一个 issue"
 msgstr ""
 "Note: Please ensure that `sea-orm-cli` is up to date, otherwise it will "
 "be blocked by the script. If the script version is older, feel free to "
 "open an issue at any time."
 
-#: ../../source/docs/development/server/server-develop.md:59
+#: ../../source/docs/development/server/server-develop.md:57
 msgid "数据库迁移"
 msgstr "Database Migration"
 
-#: ../../source/docs/development/server/server-develop.md:61
+#: ../../source/docs/development/server/server-develop.md:59
 msgid ""
 "`migration`中是数据库迁移模块，在 server 启动时会自动运行未运行的数据库迁移，为了定义一个新的数据库迁移，请参考[sea "
 "orm](https://www.sea-ql.org/SeaORM/docs/migration/setting-up-migration/)"
@@ -833,6 +672,78 @@ msgstr ""
 "will automatically run pending database migrations when the server "
 "starts. To define a new database migration, please refer to [sea "
 "orm](https://www.sea-ql.org/SeaORM/docs/migration/setting-up-migration/)"
+
+#: ../../source/docs/development/server/server_design.md:1
+msgid "服务端架构"
+msgstr "Server Architecture"
+
+#: ../../source/docs/development/server/server_design.md:3
+msgid "服务端并不是单个程序，而是由多个程序共同构成的分布式服务，涉及到的服务如下："
+msgstr "Server is not a single program, but a distributed service composed of"
+" multiple programs involved. The following services are involved:"
+
+#: ../../source/docs/development/server/server_design.md:5
+msgid "主服务: OurChatServer"
+msgstr "Main Service: OurChat server"
+
+#: ../../source/docs/development/server/server_design.md:7
+msgid "这是单个节点，可以处理几乎所有的基本请求，在舍弃其它组件的情况下也可以正常运行，是组成分布式系统的主要核心服务，同时也可以单独部署"
+msgstr "This is a single node, which can handle almost all basic requests, "
+"can run normally without discarding other components, is the main core "
+"service of the distributed system, and can also be deployed separately"
+
+#: ../../source/docs/development/server/server_design.md:9
+msgid "HttpServer: HTTP 服务"
+msgstr "HttpServer: HTTP service"
+
+#: ../../source/docs/development/server/server_design.md:11
+msgid "负责处理 HTTP 请求,如邮件验证等"
+msgstr "Is responsible for handling HTTP requests, such as email verification"
+
+#: ../../source/docs/development/server/server_design.md:13
+msgid "负载均衡器：LoadBalancer"
+msgstr "Load Balancer"
+
+#: ../../source/docs/development/server/server_design.md:15
+msgid "负责将请求和流量均摊到节点上"
+msgstr "Is responsible for evenly distributing requests and traffic to nodes"
+
+#: ../../source/docs/development/server/server_design.md:17
+msgid "Consul: 服务发现和注册中心"
+msgstr "Consul: Service discovery and registration center"
+
+#: ../../source/docs/development/server/server_design.md:19
+msgid "负责注册各个节点，并提供服务发现的能力"
+msgstr "Is responsible for registering nodes and providing service discovery"
+
+#: ../../source/docs/development/server/server_design.md:21
+msgid "Redis: 内存数据库"
+msgstr "Redis: In-memory database"
+
+#: ../../source/docs/development/server/server_design.md:23
+msgid "用于高性能的缓存"
+msgstr "For high-performance caching"
+
+#: ../../source/docs/development/server/server_design.md:25
+msgid "PostgreSQL: 数据库"
+msgstr "PostgreSQL: Database"
+
+#: ../../source/docs/development/server/server_design.md:27
+msgid "用于持久化数据"
+msgstr "For persistent data"
+
+#: ../../source/docs/development/server/server_design.md:29
+msgid "JuiceFS: 分布式文件系统"
+msgstr "JuiceFS: Distributed file system"
+
+#: ../../source/docs/development/server/server_design.md:31
+msgid "具体参考其官网 [JuiceFS](https://juicefs.com)"
+msgstr "Please refer to the official website [JuiceFS](https://juicefs.com)"
+
+#: ../../source/docs/development/server/server_design.md:33
+msgid "组件之间可以通过 RPC 的方式进行通信，通过非对称加密签名来签名 JWT 进行身份验证"
+msgstr "Components can communicate with each other through RPC, and "
+"authenticate identity by signing JWT with non-asymmetric encryption"
 
 #: ../../source/docs/development/special_string.md:1
 msgid "特殊字符串字面量"
@@ -860,8 +771,9 @@ msgstr "OurChat Status Code"
 msgid ""
 "**_注：任何状态中都可能包含INTERNAL,请务必做好校验_** **_由于服务器随时可能进入维护状态，FAILED_PRECONDITION"
 " 随时可能出现_**"
-msgstr "**_ Note: Any status may contain INTERNAL, please make sure to "
-"perform checks._** **_Due to the server potentially entering maintenance "
+msgstr ""
+"**_ Note: Any status may contain INTERNAL, please make sure to perform "
+"checks._** **_Due to the server potentially entering maintenance "
 
 #: ../../source/docs/development/status_code.md:6
 msgid "**_以上特殊信息不再赘述_**"
@@ -873,7 +785,9 @@ msgstr "Status Code"
 
 #: ../../source/docs/development/status_code.md:10
 msgid "请参考 [grpc 文档](https://grpc.io/docs/guides/status-codes/)"
-msgstr "Please refer to [grpc documentation](https://grpc.io/docs/guides/status-codes/)"
+msgstr ""
+"Please refer to [grpc documentation](https://grpc.io/docs/guides/status-"
+"codes/)"
 
 #: ../../source/docs/development/status_code.md:12
 msgid "各种信息下的状态码具体解释"
@@ -1080,69 +994,49 @@ msgid "client-pc"
 msgstr "client-pc"
 
 #: ../../source/docs/run/build.md:11
-msgid "**_考虑到性能和人力成本问题，我们决定终止py客户端的开发，改用[Flutter开发客户端](#flutter版客户端)_**"
+msgid "**_考虑到性能和人力成本问题，我们决定终止 py 客户端的开发，改用[Flutter 开发客户端](#flutter-版客户端)_**"
 msgstr ""
 "Considering performance and labor cost issues, we have decided to "
 "terminate the development of the Py client and switch to developing the "
-"[client with Flutter](#flutter版客户端)."
+"[client with Flutter](#flutter-版客户端)."
 
 #: ../../source/docs/run/build.md:13
-msgid ""
-"client-pc 部分由 python 编写，要求是 python3 以上以及[rust环境](https://www.rust-"
-"lang.org/tools/install)(编译rmodule库),通过以下命令进行安装和运行"
-msgstr ""
-"The client-pc part is written in Python, requiring Python 3 or above as "
-"well as a [Rust environment](https://www.rust-lang.org/tools/install) (to"
-" compile the rmodule library). Installation and execution can be done "
-"through the following commands."
-
-#: ../../source/docs/run/build.md:15 ../../source/docs/run/index.rst:2
-msgid "运行"
-msgstr "Run"
-
-#: ../../source/docs/run/build.md:26
-msgid "打包为可执行文件"
-msgstr "Package as an Executable"
-
-#: ../../source/docs/run/build.md:34
-msgid "等待脚本运行完毕后，`client/pc/src/out/main.dist`目录中即为可执行文件及其依赖文件"
-msgstr ""
-"After the script has finished running, the `client/pc/src/out/main.dist` "
-"directory will contain the executable file and its dependent files"
-
-#: ../../source/docs/run/build.md:36
-msgid "Flutter版客户端"
+msgid "Flutter 版客户端"
 msgstr "Flutter client"
 
-#: ../../source/docs/run/build.md:40
-msgid "在下面选择你的操作系统进入配置教程安装Flutter"
+#: ../../source/docs/run/build.md:17
+msgid "在下面选择你的操作系统进入配置教程安装 Flutter"
 msgstr ""
 "Select your operating system below to go to the setup tutorial to install"
 " Flutter"
 
-#: ../../source/docs/run/build.md:42
+#: ../../source/docs/run/build.md:19
 msgid "[Windows](https://docs.flutter.cn/get-started/install/windows/desktop)"
 msgstr "[Windows](https://docs.flutter.dev/get-started/install/windows/desktop)"
 
-#: ../../source/docs/run/build.md:43
+#: ../../source/docs/run/build.md:20
 msgid "[Linux](https://docs.flutter.cn/get-started/install/linux/desktop)"
 msgstr "[Linux](https://docs.flutter.dev/get-started/install/linux/desktop)"
 
-#: ../../source/docs/run/build.md:44
+#: ../../source/docs/run/build.md:21
 msgid "[MacOS](https://docs.flutter.cn/get-started/install/macos/desktop)"
 msgstr "[MacOS](https://docs.flutter.dev/get-started/install/macos/desktop)"
 
-#: ../../source/docs/run/build.md:46
+#: ../../source/docs/run/build.md:23
 msgid "接下来进入客户端目录安装依赖包"
 msgstr "Next, go to the client directory to install the dependency packages"
 
-#: ../../source/docs/run/build.md:55 ../../source/docs/run/build.md:74
+#: ../../source/docs/run/build.md:32 ../../source/docs/run/build.md:51
 msgid "进入客户端目录并运行项目"
 msgstr "Go to the client directory and run the project"
 
-#: ../../source/docs/run/build.md:72
+#: ../../source/docs/run/build.md:49
 msgid "构建为可执行文件"
 msgstr "Build as an executable file"
+
+#: ../../source/docs/run/index.rst:2
+msgid "运行"
+msgstr "Run"
 
 #: ../../source/docs/run/index.rst:3
 msgid "此部分是关于运行该项目的文档"
@@ -1151,6 +1045,10 @@ msgstr "This section is about the documentation for running this project"
 #: ../../source/docs/run/server_argv.md:1
 msgid "服务器参数"
 msgstr "Server Arguments"
+
+#: ../../source/docs/run/server_argv.md
+msgid "name"
+msgstr "Name"
 
 #: ../../source/docs/run/server_argv.md
 msgid "usage"
@@ -1278,49 +1176,34 @@ msgstr ""
 "`toml`,`json`,`json5`,`yaml`,`ini`,etc.Please choose your familiar format"
 
 #: ../../source/docs/run/server_argv.md:21
-msgid "[所有的配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)"
+msgid "[配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)"
 msgstr ""
-"[All configuration file "
+"[Configuration file "
 "examples](https://github.com/SkyUOI/OurChat/tree/main/config)."
 
-#: ../../source/docs/run/server_argv.md:22
-msgid "[Mysql 示例](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)"
-msgstr "[Mysql Example](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)."
-
 #: ../../source/docs/run/server_argv.md:23
-msgid "[Sqlite 示例](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)"
-msgstr ""
-"[Sqlite "
-"Example](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)."
-
-#: ../../source/docs/run/server_argv.md:25
 msgid "日志"
 msgstr "log"
 
-#: ../../source/docs/run/server_argv.md:27
-msgid ""
-"默认日志等级为`info`，可以通过`RUST_LOG`环境变量配置，支持的等级为`trace`,`debug`,`info`,`warn`,`error`，与正常的"
-" rust 程序并没有不同，日志储存路径在`log`文件夹下，以时间命名日志文件"
+#: ../../source/docs/run/server_argv.md:25
+msgid "默认日志等级为`info`，可以通过`OURCHAT_LOG`环境变量配置，支持的等级为`trace`,`debug`,`info`,`warn`,`error`，日志储存路径在`log`文件夹下，以时间命名日志文件"
 msgstr ""
 "The default log level is `info`, which can be configured through the "
-"`RUST_LOG` environment variable. Supported levels are `trace`, `debug`, "
-"`info`, `warn`, `error`, and this is no different from normal Rust "
-"`RUST_LOG` environment variable. Supported levels are `trace`, `debug`, "
-"`info`, `warn`, `error`, and this is no different from normal Rust "
-"programs. Log files are stored in the `log` directory, with filenames "
+"`OURCHAT_LOG` environment variable. Supported levels are `trace`, `debug`, "
+"`info`, `warn`, `error`. Log files are stored in the `log` directory, with filenames "
 "based on timestamps."
 
-#: ../../source/docs/run/server_argv.md:29
+#: ../../source/docs/run/server_argv.md:27
 msgid "日志会定时清理，清理时间设定在`auto_clean_duration`中，也可以通过控制台指令更改"
 msgstr ""
 "Logs will be cleaned up periodically, with the cleanup interval set in "
 "`auto_clean_duration`. It can also be changed through console commands."
 
-#: ../../source/docs/run/server_argv.md:31
+#: ../../source/docs/run/server_argv.md:29
 msgid "测试日志"
 msgstr "Testing Log"
 
-#: ../../source/docs/run/server_argv.md:33
+#: ../../source/docs/run/server_argv.md:31
 msgid "`test_mode`启用时，日志不会被输出到文件中，并且测试等级会被默认调整到`trace`"
 msgstr ""
 "When `test_mode` is enabled, logs will not be output to files, and the "
@@ -2385,4 +2268,172 @@ msgstr "File Save Days"
 
 #~ msgid "对应功能不可用"
 #~ msgstr "The corresponding feature is not available."
+
+#~ msgid "用户表(user)"
+#~ msgstr "User Table (user)"
+
+#~ msgid "列名"
+#~ msgstr "Column Name"
+
+#~ msgid "用处"
+#~ msgstr "Purpose"
+
+#~ msgid "id"
+#~ msgstr "ID"
+
+#~ msgid "主键，唯一的标识符(使用雪花 id)"
+#~ msgstr "Primary key, unique identifier (using Snowflake ID)"
+
+#~ msgid "ocid"
+#~ msgstr "OCID"
+
+#~ msgid "显示给用户的唯一 id 号(使用随机生成的 10 位字符串)"
+#~ msgstr ""
+#~ "Unique ID number displayed to the "
+#~ "user (using a randomly generated "
+#~ "10-character string)"
+
+#~ msgid "passwd"
+#~ msgstr "Password"
+
+#~ msgid "用户的密码，经过 sha256 加密，不可还原"
+#~ msgstr "User's password, encrypted with sha256, irreversible"
+
+#~ msgid "昵称"
+#~ msgstr "Nickname"
+
+#~ msgid "email"
+#~ msgstr "Email"
+
+#~ msgid "邮箱"
+#~ msgstr "Email"
+
+#~ msgid "date"
+#~ msgstr "Date"
+
+#~ msgid "时间戳"
+#~ msgstr "Timestamp"
+
+#~ msgid "好友表(friend)"
+#~ msgstr "Friends Table (friend)"
+
+#~ msgid "user_id"
+#~ msgstr "User ID"
+
+#~ msgid "用户"
+#~ msgstr "User"
+
+#~ msgid "friend_id"
+#~ msgstr "Friend ID"
+
+#~ msgid "用户的好友"
+#~ msgstr "User's friend"
+
+#~ msgid "用户给好友起的备注名"
+#~ msgstr "Alias given to the friend by the user"
+
+#~ msgid "聊天表(chat)"
+#~ msgstr "Chat Table (chat)"
+
+#~ msgid "group_id"
+#~ msgstr "Group ID"
+
+#~ msgid "群聊"
+#~ msgstr "Group chat"
+
+#~ msgid "标记用户在该群中"
+#~ msgstr "Mark the user in this group"
+
+#~ msgid "标记用户在群里的昵称"
+#~ msgstr "Mark the user's nickname in the group"
+
+#~ msgid "group_name"
+#~ msgstr "Group Name"
+
+#~ msgid "标记用户对群聊的备注，默认为空"
+#~ msgstr "Mark the user's note for the group chat, default is empty"
+
+#~ msgid "群聊表(groupchat)"
+#~ msgstr "Group Chat Table (groupchat)"
+
+#~ msgid "群聊 id"
+#~ msgstr "Group chat ID"
+
+#~ msgid "群聊名称"
+#~ msgstr "Group chat name"
+
+#~ msgid "用户聊天信息表(user_chat_msg)"
+#~ msgstr "User Chat Information Table (user_chat_msg)"
+
+#~ msgid "用户的 id"
+#~ msgstr "User's ID"
+
+#~ msgid "chat_msg_id"
+#~ msgstr "Chat message ID"
+
+#~ msgid "信息的 id"
+#~ msgstr "Information's ID"
+
+#~ msgid "聊天信息表(user_chat_id)"
+#~ msgstr "Chat Information Table (user_chat_id)"
+
+#~ msgid "char_msg_id"
+#~ msgstr "Character message ID"
+
+#~ msgid "聊天信息的 id"
+#~ msgstr "Chat information's ID"
+
+#~ msgid "msg_type"
+#~ msgstr "Message type"
+
+#~ msgid "信息的类型"
+#~ msgstr "Type of information"
+
+#~ msgid "msg_data"
+#~ msgstr "Message data"
+
+#~ msgid "信息的数据"
+#~ msgstr "Data of the message"
+
+#~ msgid "属于哪个群"
+#~ msgstr "Which group it belongs to"
+
+#~ msgid "sender_id"
+#~ msgstr "Sender ID"
+
+#~ msgid "发送者的 id"
+#~ msgstr "Sender's ID"
+
+#~ msgid ""
+#~ "client-pc 部分由 python 编写，要求是 python3 "
+#~ "以上以及[rust环境](https://www.rust-"
+#~ "lang.org/tools/install)(编译rmodule库),通过以下命令进行安装和运行"
+#~ msgstr ""
+#~ "The client-pc part is written in"
+#~ " Python, requiring Python 3 or above"
+#~ " as well as a [Rust "
+#~ "environment](https://www.rust-lang.org/tools/install) (to"
+#~ " compile the rmodule library). Installation"
+#~ " and execution can be done through"
+#~ " the following commands."
+
+#~ msgid "打包为可执行文件"
+#~ msgstr "Package as an Executable"
+
+#~ msgid "等待脚本运行完毕后，`client/pc/src/out/main.dist`目录中即为可执行文件及其依赖文件"
+#~ msgstr ""
+#~ "After the script has finished running,"
+#~ " the `client/pc/src/out/main.dist` directory will"
+#~ " contain the executable file and its"
+#~ " dependent files"
+
+#~ msgid "[Mysql 示例](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)"
+#~ msgstr ""
+#~ "[Mysql "
+#~ "Example](https://github.com/SkyUOI/OurChat/tree/main/config/mysql)."
+
+#~ msgid "[Sqlite 示例](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)"
+#~ msgstr ""
+#~ "[Sqlite "
+#~ "Example](https://github.com/SkyUOI/OurChat/tree/main/config/sqlite)."
 

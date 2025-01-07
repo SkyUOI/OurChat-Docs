@@ -9,3 +9,4 @@
    basic
    server-develop
    server-database
+   server-design
