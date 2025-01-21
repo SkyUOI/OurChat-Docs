@@ -32,7 +32,7 @@ flutter pub get # 安装依赖
 进入客户端目录并运行项目
 
 ```bash
-cd ./client/pc/ourchat # 进入目录
+cd ./client/ourchat # 进入目录
 flutter run
 
 # 会出现如下界面，选择你希望运行的平台即可
@@ -51,7 +51,7 @@ flutter run
 进入客户端目录并运行项目
 
 ```bash
-cd ./client/pc/ourchat # 进入目录
+cd ./client/ourchat # 进入目录
 flutter build # 查看可供构建的平台
 
 # 会出现可构建的平台列表，如：
