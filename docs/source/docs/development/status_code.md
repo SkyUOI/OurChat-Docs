@@ -2,11 +2,11 @@
 
 **_注：以下几种状态码在任何情况下都可能出现，请务必做好校验_**
 
-| CodeId | CodeName            | meaning        |
-| :----- | :------------------ | :------------- |
-| 0      | OK                  | 执行成功       |
-| 13     | INTERNAL            | 服务器内部错误 |
-| 9      | FAILED_PRECONDITION | 服务器维护中   |
+| CodeId | CodeName    | meaning        |
+| :----- | :---------- | :------------- |
+| 0      | OK          | 执行成功       |
+| 13     | INTERNAL    | 服务器内部错误 |
+| 14     | UNAVAILABLE | 服务器维护中   |
 
 **_以上特殊信息不再赘述_**
 
@@ -36,11 +36,11 @@
 
 ### 获取服务器信息
 
-| CodeId | CodeName            | meaning        |
-| :----- | :------------------ | :------------- |
-| 0      | OK                  | 执行成功       |
-| 13     | INTERNAL            | 服务器内部错误 |
-| 9      | FAILED_PRECONDITION | 服务器维护中   |
+| CodeId | CodeName    |    meaning     |
+| :----- | :---------- | :------------: |
+| 0      | OK          |    执行成功    |
+| 13     | INTERNAL    | 服务器内部错误 |
+| 14     | UNAVAILABLE |  服务器维护中  |
 
 ### 获取账号id
 

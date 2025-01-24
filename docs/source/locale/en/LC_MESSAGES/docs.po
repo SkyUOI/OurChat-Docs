@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-24 23:37+0800\n"
+"POT-Creation-Date: 2025-01-25 00:14+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -823,12 +823,11 @@ msgid "服务器内部错误"
 msgstr "Internal Server Error"
 
 #: ../../source/docs/development/status_code.md
-#: ../../source/docs/use/role_permission.md
-msgid "9"
+msgid "14"
 msgstr ""
 
 #: ../../source/docs/development/status_code.md
-msgid "FAILED_PRECONDITION"
+msgid "UNAVAILABLE"
 msgstr ""
 
 #: ../../source/docs/development/status_code.md
@@ -967,7 +966,9 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "权限不足(如:获取非当前帐号的隐私信息)"
-msgstr "Insufficient permissions (e.g. accessing private information of a non-current account)"
+msgstr ""
+"Insufficient permissions (e.g. accessing private information of a non-"
+"current account)"
 
 #: ../../source/docs/development/status_code.md
 msgid "用户不存在"
@@ -1056,11 +1057,11 @@ msgstr "The size of the data received is not equal to the size in metadata"
 
 #: ../../source/docs/development/status_code.md
 msgid "File Hash Error"
-msgstr "
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "文件hash与metadata不符合"
-msgstr "The hash of the data received is not equal to the hash in metadata""
+msgstr "The hash of the data received is not equal to the hash in metadata"
 
 #: ../../source/docs/development/status_code.md
 #: ../../source/docs/use/role_permission.md
@@ -1093,7 +1094,9 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "应先上传metadata再上传数据包"
-msgstr "You should upload a package of metadata, then upload content package until process finish"
+msgstr ""
+"You should upload a package of metadata, then upload content package "
+"until process finish"
 
 #: ../../source/docs/development/status_code.md:90
 msgid "下载"
@@ -1677,6 +1680,10 @@ msgstr "DeleteSession"
 #: ../../source/docs/use/role_permission.md
 msgid "删除会话"
 msgstr "Delete Session"
+
+#: ../../source/docs/use/role_permission.md
+msgid "9"
+msgstr ""
 
 #: ../../source/docs/use/role_permission.md
 msgid "SetRole"
@@ -2943,5 +2950,8 @@ msgstr "Member has permissions `1 2`"
 #~ msgstr "Agree Successfully"
 
 #~ msgid "该账号储存空间已满"
+#~ msgstr ""
+
+#~ msgid "FAILED_PRECONDITION"
 #~ msgstr ""
 
