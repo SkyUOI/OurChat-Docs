@@ -1,7 +1,12 @@
 # OurChat 状态码
 
-**_注：任何状态中都可能包含INTERNAL,请务必做好校验_**
-**_由于服务器随时可能进入维护状态，FAILED_PRECONDITION 随时可能出现_**
+**_注：以下几种状态码在任何情况下都可能出现，请务必做好校验_**
+
+| CodeId | CodeName            | meaning        |
+| :----- | :------------------ | :------------- |
+| 0      | OK                  | 执行成功       |
+| 13     | INTERNAL            | 服务器内部错误 |
+| 9      | FAILED_PRECONDITION | 服务器维护中   |
 
 **_以上特殊信息不再赘述_**
 
@@ -11,88 +16,115 @@
 
 ## 各种信息下的状态码具体解释
 
-### 获取会话信息返回信息
+### 注册
 
-| code | meaning      |
-| :--- | :----------- |
-| 0    | 获取成功     |
-| 3    | 该会话不存在 |
+| CodeId | CodeName       | Detail              | meaning        |
+| :----- | :------------- | :------------------ | :------------- |
+| 6      | ALREADY_EXISTS | User Already Exists | 该邮箱已被注册 |
 
-### 注册返回信息
+### 登录
 
-| code | meaning    |
-| :--- | :--------- |
-| 0    | 注册成功   |
-| 4    | 邮箱已存在 |
-| 10   | 未完成验证 |
+| CodeId | CodeName         | Detail           | meaning          |
+| :----- | :--------------- | :--------------- | :--------------- |
+| 5      | NOT_FOUND        | User Not Found   | 该用户不存在     |
+| 3      | INVALID_ARGUMENT | Missing AuthType | 缺少AuthType参数 |
+| 16     | Unauthenticated  | Wrong Password   | 密码错误         |
 
-### 登录返回信息
+### 验证
 
-| code | meaning       |
-| :--- | :------------ |
-| 0    | 登录成功      |
-| 10   | 账号/密码错误 |
+该功能暂未实现
 
-### 新建会话返回信息
+### 获取服务器信息
 
-| code | meaning              |
-| :--- | :------------------- |
-| 0    | 新建成功             |
-| 6    | 到达创建会话数量上限 |
+| CodeId | CodeName            | meaning        |
+| :----- | :------------------ | :------------- |
+| 0      | OK                  | 执行成功       |
+| 13     | INTERNAL            | 服务器内部错误 |
+| 9      | FAILED_PRECONDITION | 服务器维护中   |
 
-### 获取账号信息返回信息
+### 获取账号id
 
-| code | meaning      |
-| :--- | :----------- |
-| 0    | 获取成功     |
-| 3    | 该账号不存在 |
+| CodeId | CodeName  | Detail         | meaning      |
+| :----- | :-------- | :------------- | :----------- |
+| 5      | NOT_FOUND | User Not Found | 该用户不存在 |
 
-### 获取服务器状态
+### 获取账号信息
 
-| code | meaning      |
-| :--- | :----------- |
-| 0    | 服务器正常   |
-| 2    | 服务器维护中 |
+| CodeId | CodeName          | Detail                | meaning                               |
+| :----- | :---------------- | :-------------------- | :------------------------------------ |
+| 7      | PERMISSION_DENIED | Permission Denied     | 权限不足(如:获取非当前帐号的隐私信息) |
+| 5      | NOT_FOUND         | User Not Found        | 用户不存在                            |
+| 3      | INVALID_ARGUMENT  | Request Invalid Value | 请求值无效(如:获取不存在的字段)       |
 
-### 验证状态
+### 设置当前账号信息
 
-| code | meaning    |
-| :--- | :--------- |
-| 0    | 验证通过   |
-| 7    | 验证超时   |
+| CodeId | CodeName              | Detail   | meaning                     |
+| :----- | :-------------------- | :------- | :-------------------------- |
+| 6      | ALREADY_EXISTS        | Conflict | 信息冲突(如:新的ocid被占用) |
+| 3      | INVALID_ARGUMENT Ocid | Too Long | 新的ocid太长                |
 
-### 注销返回信息
+### 获取用户消息
 
-| code | meaning    |
-| :--- | :--------- |
-| 0    | 注销成功   |
-| 10   | 未完成验证 |
+| CodeId | CodeName         | Detail            | meaning        |
+| :----- | :--------------- | :---------------- | :------------- |
+| 3      | INVALID_ARGUMENT | Time Format Error | 无法解析时间戳 |
+| 3      | INVALID_ARGUMENT | Time Missing      | 缺少time参数   |
 
-### 设置账号信息返回信息
+### 发送消息
 
-| code | meaning    |
-| :--- | :--------- |
-| 0    | 设置成功   |
+| CodeId | CodeName          | Detail            | meaning      |
+| :----- | :---------------- | :---------------- | :----------- |
+| 7      | PERMISSION_DENIED | Permission Denied | 没有发言权限 |
+| 5      | NOT_FOUND         | Session Not Found | 会话不存在   |
 
-### 上传文件返回信息
+### 上传
 
-| code | meaning                      |
-| :--- | :--------------------------- |
-| 0    | 上传成功                     |
-| 6    | 因账号相关限制导致请求被拒绝 |
+| CodeId | CodeName           | Detail                       | meaning                        |
+| :----- | :----------------- | :--------------------------- | :----------------------------- |
+| 3      | INVALID_ARGUMENT   | File Size Error              | 文件大小与metadata不符合       |
+| 3      | INVALID_ARGUMENT   | File Hash Error              | 文件hash与metadata不符合       |
+| 8      | RESOURCE_EXHAUSTED | Storage Full                 | 该用户储存空间已满             |
+| 3      | INVALID_ARGUMENT   | Metadata Error               | 缺少metadata参数或metadata无效 |
+| 3      | INVALID_ARGUMENT   | Incorrect Order Of Uploading | 应先上传metadata再上传数据包   |
 
-### 邮件发送
+### 下载
 
-| code | meaning                  |
-| :--- | :----------------------- |
-| 0    | 上传成功                 |
-| 3    | 请求邮箱无法发送成功     |
-| 10   | 请求被拒绝               |
-| 11   | 对应功能不存在或无法启用 |
+| CodeId | CodeName          | Detail            | meaning      |
+| :----- | :---------------- | :---------------- | :----------- |
+| 7      | PERMISSION_DENIED | Permission Denied | 没有下载权限 |
 
-### 同意加入会话返回信息
+### 创建新会话
 
-| code | meaning        |
-| :--- | :------------- |
-| 0    | 同意成功       |
-| 10   | 请求被拒绝     |
+| CodeId | CodeName  | Detail         | meaning          |
+| :----- | :-------- | :------------- | :--------------- |
+| 5      | NOT_FOUND | User Not Found | 邀请的用户不存在 |
+
+### 获取会话信息
+
+| CodeId | CodeName         | Detail                | meaning                         |
+| :----- | :--------------- | :-------------------- | :------------------------------ |
+| 5      | NOT_FOUND        | Session Not Found     | 该会话不存在                    |
+| 3      | INVALID_ARGUMENT | Request Invalid Value | 请求值无效(如:获取不存在的字段) |
+
+### 设置会话信息
+
+| CodeId | CodeName          | Detail                 | meaning                |
+| :----- | :---------------- | :--------------------- | :--------------------- |
+| 6      | ALREADY_EXISTS    | Conflict               | 信息冲突               |
+| 7      | PERMISSION_DENIED | Cannot Set Name        | 没有设置会话名称的权限 |
+| 7      | PERMISSION_DENIED | Cannot Set Avatar      | 没有设置会话头像的权限 |
+| 7      | PERMISSION_DENIED | Cannot Set Description | 没有设置会话简介的权限 |
+
+### 撤回消息
+
+| CodeId | CodeName          | Detail            | meaning            |
+| :----- | :---------------- | :---------------- | :----------------- |
+| 7      | PERMISSION_DENIED | Permission Denied | 没有撤回消息的权限 |
+| 5      | NOT_FOUND         | Message Not Found | 撤回的消息不存在   |
+
+### 设置(会话中)身份
+
+| CodeId | CodeName          | Detail              | meaning            |
+| :----- | :---------------- | :------------------ | :----------------- |
+| 7      | PERMISSION_DENIED | Permission Denied   | 没有设置身份的权限 |
+| 5      | NOT_FOUND         | User Not In Session | 用户不存在         |

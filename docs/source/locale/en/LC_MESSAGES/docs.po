@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-24 23:08+0800\n"
+"POT-Creation-Date: 2025-01-24 23:26+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -781,38 +781,18 @@ msgid "OurChat 状态码"
 msgstr "OurChat Status Code"
 
 #: ../../source/docs/development/status_code.md:3
-msgid ""
-"**_注：任何状态中都可能包含INTERNAL,请务必做好校验_** **_由于服务器随时可能进入维护状态，FAILED_PRECONDITION"
-" 随时可能出现_**"
+msgid "**_注：以下几种状态码在任何情况下都可能出现，请务必做好校验_**"
 msgstr ""
-"**_ Note: Any status may contain INTERNAL, please make sure to perform "
-"checks._** **_Due to the server potentially entering maintenance "
-
-#: ../../source/docs/development/status_code.md:6
-msgid "**_以上特殊信息不再赘述_**"
-msgstr "**_No further elaboration on the above special information_**"
-
-#: ../../source/docs/development/status_code.md:8
-msgid "状态码"
-msgstr "Status Code"
-
-#: ../../source/docs/development/status_code.md:10
-msgid "请参考 [grpc 文档](https://grpc.io/docs/guides/status-codes/)"
-msgstr ""
-"Please refer to [grpc documentation](https://grpc.io/docs/guides/status-"
-"codes/)"
-
-#: ../../source/docs/development/status_code.md:12
-msgid "各种信息下的状态码具体解释"
-msgstr "Specific explanations of status codes under various information conditions"
-
-#: ../../source/docs/development/status_code.md:14
-msgid "获取会话信息返回信息"
-msgstr "Get Session Information Return Information"
+"**_Note: The following status codes may occur in any case, so please "
+"ensure proper validation._**"
 
 #: ../../source/docs/development/status_code.md
-msgid "code"
-msgstr "Code"
+msgid "CodeId"
+msgstr "CodeId"
+
+#: ../../source/docs/development/status_code.md
+msgid "CodeName"
+msgstr "CodeName"
 
 #: ../../source/docs/development/status_code.md
 msgid "meaning"
@@ -823,171 +803,382 @@ msgid "0"
 msgstr "0"
 
 #: ../../source/docs/development/status_code.md
-msgid "获取成功"
-msgstr "Retrieved successfully"
+msgid "OK"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "执行成功"
+msgstr "execute successfully"
+
+#: ../../source/docs/development/status_code.md
+msgid "13"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "INTERNAL"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "服务器内部错误"
+msgstr "Internal Server Error"
 
 #: ../../source/docs/development/status_code.md
 #: ../../source/docs/use/role_permission.md
-msgid "3"
-msgstr "3"
+msgid "9"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
-msgid "该会话不存在"
-msgstr "The session does not exist"
-
-#: ../../source/docs/development/status_code.md:21
-msgid "注册返回信息"
-msgstr "Registration Return Information"
-
-#: ../../source/docs/development/status_code.md
-msgid "注册成功"
-msgstr "Registration Successful"
-
-#: ../../source/docs/development/status_code.md
-#: ../../source/docs/use/role_permission.md
-msgid "4"
-msgstr "4"
-
-#: ../../source/docs/development/status_code.md
-msgid "邮箱已存在"
-msgstr "Email already exists"
-
-#: ../../source/docs/development/status_code.md
-#: ../../source/docs/use/role_permission.md
-msgid "10"
-msgstr "10"
-
-#: ../../source/docs/development/status_code.md
-msgid "未完成验证"
-msgstr "Verification not completed"
-
-#: ../../source/docs/development/status_code.md:29
-msgid "登录返回信息"
-msgstr "Login Return Information"
-
-#: ../../source/docs/development/status_code.md
-msgid "登录成功"
-msgstr "Login Successful"
-
-#: ../../source/docs/development/status_code.md
-msgid "账号/密码错误"
-msgstr "Account/password is incorrect"
-
-#: ../../source/docs/development/status_code.md:36
-msgid "新建会话返回信息"
-msgstr "New Session Return Information"
-
-#: ../../source/docs/development/status_code.md
-msgid "新建成功"
-msgstr "Created Successfully"
-
-#: ../../source/docs/development/status_code.md
-#: ../../source/docs/use/role_permission.md
-msgid "6"
-msgstr "6"
-
-#: ../../source/docs/development/status_code.md
-msgid "到达创建会话数量上限"
-msgstr "Reached the maximum number of sessions"
-
-#: ../../source/docs/development/status_code.md:43
-msgid "获取账号信息返回信息"
-msgstr "Get Account Information Return Information"
-
-#: ../../source/docs/development/status_code.md
-msgid "该账号不存在"
-msgstr "The account does not exist"
-
-#: ../../source/docs/development/status_code.md:50
-msgid "获取服务器状态"
-msgstr "Get Server Status"
-
-#: ../../source/docs/development/status_code.md
-msgid "服务器正常"
-msgstr "Server is running normally"
-
-#: ../../source/docs/development/status_code.md
-#: ../../source/docs/use/role_permission.md
-msgid "2"
-msgstr "2"
+msgid "FAILED_PRECONDITION"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "服务器维护中"
 msgstr "Under Maintenance"
 
-#: ../../source/docs/development/status_code.md:57
-msgid "验证状态"
-msgstr "Verification Status"
+#: ../../source/docs/development/status_code.md:11
+msgid "**_以上特殊信息不再赘述_**"
+msgstr "**_No further elaboration on the above special information_**"
+
+#: ../../source/docs/development/status_code.md:13
+msgid "状态码"
+msgstr "Status Code"
+
+#: ../../source/docs/development/status_code.md:15
+msgid "请参考 [grpc 文档](https://grpc.io/docs/guides/status-codes/)"
+msgstr ""
+"Please refer to [grpc documentation](https://grpc.io/docs/guides/status-"
+"codes/)"
+
+#: ../../source/docs/development/status_code.md:17
+msgid "各种信息下的状态码具体解释"
+msgstr "Specific explanations of status codes under various information conditions"
+
+#: ../../source/docs/development/status_code.md:19
+msgid "注册"
+msgstr "Register"
 
 #: ../../source/docs/development/status_code.md
-msgid "验证通过"
-msgstr "Verification Passed"
+msgid "Detail"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+#: ../../source/docs/use/role_permission.md
+msgid "6"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "ALREADY_EXISTS"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "User Already Exists"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "该邮箱已被注册"
+msgstr "The email is conflicting with an existing user"
+
+#: ../../source/docs/development/status_code.md:25
+msgid "登录"
+msgstr "Login"
+
+#: ../../source/docs/development/status_code.md
+#: ../../source/docs/use/role_permission.md
+msgid "5"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "NOT_FOUND"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "User Not Found"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "该用户不存在"
+msgstr "The user does not exist"
+
+#: ../../source/docs/development/status_code.md
+#: ../../source/docs/use/role_permission.md
+msgid "3"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "INVALID_ARGUMENT"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "Missing AuthType"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "缺少AuthType参数"
+msgstr "The auth type argument is missing"
+
+#: ../../source/docs/development/status_code.md
+msgid "16"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "Unauthenticated"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "Wrong Password"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "密码错误"
+msgstr "password is incorrect"
+
+#: ../../source/docs/development/status_code.md:33
+msgid "验证"
+msgstr "verify"
+
+#: ../../source/docs/development/status_code.md:35
+msgid "该功能暂未实现"
+msgstr "This feature is not yet implemented"
+
+#: ../../source/docs/development/status_code.md:37
+msgid "获取服务器信息"
+msgstr "Get Server Information"
+
+#: ../../source/docs/development/status_code.md:45
+msgid "获取账号id"
+msgstr "Get Account Id"
+
+#: ../../source/docs/development/status_code.md:51
+msgid "获取账号信息"
+msgstr "Get Account Information"
 
 #: ../../source/docs/development/status_code.md
 #: ../../source/docs/use/role_permission.md
 msgid "7"
-msgstr "7"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
-msgid "验证超时"
-msgstr "Verification Timeout"
-
-#: ../../source/docs/development/status_code.md:64
-msgid "注销返回信息"
-msgstr "Logout Return Information"
+msgid "PERMISSION_DENIED"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
-msgid "注销成功"
-msgstr "Logout Successful"
-
-#: ../../source/docs/development/status_code.md:71
-msgid "设置账号信息返回信息"
-msgstr "Get Account Information Return Information"
+msgid "Permission Denied"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
-msgid "设置成功"
-msgstr "Set Successfully"
-
-#: ../../source/docs/development/status_code.md:77
-msgid "上传文件返回信息"
-msgstr "The return information of the file upload"
+msgid "权限不足(如:获取非当前帐号的隐私信息)"
+msgstr "Insufficient permissions (e.g. accessing private information of a non-current account)"
 
 #: ../../source/docs/development/status_code.md
-msgid "上传成功"
-msgstr "Upload successful"
+msgid "用户不存在"
+msgstr "User does not exist"
 
 #: ../../source/docs/development/status_code.md
-msgid "因账号相关限制导致请求被拒绝"
-msgstr "The request was denied due to account-related restrictions"
-
-#: ../../source/docs/development/status_code.md:84
-msgid "邮件发送"
-msgstr "Email Sent"
+msgid "Request Invalid Value"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
-msgid "请求邮箱无法发送成功"
-msgstr "Send Email Failed"
+msgid "请求值无效(如:获取不存在的字段)"
+msgstr "Invalid request value (e.g. accessing a non-existent field)"
+
+#: ../../source/docs/development/status_code.md:59
+msgid "设置当前账号信息"
+msgstr "Set Current Account Information"
 
 #: ../../source/docs/development/status_code.md
-msgid "请求被拒绝"
-msgstr "Request denied."
+msgid "Conflict"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "信息冲突(如:新的ocid被占用)"
+msgstr "Information conflict (e.g. the new ocid is occupied)"
+
+#: ../../source/docs/development/status_code.md
+msgid "INVALID_ARGUMENT Ocid"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "Too Long"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "新的ocid太长"
+msgstr "The new ocid is too long"
+
+#: ../../source/docs/development/status_code.md:66
+msgid "获取用户消息"
+msgstr "Fetch Messages"
+
+#: ../../source/docs/development/status_code.md
+msgid "Time Format Error"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "无法解析时间戳"
+msgstr "The structure of time cannot be parsed"
+
+#: ../../source/docs/development/status_code.md
+msgid "Time Missing"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "缺少time参数"
+msgstr "Member time is required"
+
+#: ../../source/docs/development/status_code.md:73
+#: ../../source/docs/use/role_permission.md
+msgid "发送消息"
+msgstr "Send Message"
+
+#: ../../source/docs/development/status_code.md
+msgid "没有发言权限"
+msgstr "you don't have the privilege to send message here"
+
+#: ../../source/docs/development/status_code.md
+msgid "Session Not Found"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "会话不存在"
+msgstr "The session does not exist"
+
+#: ../../source/docs/development/status_code.md:80
+msgid "上传"
+msgstr "File Upload"
+
+#: ../../source/docs/development/status_code.md
+msgid "File Size Error"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "文件大小与metadata不符合"
+msgstr "The size of the data received is not equal to the size in metadata"
+
+#: ../../source/docs/development/status_code.md
+msgid "File Hash Error"
+msgstr "
+
+#: ../../source/docs/development/status_code.md
+msgid "文件hash与metadata不符合"
+msgstr "The hash of the data received is not equal to the hash in metadata""
 
 #: ../../source/docs/development/status_code.md
 #: ../../source/docs/use/role_permission.md
-msgid "11"
-msgstr "11"
+msgid "8"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
-msgid "对应功能不存在或无法启用"
-msgstr "The corresponding feature does not exist or cannot be enabled"
-
-#: ../../source/docs/development/status_code.md:93
-msgid "同意加入会话返回信息"
-msgstr "Agree to Join Session Return Information"
+msgid "RESOURCE_EXHAUSTED"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
-msgid "同意成功"
-msgstr "Agree Successfully"
+msgid "Storage Full"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "该用户储存空间已满"
+msgstr "The storage is full"
+
+#: ../../source/docs/development/status_code.md
+msgid "Metadata Error"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "缺少metadata参数或metadata无效"
+msgstr "The metadata is invalid or missing"
+
+#: ../../source/docs/development/status_code.md
+msgid "Incorrect Order Of Uploading"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "应先上传metadata再上传数据包"
+msgstr "You should upload a package of metadata, then upload content package until process finish"
+
+#: ../../source/docs/development/status_code.md:90
+msgid "下载"
+msgstr "File Download"
+
+#: ../../source/docs/development/status_code.md
+msgid "没有下载权限"
+msgstr "This file is not yours"
+
+#: ../../source/docs/development/status_code.md:96
+msgid "创建新会话"
+msgstr "New Session"
+
+#: ../../source/docs/development/status_code.md
+msgid "邀请的用户不存在"
+msgstr "the user you want to invite does not exist"
+
+#: ../../source/docs/development/status_code.md:102
+msgid "获取会话信息"
+msgstr "Get Session Information"
+
+#: ../../source/docs/development/status_code.md
+msgid "该会话不存在"
+msgstr "The session does not exist"
+
+#: ../../source/docs/development/status_code.md:109
+msgid "设置会话信息"
+msgstr "Set Session Information"
+
+#: ../../source/docs/development/status_code.md
+msgid "信息冲突"
+msgstr "the information should be set is conflict"
+
+#: ../../source/docs/development/status_code.md
+msgid "Cannot Set Name"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "没有设置会话名称的权限"
+msgstr "you don't have the privilege to set name"
+
+#: ../../source/docs/development/status_code.md
+msgid "Cannot Set Avatar"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "没有设置会话头像的权限"
+msgstr "you don't have the privilege to set avatar"
+
+#: ../../source/docs/development/status_code.md
+msgid "Cannot Set Description"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "没有设置会话简介的权限"
+msgstr "you don't have the privilege to set description"
+
+#: ../../source/docs/development/status_code.md:118
+#: ../../source/docs/use/role_permission.md
+msgid "撤回消息"
+msgstr "Recall Message"
+
+#: ../../source/docs/development/status_code.md
+msgid "没有撤回消息的权限"
+msgstr "you don't have the privilege to recall message"
+
+#: ../../source/docs/development/status_code.md
+msgid "Message Not Found"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+msgid "撤回的消息不存在"
+msgstr "the message you want to recall does not exist"
+
+#: ../../source/docs/development/status_code.md:125
+msgid "设置(会话中)身份"
+msgstr "set role (in session)"
+
+#: ../../source/docs/development/status_code.md
+msgid "没有设置身份的权限"
+msgstr "you don't have the privilege to set role"
+
+#: ../../source/docs/development/status_code.md
+msgid "User Not In Session"
+msgstr ""
 
 #: ../../source/docs/run/build.md:1
 msgid "如何构建该项目"
@@ -1383,11 +1574,17 @@ msgstr "Permission and Role Mechanism"
 
 #: ../../source/docs/use/role_permission.md:3
 msgid "OurChat提供了一套灵活的机制来管理成员在会话中的权限。"
-msgstr "OurChat provides a flexible mechanism to manage members' permissions in sessions."
+msgstr ""
+"OurChat provides a flexible mechanism to manage members' permissions in "
+"sessions."
 
 #: ../../source/docs/use/role_permission.md:5
 msgid "在权限管理中，可以为用户在每个群聊中指定不同的角色，每个角色可以拥有不同的权限。在权限管理中，可以对角色进行操作，例如添加、删除、编辑等。"
-msgstr "In permission management, different roles can be assigned to users in each group chat, and each role can have different permissions. In permission management, roles can be operated on, such as adding, deleting, editing, etc."
+msgstr ""
+"In permission management, different roles can be assigned to users in "
+"each group chat, and each role can have different permissions. In "
+"permission management, roles can be operated on, such as adding, "
+"deleting, editing, etc."
 
 #: ../../source/docs/use/role_permission.md:7
 msgid "以下是权限表："
@@ -1410,10 +1607,6 @@ msgid "SendMsg"
 msgstr "SendMsg"
 
 #: ../../source/docs/use/role_permission.md
-msgid "发送消息"
-msgstr "Send Message"
-
-#: ../../source/docs/use/role_permission.md
 msgid "1"
 msgstr "1"
 
@@ -1422,8 +1615,8 @@ msgid "RecallMsg"
 msgstr "RecallMsg"
 
 #: ../../source/docs/use/role_permission.md
-msgid "撤回消息"
-msgstr "Recall Message"
+msgid "2"
+msgstr ""
 
 #: ../../source/docs/use/role_permission.md
 msgid "BanUser"
@@ -1442,16 +1635,16 @@ msgid "解封用户"
 msgstr "Unban User"
 
 #: ../../source/docs/use/role_permission.md
+msgid "4"
+msgstr ""
+
+#: ../../source/docs/use/role_permission.md
 msgid "KickUser"
 msgstr "KickUser"
 
 #: ../../source/docs/use/role_permission.md
 msgid "踢出用户"
 msgstr "Kick User out of the session"
-
-#: ../../source/docs/use/role_permission.md
-msgid "5"
-msgstr "5"
 
 #: ../../source/docs/use/role_permission.md
 msgid "SetTitle"
@@ -1478,20 +1671,12 @@ msgid "设置群聊描述"
 msgstr "Set the session description"
 
 #: ../../source/docs/use/role_permission.md
-msgid "8"
-msgstr "8"
-
-#: ../../source/docs/use/role_permission.md
 msgid "DeleteSession"
 msgstr "DeleteSession"
 
 #: ../../source/docs/use/role_permission.md
 msgid "删除会话"
 msgstr "Delete Session"
-
-#: ../../source/docs/use/role_permission.md
-msgid "9"
-msgstr "9"
 
 #: ../../source/docs/use/role_permission.md
 msgid "SetRole"
@@ -1502,12 +1687,20 @@ msgid "设置某人为某角色"
 msgstr "Set someone as a certain role"
 
 #: ../../source/docs/use/role_permission.md
+msgid "10"
+msgstr ""
+
+#: ../../source/docs/use/role_permission.md
 msgid "MuteUser"
 msgstr "MuteUser"
 
 #: ../../source/docs/use/role_permission.md
 msgid "禁言用户"
 msgstr "Mute User"
+
+#: ../../source/docs/use/role_permission.md
+msgid "11"
+msgstr ""
 
 #: ../../source/docs/use/role_permission.md
 msgid "UnmuteUser"
@@ -1519,7 +1712,7 @@ msgstr "Unmute User"
 
 #: ../../source/docs/use/role_permission.md
 msgid "12"
-msgstr "12"
+msgstr ""
 
 #: ../../source/docs/use/role_permission.md:24
 msgid "为了方便，提前定义了一些角色:"
@@ -2670,4 +2863,85 @@ msgstr "Member has permissions `1`"
 #~ " before running `cargo test`, you "
 #~ "must set the `OURCHAT_CONFIG_PATH` environment"
 #~ " variable.**"
+
+#~ msgid ""
+#~ "**_注：任何状态中都可能包含INTERNAL,请务必做好校验_** "
+#~ "**_由于服务器随时可能进入维护状态，FAILED_PRECONDITION 随时可能出现_**"
+#~ msgstr ""
+#~ "**_ Note: Any status may contain "
+#~ "INTERNAL, please make sure to perform"
+#~ " checks._** **_Due to the server "
+#~ "potentially entering maintenance "
+
+#~ msgid "获取成功"
+#~ msgstr "Retrieved successfully"
+
+#~ msgid "注册返回信息"
+#~ msgstr "Registration Return Information"
+
+#~ msgid "邮箱已存在"
+#~ msgstr "Email already exists"
+
+#~ msgid "未完成验证"
+#~ msgstr "Verification not completed"
+
+#~ msgid "登录返回信息"
+#~ msgstr "Login Return Information"
+
+#~ msgid "新建会话返回信息"
+#~ msgstr "New Session Return Information"
+
+#~ msgid "新建成功"
+#~ msgstr "Created Successfully"
+
+#~ msgid "到达创建会话数量上限"
+#~ msgstr "Reached the maximum number of sessions"
+
+#~ msgid "服务器正常"
+#~ msgstr "Server is running normally"
+
+#~ msgid "验证状态"
+#~ msgstr "Verification Status"
+
+#~ msgid "验证超时"
+#~ msgstr "Verification Timeout"
+
+#~ msgid "注销返回信息"
+#~ msgstr "Logout Return Information"
+
+#~ msgid "注销成功"
+#~ msgstr "Logout Successful"
+
+#~ msgid "设置成功"
+#~ msgstr "Set Successfully"
+
+#~ msgid "上传文件返回信息"
+#~ msgstr "The return information of the file upload"
+
+#~ msgid "上传成功"
+#~ msgstr "Upload successful"
+
+#~ msgid "因账号相关限制导致请求被拒绝"
+#~ msgstr "The request was denied due to account-related restrictions"
+
+#~ msgid "邮件发送"
+#~ msgstr "Email Sent"
+
+#~ msgid "请求邮箱无法发送成功"
+#~ msgstr "Send Email Failed"
+
+#~ msgid "请求被拒绝"
+#~ msgstr "Request denied."
+
+#~ msgid "对应功能不存在或无法启用"
+#~ msgstr "The corresponding feature does not exist or cannot be enabled"
+
+#~ msgid "同意加入会话返回信息"
+#~ msgstr "Agree to Join Session Return Information"
+
+#~ msgid "同意成功"
+#~ msgstr "Agree Successfully"
+
+#~ msgid "该账号储存空间已满"
+#~ msgstr ""
 
