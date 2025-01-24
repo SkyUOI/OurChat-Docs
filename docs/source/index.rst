@@ -16,3 +16,4 @@ OurChat 是一个全平台的即时聊天软件，具体参见 `README <https://
    docs/deploy/index
    docs/run/index
    docs/development/index
+   docs/use/index

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-09 11:23+0800\n"
+"POT-Creation-Date: 2025-01-24 23:08+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -65,6 +65,7 @@ msgid "即可查看所有可用的生成器"
 msgstr "You can view all available generators"
 
 #: ../../source/docs/deploy/document-deploy.md:38
+#: ../../source/docs/use/index.rst:2
 msgid "使用"
 msgstr "Usage"
 
@@ -114,7 +115,7 @@ msgstr "The documentation will be generated in the `build/html` directory"
 #: ../../source/docs/deploy/index.rst:5
 #: ../../source/docs/development/index.rst:7
 #: ../../source/docs/development/server/index.rst:5
-#: ../../source/docs/run/index.rst:5
+#: ../../source/docs/run/index.rst:5 ../../source/docs/use/index.rst:5
 msgid "目录:"
 msgstr "Table of Contents:"
 
@@ -457,7 +458,8 @@ msgstr "Scripts"
 msgid "我们提供了一系列脚本，帮助您处理日常简单事物，参考[脚本说明](https://github.com/SkyUOI/OurChat/blob/main/script/README.md)。"
 msgstr ""
 "We provide a series of scripts to help you handle simple daily tasks. "
-"Please refer to [Script Instructions](https://github.com/SkyUOI/OurChat/blob/main/script/README.md)."
+"Please refer to [Script "
+"Instructions](https://github.com/SkyUOI/OurChat/blob/main/script/README.md)."
 
 #: ../../source/docs/development/server/basic.md:7
 msgid "运行集成测试"
@@ -468,11 +470,12 @@ msgid ""
 "首先要设置环境变量，为了方便起见，我们支持`.env`的方式来设置环境变量，提供了一个[简单模板](https://github.com/SkyUOI/OurChat/blob/main/.env.template)，或者可以通过设置`OURCHAT_TEST_CONFIG_DIR`变量指向存有配置文件的目录。然后如正常"
 " rust 项目运行`cargo test`即可运行测试"
 msgstr ""
-"First, you need to set environment variables. For convenience, we support `.env` and "
-"provide a [simple template](https://github.com/SkyUOI/OurChat/blob/main/.env.template) "
-"for setting environment variables, or you can set the `OURCHAT_TEST_CONFIG_DIR` "
-"variable to point to the directory containing test configuration files. "
-"Then you can run `cargo test` to run the tests."
+"First, you need to set environment variables. For convenience, we support"
+" `.env` and provide a [simple "
+"template](https://github.com/SkyUOI/OurChat/blob/main/.env.template) for "
+"setting environment variables, or you can set the "
+"`OURCHAT_TEST_CONFIG_DIR` variable to point to the directory containing "
+"test configuration files. Then you can run `cargo test` to run the tests."
 
 #: ../../source/docs/development/server/basic.md:11
 msgid "文档"
@@ -824,6 +827,7 @@ msgid "获取成功"
 msgstr "Retrieved successfully"
 
 #: ../../source/docs/development/status_code.md
+#: ../../source/docs/use/role_permission.md
 msgid "3"
 msgstr "3"
 
@@ -840,6 +844,7 @@ msgid "注册成功"
 msgstr "Registration Successful"
 
 #: ../../source/docs/development/status_code.md
+#: ../../source/docs/use/role_permission.md
 msgid "4"
 msgstr "4"
 
@@ -848,6 +853,7 @@ msgid "邮箱已存在"
 msgstr "Email already exists"
 
 #: ../../source/docs/development/status_code.md
+#: ../../source/docs/use/role_permission.md
 msgid "10"
 msgstr "10"
 
@@ -876,6 +882,7 @@ msgid "新建成功"
 msgstr "Created Successfully"
 
 #: ../../source/docs/development/status_code.md
+#: ../../source/docs/use/role_permission.md
 msgid "6"
 msgstr "6"
 
@@ -900,6 +907,7 @@ msgid "服务器正常"
 msgstr "Server is running normally"
 
 #: ../../source/docs/development/status_code.md
+#: ../../source/docs/use/role_permission.md
 msgid "2"
 msgstr "2"
 
@@ -916,6 +924,7 @@ msgid "验证通过"
 msgstr "Verification Passed"
 
 #: ../../source/docs/development/status_code.md
+#: ../../source/docs/use/role_permission.md
 msgid "7"
 msgstr "7"
 
@@ -964,6 +973,7 @@ msgid "请求被拒绝"
 msgstr "Request denied."
 
 #: ../../source/docs/development/status_code.md
+#: ../../source/docs/use/role_permission.md
 msgid "11"
 msgstr "11"
 
@@ -1362,6 +1372,206 @@ msgstr "FileSaveDays"
 #: ../../source/docs/run/server_cmd.md
 msgid "文件保存天数"
 msgstr "File Save Days"
+
+#: ../../source/docs/use/index.rst:3
+msgid "此部分是关于使用OurChat的文档"
+msgstr "Documentation for OurChat Usage"
+
+#: ../../source/docs/use/role_permission.md:1
+msgid "权限和角色机制"
+msgstr "Permission and Role Mechanism"
+
+#: ../../source/docs/use/role_permission.md:3
+msgid "OurChat提供了一套灵活的机制来管理成员在会话中的权限。"
+msgstr "OurChat provides a flexible mechanism to manage members' permissions in sessions."
+
+#: ../../source/docs/use/role_permission.md:5
+msgid "在权限管理中，可以为用户在每个群聊中指定不同的角色，每个角色可以拥有不同的权限。在权限管理中，可以对角色进行操作，例如添加、删除、编辑等。"
+msgstr "In permission management, different roles can be assigned to users in each group chat, and each role can have different permissions. In permission management, roles can be operated on, such as adding, deleting, editing, etc."
+
+#: ../../source/docs/use/role_permission.md:7
+msgid "以下是权限表："
+msgstr "The following is the permission table:"
+
+#: ../../source/docs/use/role_permission.md
+msgid "权限"
+msgstr "Permission"
+
+#: ../../source/docs/use/role_permission.md
+msgid "说明"
+msgstr "Description"
+
+#: ../../source/docs/use/role_permission.md
+msgid "权限代码"
+msgstr "Permission Code"
+
+#: ../../source/docs/use/role_permission.md
+msgid "SendMsg"
+msgstr "SendMsg"
+
+#: ../../source/docs/use/role_permission.md
+msgid "发送消息"
+msgstr "Send Message"
+
+#: ../../source/docs/use/role_permission.md
+msgid "1"
+msgstr "1"
+
+#: ../../source/docs/use/role_permission.md
+msgid "RecallMsg"
+msgstr "RecallMsg"
+
+#: ../../source/docs/use/role_permission.md
+msgid "撤回消息"
+msgstr "Recall Message"
+
+#: ../../source/docs/use/role_permission.md
+msgid "BanUser"
+msgstr "BanUser"
+
+#: ../../source/docs/use/role_permission.md
+msgid "封禁用户"
+msgstr "Ban User"
+
+#: ../../source/docs/use/role_permission.md
+msgid "UnbanUser"
+msgstr "UnbanUser"
+
+#: ../../source/docs/use/role_permission.md
+msgid "解封用户"
+msgstr "Unban User"
+
+#: ../../source/docs/use/role_permission.md
+msgid "KickUser"
+msgstr "KickUser"
+
+#: ../../source/docs/use/role_permission.md
+msgid "踢出用户"
+msgstr "Kick User out of the session"
+
+#: ../../source/docs/use/role_permission.md
+msgid "5"
+msgstr "5"
+
+#: ../../source/docs/use/role_permission.md
+msgid "SetTitle"
+msgstr "SetTitle"
+
+#: ../../source/docs/use/role_permission.md
+msgid "设置群聊名称"
+msgstr "Set the session title"
+
+#: ../../source/docs/use/role_permission.md
+msgid "SetAvatar"
+msgstr "SetAvatar"
+
+#: ../../source/docs/use/role_permission.md
+msgid "设置群聊头像"
+msgstr "Set the session avatar"
+
+#: ../../source/docs/use/role_permission.md
+msgid "SetDescription"
+msgstr "SetDescription"
+
+#: ../../source/docs/use/role_permission.md
+msgid "设置群聊描述"
+msgstr "Set the session description"
+
+#: ../../source/docs/use/role_permission.md
+msgid "8"
+msgstr "8"
+
+#: ../../source/docs/use/role_permission.md
+msgid "DeleteSession"
+msgstr "DeleteSession"
+
+#: ../../source/docs/use/role_permission.md
+msgid "删除会话"
+msgstr "Delete Session"
+
+#: ../../source/docs/use/role_permission.md
+msgid "9"
+msgstr "9"
+
+#: ../../source/docs/use/role_permission.md
+msgid "SetRole"
+msgstr "SetRole"
+
+#: ../../source/docs/use/role_permission.md
+msgid "设置某人为某角色"
+msgstr "Set someone as a certain role"
+
+#: ../../source/docs/use/role_permission.md
+msgid "MuteUser"
+msgstr "MuteUser"
+
+#: ../../source/docs/use/role_permission.md
+msgid "禁言用户"
+msgstr "Mute User"
+
+#: ../../source/docs/use/role_permission.md
+msgid "UnmuteUser"
+msgstr "UnmuteUser"
+
+#: ../../source/docs/use/role_permission.md
+msgid "解除禁言用户"
+msgstr "Unmute User"
+
+#: ../../source/docs/use/role_permission.md
+msgid "12"
+msgstr "12"
+
+#: ../../source/docs/use/role_permission.md:24
+msgid "为了方便，提前定义了一些角色:"
+msgstr "For convenience, some roles are defined in advance:"
+
+#: ../../source/docs/use/role_permission.md
+msgid "预定义角色"
+msgstr "Predefined roles"
+
+#: ../../source/docs/use/role_permission.md
+msgid "角色代码"
+msgstr "Role Code"
+
+#: ../../source/docs/use/role_permission.md
+msgid "Member"
+msgstr "Member"
+
+#: ../../source/docs/use/role_permission.md
+msgid "成员"
+msgstr "Member"
+
+#: ../../source/docs/use/role_permission.md
+msgid "Admin"
+msgstr "Admin"
+
+#: ../../source/docs/use/role_permission.md
+msgid "管理员"
+msgstr "Admin"
+
+#: ../../source/docs/use/role_permission.md
+msgid "Owner"
+msgstr "Owner"
+
+#: ../../source/docs/use/role_permission.md
+msgid "群主"
+msgstr "The owner of the session"
+
+#: ../../source/docs/use/role_permission.md:32
+msgid "权限如下:"
+msgstr "Permissions are as follows:"
+
+#: ../../source/docs/use/role_permission.md:34
+msgid "Owner 拥有所有权限"
+msgstr "Owner has all permissions"
+
+#: ../../source/docs/use/role_permission.md:35
+msgid "Admin 拥有权限`1 2 3 4 5 11 12`"
+msgstr "Admin has permissions `1 2 3 4 5 11 12`"
+
+#: ../../source/docs/use/role_permission.md:36
+msgid "Member 拥有权限 `1`"
+msgstr "Member has permissions `1`"
 
 #~ msgid "验证密钥"
 #~ msgstr "verification key"
