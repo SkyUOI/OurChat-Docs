@@ -808,7 +808,7 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "执行成功"
-msgstr "execute successfully"
+msgstr "Execute successfully"
 
 #: ../../source/docs/development/status_code.md
 msgid "13"
@@ -930,11 +930,11 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "密码错误"
-msgstr "password is incorrect"
+msgstr "Password is incorrect"
 
 #: ../../source/docs/development/status_code.md:33
 msgid "验证"
-msgstr "verify"
+msgstr "Verify"
 
 #: ../../source/docs/development/status_code.md:35
 msgid "该功能暂未实现"
@@ -1032,7 +1032,7 @@ msgstr "Send Message"
 
 #: ../../source/docs/development/status_code.md
 msgid "没有发言权限"
-msgstr "you don't have the privilege to send message here"
+msgstr "You don't have the privilege to send message here"
 
 #: ../../source/docs/development/status_code.md
 msgid "Session Not Found"
@@ -1109,7 +1109,7 @@ msgstr "New Session"
 
 #: ../../source/docs/development/status_code.md
 msgid "邀请的用户不存在"
-msgstr "the user you want to invite does not exist"
+msgstr "The user you want to invite does not exist"
 
 #: ../../source/docs/development/status_code.md:102
 msgid "获取会话信息"
@@ -1125,7 +1125,7 @@ msgstr "Set Session Information"
 
 #: ../../source/docs/development/status_code.md
 msgid "信息冲突"
-msgstr "the information should be set is conflict"
+msgstr "The information should be set is conflict"
 
 #: ../../source/docs/development/status_code.md
 msgid "Cannot Set Name"
@@ -1133,7 +1133,7 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "没有设置会话名称的权限"
-msgstr "you don't have the privilege to set name"
+msgstr "You don't have the privilege to set name"
 
 #: ../../source/docs/development/status_code.md
 msgid "Cannot Set Avatar"
@@ -1141,7 +1141,7 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "没有设置会话头像的权限"
-msgstr "you don't have the privilege to set avatar"
+msgstr "You don't have the privilege to set avatar"
 
 #: ../../source/docs/development/status_code.md
 msgid "Cannot Set Description"
@@ -1149,7 +1149,7 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "没有设置会话简介的权限"
-msgstr "you don't have the privilege to set description"
+msgstr "You don't have the privilege to set description"
 
 #: ../../source/docs/development/status_code.md:118
 #: ../../source/docs/use/role_permission.md
@@ -1158,7 +1158,7 @@ msgstr "Recall Message"
 
 #: ../../source/docs/development/status_code.md
 msgid "没有撤回消息的权限"
-msgstr "you don't have the privilege to recall message"
+msgstr "You don't have the privilege to recall message"
 
 #: ../../source/docs/development/status_code.md
 msgid "Message Not Found"
@@ -1166,15 +1166,15 @@ msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "撤回的消息不存在"
-msgstr "the message you want to recall does not exist"
+msgstr "The message you want to recall does not exist"
 
 #: ../../source/docs/development/status_code.md:125
 msgid "设置(会话中)身份"
-msgstr "set role (in session)"
+msgstr "Set Role (in session)"
 
 #: ../../source/docs/development/status_code.md
 msgid "没有设置身份的权限"
-msgstr "you don't have the privilege to set role"
+msgstr "You don't have the privilege to set role"
 
 #: ../../source/docs/development/status_code.md
 msgid "User Not In Session"
