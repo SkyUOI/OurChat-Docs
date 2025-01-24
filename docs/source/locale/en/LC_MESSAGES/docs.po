@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-24 23:08+0800\n"
+"POT-Creation-Date: 2025-01-24 23:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -1383,11 +1383,17 @@ msgstr "Permission and Role Mechanism"
 
 #: ../../source/docs/use/role_permission.md:3
 msgid "OurChat提供了一套灵活的机制来管理成员在会话中的权限。"
-msgstr "OurChat provides a flexible mechanism to manage members' permissions in sessions."
+msgstr ""
+"OurChat provides a flexible mechanism to manage members' permissions in "
+"sessions."
 
 #: ../../source/docs/use/role_permission.md:5
 msgid "在权限管理中，可以为用户在每个群聊中指定不同的角色，每个角色可以拥有不同的权限。在权限管理中，可以对角色进行操作，例如添加、删除、编辑等。"
-msgstr "In permission management, different roles can be assigned to users in each group chat, and each role can have different permissions. In permission management, roles can be operated on, such as adding, deleting, editing, etc."
+msgstr ""
+"In permission management, different roles can be assigned to users in "
+"each group chat, and each role can have different permissions. In "
+"permission management, roles can be operated on, such as adding, "
+"deleting, editing, etc."
 
 #: ../../source/docs/use/role_permission.md:7
 msgid "以下是权限表："
@@ -1570,8 +1576,8 @@ msgid "Admin 拥有权限`1 2 3 4 5 11 12`"
 msgstr "Admin has permissions `1 2 3 4 5 11 12`"
 
 #: ../../source/docs/use/role_permission.md:36
-msgid "Member 拥有权限 `1`"
-msgstr "Member has permissions `1`"
+msgid "Member 拥有权限 `1 2`"
+msgstr "Member has permissions `1 2`"
 
 #~ msgid "验证密钥"
 #~ msgstr "verification key"
