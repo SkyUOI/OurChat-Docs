@@ -23,16 +23,12 @@ docker-buildx 和 docker-compose 同样也需要安装.
 你可以运行:
 
 ```bash
-docker compose -f compose.dev.yml up -d
+docker compose -f docker/compose.devenv.yml up -d
 ```
 
-来配置开发环境
+来配置开发环境(postgres, redis, rabbitmq等)
 
-如果 Dockerfile.dev 改变了，你可以运行`script/rebuild_dev_container.py`来重新构建镜像。
-
-我们将数据直接复制到了`/app`文件夹，因此你**_不能随意重置容器_**，但这样可以使您的数据之间不会相互干扰。
-
-推荐的开发方式是在本地使用编辑器编辑，同时使用`docker exec -it OurChatServer bash`进入容器运行并观察结果
+推荐的开发方式是在容器外进行开发，但是环境使用容器内设置好的环境，不然可能造成环境不一致问题
 
 首先，切换进`server`目录中，开发都将在这里进行。
 

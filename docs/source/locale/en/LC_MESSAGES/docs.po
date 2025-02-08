@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-25 00:14+0800\n"
+"POT-Creation-Date: 2025-02-08 17:50+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../source/docs/deploy/document-deploy.md:1
 msgid "本地文档部署指南"
@@ -144,59 +144,87 @@ msgid "Docker(推荐)"
 msgstr "Docker (Recommended)"
 
 #: ../../source/docs/deploy/server-deploy.md:8
-msgid "对于该项目，我们提供了一个生产环境中使用的 docker 镜像，可以直接构建并运行项目。"
+msgid ""
+"对于该项目，我们提供了两种在生产环境中使用的 docker 镜像，一种基于debian，另一种基于alpine, "
+"alpine系列镜像适合硬盘空间比较宝贵的场景。"
 msgstr ""
-"For this project, we provide a docker image for use in a production "
-"environment, which can be used to build and run the project directly."
 
 #: ../../source/docs/deploy/server-deploy.md:10
 msgid "以下是具体操作步骤："
 msgstr "Here are the specific steps to follow:"
 
-#: ../../source/docs/deploy/server-deploy.md:16
+#: ../../source/docs/deploy/server-deploy.md:12
+msgid "alpine"
+msgstr ""
+
+#: ../../source/docs/deploy/server-deploy.md:18
+msgid "debian"
+msgstr ""
+
+#: ../../source/docs/deploy/server-deploy.md:24
 msgid "这一步完成只是创建了一个最基本的环境，但是安全性还远远没有达到，为了保证安全性，你需要修改 PostgreSQL 和 Redis 的密码。"
 msgstr ""
 "Completing this step only creates a very basic environment, but the "
 "security is far from adequate. To ensure security, you need to change the"
 " passwords for PostgreSQL and Redis."
 
-#: ../../source/docs/deploy/server-deploy.md:18
+#: ../../source/docs/deploy/server-deploy.md:26
 msgid "具体有以下几步:"
 msgstr "Here are the specific steps:"
 
-#: ../../source/docs/deploy/server-deploy.md:20
-msgid "修改`compose.yml`中的两个`password`的`123456`为你自己的强密码"
+#: ../../source/docs/deploy/server-deploy.md:28
+msgid "(如果你是用的debian系列镜像，下文的`compose.yml`全都指的是`compose.debian.yml`)"
+msgstr ""
+
+#: ../../source/docs/deploy/server-deploy.md:30
+#, fuzzy
+msgid "修改`compose.yml`中的`PORTGRES_PASSWORD`的`123456`为你自己的强密码"
 msgstr ""
 "Change the `123456` for the two `password` fields in `compose.yml` to "
 "your own strong password"
 
-#: ../../source/docs/deploy/server-deploy.md:21
-msgid ""
-"修改`config/database.json`为改后的 PostgreSQL "
-"密码，`config/redis_connection.json`为改后的 Redis 密码"
+#: ../../source/docs/deploy/server-deploy.md:31
+msgid "修改`docker/config/redis.conf`中的`123456`为你自己的强密码"
 msgstr ""
-"Change `config/database.json` to the new PostgreSQL password, and "
-"`config/redis_connection.json` to the new Redis password"
 
-#: ../../source/docs/deploy/server-deploy.md:22
-msgid "再次运行`docker compose up -d`"
-msgstr "Run `docker compose up -d` again"
+#: ../../source/docs/deploy/server-deploy.md:32
+#, fuzzy
+msgid "修改`compose.yml`中的`RABBITMQ_DEFAULT_PASS`的`123456`为你自己的强密码"
+msgstr ""
+"Change the `123456` for the two `password` fields in `compose.yml` to "
+"your own strong password"
 
-#: ../../source/docs/deploy/server-deploy.md:24
+#: ../../source/docs/deploy/server-deploy.md:33
+msgid "修改`docker/config/database.toml`中的密码为改后的 PostgreSQL 密码"
+msgstr ""
+
+#: ../../source/docs/deploy/server-deploy.md:34
+msgid "修改`docker/config/redis.toml`中的密码为改后的 Redis 密码"
+msgstr ""
+
+#: ../../source/docs/deploy/server-deploy.md:35
+msgid "修改`docker/config/rabbitmq.toml`中的密码为改后的 Rabbitmq 密码"
+msgstr ""
+
+#: ../../source/docs/deploy/server-deploy.md:36
+msgid "再次运行你用于启动docker的环境的命令"
+msgstr ""
+
+#: ../../source/docs/deploy/server-deploy.md:38
 msgid "完成这几步之后，你就成功部署了该项目。"
 msgstr "After completing these steps, you have successfully deployed the project."
 
-#: ../../source/docs/deploy/server-deploy.md:26
+#: ../../source/docs/deploy/server-deploy.md:40
 msgid "对于容器中的数据，我们将其映射在了`data`中，你可以随时保存数据"
 msgstr ""
 "For data in the container, we have mapped it to `data`, so you can save "
 "data at any time"
 
-#: ../../source/docs/deploy/server-deploy.md:28
+#: ../../source/docs/deploy/server-deploy.md:42
 msgid "手动部署"
 msgstr "Manual Deployment"
 
-#: ../../source/docs/deploy/server-deploy.md:30
+#: ../../source/docs/deploy/server-deploy.md:44
 msgid "对于性能不高和未安装 docker 的计算机，我们也提供了手动部署的文档，关于这一点，建议部署在 linux 环境，其他环境未经过严格的测试。"
 msgstr ""
 "For computers with low performance and no Docker installed, we also "
@@ -204,70 +232,83 @@ msgstr ""
 "to deploy in a Linux environment, as other environments have not been "
 "rigorously tested."
 
-#: ../../source/docs/deploy/server-deploy.md:32
+#: ../../source/docs/deploy/server-deploy.md:46
 msgid "安装 PostgreSQL"
 msgstr "install PostgreSQL"
 
-#: ../../source/docs/deploy/server-deploy.md:34
+#: ../../source/docs/deploy/server-deploy.md:48
+#, fuzzy
 msgid ""
 "postgres 版本为 17（如果该文档未及时更新可以查看 "
 "[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的"
-" posgres 版本）"
+" postgres 版本）"
 msgstr ""
 "The postgres version is 17 (If this document is not updated in time, you "
 "can check the 'postgres version' in the "
 "[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)"
 " file)"
 
-#: ../../source/docs/deploy/server-deploy.md:36
+#: ../../source/docs/deploy/server-deploy.md:50
 msgid "安装 redis"
 msgstr "Install Redis"
 
-#: ../../source/docs/deploy/server-deploy.md:38
-msgid "可以直接安装最新版的 redis"
-msgstr "You can directly install the latest version of Redis"
+#: ../../source/docs/deploy/server-deploy.md:52
+#, fuzzy
+msgid ""
+"Redis 版本为 7（如果该文档未及时更新可以查看 "
+"[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的"
+" redis 版本）"
+msgstr ""
+"The postgres version is 17 (If this document is not updated in time, you "
+"can check the 'postgres version' in the "
+"[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)"
+" file)"
 
-#: ../../source/docs/deploy/server-deploy.md:40
+#: ../../source/docs/deploy/server-deploy.md:54
 msgid "安装 ourchat server"
 msgstr "Install OurChat server"
 
-#: ../../source/docs/deploy/server-deploy.md:42
+#: ../../source/docs/deploy/server-deploy.md:56
 msgid "此处存在两种备选的方案:"
 msgstr "There are two alternative options here:"
 
-#: ../../source/docs/deploy/server-deploy.md:44
+#: ../../source/docs/deploy/server-deploy.md:58
 msgid "1.(推荐)从 github release 下载最新的 linux 编译结果，如果遇到 CPU 架构和其他兼容性问题，可能需要手动编译，参见下一节"
 msgstr ""
 "1. (Recommended) Download the latest Linux compilation results from the "
 "GitHub release. If you encounter CPU architecture and other compatibility"
 " issues, manual compilation may be necessary, see the following section"
 
-#: ../../source/docs/deploy/server-deploy.md:46
+#: ../../source/docs/deploy/server-deploy.md:60
 msgid "2.手动编译"
 msgstr "2. Manual Compilation"
 
-#: ../../source/docs/deploy/server-deploy.md:48
+#: ../../source/docs/deploy/server-deploy.md:62
 msgid "拉取源代码:"
 msgstr "Pull the source code:"
 
-#: ../../source/docs/deploy/server-deploy.md:54
+#: ../../source/docs/deploy/server-deploy.md:68
 msgid "安装 rust 工具链"
 msgstr "Install the Rust toolchain"
 
-#: ../../source/docs/deploy/server-deploy.md:56
+#: ../../source/docs/deploy/server-deploy.md:70
 msgid "编译项目"
 msgstr "Compile the project"
 
-#: ../../source/docs/deploy/server-deploy.md:62
+#: ../../source/docs/deploy/server-deploy.md:76
 #: ../../source/docs/run/build.md:30
 msgid "运行项目"
 msgstr "Run the project"
 
-#: ../../source/docs/deploy/server-deploy.md:64
+#: ../../source/docs/deploy/server-deploy.md:78
 msgid "这一步请参考[服务器参数](../run/server_argv.md)进行运行，可执行文件位于`target/release/server`"
 msgstr ""
 "Please refer to the [Server Arguments](../run/server_argv.md) for this "
 "step, and the executable file is located at `target/release/server`"
+
+#: ../../source/docs/deploy/server-deploy.md:80
+msgid "请注意服务器密码等依然需要修改!"
+msgstr ""
 
 #: ../../source/docs/development/contributing.md:1
 msgid "贡献指南"
@@ -419,12 +460,29 @@ msgid "文件上传"
 msgstr "File upload"
 
 #: ../../source/docs/development/http_api.md:5
-msgid "接口:`/verify` 请求类型:`GET`"
+#, fuzzy
+msgid "接口:`/v1/verify` 请求类型:`GET`"
 msgstr "Api:`/verify` Request Type: `GET`"
 
 #: ../../source/docs/development/http_api.md:8
 msgid "参数:token=verify_token 该接口供邮件验证使用，一般不需要客户端直接操作"
 msgstr "Arguments: token=verify_token This interface is used for email "
+
+#: ../../source/docs/development/http_api.md:11
+msgid "获取logo"
+msgstr ""
+
+#: ../../source/docs/development/http_api.md:13
+msgid "接口:`/v1/logo`"
+msgstr ""
+
+#: ../../source/docs/development/http_api.md:15
+msgid "请求类型:`GET` 无参数"
+msgstr ""
+
+#: ../../source/docs/development/http_api.md:18
+msgid "用于获取服务器logo"
+msgstr ""
 
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
@@ -571,47 +629,52 @@ msgid "负责处理 HTTP 请求,如邮件验证等"
 msgstr "Is responsible for handling HTTP requests, such as email verification"
 
 #: ../../source/docs/development/server/server-design.md:13
+msgid "实验性matrix支持也由该节点负责"
+msgstr ""
+
+#: ../../source/docs/development/server/server-design.md:15
 msgid "负载均衡器：LoadBalancer"
 msgstr "Load Balancer"
 
-#: ../../source/docs/development/server/server-design.md:15
+#: ../../source/docs/development/server/server-design.md:17
 msgid "负责将请求和流量均摊到节点上"
 msgstr "Is responsible for evenly distributing requests and traffic to nodes"
 
-#: ../../source/docs/development/server/server-design.md:17
-msgid "Consul: 服务发现和注册中心"
-msgstr "Consul: Service discovery and registration center"
-
 #: ../../source/docs/development/server/server-design.md:19
-msgid "负责注册各个节点，并提供服务发现的能力"
-msgstr "Is responsible for registering nodes and providing service discovery"
+msgid "Rabbitmq: 消息队列"
+msgstr ""
 
 #: ../../source/docs/development/server/server-design.md:21
+msgid "不同节点间消息传递的中间件"
+msgstr ""
+
+#: ../../source/docs/development/server/server-design.md:23
 msgid "Redis: 内存数据库"
 msgstr "Redis: In-memory database"
 
-#: ../../source/docs/development/server/server-design.md:23
+#: ../../source/docs/development/server/server-design.md:25
 msgid "用于高性能的缓存"
 msgstr "For high-performance caching"
 
-#: ../../source/docs/development/server/server-design.md:25
+#: ../../source/docs/development/server/server-design.md:27
 msgid "PostgreSQL: 数据库"
 msgstr "PostgreSQL: Database"
 
-#: ../../source/docs/development/server/server-design.md:27
+#: ../../source/docs/development/server/server-design.md:29
 msgid "用于持久化数据"
 msgstr "For persistent data"
 
-#: ../../source/docs/development/server/server-design.md:29
+#: ../../source/docs/development/server/server-design.md:31
 msgid "JuiceFS: 分布式文件系统"
 msgstr "JuiceFS: Distributed file system"
 
-#: ../../source/docs/development/server/server-design.md:31
+#: ../../source/docs/development/server/server-design.md:33
 msgid "具体参考其官网 [JuiceFS](https://juicefs.com)"
 msgstr "Please refer to the official website [JuiceFS](https://juicefs.com)"
 
-#: ../../source/docs/development/server/server-design.md:33
-msgid "组件之间可以通过 RPC 的方式进行通信，通过非对称加密签名来签名 JWT 进行身份验证"
+#: ../../source/docs/development/server/server-design.md:35
+#, fuzzy
+msgid "组件之间计划可以通过 RPC 的方式进行通信，通过非对称加密签名来签名 JWT 进行身份验证，但目前主要还是通过消息队列通信"
 msgstr ""
 "Components can communicate with each other through RPC, and authenticate "
 "identity by signing JWT with non-asymmetric encryption"
@@ -678,52 +741,36 @@ msgid "你可以运行:"
 msgstr "You can run:"
 
 #: ../../source/docs/development/server/server-develop.md:29
-msgid "来配置开发环境"
-msgstr "to configure the development environment"
+msgid "来配置开发环境(postgres, redis, rabbitmq等)"
+msgstr ""
 
 #: ../../source/docs/development/server/server-develop.md:31
-msgid "如果 Dockerfile.dev 改变了，你可以运行`script/rebuild_dev_container.py`来重新构建镜像。"
+msgid "推荐的开发方式是在容器外进行开发，但是环境使用容器内设置好的环境，不然可能造成环境不一致问题"
 msgstr ""
-"If Dockerfile.dev has changed, you can run "
-"`script/rebuild_dev_container.py` to rebuild the image."
 
 #: ../../source/docs/development/server/server-develop.md:33
-msgid "我们将数据直接复制到了`/app`文件夹，因此你**_不能随意重置容器_**，但这样可以使您的数据之间不会相互干扰。"
-msgstr ""
-"We have directly copied the data to the `/app` folder, so you **_cannot "
-"arbitrarily reset the container_**, but this ensures that your data will "
-"not interfere with each other."
-
-#: ../../source/docs/development/server/server-develop.md:35
-msgid "推荐的开发方式是在本地使用编辑器编辑，同时使用`docker exec -it OurChatServer bash`进入容器运行并观察结果"
-msgstr ""
-"The recommended development method is to edit locally with an editor, "
-"while using `docker exec -it OurChatServer bash` to enter the container "
-"to run and observe the results."
-
-#: ../../source/docs/development/server/server-develop.md:37
 msgid "首先，切换进`server`目录中，开发都将在这里进行。"
 msgstr ""
 "First, switch to the `server` directory, all development will be done "
 "here."
 
-#: ../../source/docs/development/server/server-develop.md:39
+#: ../../source/docs/development/server/server-develop.md:35
 msgid "启动时使用"
 msgstr "Use when starting up"
 
-#: ../../source/docs/development/server/server-develop.md:45
+#: ../../source/docs/development/server/server-develop.md:41
 msgid "启动测试:"
 msgstr "Start testing:"
 
-#: ../../source/docs/development/server/server-develop.md:47
+#: ../../source/docs/development/server/server-develop.md:43
 msgid "参见[测试](./basic.md#运行集成测试)"
 msgstr "Please refer to [Testing](./basic.md#运行集成测试)"
 
-#: ../../source/docs/development/server/server-develop.md:49
+#: ../../source/docs/development/server/server-develop.md:45
 msgid "数据库"
 msgstr "Database"
 
-#: ../../source/docs/development/server/server-develop.md:51
+#: ../../source/docs/development/server/server-develop.md:47
 msgid ""
 "本项目采用 Redis, PostgreSQL 作为数据库，同时采用 sea-orm 作为 ORM 框架。为了更好地使用该 ORM "
 "框架，在修改数据库表后，您可以运行`script/regenerate_entity.py`来重新生成 ORM 框架需要的文件"
@@ -733,22 +780,22 @@ msgstr ""
 " database tables, you can run `script/regenerate_entity.py` to regenerate"
 " the files required by the ORM framework."
 
-#: ../../source/docs/development/server/server-develop.md:53
+#: ../../source/docs/development/server/server-develop.md:49
 msgid "为了运行这个脚本，你首先需要运行`cargo install sea-orm-cli`"
 msgstr "To run this script, you first need to run `cargo install sea-orm-cli`"
 
-#: ../../source/docs/development/server/server-develop.md:55
+#: ../../source/docs/development/server/server-develop.md:51
 msgid "注意：请保证`sea-orm-cli`是最新的，否则会被脚本拦截，若脚本的版本更旧，请随时打开一个 issue"
 msgstr ""
 "Note: Please ensure that `sea-orm-cli` is up to date, otherwise it will "
 "be blocked by the script. If the script version is older, feel free to "
 "open an issue at any time."
 
-#: ../../source/docs/development/server/server-develop.md:57
+#: ../../source/docs/development/server/server-develop.md:53
 msgid "数据库迁移"
 msgstr "Database Migration"
 
-#: ../../source/docs/development/server/server-develop.md:59
+#: ../../source/docs/development/server/server-develop.md:55
 msgid ""
 "`migration`中是数据库迁移模块，在 server 启动时会自动运行未运行的数据库迁移，为了定义一个新的数据库迁移，请参考[sea "
 "orm](https://www.sea-ql.org/SeaORM/docs/migration/setting-up-migration/)"
@@ -853,8 +900,8 @@ msgid "各种信息下的状态码具体解释"
 msgstr "Specific explanations of status codes under various information conditions"
 
 #: ../../source/docs/development/status_code.md:19
-msgid "注册"
-msgstr "Register"
+msgid "AuthService/Register"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "Detail"
@@ -878,8 +925,8 @@ msgid "该邮箱已被注册"
 msgstr "The email is conflicting with an existing user"
 
 #: ../../source/docs/development/status_code.md:25
-msgid "登录"
-msgstr "Login"
+msgid "AuthService/Auth"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 #: ../../source/docs/use/role_permission.md
@@ -932,24 +979,20 @@ msgid "密码错误"
 msgstr "Password is incorrect"
 
 #: ../../source/docs/development/status_code.md:33
-msgid "验证"
-msgstr "Verify"
+msgid "AuthService/Verify"
+msgstr ""
 
-#: ../../source/docs/development/status_code.md:35
-msgid "该功能暂未实现"
-msgstr "This feature is not yet implemented"
+#: ../../source/docs/development/status_code.md:41
+msgid "BasicService/GetServerInfo"
+msgstr ""
 
-#: ../../source/docs/development/status_code.md:37
-msgid "获取服务器信息"
-msgstr "Get Server Information"
+#: ../../source/docs/development/status_code.md:49
+msgid "BasicServer/GetId"
+msgstr ""
 
-#: ../../source/docs/development/status_code.md:45
-msgid "获取账号id"
-msgstr "Get Account Id"
-
-#: ../../source/docs/development/status_code.md:51
-msgid "获取账号信息"
-msgstr "Get Account Information"
+#: ../../source/docs/development/status_code.md:55
+msgid "OurChatService/GetAccountInfo"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 #: ../../source/docs/use/role_permission.md
@@ -982,9 +1025,9 @@ msgstr ""
 msgid "请求值无效(如:获取不存在的字段)"
 msgstr "Invalid request value (e.g. accessing a non-existent field)"
 
-#: ../../source/docs/development/status_code.md:59
-msgid "设置当前账号信息"
-msgstr "Set Current Account Information"
+#: ../../source/docs/development/status_code.md:63
+msgid "OurChatService/SetSelfInfo"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "Conflict"
@@ -1006,9 +1049,9 @@ msgstr ""
 msgid "新的ocid太长"
 msgstr "The new ocid is too long"
 
-#: ../../source/docs/development/status_code.md:66
-msgid "获取用户消息"
-msgstr "Fetch Messages"
+#: ../../source/docs/development/status_code.md:70
+msgid "OurChatService/FetchMsgs"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "Time Format Error"
@@ -1026,10 +1069,10 @@ msgstr ""
 msgid "缺少time参数"
 msgstr "Member time is required"
 
-#: ../../source/docs/development/status_code.md:73
-#: ../../source/docs/use/role_permission.md
-msgid "发送消息"
-msgstr "Send Message"
+#: ../../source/docs/development/status_code.md:77
+#, fuzzy
+msgid "OurChatService/SendMsg"
+msgstr "Install OurChat server"
 
 #: ../../source/docs/development/status_code.md
 msgid "没有发言权限"
@@ -1043,9 +1086,10 @@ msgstr ""
 msgid "会话不存在"
 msgstr "The session does not exist"
 
-#: ../../source/docs/development/status_code.md:80
-msgid "上传"
-msgstr "File Upload"
+#: ../../source/docs/development/status_code.md:84
+#, fuzzy
+msgid "OurChatService/Upload"
+msgstr "Install OurChat server"
 
 #: ../../source/docs/development/status_code.md
 msgid "File Size Error"
@@ -1098,33 +1142,34 @@ msgstr ""
 "You should upload a package of metadata, then upload content package "
 "until process finish"
 
-#: ../../source/docs/development/status_code.md:90
-msgid "下载"
-msgstr "File Download"
+#: ../../source/docs/development/status_code.md:94
+#, fuzzy
+msgid "OurChatService/Download"
+msgstr "Install OurChat server"
 
 #: ../../source/docs/development/status_code.md
 msgid "没有下载权限"
 msgstr "This file is not yours"
 
-#: ../../source/docs/development/status_code.md:96
-msgid "创建新会话"
-msgstr "New Session"
+#: ../../source/docs/development/status_code.md:100
+msgid "OurChatService/NewSession"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "邀请的用户不存在"
 msgstr "The user you want to invite does not exist"
 
-#: ../../source/docs/development/status_code.md:102
-msgid "获取会话信息"
-msgstr "Get Session Information"
+#: ../../source/docs/development/status_code.md:106
+msgid "OurChatService/GetSessionInfo"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "该会话不存在"
 msgstr "The session does not exist"
 
-#: ../../source/docs/development/status_code.md:109
-msgid "设置会话信息"
-msgstr "Set Session Information"
+#: ../../source/docs/development/status_code.md:113
+msgid "OurChatService/SetSessionInfo"
+msgstr ""
 
 #: ../../source/docs/development/status_code.md
 msgid "信息冲突"
@@ -1154,10 +1199,10 @@ msgstr ""
 msgid "没有设置会话简介的权限"
 msgstr "You don't have the privilege to set description"
 
-#: ../../source/docs/development/status_code.md:118
-#: ../../source/docs/use/role_permission.md
-msgid "撤回消息"
-msgstr "Recall Message"
+#: ../../source/docs/development/status_code.md:122
+#, fuzzy
+msgid "OurChatService/RecallMsg"
+msgstr "Install OurChat server"
 
 #: ../../source/docs/development/status_code.md
 msgid "没有撤回消息的权限"
@@ -1171,9 +1216,10 @@ msgstr ""
 msgid "撤回的消息不存在"
 msgstr "The message you want to recall does not exist"
 
-#: ../../source/docs/development/status_code.md:125
-msgid "设置(会话中)身份"
-msgstr "Set Role (in session)"
+#: ../../source/docs/development/status_code.md:129
+#, fuzzy
+msgid "OurChatService/SetRole"
+msgstr "Install OurChat server"
 
 #: ../../source/docs/development/status_code.md
 msgid "没有设置身份的权限"
@@ -1181,6 +1227,34 @@ msgstr "You don't have the privilege to set role"
 
 #: ../../source/docs/development/status_code.md
 msgid "User Not In Session"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md:136
+#, fuzzy
+msgid "OurChatService/AddRole"
+msgstr "Install OurChat server"
+
+#: ../../source/docs/development/status_code.md:138
+#, fuzzy
+msgid "OurChatService/DeleteSession"
+msgstr "DeleteSession"
+
+#: ../../source/docs/development/status_code.md
+#, fuzzy
+msgid "没有删除会话的权限"
+msgstr "You don't have the privilege to set description"
+
+#: ../../source/docs/development/status_code.md:145
+msgid "OurChatService/LeaveSession"
+msgstr ""
+
+#: ../../source/docs/development/status_code.md
+#, fuzzy
+msgid "用户不在该会话"
+msgstr "User does not exist"
+
+#: ../../source/docs/development/status_code.md:151
+msgid "OurChatService/JoinInSession"
 msgstr ""
 
 #: ../../source/docs/run/build.md:1
@@ -1610,12 +1684,20 @@ msgid "SendMsg"
 msgstr "SendMsg"
 
 #: ../../source/docs/use/role_permission.md
+msgid "发送消息"
+msgstr "Send Message"
+
+#: ../../source/docs/use/role_permission.md
 msgid "1"
 msgstr "1"
 
 #: ../../source/docs/use/role_permission.md
 msgid "RecallMsg"
 msgstr "RecallMsg"
+
+#: ../../source/docs/use/role_permission.md
+msgid "撤回消息"
+msgstr "Recall Message"
 
 #: ../../source/docs/use/role_permission.md
 msgid "2"
@@ -2954,4 +3036,94 @@ msgstr "Member has permissions `1 2`"
 
 #~ msgid "FAILED_PRECONDITION"
 #~ msgstr ""
+
+#~ msgid "对于该项目，我们提供了一个生产环境中使用的 docker 镜像，可以直接构建并运行项目。"
+#~ msgstr ""
+#~ "For this project, we provide a "
+#~ "docker image for use in a "
+#~ "production environment, which can be "
+#~ "used to build and run the project"
+#~ " directly."
+
+#~ msgid ""
+#~ "修改`config/database.json`为改后的 PostgreSQL "
+#~ "密码，`config/redis_connection.json`为改后的 Redis 密码"
+#~ msgstr ""
+#~ "Change `config/database.json` to the new "
+#~ "PostgreSQL password, and "
+#~ "`config/redis_connection.json` to the new "
+#~ "Redis password"
+
+#~ msgid "再次运行`docker compose up -d`"
+#~ msgstr "Run `docker compose up -d` again"
+
+#~ msgid "可以直接安装最新版的 redis"
+#~ msgstr "You can directly install the latest version of Redis"
+
+#~ msgid "Consul: 服务发现和注册中心"
+#~ msgstr "Consul: Service discovery and registration center"
+
+#~ msgid "负责注册各个节点，并提供服务发现的能力"
+#~ msgstr "Is responsible for registering nodes and providing service discovery"
+
+#~ msgid "来配置开发环境"
+#~ msgstr "to configure the development environment"
+
+#~ msgid "如果 Dockerfile.dev 改变了，你可以运行`script/rebuild_dev_container.py`来重新构建镜像。"
+#~ msgstr ""
+#~ "If Dockerfile.dev has changed, you can"
+#~ " run `script/rebuild_dev_container.py` to rebuild"
+#~ " the image."
+
+#~ msgid "我们将数据直接复制到了`/app`文件夹，因此你**_不能随意重置容器_**，但这样可以使您的数据之间不会相互干扰。"
+#~ msgstr ""
+#~ "We have directly copied the data "
+#~ "to the `/app` folder, so you "
+#~ "**_cannot arbitrarily reset the container_**,"
+#~ " but this ensures that your data "
+#~ "will not interfere with each other."
+
+#~ msgid "推荐的开发方式是在本地使用编辑器编辑，同时使用`docker exec -it OurChatServer bash`进入容器运行并观察结果"
+#~ msgstr ""
+#~ "The recommended development method is to"
+#~ " edit locally with an editor, while"
+#~ " using `docker exec -it OurChatServer "
+#~ "bash` to enter the container to "
+#~ "run and observe the results."
+
+#~ msgid "注册"
+#~ msgstr "Register"
+
+#~ msgid "登录"
+#~ msgstr "Login"
+
+#~ msgid "验证"
+#~ msgstr "Verify"
+
+#~ msgid "该功能暂未实现"
+#~ msgstr "This feature is not yet implemented"
+
+#~ msgid "获取账号id"
+#~ msgstr "Get Account Id"
+
+#~ msgid "设置当前账号信息"
+#~ msgstr "Set Current Account Information"
+
+#~ msgid "获取用户消息"
+#~ msgstr "Fetch Messages"
+
+#~ msgid "上传"
+#~ msgstr "File Upload"
+
+#~ msgid "下载"
+#~ msgstr "File Download"
+
+#~ msgid "创建新会话"
+#~ msgstr "New Session"
+
+#~ msgid "设置会话信息"
+#~ msgstr "Set Session Information"
+
+#~ msgid "设置(会话中)身份"
+#~ msgstr "Set Role (in session)"
 
