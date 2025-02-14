@@ -24,19 +24,19 @@
 
 ### AuthService/Auth
 
-| CodeId | CodeName         | Detail           | meaning          |
-| :----- | :--------------- | :--------------- | :--------------- |
-| 5      | NOT_FOUND        | User Not Found   | 该用户不存在     |
-| 3      | INVALID_ARGUMENT | Missing AuthType | 缺少AuthType参数 |
-| 16     | Unauthenticated  | Wrong Password   | 密码错误         |
+| CodeId | CodeName         | Detail           | meaning            |
+| :----- | :--------------- | :--------------- | :----------------- |
+| 5      | NOT_FOUND        | User Not Found   | 该用户不存在       |
+| 3      | INVALID_ARGUMENT | Missing AuthType | 缺少 AuthType 参数 |
+| 16     | Unauthenticated  | Wrong Password   | 密码错误           |
 
 ### AuthService/Verify
 
-| CodeId | CodeName         | Detail           | meaning          |
-| :----- | :--------------- | :--------------- | :--------------- |
-| 5      | NOT_FOUND        | User Not Found   | 该用户不存在     |
-| 3      | INVALID_ARGUMENT | Missing AuthType | 缺少AuthType参数 |
-| 16     | Unauthenticated  | Wrong Password   | 密码错误         |
+| CodeId | CodeName         | Detail           | meaning            |
+| :----- | :--------------- | :--------------- | :----------------- |
+| 5      | NOT_FOUND        | User Not Found   | 该用户不存在       |
+| 3      | INVALID_ARGUMENT | Missing AuthType | 缺少 AuthType 参数 |
+| 16     | Unauthenticated  | Wrong Password   | 密码错误           |
 
 ### BasicService/GetServerInfo
 
@@ -62,17 +62,17 @@
 
 ### OurChatService/SetSelfInfo
 
-| CodeId | CodeName              | Detail   | meaning                     |
-| :----- | :-------------------- | :------- | :-------------------------- |
-| 6      | ALREADY_EXISTS        | Conflict | 信息冲突(如:新的ocid被占用) |
-| 3      | INVALID_ARGUMENT Ocid | Too Long | 新的ocid太长                |
+| CodeId | CodeName              | Detail   | meaning                       |
+| :----- | :-------------------- | :------- | :---------------------------- |
+| 6      | ALREADY_EXISTS        | Conflict | 信息冲突(如:新的 ocid 被占用) |
+| 3      | INVALID_ARGUMENT Ocid | Too Long | 新的 ocid 太长                |
 
 ### OurChatService/FetchMsgs
 
 | CodeId | CodeName         | Detail            | meaning        |
 | :----- | :--------------- | :---------------- | :------------- |
 | 3      | INVALID_ARGUMENT | Time Format Error | 无法解析时间戳 |
-| 3      | INVALID_ARGUMENT | Time Missing      | 缺少time参数   |
+| 3      | INVALID_ARGUMENT | Time Missing      | 缺少 time 参数 |
 
 ### OurChatService/SendMsg
 
@@ -83,13 +83,13 @@
 
 ### OurChatService/Upload
 
-| CodeId | CodeName           | Detail                       | meaning                        |
-| :----- | :----------------- | :--------------------------- | :----------------------------- |
-| 3      | INVALID_ARGUMENT   | File Size Error              | 文件大小与metadata不符合       |
-| 3      | INVALID_ARGUMENT   | File Hash Error              | 文件hash与metadata不符合       |
-| 8      | RESOURCE_EXHAUSTED | Storage Full                 | 该用户储存空间已满             |
-| 3      | INVALID_ARGUMENT   | Metadata Error               | 缺少metadata参数或metadata无效 |
-| 3      | INVALID_ARGUMENT   | Incorrect Order Of Uploading | 应先上传metadata再上传数据包   |
+| CodeId | CodeName           | Detail                       | meaning                            |
+| :----- | :----------------- | :--------------------------- | :--------------------------------- |
+| 3      | INVALID_ARGUMENT   | File Size Error              | 文件大小与 metadata 不符合         |
+| 3      | INVALID_ARGUMENT   | File Hash Error              | 文件 hash 与 metadata 不符合       |
+| 8      | RESOURCE_EXHAUSTED | Storage Full                 | 该用户储存空间已满                 |
+| 3      | INVALID_ARGUMENT   | Metadata Error               | 缺少 metadata 参数或 metadata 无效 |
+| 3      | INVALID_ARGUMENT   | Incorrect Order Of Uploading | 应先上传 metadata 再上传数据包     |
 
 ### OurChatService/Download
 
@@ -137,15 +137,59 @@
 
 ### OurChatService/DeleteSession
 
-| CodeId | CodeName          | Detail              | meaning            |
-| :----- | :---------------- | :------------------ | :----------------- |
-| 7      | PERMISSION_DENIED | Permission Denied   | 没有删除会话的权限 |
-| 5      | NOT_FOUND         | Session Not Found   | 该会话不存在       |
+| CodeId | CodeName          | Detail            | meaning            |
+| :----- | :---------------- | :---------------- | :----------------- |
+| 7      | PERMISSION_DENIED | Permission Denied | 没有删除会话的权限 |
+| 5      | NOT_FOUND         | Session Not Found | 该会话不存在       |
 
 ### OurChatService/LeaveSession
 
-| CodeId | CodeName          | Detail              | meaning            |
-| :----- | :---------------- | :------------------ | :----------------- |
-| 5      | NOT_FOUND         |   User Not In Session | 用户不在该会话       |
+| CodeId | CodeName  | Detail              | meaning        |
+| :----- | :-------- | :------------------ | :------------- |
+| 5      | NOT_FOUND | User Not In Session | 用户不在该会话 |
 
 ### OurChatService/JoinInSession
+
+| CodeId | CodeName          | Detail            | meaning                     |
+| :----- | :---------------- | :---------------- | :-------------------------- |
+| 7      | PERMISSION_DENIED | Permission Denied | 无法加入会话，例如被 ban 了 |
+| 5      | NOT_FOUND         | Session Not Found | 该 session 不存在           |
+
+### OurChatService/AcceptJoinInSession
+
+| CodeId | CodeName          | Detail            | meaning                              |
+| :----- | :---------------- | :---------------- | :----------------------------------- |
+| 7      | PERMISSION_DENIED | Permission Denied | 无法同意加入会话请求，例如缺少该权限 |
+| 5      | NOT_FOUND         | Session Not Found | 该 session 不存在                    |
+
+### OurChatService/MuteUser
+
+| CodeId | CodeName          | Detail            | meaning              |
+| :----- | :---------------- | :---------------- | :------------------- |
+| 7      | PERMISSION_DENIED | Permission Denied | 不具有 MuteUser 权限 |
+
+### OurChatService/UnmuteUser
+
+| CodeId | CodeName          | Detail            | meaning                |
+| :----- | :---------------- | :---------------- | :--------------------- |
+| 7      | PERMISSION_DENIED | Permission Denied | 不具有 UnmuteUser 权限 |
+| 5      | NOT_FOUND         | User Not Be Muted | 用户没有被 Mute        |
+
+### OurChatService/BanUser
+
+| CodeId | CodeName          | Detail            | meaning             |
+| :----- | :---------------- | :---------------- | :------------------ |
+| 7      | PERMISSION_DENIED | Permission Denied | 不具有 BanUser 权限 |
+
+### OurChatService/UnbanUser
+
+| CodeId | CodeName          | Detail             | meaning               |
+| :----- | :---------------- | :----------------- | :-------------------- |
+| 7      | PERMISSION_DENIED | Permission Denied  | 不具有 UnbanUser 权限 |
+| 5      | NOT_FOUND         | User Not Be Banned | 用户没有被 Ban        |
+
+### OurChatService/AddFriend
+
+### OurChatService/AcceptFriend
+
+### OurChatService/DeleteFriend
