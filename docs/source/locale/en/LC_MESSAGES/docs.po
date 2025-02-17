@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-08 17:50+0800\n"
+"POT-Creation-Date: 2025-02-17 17:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -237,7 +237,6 @@ msgid "安装 PostgreSQL"
 msgstr "install PostgreSQL"
 
 #: ../../source/docs/deploy/server-deploy.md:48
-#, fuzzy
 msgid ""
 "postgres 版本为 17（如果该文档未及时更新可以查看 "
 "[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的"
@@ -253,15 +252,14 @@ msgid "安装 redis"
 msgstr "Install Redis"
 
 #: ../../source/docs/deploy/server-deploy.md:52
-#, fuzzy
 msgid ""
 "Redis 版本为 7（如果该文档未及时更新可以查看 "
 "[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的"
 " redis 版本）"
 msgstr ""
-"The postgres version is 17 (If this document is not updated in time, you "
-"can check the 'postgres version' in the "
-"[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)"
+"The redis version is 7 (If this document is not updated in time, you can "
+"check the redis version "
+"in[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)"
 " file)"
 
 #: ../../source/docs/deploy/server-deploy.md:54
@@ -308,6 +306,561 @@ msgstr ""
 
 #: ../../source/docs/deploy/server-deploy.md:80
 msgid "请注意服务器密码等依然需要修改!"
+msgstr ""
+
+#: ../../source/docs/development/api.md:1
+msgid "OurChat Api 文档"
+msgstr "OurChat Api Document"
+
+#: ../../source/docs/development/api.md:3
+msgid "状态码"
+msgstr "Status Code"
+
+#: ../../source/docs/development/api.md:5
+msgid "**_注：以下几种状态码在任何情况下都可能出现，请务必做好校验_**"
+msgstr ""
+"**_Note: The following status codes may occur in any case, so please "
+"ensure proper validation._**"
+
+#: ../../source/docs/development/api.md
+msgid "CodeId"
+msgstr "CodeId"
+
+#: ../../source/docs/development/api.md
+msgid "CodeName"
+msgstr "CodeName"
+
+#: ../../source/docs/development/api.md
+msgid "meaning"
+msgstr "Meaning"
+
+#: ../../source/docs/development/api.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/docs/development/api.md
+msgid "OK"
+msgstr "OK"
+
+#: ../../source/docs/development/api.md
+msgid "执行成功"
+msgstr "Execute successfully"
+
+#: ../../source/docs/development/api.md
+msgid "13"
+msgstr "13"
+
+#: ../../source/docs/development/api.md
+msgid "INTERNAL"
+msgstr "INTERNAL"
+
+#: ../../source/docs/development/api.md
+msgid "服务器内部错误"
+msgstr "Internal Server Error"
+
+#: ../../source/docs/development/api.md
+msgid "14"
+msgstr "14"
+
+#: ../../source/docs/development/api.md
+msgid "UNAVAILABLE"
+msgstr "UNAVAILABLE"
+
+#: ../../source/docs/development/api.md
+msgid "服务器维护中"
+msgstr "Under Maintenance"
+
+#: ../../source/docs/development/api.md:13
+msgid "**_以上特殊信息不再赘述_**"
+msgstr "**_No further elaboration on the above special information_**"
+
+#: ../../source/docs/development/api.md:15
+msgid "请参考 [grpc 文档](https://grpc.io/docs/guides/status-codes/)"
+msgstr ""
+"Please refer to [grpc documentation](https://grpc.io/docs/guides/status-"
+"codes/)"
+
+#: ../../source/docs/development/api.md:17
+msgid "Api"
+msgstr "Api"
+
+#: ../../source/docs/development/api.md:19
+msgid "AuthService"
+msgstr "AuthService"
+
+#: ../../source/docs/development/api.md:21
+msgid "Register"
+msgstr "Register"
+
+#: ../../source/docs/development/api.md
+msgid "Detail"
+msgstr "Detail"
+
+#: ../../source/docs/development/api.md
+#: ../../source/docs/use/role_permission.md
+msgid "6"
+msgstr "6"
+
+#: ../../source/docs/development/api.md
+msgid "ALREADY_EXISTS"
+msgstr "ALREADY_EXISTS"
+
+#: ../../source/docs/development/api.md
+msgid "User Already Exists"
+msgstr ""
+
+#: ../../source/docs/development/api.md
+msgid "该邮箱已被注册"
+msgstr "The email is conflicting with an existing user"
+
+#: ../../source/docs/development/api.md:27
+msgid "Auth"
+msgstr "Auth"
+
+#: ../../source/docs/development/api.md
+#: ../../source/docs/use/role_permission.md
+msgid "5"
+msgstr "5"
+
+#: ../../source/docs/development/api.md
+msgid "NOT_FOUND"
+msgstr "NOT_FOUND"
+
+#: ../../source/docs/development/api.md
+msgid "User Not Found"
+msgstr "User Not Found"
+
+#: ../../source/docs/development/api.md
+msgid "该用户不存在"
+msgstr "The user does not exist"
+
+#: ../../source/docs/development/api.md
+#: ../../source/docs/use/role_permission.md
+msgid "3"
+msgstr "333"
+
+#: ../../source/docs/development/api.md
+msgid "INVALID_ARGUMENT"
+msgstr "INVALID_ARGUMENT"
+
+#: ../../source/docs/development/api.md
+msgid "Missing AuthType"
+msgstr "Missing AuthType"
+
+#: ../../source/docs/development/api.md
+msgid "缺少 AuthType 参数"
+msgstr "The AuthType argument is missing"
+
+#: ../../source/docs/development/api.md
+msgid "16"
+msgstr "16"
+
+#: ../../source/docs/development/api.md
+msgid "Unauthenticated"
+msgstr "Unauthenticated"
+
+#: ../../source/docs/development/api.md
+msgid "Wrong Password"
+msgstr "Wrong Password"
+
+#: ../../source/docs/development/api.md
+msgid "密码错误"
+msgstr "Password is incorrect"
+
+#: ../../source/docs/development/api.md:35
+msgid "Verify"
+msgstr "Verify"
+
+#: ../../source/docs/development/api.md:43
+msgid "BasicService"
+msgstr "BasicService"
+
+#: ../../source/docs/development/api.md:45
+msgid "GetServerInfo"
+msgstr "GetServerInfo"
+
+#: ../../source/docs/development/api.md:53
+msgid "GetId"
+msgstr "GetId"
+
+#: ../../source/docs/development/api.md:59
+msgid "OurChatService"
+msgstr "OurChatService"
+
+#: ../../source/docs/development/api.md:61
+msgid "GetAccountInfo"
+msgstr "GetAccountInfo"
+
+#: ../../source/docs/development/api.md
+#: ../../source/docs/use/role_permission.md
+msgid "7"
+msgstr "7"
+
+#: ../../source/docs/development/api.md
+msgid "PERMISSION_DENIED"
+msgstr "PERMISSION_DENIED"
+
+#: ../../source/docs/development/api.md
+msgid "Permission Denied"
+msgstr "Permission Denied"
+
+#: ../../source/docs/development/api.md
+msgid "权限不足(如:获取非当前帐号的隐私信息)"
+msgstr ""
+"Insufficient permissions (e.g. accessing private information of a non-"
+"current account)"
+
+#: ../../source/docs/development/api.md
+msgid "用户不存在"
+msgstr "User does not exist"
+
+#: ../../source/docs/development/api.md
+msgid "Request Invalid Value"
+msgstr "Request Invalid Value"
+
+#: ../../source/docs/development/api.md
+msgid "请求值无效(如:获取不存在的字段)"
+msgstr "Invalid request value (e.g. accessing a non-existent field)"
+
+#: ../../source/docs/development/api.md:69
+msgid "SetSelfInfo"
+msgstr "SetSelfInfo"
+
+#: ../../source/docs/development/api.md
+msgid "Conflict"
+msgstr "Conflict"
+
+#: ../../source/docs/development/api.md
+msgid "信息冲突(如:新的 ocid 被占用)"
+msgstr "Information conflict (e.g. the new ocid is occupied)"
+
+#: ../../source/docs/development/api.md
+msgid "Too Long Ocid"
+msgstr "Too Long Ocid"
+
+#: ../../source/docs/development/api.md
+msgid "新的 ocid 太长"
+msgstr "The new ocid is too long"
+
+#: ../../source/docs/development/api.md:76
+msgid "FetchMsgs"
+msgstr "FetchMsgs"
+
+#: ../../source/docs/development/api.md
+msgid "Time Format Error"
+msgstr "Time Format Error"
+
+#: ../../source/docs/development/api.md
+msgid "无法解析时间戳"
+msgstr "The structure of time cannot be parsed"
+
+#: ../../source/docs/development/api.md
+msgid "Time Missing"
+msgstr "Time Missing"
+
+#: ../../source/docs/development/api.md
+msgid "缺少 time 参数"
+msgstr "Argument time is required"
+
+#: ../../source/docs/development/api.md:83
+#: ../../source/docs/use/role_permission.md
+msgid "SendMsg"
+msgstr "SendMsg"
+
+#: ../../source/docs/development/api.md
+msgid "没有发言权限"
+msgstr "You don't have the privilege to send message here"
+
+#: ../../source/docs/development/api.md
+msgid "Session Not Found"
+msgstr "Session Not Found"
+
+#: ../../source/docs/development/api.md
+msgid "会话不存在"
+msgstr "The session does not exist"
+
+#: ../../source/docs/development/api.md:90
+msgid "Upload"
+msgstr "Upload"
+
+#: ../../source/docs/development/api.md
+msgid "File Size Error"
+msgstr "File Size Error"
+
+#: ../../source/docs/development/api.md
+msgid "文件大小与 metadata 不符合"
+msgstr "The size of the data received is not equal to the size in metadata"
+
+#: ../../source/docs/development/api.md
+msgid "File Hash Error"
+msgstr "File Hash Error"
+
+#: ../../source/docs/development/api.md
+msgid "文件 hash 与 metadata 不符合"
+msgstr "The hash of the data received is not equal to the hash in metadata"
+
+#: ../../source/docs/development/api.md
+#: ../../source/docs/use/role_permission.md
+msgid "8"
+msgstr "8"
+
+#: ../../source/docs/development/api.md
+msgid "RESOURCE_EXHAUSTED"
+msgstr "RESOURCE_EXHAUSTED"
+
+#: ../../source/docs/development/api.md
+msgid "Storage Full"
+msgstr "Storage Full"
+
+#: ../../source/docs/development/api.md
+msgid "该用户储存空间已满"
+msgstr "The storage is full"
+
+#: ../../source/docs/development/api.md
+msgid "Metadata Error"
+msgstr "Metadata Error"
+
+#: ../../source/docs/development/api.md
+msgid "缺少 metadata 参数或 metadata 无效"
+msgstr "The metadata is invalid or missing"
+
+#: ../../source/docs/development/api.md
+msgid "Incorrect Order Of Uploading"
+msgstr "Incorrect Order Of Uploading"
+
+#: ../../source/docs/development/api.md
+msgid "应先上传 metadata 再上传数据包"
+msgstr ""
+"You should upload a package of metadata, then upload content package "
+"until process finish"
+
+#: ../../source/docs/development/api.md:100
+msgid "Download"
+msgstr "Download"
+
+#: ../../source/docs/development/api.md
+msgid "没有下载权限"
+msgstr "This file is not yours"
+
+#: ../../source/docs/development/api.md:106
+msgid "NewSession"
+msgstr "NewSession"
+
+#: ../../source/docs/development/api.md
+msgid "邀请的用户不存在"
+msgstr "The user you want to invite does not exist"
+
+#: ../../source/docs/development/api.md:112
+msgid "GetSessionInfo"
+msgstr "DeleteSession"
+
+#: ../../source/docs/development/api.md
+msgid "该会话不存在"
+msgstr "The session does not exist"
+
+#: ../../source/docs/development/api.md:119
+msgid "SetSessionInfo"
+msgstr "SetSessionInfo"
+
+#: ../../source/docs/development/api.md
+msgid "信息冲突"
+msgstr "The information should be set is conflict"
+
+#: ../../source/docs/development/api.md
+msgid "Cannot Set Name"
+msgstr "Cannot Set Name"
+
+#: ../../source/docs/development/api.md
+msgid "没有设置会话名称的权限"
+msgstr "You don't have the privilege to set name"
+
+#: ../../source/docs/development/api.md
+msgid "Cannot Set Avatar"
+msgstr "Cannot Set Avatar"
+
+#: ../../source/docs/development/api.md
+msgid "没有设置会话头像的权限"
+msgstr "You don't have the privilege to set avatar"
+
+#: ../../source/docs/development/api.md
+msgid "Cannot Set Description"
+msgstr "Cannot Set Description"
+
+#: ../../source/docs/development/api.md
+msgid "没有设置会话简介的权限"
+msgstr "You don't have the privilege to set description"
+
+#: ../../source/docs/development/api.md:128
+#: ../../source/docs/use/role_permission.md
+msgid "RecallMsg"
+msgstr "RecallMsg"
+
+#: ../../source/docs/development/api.md
+msgid "没有撤回消息的权限"
+msgstr "You don't have the privilege to recall message"
+
+#: ../../source/docs/development/api.md
+msgid "Message Not Found"
+msgstr "Message Not Found"
+
+#: ../../source/docs/development/api.md
+msgid "撤回的消息不存在"
+msgstr "The message you want to recall does not exist"
+
+#: ../../source/docs/development/api.md:135
+#: ../../source/docs/use/role_permission.md
+msgid "SetRole"
+msgstr "SetRole"
+
+#: ../../source/docs/development/api.md
+msgid "没有设置身份的权限"
+msgstr "You don't have the privilege to set role"
+
+#: ../../source/docs/development/api.md
+msgid "User Not In Session"
+msgstr "User Not In Session"
+
+#: ../../source/docs/development/api.md:142
+msgid "AddRole"
+msgstr "AddRole"
+
+#: ../../source/docs/development/api.md:144
+#: ../../source/docs/use/role_permission.md
+msgid "DeleteSession"
+msgstr "DeleteSession"
+
+#: ../../source/docs/development/api.md
+msgid "没有删除会话的权限"
+msgstr "You don't have the privilege to delete session"
+
+#: ../../source/docs/development/api.md:151
+msgid "LeaveSession"
+msgstr "LeaveSession"
+
+#: ../../source/docs/development/api.md
+msgid "用户不在该会话"
+msgstr "User is not in this session"
+
+#: ../../source/docs/development/api.md:157
+msgid "JoinInSession"
+msgstr "JoinInSession"
+
+#: ../../source/docs/development/api.md
+msgid "无法加入会话，例如被 ban 了"
+msgstr "Cannot join in session, for example, user was banned"
+
+#: ../../source/docs/development/api.md
+msgid "该 session 不存在"
+msgstr "This session not exists"
+
+#: ../../source/docs/development/api.md:164
+msgid "AcceptJoinInSession"
+msgstr "AcceptJoinInSession"
+
+#: ../../source/docs/development/api.md
+msgid "无法同意加入会话请求，例如缺少该权限"
+msgstr ""
+"Cannot accept join in session request, for example, you don't have this "
+"permission"
+
+#: ../../source/docs/development/api.md:171
+#: ../../source/docs/use/role_permission.md
+msgid "MuteUser"
+msgstr "MuteUser"
+
+#: ../../source/docs/development/api.md
+msgid "不具有 MuteUser 权限"
+msgstr "Don't have MuteUser permission"
+
+#: ../../source/docs/development/api.md:177
+#: ../../source/docs/use/role_permission.md
+msgid "UnmuteUser"
+msgstr "UnmuteUser"
+
+#: ../../source/docs/development/api.md
+msgid "不具有 UnmuteUser 权限"
+msgstr "Don;t have UnmuteUser permission"
+
+#: ../../source/docs/development/api.md
+msgid "User Not Be Muted"
+msgstr "User Not Be Muted"
+
+#: ../../source/docs/development/api.md
+msgid "用户没有被 Mute"
+msgstr "User wasn't be muted"
+
+#: ../../source/docs/development/api.md:184
+#: ../../source/docs/use/role_permission.md
+msgid "BanUser"
+msgstr "BanUser"
+
+#: ../../source/docs/development/api.md
+#, fuzzy
+msgid "不具有 BanUser 权限"
+msgstr "BanUser"
+
+#: ../../source/docs/development/api.md:190
+#: ../../source/docs/use/role_permission.md
+msgid "UnbanUser"
+msgstr "UnbanUser"
+
+#: ../../source/docs/development/api.md
+#, fuzzy
+msgid "不具有 UnbanUser 权限"
+msgstr "UnbanUser"
+
+#: ../../source/docs/development/api.md
+msgid "User Not Be Banned"
+msgstr ""
+
+#: ../../source/docs/development/api.md
+msgid "用户没有被 Ban"
+msgstr ""
+
+#: ../../source/docs/development/api.md:197
+msgid "AddFriend"
+msgstr ""
+
+#: ../../source/docs/development/api.md
+msgid "不具有权限"
+msgstr ""
+
+#: ../../source/docs/development/api.md
+msgid "Friend Already Exists"
+msgstr ""
+
+#: ../../source/docs/development/api.md
+msgid "好友关系已存在"
+msgstr ""
+
+#: ../../source/docs/development/api.md
+#, fuzzy
+msgid "好友不存在"
+msgstr "User does not exist"
+
+#: ../../source/docs/development/api.md:205
+msgid "AcceptFriend"
+msgstr ""
+
+#: ../../source/docs/development/api.md
+msgid "Friend Invitation Not Found"
+msgstr ""
+
+#: ../../source/docs/development/api.md
+msgid "好友申请不存在"
+msgstr ""
+
+#: ../../source/docs/development/api.md:212
+#, fuzzy
+msgid "DeleteFriend"
+msgstr "DeleteSession"
+
+#: ../../source/docs/development/api.md
+msgid "Friend Not Found"
+msgstr ""
+
+#: ../../source/docs/development/api.md
+msgid "好友关系不存在"
 msgstr ""
 
 #: ../../source/docs/development/contributing.md:1
@@ -823,440 +1376,6 @@ msgstr "String"
 msgid "含义"
 msgstr "Meaning"
 
-#: ../../source/docs/development/status_code.md:1
-msgid "OurChat 状态码"
-msgstr "OurChat Status Code"
-
-#: ../../source/docs/development/status_code.md:3
-msgid "**_注：以下几种状态码在任何情况下都可能出现，请务必做好校验_**"
-msgstr ""
-"**_Note: The following status codes may occur in any case, so please "
-"ensure proper validation._**"
-
-#: ../../source/docs/development/status_code.md
-msgid "CodeId"
-msgstr "CodeId"
-
-#: ../../source/docs/development/status_code.md
-msgid "CodeName"
-msgstr "CodeName"
-
-#: ../../source/docs/development/status_code.md
-msgid "meaning"
-msgstr "Meaning"
-
-#: ../../source/docs/development/status_code.md
-msgid "0"
-msgstr "0"
-
-#: ../../source/docs/development/status_code.md
-msgid "OK"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "执行成功"
-msgstr "Execute successfully"
-
-#: ../../source/docs/development/status_code.md
-msgid "13"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "INTERNAL"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "服务器内部错误"
-msgstr "Internal Server Error"
-
-#: ../../source/docs/development/status_code.md
-msgid "14"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "UNAVAILABLE"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "服务器维护中"
-msgstr "Under Maintenance"
-
-#: ../../source/docs/development/status_code.md:11
-msgid "**_以上特殊信息不再赘述_**"
-msgstr "**_No further elaboration on the above special information_**"
-
-#: ../../source/docs/development/status_code.md:13
-msgid "状态码"
-msgstr "Status Code"
-
-#: ../../source/docs/development/status_code.md:15
-msgid "请参考 [grpc 文档](https://grpc.io/docs/guides/status-codes/)"
-msgstr ""
-"Please refer to [grpc documentation](https://grpc.io/docs/guides/status-"
-"codes/)"
-
-#: ../../source/docs/development/status_code.md:17
-msgid "各种信息下的状态码具体解释"
-msgstr "Specific explanations of status codes under various information conditions"
-
-#: ../../source/docs/development/status_code.md:19
-msgid "AuthService/Register"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "Detail"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-#: ../../source/docs/use/role_permission.md
-msgid "6"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "ALREADY_EXISTS"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "User Already Exists"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "该邮箱已被注册"
-msgstr "The email is conflicting with an existing user"
-
-#: ../../source/docs/development/status_code.md:25
-msgid "AuthService/Auth"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-#: ../../source/docs/use/role_permission.md
-msgid "5"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "NOT_FOUND"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "User Not Found"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "该用户不存在"
-msgstr "The user does not exist"
-
-#: ../../source/docs/development/status_code.md
-#: ../../source/docs/use/role_permission.md
-msgid "3"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "INVALID_ARGUMENT"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "Missing AuthType"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "缺少AuthType参数"
-msgstr "The auth type argument is missing"
-
-#: ../../source/docs/development/status_code.md
-msgid "16"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "Unauthenticated"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "Wrong Password"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "密码错误"
-msgstr "Password is incorrect"
-
-#: ../../source/docs/development/status_code.md:33
-msgid "AuthService/Verify"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md:41
-msgid "BasicService/GetServerInfo"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md:49
-msgid "BasicServer/GetId"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md:55
-msgid "OurChatService/GetAccountInfo"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-#: ../../source/docs/use/role_permission.md
-msgid "7"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "PERMISSION_DENIED"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "Permission Denied"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "权限不足(如:获取非当前帐号的隐私信息)"
-msgstr ""
-"Insufficient permissions (e.g. accessing private information of a non-"
-"current account)"
-
-#: ../../source/docs/development/status_code.md
-msgid "用户不存在"
-msgstr "User does not exist"
-
-#: ../../source/docs/development/status_code.md
-msgid "Request Invalid Value"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "请求值无效(如:获取不存在的字段)"
-msgstr "Invalid request value (e.g. accessing a non-existent field)"
-
-#: ../../source/docs/development/status_code.md:63
-msgid "OurChatService/SetSelfInfo"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "Conflict"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "信息冲突(如:新的ocid被占用)"
-msgstr "Information conflict (e.g. the new ocid is occupied)"
-
-#: ../../source/docs/development/status_code.md
-msgid "INVALID_ARGUMENT Ocid"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "Too Long"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "新的ocid太长"
-msgstr "The new ocid is too long"
-
-#: ../../source/docs/development/status_code.md:70
-msgid "OurChatService/FetchMsgs"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "Time Format Error"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "无法解析时间戳"
-msgstr "The structure of time cannot be parsed"
-
-#: ../../source/docs/development/status_code.md
-msgid "Time Missing"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "缺少time参数"
-msgstr "Member time is required"
-
-#: ../../source/docs/development/status_code.md:77
-#, fuzzy
-msgid "OurChatService/SendMsg"
-msgstr "Install OurChat server"
-
-#: ../../source/docs/development/status_code.md
-msgid "没有发言权限"
-msgstr "You don't have the privilege to send message here"
-
-#: ../../source/docs/development/status_code.md
-msgid "Session Not Found"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "会话不存在"
-msgstr "The session does not exist"
-
-#: ../../source/docs/development/status_code.md:84
-#, fuzzy
-msgid "OurChatService/Upload"
-msgstr "Install OurChat server"
-
-#: ../../source/docs/development/status_code.md
-msgid "File Size Error"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "文件大小与metadata不符合"
-msgstr "The size of the data received is not equal to the size in metadata"
-
-#: ../../source/docs/development/status_code.md
-msgid "File Hash Error"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "文件hash与metadata不符合"
-msgstr "The hash of the data received is not equal to the hash in metadata"
-
-#: ../../source/docs/development/status_code.md
-#: ../../source/docs/use/role_permission.md
-msgid "8"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "RESOURCE_EXHAUSTED"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "Storage Full"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "该用户储存空间已满"
-msgstr "The storage is full"
-
-#: ../../source/docs/development/status_code.md
-msgid "Metadata Error"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "缺少metadata参数或metadata无效"
-msgstr "The metadata is invalid or missing"
-
-#: ../../source/docs/development/status_code.md
-msgid "Incorrect Order Of Uploading"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "应先上传metadata再上传数据包"
-msgstr ""
-"You should upload a package of metadata, then upload content package "
-"until process finish"
-
-#: ../../source/docs/development/status_code.md:94
-#, fuzzy
-msgid "OurChatService/Download"
-msgstr "Install OurChat server"
-
-#: ../../source/docs/development/status_code.md
-msgid "没有下载权限"
-msgstr "This file is not yours"
-
-#: ../../source/docs/development/status_code.md:100
-msgid "OurChatService/NewSession"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "邀请的用户不存在"
-msgstr "The user you want to invite does not exist"
-
-#: ../../source/docs/development/status_code.md:106
-msgid "OurChatService/GetSessionInfo"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "该会话不存在"
-msgstr "The session does not exist"
-
-#: ../../source/docs/development/status_code.md:113
-msgid "OurChatService/SetSessionInfo"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "信息冲突"
-msgstr "The information should be set is conflict"
-
-#: ../../source/docs/development/status_code.md
-msgid "Cannot Set Name"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "没有设置会话名称的权限"
-msgstr "You don't have the privilege to set name"
-
-#: ../../source/docs/development/status_code.md
-msgid "Cannot Set Avatar"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "没有设置会话头像的权限"
-msgstr "You don't have the privilege to set avatar"
-
-#: ../../source/docs/development/status_code.md
-msgid "Cannot Set Description"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "没有设置会话简介的权限"
-msgstr "You don't have the privilege to set description"
-
-#: ../../source/docs/development/status_code.md:122
-#, fuzzy
-msgid "OurChatService/RecallMsg"
-msgstr "Install OurChat server"
-
-#: ../../source/docs/development/status_code.md
-msgid "没有撤回消息的权限"
-msgstr "You don't have the privilege to recall message"
-
-#: ../../source/docs/development/status_code.md
-msgid "Message Not Found"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-msgid "撤回的消息不存在"
-msgstr "The message you want to recall does not exist"
-
-#: ../../source/docs/development/status_code.md:129
-#, fuzzy
-msgid "OurChatService/SetRole"
-msgstr "Install OurChat server"
-
-#: ../../source/docs/development/status_code.md
-msgid "没有设置身份的权限"
-msgstr "You don't have the privilege to set role"
-
-#: ../../source/docs/development/status_code.md
-msgid "User Not In Session"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md:136
-#, fuzzy
-msgid "OurChatService/AddRole"
-msgstr "Install OurChat server"
-
-#: ../../source/docs/development/status_code.md:138
-#, fuzzy
-msgid "OurChatService/DeleteSession"
-msgstr "DeleteSession"
-
-#: ../../source/docs/development/status_code.md
-#, fuzzy
-msgid "没有删除会话的权限"
-msgstr "You don't have the privilege to set description"
-
-#: ../../source/docs/development/status_code.md:145
-msgid "OurChatService/LeaveSession"
-msgstr ""
-
-#: ../../source/docs/development/status_code.md
-#, fuzzy
-msgid "用户不在该会话"
-msgstr "User does not exist"
-
-#: ../../source/docs/development/status_code.md:151
-msgid "OurChatService/JoinInSession"
-msgstr ""
-
 #: ../../source/docs/run/build.md:1
 msgid "如何构建该项目"
 msgstr "How to Build This Project"
@@ -1322,6 +1441,60 @@ msgstr "Go to the client directory and run the project"
 msgid "构建为可执行文件"
 msgstr "Build as an executable file"
 
+#: ../../source/docs/run/http_server_argv.md:1
+msgid "http服务器命令行参数"
+msgstr ""
+
+#: ../../source/docs/run/http_server_argv.md
+#: ../../source/docs/run/server_argv.md
+msgid "name"
+msgstr "Name"
+
+#: ../../source/docs/run/http_server_argv.md
+#: ../../source/docs/run/server_argv.md
+msgid "usage"
+msgstr "Usage"
+
+#: ../../source/docs/run/http_server_argv.md
+#: ../../source/docs/run/server_argv.md
+msgid "default"
+msgstr "Default"
+
+#: ../../source/docs/run/http_server_argv.md
+#: ../../source/docs/run/server_argv.md
+msgid "`--config config file path`"
+msgstr "`--config config file path`"
+
+#: ../../source/docs/run/http_server_argv.md
+#: ../../source/docs/run/server_argv.md
+msgid "选择配置文件.[example](#配置文件示例)"
+msgstr "Select the configuration file. [example](#配置文件示例)"
+
+#: ../../source/docs/run/http_server_argv.md
+#: ../../source/docs/run/server_argv.md
+msgid "不适用"
+msgstr "unsuitable"
+
+#: ../../source/docs/run/http_server_argv.md:7
+#: ../../source/docs/run/server_argv.md:15
+msgid "配置文件示例"
+msgstr "Configuration File Example"
+
+#: ../../source/docs/run/http_server_argv.md:9
+#: ../../source/docs/run/server_argv.md:19
+#, fuzzy
+msgid "配置文件格式支持多样，包括`toml`,`json`,`json5`,`yaml`,`ini`等，请自行选择熟悉的配置文件格式"
+msgstr ""
+"Noto,the supported type of config file is various,including "
+"`toml`,`json`,`json5`,`yaml`,`ini`,etc.Please choose your familiar format"
+
+#: ../../source/docs/run/http_server_argv.md:11
+#: ../../source/docs/run/server_argv.md:21
+msgid "[配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)"
+msgstr ""
+"[Configuration file "
+"examples](https://github.com/SkyUOI/OurChat/tree/main/config)."
+
 #: ../../source/docs/run/index.rst:2
 msgid "运行"
 msgstr "Run"
@@ -1331,32 +1504,9 @@ msgid "此部分是关于运行该项目的文档"
 msgstr "This section is about the documentation for running this project"
 
 #: ../../source/docs/run/server_argv.md:1
-msgid "服务器参数"
+#, fuzzy
+msgid "服务器命令行参数"
 msgstr "Server Arguments"
-
-#: ../../source/docs/run/server_argv.md
-msgid "name"
-msgstr "Name"
-
-#: ../../source/docs/run/server_argv.md
-msgid "usage"
-msgstr "Usage"
-
-#: ../../source/docs/run/server_argv.md
-msgid "default"
-msgstr "Default"
-
-#: ../../source/docs/run/server_argv.md
-msgid "`--config config file path`"
-msgstr "`--config config file path`"
-
-#: ../../source/docs/run/server_argv.md
-msgid "选择配置文件.[example](#配置文件示例)"
-msgstr "Select the configuration file. [example](#配置文件示例)"
-
-#: ../../source/docs/run/server_argv.md
-msgid "不适用"
-msgstr "unsuitable"
 
 #: ../../source/docs/run/server_argv.md
 msgid "`--test-mode`"
@@ -1446,28 +1596,12 @@ msgstr "whether to enable cmd"
 msgid "true"
 msgstr "true"
 
-#: ../../source/docs/run/server_argv.md:15
-msgid "配置文件示例"
-msgstr "Configuration File Example"
-
 #: ../../source/docs/run/server_argv.md:17
 msgid "注意，当配置文件和命令行参数冲突时，以命令行参数覆盖配置文件参数"
 msgstr ""
 "Note that when there is a conflict between the configuration file and "
 "command line arguments, the command line arguments will override the "
 "configuration file parameters"
-
-#: ../../source/docs/run/server_argv.md:19
-msgid "注意，配置文件格式支持多样，包括`toml`,`json`,`json5`,`yaml`,`ini`等，请自行选择熟悉的配置文件格式"
-msgstr ""
-"Noto,the supported type of config file is various,including "
-"`toml`,`json`,`json5`,`yaml`,`ini`,etc.Please choose your familiar format"
-
-#: ../../source/docs/run/server_argv.md:21
-msgid "[配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)"
-msgstr ""
-"[Configuration file "
-"examples](https://github.com/SkyUOI/OurChat/tree/main/config)."
 
 #: ../../source/docs/run/server_argv.md:23
 msgid "日志"
@@ -1680,20 +1814,12 @@ msgid "权限代码"
 msgstr "Permission Code"
 
 #: ../../source/docs/use/role_permission.md
-msgid "SendMsg"
-msgstr "SendMsg"
-
-#: ../../source/docs/use/role_permission.md
 msgid "发送消息"
 msgstr "Send Message"
 
 #: ../../source/docs/use/role_permission.md
 msgid "1"
 msgstr "1"
-
-#: ../../source/docs/use/role_permission.md
-msgid "RecallMsg"
-msgstr "RecallMsg"
 
 #: ../../source/docs/use/role_permission.md
 msgid "撤回消息"
@@ -1704,16 +1830,8 @@ msgid "2"
 msgstr ""
 
 #: ../../source/docs/use/role_permission.md
-msgid "BanUser"
-msgstr "BanUser"
-
-#: ../../source/docs/use/role_permission.md
 msgid "封禁用户"
 msgstr "Ban User"
-
-#: ../../source/docs/use/role_permission.md
-msgid "UnbanUser"
-msgstr "UnbanUser"
 
 #: ../../source/docs/use/role_permission.md
 msgid "解封用户"
@@ -1756,20 +1874,12 @@ msgid "设置群聊描述"
 msgstr "Set the session description"
 
 #: ../../source/docs/use/role_permission.md
-msgid "DeleteSession"
-msgstr "DeleteSession"
-
-#: ../../source/docs/use/role_permission.md
 msgid "删除会话"
 msgstr "Delete Session"
 
 #: ../../source/docs/use/role_permission.md
 msgid "9"
 msgstr ""
-
-#: ../../source/docs/use/role_permission.md
-msgid "SetRole"
-msgstr "SetRole"
 
 #: ../../source/docs/use/role_permission.md
 msgid "设置某人为某角色"
@@ -1780,20 +1890,12 @@ msgid "10"
 msgstr ""
 
 #: ../../source/docs/use/role_permission.md
-msgid "MuteUser"
-msgstr "MuteUser"
-
-#: ../../source/docs/use/role_permission.md
 msgid "禁言用户"
 msgstr "Mute User"
 
 #: ../../source/docs/use/role_permission.md
 msgid "11"
 msgstr ""
-
-#: ../../source/docs/use/role_permission.md
-msgid "UnmuteUser"
-msgstr "UnmuteUser"
 
 #: ../../source/docs/use/role_permission.md
 msgid "解除禁言用户"
@@ -3126,4 +3228,75 @@ msgstr "Member has permissions `1 2`"
 
 #~ msgid "设置(会话中)身份"
 #~ msgstr "Set Role (in session)"
+
+#~ msgid "OurChat 状态码"
+#~ msgstr "OurChat Status Code"
+
+#~ msgid "各种信息下的状态码具体解释"
+#~ msgstr ""
+#~ "Specific explanations of status codes "
+#~ "under various information conditions"
+
+#~ msgid "AuthService/Register"
+#~ msgstr ""
+
+#~ msgid "AuthService/Auth"
+#~ msgstr ""
+
+#~ msgid "AuthService/Verify"
+#~ msgstr ""
+
+#~ msgid "BasicService/GetServerInfo"
+#~ msgstr ""
+
+#~ msgid "BasicServer/GetId"
+#~ msgstr ""
+
+#~ msgid "OurChatService/GetAccountInfo"
+#~ msgstr ""
+
+#~ msgid "OurChatService/SetSelfInfo"
+#~ msgstr ""
+
+#~ msgid "OurChatService/FetchMsgs"
+#~ msgstr ""
+
+#~ msgid "OurChatService/SendMsg"
+#~ msgstr "Install OurChat server"
+
+#~ msgid "OurChatService/Download"
+#~ msgstr "Install OurChat server"
+
+#~ msgid "OurChatService/NewSession"
+#~ msgstr ""
+
+#~ msgid "OurChatService/GetSessionInfo"
+#~ msgstr ""
+
+#~ msgid "OurChatService/SetSessionInfo"
+#~ msgstr ""
+
+#~ msgid "OurChatService/RecallMsg"
+#~ msgstr "Install OurChat server"
+
+#~ msgid "OurChatService/SetRole"
+#~ msgstr "Install OurChat server"
+
+#~ msgid "OurChatService/AddRole"
+#~ msgstr "Install OurChat server"
+
+#~ msgid "OurChatService/DeleteSession"
+#~ msgstr "DeleteSession"
+
+#~ msgid "OurChatService/LeaveSession"
+#~ msgstr ""
+
+#~ msgid "OurChatService/JoinInSession"
+#~ msgstr ""
+
+#~ msgid "INVALID_ARGUMENT Ocid"
+#~ msgstr ""
+
+#~ msgid "Too Long"
+#~ msgstr ""
 

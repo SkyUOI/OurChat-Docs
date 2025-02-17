@@ -1,4 +1,6 @@
-# OurChat 状态码
+# OurChat Api 文档
+
+## 状态码
 
 **_注：以下几种状态码在任何情况下都可能出现，请务必做好校验_**
 
@@ -10,19 +12,19 @@
 
 **_以上特殊信息不再赘述_**
 
-## 状态码
-
 请参考 [grpc 文档](https://grpc.io/docs/guides/status-codes/)
 
-## 各种信息下的状态码具体解释
+## Api
 
-### AuthService/Register
+### AuthService
+
+#### Register
 
 | CodeId | CodeName       | Detail              | meaning        |
 | :----- | :------------- | :------------------ | :------------- |
 | 6      | ALREADY_EXISTS | User Already Exists | 该邮箱已被注册 |
 
-### AuthService/Auth
+#### Auth
 
 | CodeId | CodeName         | Detail           | meaning            |
 | :----- | :--------------- | :--------------- | :----------------- |
@@ -30,7 +32,7 @@
 | 3      | INVALID_ARGUMENT | Missing AuthType | 缺少 AuthType 参数 |
 | 16     | Unauthenticated  | Wrong Password   | 密码错误           |
 
-### AuthService/Verify
+#### Verify
 
 | CodeId | CodeName         | Detail           | meaning            |
 | :----- | :--------------- | :--------------- | :----------------- |
@@ -38,7 +40,9 @@
 | 3      | INVALID_ARGUMENT | Missing AuthType | 缺少 AuthType 参数 |
 | 16     | Unauthenticated  | Wrong Password   | 密码错误           |
 
-### BasicService/GetServerInfo
+### BasicService
+
+#### GetServerInfo
 
 | CodeId | CodeName    |    meaning     |
 | :----- | :---------- | :------------: |
@@ -46,13 +50,15 @@
 | 13     | INTERNAL    | 服务器内部错误 |
 | 14     | UNAVAILABLE |  服务器维护中  |
 
-### BasicServer/GetId
+#### GetId
 
 | CodeId | CodeName  | Detail         | meaning      |
 | :----- | :-------- | :------------- | :----------- |
 | 5      | NOT_FOUND | User Not Found | 该用户不存在 |
 
-### OurChatService/GetAccountInfo
+### OurChatService
+
+#### GetAccountInfo
 
 | CodeId | CodeName          | Detail                | meaning                               |
 | :----- | :---------------- | :-------------------- | :------------------------------------ |
@@ -60,28 +66,28 @@
 | 5      | NOT_FOUND         | User Not Found        | 用户不存在                            |
 | 3      | INVALID_ARGUMENT  | Request Invalid Value | 请求值无效(如:获取不存在的字段)       |
 
-### OurChatService/SetSelfInfo
+#### SetSelfInfo
 
-| CodeId | CodeName              | Detail   | meaning                       |
-| :----- | :-------------------- | :------- | :---------------------------- |
-| 6      | ALREADY_EXISTS        | Conflict | 信息冲突(如:新的 ocid 被占用) |
-| 3      | INVALID_ARGUMENT Ocid | Too Long | 新的 ocid 太长                |
+| CodeId | CodeName         | Detail        | meaning                       |
+| :----- | :--------------- | :------------ | :---------------------------- |
+| 6      | ALREADY_EXISTS   | Conflict      | 信息冲突(如:新的 ocid 被占用) |
+| 3      | INVALID_ARGUMENT | Too Long Ocid | 新的 ocid 太长                |
 
-### OurChatService/FetchMsgs
+#### FetchMsgs
 
 | CodeId | CodeName         | Detail            | meaning        |
 | :----- | :--------------- | :---------------- | :------------- |
 | 3      | INVALID_ARGUMENT | Time Format Error | 无法解析时间戳 |
 | 3      | INVALID_ARGUMENT | Time Missing      | 缺少 time 参数 |
 
-### OurChatService/SendMsg
+#### SendMsg
 
 | CodeId | CodeName          | Detail            | meaning      |
 | :----- | :---------------- | :---------------- | :----------- |
 | 7      | PERMISSION_DENIED | Permission Denied | 没有发言权限 |
 | 5      | NOT_FOUND         | Session Not Found | 会话不存在   |
 
-### OurChatService/Upload
+#### Upload
 
 | CodeId | CodeName           | Detail                       | meaning                            |
 | :----- | :----------------- | :--------------------------- | :--------------------------------- |
@@ -91,26 +97,26 @@
 | 3      | INVALID_ARGUMENT   | Metadata Error               | 缺少 metadata 参数或 metadata 无效 |
 | 3      | INVALID_ARGUMENT   | Incorrect Order Of Uploading | 应先上传 metadata 再上传数据包     |
 
-### OurChatService/Download
+#### Download
 
 | CodeId | CodeName          | Detail            | meaning      |
 | :----- | :---------------- | :---------------- | :----------- |
 | 7      | PERMISSION_DENIED | Permission Denied | 没有下载权限 |
 
-### OurChatService/NewSession
+#### NewSession
 
 | CodeId | CodeName  | Detail         | meaning          |
 | :----- | :-------- | :------------- | :--------------- |
 | 5      | NOT_FOUND | User Not Found | 邀请的用户不存在 |
 
-### OurChatService/GetSessionInfo
+#### GetSessionInfo
 
 | CodeId | CodeName         | Detail                | meaning                         |
 | :----- | :--------------- | :-------------------- | :------------------------------ |
 | 5      | NOT_FOUND        | Session Not Found     | 该会话不存在                    |
 | 3      | INVALID_ARGUMENT | Request Invalid Value | 请求值无效(如:获取不存在的字段) |
 
-### OurChatService/SetSessionInfo
+#### SetSessionInfo
 
 | CodeId | CodeName          | Detail                 | meaning                |
 | :----- | :---------------- | :--------------------- | :--------------------- |
@@ -119,77 +125,92 @@
 | 7      | PERMISSION_DENIED | Cannot Set Avatar      | 没有设置会话头像的权限 |
 | 7      | PERMISSION_DENIED | Cannot Set Description | 没有设置会话简介的权限 |
 
-### OurChatService/RecallMsg
+#### RecallMsg
 
 | CodeId | CodeName          | Detail            | meaning            |
 | :----- | :---------------- | :---------------- | :----------------- |
 | 7      | PERMISSION_DENIED | Permission Denied | 没有撤回消息的权限 |
 | 5      | NOT_FOUND         | Message Not Found | 撤回的消息不存在   |
 
-### OurChatService/SetRole
+#### SetRole
 
 | CodeId | CodeName          | Detail              | meaning            |
 | :----- | :---------------- | :------------------ | :----------------- |
 | 7      | PERMISSION_DENIED | Permission Denied   | 没有设置身份的权限 |
 | 5      | NOT_FOUND         | User Not In Session | 用户不存在         |
 
-### OurChatService/AddRole
+#### AddRole
 
-### OurChatService/DeleteSession
+#### DeleteSession
 
 | CodeId | CodeName          | Detail            | meaning            |
 | :----- | :---------------- | :---------------- | :----------------- |
 | 7      | PERMISSION_DENIED | Permission Denied | 没有删除会话的权限 |
 | 5      | NOT_FOUND         | Session Not Found | 该会话不存在       |
 
-### OurChatService/LeaveSession
+#### LeaveSession
 
 | CodeId | CodeName  | Detail              | meaning        |
 | :----- | :-------- | :------------------ | :------------- |
 | 5      | NOT_FOUND | User Not In Session | 用户不在该会话 |
 
-### OurChatService/JoinInSession
+#### JoinInSession
 
 | CodeId | CodeName          | Detail            | meaning                     |
 | :----- | :---------------- | :---------------- | :-------------------------- |
 | 7      | PERMISSION_DENIED | Permission Denied | 无法加入会话，例如被 ban 了 |
 | 5      | NOT_FOUND         | Session Not Found | 该 session 不存在           |
 
-### OurChatService/AcceptJoinInSession
+#### AcceptJoinInSession
 
 | CodeId | CodeName          | Detail            | meaning                              |
 | :----- | :---------------- | :---------------- | :----------------------------------- |
 | 7      | PERMISSION_DENIED | Permission Denied | 无法同意加入会话请求，例如缺少该权限 |
 | 5      | NOT_FOUND         | Session Not Found | 该 session 不存在                    |
 
-### OurChatService/MuteUser
+#### MuteUser
 
 | CodeId | CodeName          | Detail            | meaning              |
 | :----- | :---------------- | :---------------- | :------------------- |
 | 7      | PERMISSION_DENIED | Permission Denied | 不具有 MuteUser 权限 |
 
-### OurChatService/UnmuteUser
+#### UnmuteUser
 
 | CodeId | CodeName          | Detail            | meaning                |
 | :----- | :---------------- | :---------------- | :--------------------- |
 | 7      | PERMISSION_DENIED | Permission Denied | 不具有 UnmuteUser 权限 |
 | 5      | NOT_FOUND         | User Not Be Muted | 用户没有被 Mute        |
 
-### OurChatService/BanUser
+#### BanUser
 
 | CodeId | CodeName          | Detail            | meaning             |
 | :----- | :---------------- | :---------------- | :------------------ |
 | 7      | PERMISSION_DENIED | Permission Denied | 不具有 BanUser 权限 |
 
-### OurChatService/UnbanUser
+#### UnbanUser
 
 | CodeId | CodeName          | Detail             | meaning               |
 | :----- | :---------------- | :----------------- | :-------------------- |
 | 7      | PERMISSION_DENIED | Permission Denied  | 不具有 UnbanUser 权限 |
 | 5      | NOT_FOUND         | User Not Be Banned | 用户没有被 Ban        |
 
-### OurChatService/AddFriend
+#### AddFriend
 
-### OurChatService/AcceptFriend
+| CodeId | CodeName          | Detail                | meaning        |
+| :----- | :---------------- | :-------------------- | :------------- |
+| 7      | PERMISSION_DENIED | Permission Denied     | 不具有权限     |
+| 6      | ALREADY_EXISTS    | Friend Already Exists | 好友关系已存在 |
+| 5      | NOT_FOUND         | User Not Found        | 好友不存在     |
 
-### OurChatService/DeleteFriend
+#### AcceptFriend
+
+| CodeId | CodeName          | Detail                      | meaning        |
+| :----- | :---------------- | :-------------------------- | :------------- |
+| 7      | PERMISSION_DENIED | Permission Denied           | 不具有权限     |
+| 5      | NOT_FOUND         | Friend Invitation Not Found | 好友申请不存在 |
+
+#### DeleteFriend
+
+| CodeId | CodeName  | Detail           | meaning        |
+| :----- | :-------- | :--------------- | :------------- |
+| 5      | NOT_FOUND | Friend Not Found | 好友关系不存在 |

@@ -8,4 +8,5 @@
    
    build
    server_argv
+   http_server_argv
    server_cmd

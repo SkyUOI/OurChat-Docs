@@ -11,6 +11,6 @@
    server/index
    contributing
    http_api
-   status_code
+   api
    special_string
    document_contributing
