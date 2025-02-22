@@ -27,4 +27,5 @@ jobs:
         uses: DavidAnson/markdownlint-cli2-action@v9
       - name: Sphinx build
         run: |
+          source .venv/bin/activate
           cd docs && make SPHINXOPTS='--color -W' html
