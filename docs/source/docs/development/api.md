@@ -74,7 +74,9 @@
 | CodeId | CodeName         | Detail        | meaning                       |
 | :----- | :--------------- | :------------ | :---------------------------- |
 | 6      | ALREADY_EXISTS   | Conflict      | 信息冲突(如:新的 ocid 被占用) |
-| 3      | INVALID_ARGUMENT | Too Long Ocid | 新的 ocid 太长                |
+| 3      | INVALID_ARGUMENT | Ocid Too Long | 新的 ocid 太长                |
+| 3      | INVALID_ARGUMENT | Status Too Long | 新的 ocid 太长                |
+| 3      | INVALID_ARGUMENT | Username Is Invalid | 用户名非法，例如过长或为空  |
 
 #### FetchMsgs
 
