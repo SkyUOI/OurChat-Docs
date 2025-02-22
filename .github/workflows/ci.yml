@@ -12,13 +12,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Install dependencies
-        run: |
-          sudo pip3 install -r requirements.txt
       - name: typos-action
         uses: crate-ci/typos@master
         with:
           files: .
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      - name: Install dependencies
+        run: |
+          uv venv
+          source .venv/bin/activate
+          uv sync
       - name: mdlint
         uses: DavidAnson/markdownlint-cli2-action@v9
       - name: Sphinx build
