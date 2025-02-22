@@ -23,6 +23,9 @@
 | CodeId | CodeName       | Detail              | meaning        |
 | :----- | :------------- | :------------------ | :------------- |
 | 6      | ALREADY_EXISTS | User Already Exists | 该邮箱已被注册 |
+| 3      | INVALID_ARGUMENT | Password Is Not Strong Enough | 密码不够强 |
+| 3      | INVALID_ARGUMENT | Username Is Invalid | 用户名非法，例如过长 |
+| 3      | INVALID_ARGUMENT | Email Address Is Invalid |不是合法的邮箱地址 |
 
 #### Auth
 
@@ -30,7 +33,7 @@
 | :----- | :--------------- | :--------------- | :----------------- |
 | 5      | NOT_FOUND        | User Not Found   | 该用户不存在       |
 | 3      | INVALID_ARGUMENT | Missing AuthType | 缺少 AuthType 参数 |
-| 16     | Unauthenticated  | Wrong Password   | 密码错误           |
+| 16     | UNAUTHENTICATED  | Wrong Password   | 密码错误           |
 
 #### Verify
 
@@ -38,7 +41,7 @@
 | :----- | :--------------- | :--------------- | :----------------- |
 | 5      | NOT_FOUND        | User Not Found   | 该用户不存在       |
 | 3      | INVALID_ARGUMENT | Missing AuthType | 缺少 AuthType 参数 |
-| 16     | Unauthenticated  | Wrong Password   | 密码错误           |
+| 16     | UNAUTHENTICATED  | Wrong Password   | 密码错误           |
 
 ### BasicService
 
