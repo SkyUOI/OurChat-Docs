@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-17 17:27+0800\n"
+"POT-Creation-Date: 2025-02-25 12:35+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -148,83 +148,99 @@ msgid ""
 "对于该项目，我们提供了两种在生产环境中使用的 docker 镜像，一种基于debian，另一种基于alpine, "
 "alpine系列镜像适合硬盘空间比较宝贵的场景。"
 msgstr ""
+"For this project, we provide two docker images for use in production "
+"environments: one based on Debian and another based on Alpine. The Alpine "
+"series images are suitable for scenarios where disk space is precious."
 
 #: ../../source/docs/deploy/server-deploy.md:10
+msgid "除去操作系统的区别外，还有几种不同的tag供选择："
+msgstr "Apart from the operating system differences, there are several different tags to choose from:"
+
+#: ../../source/docs/deploy/server-deploy.md:12
+msgid "nightly: 在main分支上构建的最新版本，每天构建一次，可能不稳定，但具有最新的更改"
+msgstr "nightly: The latest version built on the main branch, built once a day, may be unstable but has the latest changes"
+
+#: ../../source/docs/deploy/server-deploy.md:13
+msgid "latest: 最新的稳定版本"
+msgstr "latest: The latest stable version"
+
+#: ../../source/docs/deploy/server-deploy.md:14
+msgid "其余各个版本的镜像，例如v0.1.0.beta之类，代表特定版本的镜像"
+msgstr "Other version images, such as v0.1.0.beta, represent images of specific versions"
+
+#: ../../source/docs/deploy/server-deploy.md:16
 msgid "以下是具体操作步骤："
 msgstr "Here are the specific steps to follow:"
 
-#: ../../source/docs/deploy/server-deploy.md:12
-msgid "alpine"
-msgstr ""
-
 #: ../../source/docs/deploy/server-deploy.md:18
-msgid "debian"
-msgstr ""
+msgid "alpine"
+msgstr "alpine"
 
 #: ../../source/docs/deploy/server-deploy.md:24
+msgid "debian"
+msgstr "debian"
+
+#: ../../source/docs/deploy/server-deploy.md:30
 msgid "这一步完成只是创建了一个最基本的环境，但是安全性还远远没有达到，为了保证安全性，你需要修改 PostgreSQL 和 Redis 的密码。"
 msgstr ""
 "Completing this step only creates a very basic environment, but the "
 "security is far from adequate. To ensure security, you need to change the"
 " passwords for PostgreSQL and Redis."
 
-#: ../../source/docs/deploy/server-deploy.md:26
+#: ../../source/docs/deploy/server-deploy.md:32
 msgid "具体有以下几步:"
 msgstr "Here are the specific steps:"
 
-#: ../../source/docs/deploy/server-deploy.md:28
-msgid "(如果你是用的debian系列镜像，下文的`compose.yml`全都指的是`compose.debian.yml`)"
-msgstr ""
-
-#: ../../source/docs/deploy/server-deploy.md:30
-#, fuzzy
-msgid "修改`compose.yml`中的`PORTGRES_PASSWORD`的`123456`为你自己的强密码"
-msgstr ""
-"Change the `123456` for the two `password` fields in `compose.yml` to "
-"your own strong password"
-
-#: ../../source/docs/deploy/server-deploy.md:31
-msgid "修改`docker/config/redis.conf`中的`123456`为你自己的强密码"
-msgstr ""
-
-#: ../../source/docs/deploy/server-deploy.md:32
-#, fuzzy
-msgid "修改`compose.yml`中的`RABBITMQ_DEFAULT_PASS`的`123456`为你自己的强密码"
-msgstr ""
-"Change the `123456` for the two `password` fields in `compose.yml` to "
-"your own strong password"
-
-#: ../../source/docs/deploy/server-deploy.md:33
-msgid "修改`docker/config/database.toml`中的密码为改后的 PostgreSQL 密码"
-msgstr ""
-
 #: ../../source/docs/deploy/server-deploy.md:34
-msgid "修改`docker/config/redis.toml`中的密码为改后的 Redis 密码"
-msgstr ""
-
-#: ../../source/docs/deploy/server-deploy.md:35
-msgid "修改`docker/config/rabbitmq.toml`中的密码为改后的 Rabbitmq 密码"
-msgstr ""
+msgid "(如果你是用的debian系列镜像，下文的`compose.yml`全都指的是`compose.debian.yml`)"
+msgstr "(If you are using the Debian series image, all references to `compose.yml` below refer to `compose.debian.yml`)"
 
 #: ../../source/docs/deploy/server-deploy.md:36
-msgid "再次运行你用于启动docker的环境的命令"
-msgstr ""
+msgid "修改`compose.yml`中的`PORTGRES_PASSWORD`的`123456`为你自己的强密码"
+msgstr "Change the `123456` for `POSTGRES_PASSWORD` in `compose.yml` to your own strong password"
+
+#: ../../source/docs/deploy/server-deploy.md:37
+msgid "修改`docker/config/redis.conf`中的`123456`为你自己的强密码"
+msgstr "Change the `123456` in `docker/config/redis.conf` to your own strong password"
 
 #: ../../source/docs/deploy/server-deploy.md:38
+msgid "修改`compose.yml`中的`RABBITMQ_DEFAULT_PASS`的`123456`为你自己的强密码"
+msgstr "Change the `123456` for `RABBITMQ_DEFAULT_PASS` in `compose.yml` to your own strong password"
+
+#: ../../source/docs/deploy/server-deploy.md:39
+msgid "修改`docker/config/database.toml`中的密码为改后的 PostgreSQL 密码"
+msgstr ""
+"Change the password in `docker/config/database.toml` to the new PostgreSQL password"
+
+#: ../../source/docs/deploy/server-deploy.md:40
+msgid "修改`docker/config/redis.toml`中的密码为改后的 Redis 密码"
+msgstr ""
+"Change the password in `docker/config/redis.toml` to the new Redis password"
+
+#: ../../source/docs/deploy/server-deploy.md:41
+msgid "修改`docker/config/rabbitmq.toml`中的密码为改后的 Rabbitmq 密码"
+msgstr ""
+"Change the password in `docker/config/rabbitmq.toml` to the new Rabbitmq password"
+
+#: ../../source/docs/deploy/server-deploy.md:42
+msgid "再次运行你用于启动docker的环境的命令"
+msgstr "Run your docker environment startup command again"
+
+#: ../../source/docs/deploy/server-deploy.md:44
 msgid "完成这几步之后，你就成功部署了该项目。"
 msgstr "After completing these steps, you have successfully deployed the project."
 
-#: ../../source/docs/deploy/server-deploy.md:40
+#: ../../source/docs/deploy/server-deploy.md:46
 msgid "对于容器中的数据，我们将其映射在了`data`中，你可以随时保存数据"
 msgstr ""
 "For data in the container, we have mapped it to `data`, so you can save "
 "data at any time"
 
-#: ../../source/docs/deploy/server-deploy.md:42
+#: ../../source/docs/deploy/server-deploy.md:48
 msgid "手动部署"
 msgstr "Manual Deployment"
 
-#: ../../source/docs/deploy/server-deploy.md:44
+#: ../../source/docs/deploy/server-deploy.md:50
 msgid "对于性能不高和未安装 docker 的计算机，我们也提供了手动部署的文档，关于这一点，建议部署在 linux 环境，其他环境未经过严格的测试。"
 msgstr ""
 "For computers with low performance and no Docker installed, we also "
@@ -232,11 +248,11 @@ msgstr ""
 "to deploy in a Linux environment, as other environments have not been "
 "rigorously tested."
 
-#: ../../source/docs/deploy/server-deploy.md:46
+#: ../../source/docs/deploy/server-deploy.md:52
 msgid "安装 PostgreSQL"
 msgstr "install PostgreSQL"
 
-#: ../../source/docs/deploy/server-deploy.md:48
+#: ../../source/docs/deploy/server-deploy.md:54
 msgid ""
 "postgres 版本为 17（如果该文档未及时更新可以查看 "
 "[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的"
@@ -247,11 +263,11 @@ msgstr ""
 "[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)"
 " file)"
 
-#: ../../source/docs/deploy/server-deploy.md:50
+#: ../../source/docs/deploy/server-deploy.md:56
 msgid "安装 redis"
 msgstr "Install Redis"
 
-#: ../../source/docs/deploy/server-deploy.md:52
+#: ../../source/docs/deploy/server-deploy.md:58
 msgid ""
 "Redis 版本为 7（如果该文档未及时更新可以查看 "
 "[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的"
@@ -262,51 +278,51 @@ msgstr ""
 "in[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)"
 " file)"
 
-#: ../../source/docs/deploy/server-deploy.md:54
+#: ../../source/docs/deploy/server-deploy.md:60
 msgid "安装 ourchat server"
 msgstr "Install OurChat server"
 
-#: ../../source/docs/deploy/server-deploy.md:56
+#: ../../source/docs/deploy/server-deploy.md:62
 msgid "此处存在两种备选的方案:"
 msgstr "There are two alternative options here:"
 
-#: ../../source/docs/deploy/server-deploy.md:58
+#: ../../source/docs/deploy/server-deploy.md:64
 msgid "1.(推荐)从 github release 下载最新的 linux 编译结果，如果遇到 CPU 架构和其他兼容性问题，可能需要手动编译，参见下一节"
 msgstr ""
 "1. (Recommended) Download the latest Linux compilation results from the "
 "GitHub release. If you encounter CPU architecture and other compatibility"
 " issues, manual compilation may be necessary, see the following section"
 
-#: ../../source/docs/deploy/server-deploy.md:60
+#: ../../source/docs/deploy/server-deploy.md:66
 msgid "2.手动编译"
 msgstr "2. Manual Compilation"
 
-#: ../../source/docs/deploy/server-deploy.md:62
+#: ../../source/docs/deploy/server-deploy.md:68
 msgid "拉取源代码:"
 msgstr "Pull the source code:"
 
-#: ../../source/docs/deploy/server-deploy.md:68
+#: ../../source/docs/deploy/server-deploy.md:74
 msgid "安装 rust 工具链"
 msgstr "Install the Rust toolchain"
 
-#: ../../source/docs/deploy/server-deploy.md:70
+#: ../../source/docs/deploy/server-deploy.md:76
 msgid "编译项目"
 msgstr "Compile the project"
 
-#: ../../source/docs/deploy/server-deploy.md:76
+#: ../../source/docs/deploy/server-deploy.md:82
 #: ../../source/docs/run/build.md:30
 msgid "运行项目"
 msgstr "Run the project"
 
-#: ../../source/docs/deploy/server-deploy.md:78
+#: ../../source/docs/deploy/server-deploy.md:84
 msgid "这一步请参考[服务器参数](../run/server_argv.md)进行运行，可执行文件位于`target/release/server`"
 msgstr ""
 "Please refer to the [Server Arguments](../run/server_argv.md) for this "
 "step, and the executable file is located at `target/release/server`"
 
-#: ../../source/docs/deploy/server-deploy.md:80
+#: ../../source/docs/deploy/server-deploy.md:86
 msgid "请注意服务器密码等依然需要修改!"
-msgstr ""
+msgstr "Please note that server passwords and other settings still need to be modified!"
 
 #: ../../source/docs/development/api.md:1
 msgid "OurChat Api 文档"
@@ -407,13 +423,46 @@ msgstr "ALREADY_EXISTS"
 
 #: ../../source/docs/development/api.md
 msgid "User Already Exists"
-msgstr ""
+msgstr "User Already Exists"
 
 #: ../../source/docs/development/api.md
 msgid "该邮箱已被注册"
 msgstr "The email is conflicting with an existing user"
 
-#: ../../source/docs/development/api.md:27
+#: ../../source/docs/development/api.md
+#: ../../source/docs/use/role_permission.md
+msgid "3"
+msgstr "333"
+
+#: ../../source/docs/development/api.md
+msgid "INVALID_ARGUMENT"
+msgstr "INVALID_ARGUMENT"
+
+#: ../../source/docs/development/api.md
+msgid "Password Is Not Strong Enough"
+msgstr "Password Is Not Strong Enough"
+
+#: ../../source/docs/development/api.md
+msgid "密码不够强"
+msgstr "The password is not strong enough"
+
+#: ../../source/docs/development/api.md
+msgid "Username Is Invalid"
+msgstr "Username Is Invalid"
+
+#: ../../source/docs/development/api.md
+msgid "用户名非法，例如过长"
+msgstr "The username is invalid, for example, it is too long"
+
+#: ../../source/docs/development/api.md
+msgid "Email Address Is Invalid"
+msgstr "Email Address Is Invalid"
+
+#: ../../source/docs/development/api.md
+msgid "不是合法的邮箱地址"
+msgstr "It is not a valid address"
+
+#: ../../source/docs/development/api.md:30
 msgid "Auth"
 msgstr "Auth"
 
@@ -435,15 +484,6 @@ msgid "该用户不存在"
 msgstr "The user does not exist"
 
 #: ../../source/docs/development/api.md
-#: ../../source/docs/use/role_permission.md
-msgid "3"
-msgstr "333"
-
-#: ../../source/docs/development/api.md
-msgid "INVALID_ARGUMENT"
-msgstr "INVALID_ARGUMENT"
-
-#: ../../source/docs/development/api.md
 msgid "Missing AuthType"
 msgstr "Missing AuthType"
 
@@ -456,7 +496,8 @@ msgid "16"
 msgstr "16"
 
 #: ../../source/docs/development/api.md
-msgid "Unauthenticated"
+#, fuzzy
+msgid "UNAUTHENTICATED"
 msgstr "Unauthenticated"
 
 #: ../../source/docs/development/api.md
@@ -467,27 +508,27 @@ msgstr "Wrong Password"
 msgid "密码错误"
 msgstr "Password is incorrect"
 
-#: ../../source/docs/development/api.md:35
+#: ../../source/docs/development/api.md:38
 msgid "Verify"
 msgstr "Verify"
 
-#: ../../source/docs/development/api.md:43
+#: ../../source/docs/development/api.md:46
 msgid "BasicService"
 msgstr "BasicService"
 
-#: ../../source/docs/development/api.md:45
+#: ../../source/docs/development/api.md:48
 msgid "GetServerInfo"
 msgstr "GetServerInfo"
 
-#: ../../source/docs/development/api.md:53
+#: ../../source/docs/development/api.md:56
 msgid "GetId"
 msgstr "GetId"
 
-#: ../../source/docs/development/api.md:59
+#: ../../source/docs/development/api.md:62
 msgid "OurChatService"
 msgstr "OurChatService"
 
-#: ../../source/docs/development/api.md:61
+#: ../../source/docs/development/api.md:64
 msgid "GetAccountInfo"
 msgstr "GetAccountInfo"
 
@@ -522,7 +563,7 @@ msgstr "Request Invalid Value"
 msgid "请求值无效(如:获取不存在的字段)"
 msgstr "Invalid request value (e.g. accessing a non-existent field)"
 
-#: ../../source/docs/development/api.md:69
+#: ../../source/docs/development/api.md:72
 msgid "SetSelfInfo"
 msgstr "SetSelfInfo"
 
@@ -535,14 +576,23 @@ msgid "信息冲突(如:新的 ocid 被占用)"
 msgstr "Information conflict (e.g. the new ocid is occupied)"
 
 #: ../../source/docs/development/api.md
-msgid "Too Long Ocid"
+#, fuzzy
+msgid "Ocid Too Long"
 msgstr "Too Long Ocid"
 
 #: ../../source/docs/development/api.md
 msgid "新的 ocid 太长"
 msgstr "The new ocid is too long"
 
-#: ../../source/docs/development/api.md:76
+#: ../../source/docs/development/api.md
+msgid "Status Too Long"
+msgstr "Status Too Long"
+
+#: ../../source/docs/development/api.md
+msgid "用户名非法，例如过长或为空"
+msgstr "The username is invalid, for example, it is too long or empty"
+
+#: ../../source/docs/development/api.md:81
 msgid "FetchMsgs"
 msgstr "FetchMsgs"
 
@@ -562,7 +612,7 @@ msgstr "Time Missing"
 msgid "缺少 time 参数"
 msgstr "Argument time is required"
 
-#: ../../source/docs/development/api.md:83
+#: ../../source/docs/development/api.md:88
 #: ../../source/docs/use/role_permission.md
 msgid "SendMsg"
 msgstr "SendMsg"
@@ -579,7 +629,7 @@ msgstr "Session Not Found"
 msgid "会话不存在"
 msgstr "The session does not exist"
 
-#: ../../source/docs/development/api.md:90
+#: ../../source/docs/development/api.md:95
 msgid "Upload"
 msgstr "Upload"
 
@@ -634,7 +684,7 @@ msgstr ""
 "You should upload a package of metadata, then upload content package "
 "until process finish"
 
-#: ../../source/docs/development/api.md:100
+#: ../../source/docs/development/api.md:105
 msgid "Download"
 msgstr "Download"
 
@@ -642,7 +692,7 @@ msgstr "Download"
 msgid "没有下载权限"
 msgstr "This file is not yours"
 
-#: ../../source/docs/development/api.md:106
+#: ../../source/docs/development/api.md:111
 msgid "NewSession"
 msgstr "NewSession"
 
@@ -650,7 +700,7 @@ msgstr "NewSession"
 msgid "邀请的用户不存在"
 msgstr "The user you want to invite does not exist"
 
-#: ../../source/docs/development/api.md:112
+#: ../../source/docs/development/api.md:117
 msgid "GetSessionInfo"
 msgstr "DeleteSession"
 
@@ -658,7 +708,7 @@ msgstr "DeleteSession"
 msgid "该会话不存在"
 msgstr "The session does not exist"
 
-#: ../../source/docs/development/api.md:119
+#: ../../source/docs/development/api.md:124
 msgid "SetSessionInfo"
 msgstr "SetSessionInfo"
 
@@ -690,7 +740,7 @@ msgstr "Cannot Set Description"
 msgid "没有设置会话简介的权限"
 msgstr "You don't have the privilege to set description"
 
-#: ../../source/docs/development/api.md:128
+#: ../../source/docs/development/api.md:133
 #: ../../source/docs/use/role_permission.md
 msgid "RecallMsg"
 msgstr "RecallMsg"
@@ -707,7 +757,7 @@ msgstr "Message Not Found"
 msgid "撤回的消息不存在"
 msgstr "The message you want to recall does not exist"
 
-#: ../../source/docs/development/api.md:135
+#: ../../source/docs/development/api.md:140
 #: ../../source/docs/use/role_permission.md
 msgid "SetRole"
 msgstr "SetRole"
@@ -720,11 +770,11 @@ msgstr "You don't have the privilege to set role"
 msgid "User Not In Session"
 msgstr "User Not In Session"
 
-#: ../../source/docs/development/api.md:142
+#: ../../source/docs/development/api.md:147
 msgid "AddRole"
 msgstr "AddRole"
 
-#: ../../source/docs/development/api.md:144
+#: ../../source/docs/development/api.md:149
 #: ../../source/docs/use/role_permission.md
 msgid "DeleteSession"
 msgstr "DeleteSession"
@@ -733,7 +783,7 @@ msgstr "DeleteSession"
 msgid "没有删除会话的权限"
 msgstr "You don't have the privilege to delete session"
 
-#: ../../source/docs/development/api.md:151
+#: ../../source/docs/development/api.md:156
 msgid "LeaveSession"
 msgstr "LeaveSession"
 
@@ -741,7 +791,7 @@ msgstr "LeaveSession"
 msgid "用户不在该会话"
 msgstr "User is not in this session"
 
-#: ../../source/docs/development/api.md:157
+#: ../../source/docs/development/api.md:162
 msgid "JoinInSession"
 msgstr "JoinInSession"
 
@@ -753,7 +803,7 @@ msgstr "Cannot join in session, for example, user was banned"
 msgid "该 session 不存在"
 msgstr "This session not exists"
 
-#: ../../source/docs/development/api.md:164
+#: ../../source/docs/development/api.md:169
 msgid "AcceptJoinInSession"
 msgstr "AcceptJoinInSession"
 
@@ -763,7 +813,7 @@ msgstr ""
 "Cannot accept join in session request, for example, you don't have this "
 "permission"
 
-#: ../../source/docs/development/api.md:171
+#: ../../source/docs/development/api.md:176
 #: ../../source/docs/use/role_permission.md
 msgid "MuteUser"
 msgstr "MuteUser"
@@ -772,7 +822,7 @@ msgstr "MuteUser"
 msgid "不具有 MuteUser 权限"
 msgstr "Don't have MuteUser permission"
 
-#: ../../source/docs/development/api.md:177
+#: ../../source/docs/development/api.md:182
 #: ../../source/docs/use/role_permission.md
 msgid "UnmuteUser"
 msgstr "UnmuteUser"
@@ -789,79 +839,75 @@ msgstr "User Not Be Muted"
 msgid "用户没有被 Mute"
 msgstr "User wasn't be muted"
 
-#: ../../source/docs/development/api.md:184
+#: ../../source/docs/development/api.md:189
 #: ../../source/docs/use/role_permission.md
 msgid "BanUser"
 msgstr "BanUser"
 
 #: ../../source/docs/development/api.md
-#, fuzzy
 msgid "不具有 BanUser 权限"
-msgstr "BanUser"
+msgstr "Do not have BanUser permission"
 
-#: ../../source/docs/development/api.md:190
+#: ../../source/docs/development/api.md:195
 #: ../../source/docs/use/role_permission.md
 msgid "UnbanUser"
 msgstr "UnbanUser"
 
 #: ../../source/docs/development/api.md
-#, fuzzy
 msgid "不具有 UnbanUser 权限"
-msgstr "UnbanUser"
+msgstr "Do not have UnbanUser permission"
 
 #: ../../source/docs/development/api.md
 msgid "User Not Be Banned"
-msgstr ""
+msgstr "User Not Be Banned"
 
 #: ../../source/docs/development/api.md
 msgid "用户没有被 Ban"
-msgstr ""
+msgstr "The user is not banned"
 
-#: ../../source/docs/development/api.md:197
+#: ../../source/docs/development/api.md:202
 msgid "AddFriend"
-msgstr ""
+msgstr "AddFriend"
 
 #: ../../source/docs/development/api.md
 msgid "不具有权限"
-msgstr ""
+msgstr "Do not have permission"
 
 #: ../../source/docs/development/api.md
 msgid "Friend Already Exists"
-msgstr ""
+msgstr "Friend Already Exists"
 
 #: ../../source/docs/development/api.md
 msgid "好友关系已存在"
-msgstr ""
+msgstr "The friend relationship already exists"
 
 #: ../../source/docs/development/api.md
-#, fuzzy
 msgid "好友不存在"
-msgstr "User does not exist"
+msgstr "Friend does not exist"
 
-#: ../../source/docs/development/api.md:205
+#: ../../source/docs/development/api.md:210
 msgid "AcceptFriend"
-msgstr ""
+msgstr "AcceptFriend"
 
 #: ../../source/docs/development/api.md
 msgid "Friend Invitation Not Found"
-msgstr ""
+msgstr "Friend Invitation Not Found"
 
 #: ../../source/docs/development/api.md
 msgid "好友申请不存在"
-msgstr ""
+msgstr "The friend request does not exist"
 
-#: ../../source/docs/development/api.md:212
-#, fuzzy
+#: ../../source/docs/development/api.md:217
 msgid "DeleteFriend"
-msgstr "DeleteSession"
+msgstr "DeleteFriend"
 
 #: ../../source/docs/development/api.md
 msgid "Friend Not Found"
-msgstr ""
+msgstr "Friend Not Found"
 
 #: ../../source/docs/development/api.md
 msgid "好友关系不存在"
-msgstr ""
+msgstr "The friend relationship does not exist"
 
 #: ../../source/docs/development/contributing.md:1
 msgid "贡献指南"
@@ -1013,29 +1059,28 @@ msgid "文件上传"
 msgstr "File upload"
 
 #: ../../source/docs/development/http_api.md:5
-#, fuzzy
 msgid "接口:`/v1/verify` 请求类型:`GET`"
-msgstr "Api:`/verify` Request Type: `GET`"
+msgstr "API: `/v1/verify` Request Type: `GET`"
 
 #: ../../source/docs/development/http_api.md:8
 msgid "参数:token=verify_token 该接口供邮件验证使用，一般不需要客户端直接操作"
-msgstr "Arguments: token=verify_token This interface is used for email "
+msgstr "Parameters: token=verify_token This interface is used for email verification, generally does not need direct client operation"
 
 #: ../../source/docs/development/http_api.md:11
 msgid "获取logo"
-msgstr ""
+msgstr "Get Logo"
 
 #: ../../source/docs/development/http_api.md:13
 msgid "接口:`/v1/logo`"
-msgstr ""
+msgstr "API: `/v1/logo`"
 
 #: ../../source/docs/development/http_api.md:15
 msgid "请求类型:`GET` 无参数"
-msgstr ""
+msgstr "Request Type: `GET` No parameters"
 
 #: ../../source/docs/development/http_api.md:18
 msgid "用于获取服务器logo"
-msgstr ""
+msgstr "Used to get the server logo"
 
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
@@ -1117,6 +1162,14 @@ msgstr "[buf](https://buf.build/)"
 msgid "[protobuf compiler](https://github.com/protocolbuffers/protobuf)"
 msgstr "[protobuf compiler](https://github.com/protocolbuffers/protobuf)"
 
+#: ../../source/docs/development/server/basic.md:21
+msgid "优化开发体验"
+msgstr "Optimize Development Experience"
+
+#: ../../source/docs/development/server/basic.md:23
+msgid "由于全部分析索引workspace中的所有crate对您的计算机是一种很大的负担，尤其是您很可能只会在其中几个crate上工作的情况下，我们强烈建议您使用如下配置，在vscode中:"
+msgstr "Since analyzing and indexing all crates in the workspace is a heavy burden on your computer, especially when you are likely to work on only a few crates, we strongly recommend using the following configuration in VSCode:"
+
 #: ../../source/docs/development/server/index.rst:2
 msgid "开发-服务器"
 msgstr "Development - Server"
@@ -1183,7 +1236,7 @@ msgstr "Is responsible for handling HTTP requests, such as email verification"
 
 #: ../../source/docs/development/server/server-design.md:13
 msgid "实验性matrix支持也由该节点负责"
-msgstr ""
+msgstr "Experimental Matrix support is also handled by this node"
 
 #: ../../source/docs/development/server/server-design.md:15
 msgid "负载均衡器：LoadBalancer"
@@ -1195,11 +1248,11 @@ msgstr "Is responsible for evenly distributing requests and traffic to nodes"
 
 #: ../../source/docs/development/server/server-design.md:19
 msgid "Rabbitmq: 消息队列"
-msgstr ""
+msgstr "Rabbitmq: Message Queue"
 
 #: ../../source/docs/development/server/server-design.md:21
 msgid "不同节点间消息传递的中间件"
-msgstr ""
+msgstr "Middleware for message passing between different nodes"
 
 #: ../../source/docs/development/server/server-design.md:23
 msgid "Redis: 内存数据库"
@@ -1226,11 +1279,8 @@ msgid "具体参考其官网 [JuiceFS](https://juicefs.com)"
 msgstr "Please refer to the official website [JuiceFS](https://juicefs.com)"
 
 #: ../../source/docs/development/server/server-design.md:35
-#, fuzzy
 msgid "组件之间计划可以通过 RPC 的方式进行通信，通过非对称加密签名来签名 JWT 进行身份验证，但目前主要还是通过消息队列通信"
-msgstr ""
-"Components can communicate with each other through RPC, and authenticate "
-"identity by signing JWT with non-asymmetric encryption"
+msgstr "Components are planned to communicate via RPC and authenticate using JWT signed with asymmetric encryption, but currently communication is mainly done through message queues"
 
 #: ../../source/docs/development/server/server-develop.md:1
 msgid "服务端开发指南"
@@ -1295,17 +1345,15 @@ msgstr "You can run:"
 
 #: ../../source/docs/development/server/server-develop.md:29
 msgid "来配置开发环境(postgres, redis, rabbitmq等)"
-msgstr ""
+msgstr "to configure the development environment (postgres, redis, rabbitmq, etc.)"
 
 #: ../../source/docs/development/server/server-develop.md:31
 msgid "推荐的开发方式是在容器外进行开发，但是环境使用容器内设置好的环境，不然可能造成环境不一致问题"
-msgstr ""
+msgstr "The recommended development approach is to develop outside the container but use the environment set up inside the container, otherwise environment inconsistency issues may occur"
 
 #: ../../source/docs/development/server/server-develop.md:33
 msgid "首先，切换进`server`目录中，开发都将在这里进行。"
-msgstr ""
-"First, switch to the `server` directory, all development will be done "
-"here."
+msgstr "First, switch to the `server` directory, all development will be done here."
 
 #: ../../source/docs/development/server/server-develop.md:35
 msgid "启动时使用"
@@ -1443,7 +1491,7 @@ msgstr "Build as an executable file"
 
 #: ../../source/docs/run/http_server_argv.md:1
 msgid "http服务器命令行参数"
-msgstr ""
+msgstr "http server command argument"
 
 #: ../../source/docs/run/http_server_argv.md
 #: ../../source/docs/run/server_argv.md
@@ -1604,10 +1652,14 @@ msgstr ""
 "configuration file parameters"
 
 #: ../../source/docs/run/server_argv.md:23
+msgid "为了灵活的复用配置文件，配置文件支持指定多个，按照顺序以后面的覆盖前面的，例如首个配置文件指定`port=80`，指定的第二个配置文件可以设置`port=90`，后面的配置选项就会覆盖之前的，并且原有选项会得到保留"
+msgstr "For flexible reuse of configuration files, multiple configuration files can be specified, with later ones overriding earlier ones in order. For example, if the first configuration file specifies `port=80`, and the second specified configuration file sets `port=90`, the later configuration option will override the previous one, while retaining other existing options"
+
+#: ../../source/docs/run/server_argv.md:25
 msgid "日志"
 msgstr "log"
 
-#: ../../source/docs/run/server_argv.md:25
+#: ../../source/docs/run/server_argv.md:27
 msgid "默认日志等级为`info`，可以通过`OURCHAT_LOG`环境变量配置，支持的等级为`trace`,`debug`,`info`,`warn`,`error`，日志储存路径在`log`文件夹下，以时间命名日志文件"
 msgstr ""
 "The default log level is `info`, which can be configured through the "
@@ -1615,17 +1667,17 @@ msgstr ""
 "`debug`, `info`, `warn`, `error`. Log files are stored in the `log` "
 "directory, with filenames based on timestamps."
 
-#: ../../source/docs/run/server_argv.md:27
+#: ../../source/docs/run/server_argv.md:29
 msgid "日志会定时清理，清理时间设定在`auto_clean_duration`中，也可以通过控制台指令更改"
 msgstr ""
 "Logs will be cleaned up periodically, with the cleanup interval set in "
 "`auto_clean_duration`. It can also be changed through console commands."
 
-#: ../../source/docs/run/server_argv.md:29
+#: ../../source/docs/run/server_argv.md:31
 msgid "测试日志"
 msgstr "Testing Log"
 
-#: ../../source/docs/run/server_argv.md:31
+#: ../../source/docs/run/server_argv.md:33
 msgid "`test_mode`启用时，日志不会被输出到文件中，并且测试等级会被默认调整到`trace`"
 msgstr ""
 "When `test_mode` is enabled, logs will not be output to files, and the "
@@ -1827,7 +1879,7 @@ msgstr "Recall Message"
 
 #: ../../source/docs/use/role_permission.md
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../../source/docs/use/role_permission.md
 msgid "封禁用户"
@@ -1839,7 +1891,7 @@ msgstr "Unban User"
 
 #: ../../source/docs/use/role_permission.md
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../../source/docs/use/role_permission.md
 msgid "KickUser"
@@ -1879,7 +1931,7 @@ msgstr "Delete Session"
 
 #: ../../source/docs/use/role_permission.md
 msgid "9"
-msgstr ""
+msgstr "9"
 
 #: ../../source/docs/use/role_permission.md
 msgid "设置某人为某角色"
@@ -1887,7 +1939,7 @@ msgstr "Set someone as a certain role"
 
 #: ../../source/docs/use/role_permission.md
 msgid "10"
-msgstr ""
+msgstr "10"
 
 #: ../../source/docs/use/role_permission.md
 msgid "禁言用户"
@@ -1895,7 +1947,7 @@ msgstr "Mute User"
 
 #: ../../source/docs/use/role_permission.md
 msgid "11"
-msgstr ""
+msgstr "11"
 
 #: ../../source/docs/use/role_permission.md
 msgid "解除禁言用户"
@@ -1903,7 +1955,7 @@ msgstr "Unmute User"
 
 #: ../../source/docs/use/role_permission.md
 msgid "12"
-msgstr ""
+msgstr "12"
 
 #: ../../source/docs/use/role_permission.md:24
 msgid "为了方便，提前定义了一些角色:"
@@ -2169,9 +2221,6 @@ msgstr "Member has permissions `1 2`"
 #~ msgid "请求头"
 #~ msgstr "Request Header"
 
-#~ msgid "说明"
-#~ msgstr "Note"
-
 #~ msgid "资源密钥"
 #~ msgstr "Resource Key"
 
@@ -2183,9 +2232,6 @@ msgstr "Member has permissions `1 2`"
 
 #~ msgid "InternalServerError"
 #~ msgstr "INternalServerError"
-
-#~ msgid "服务器内部错误"
-#~ msgstr "Internal Server Error"
 
 #~ msgid "BadRequest"
 #~ msgstr "BadRequest"
@@ -2828,9 +2874,6 @@ msgstr "Member has permissions `1 2`"
 #~ msgid "运行成功"
 #~ msgstr "Operation successful"
 
-#~ msgid "1"
-#~ msgstr ""
-
 #~ msgid "服务器错误"
 #~ msgstr "Server Error"
 
@@ -2839,9 +2882,6 @@ msgstr "Member has permissions `1 2`"
 
 #~ msgid "新增信息已存在"
 #~ msgstr "The new information already exists"
-
-#~ msgid "5"
-#~ msgstr ""
 
 #~ msgid "参数错误，指令错误，参数不存在，指令不存在等错误"
 #~ msgstr ""
@@ -2855,14 +2895,8 @@ msgstr "Member has permissions `1 2`"
 #~ msgid "等待超时"
 #~ msgstr "Timeout"
 
-#~ msgid "8"
-#~ msgstr ""
-
 #~ msgid "未知错误"
 #~ msgstr "Unknown Error"
-
-#~ msgid "9"
-#~ msgstr ""
 
 #~ msgid "验证失败"
 #~ msgstr "Verification failed."
@@ -3133,12 +3167,6 @@ msgstr "Member has permissions `1 2`"
 #~ msgid "同意成功"
 #~ msgstr "Agree Successfully"
 
-#~ msgid "该账号储存空间已满"
-#~ msgstr ""
-
-#~ msgid "FAILED_PRECONDITION"
-#~ msgstr ""
-
 #~ msgid "对于该项目，我们提供了一个生产环境中使用的 docker 镜像，可以直接构建并运行项目。"
 #~ msgstr ""
 #~ "For this project, we provide a "
@@ -3237,44 +3265,11 @@ msgstr "Member has permissions `1 2`"
 #~ "Specific explanations of status codes "
 #~ "under various information conditions"
 
-#~ msgid "AuthService/Register"
-#~ msgstr ""
-
-#~ msgid "AuthService/Auth"
-#~ msgstr ""
-
-#~ msgid "AuthService/Verify"
-#~ msgstr ""
-
-#~ msgid "BasicService/GetServerInfo"
-#~ msgstr ""
-
-#~ msgid "BasicServer/GetId"
-#~ msgstr ""
-
-#~ msgid "OurChatService/GetAccountInfo"
-#~ msgstr ""
-
-#~ msgid "OurChatService/SetSelfInfo"
-#~ msgstr ""
-
-#~ msgid "OurChatService/FetchMsgs"
-#~ msgstr ""
-
 #~ msgid "OurChatService/SendMsg"
 #~ msgstr "Install OurChat server"
 
 #~ msgid "OurChatService/Download"
 #~ msgstr "Install OurChat server"
-
-#~ msgid "OurChatService/NewSession"
-#~ msgstr ""
-
-#~ msgid "OurChatService/GetSessionInfo"
-#~ msgstr ""
-
-#~ msgid "OurChatService/SetSessionInfo"
-#~ msgstr ""
 
 #~ msgid "OurChatService/RecallMsg"
 #~ msgstr "Install OurChat server"
@@ -3287,16 +3282,3 @@ msgstr "Member has permissions `1 2`"
 
 #~ msgid "OurChatService/DeleteSession"
 #~ msgstr "DeleteSession"
-
-#~ msgid "OurChatService/LeaveSession"
-#~ msgstr ""
-
-#~ msgid "OurChatService/JoinInSession"
-#~ msgstr ""
-
-#~ msgid "INVALID_ARGUMENT Ocid"
-#~ msgstr ""
-
-#~ msgid "Too Long"
-#~ msgstr ""
-
