@@ -28,6 +28,20 @@ docker compose -f docker/compose.devenv.yml up -d
 
 来配置开发环境(postgres, redis, rabbitmq等)
 
+### 安全警告
+
+如果你正在一台有公网ip的服务器上通过docker设置环境，请注意，因为docker会通过修改iptables越过防火墙，所以将这些未设置强密码的服务暴露到公网中非常危险
+
+你可以在`/etc/docker/daemon.json`采用如下配置来防止网络攻击问题:
+
+```json
+{
+    "iptables": false
+}
+```
+
+---
+
 推荐的开发方式是在容器外进行开发，但是环境使用容器内设置好的环境，不然可能造成环境不一致问题
 
 首先，切换进`server`目录中，开发都将在这里进行。
