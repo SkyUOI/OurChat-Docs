@@ -16,9 +16,17 @@
 
 ## Api
 
+**_消息体本身不在此赘述，请查看代码中的注释_**
+
 ### AuthService
 
+该Service用于完成服务器中的鉴权操作
+
 #### Register
+
+用于注册一个用户并返回其token
+
+错误:
 
 | CodeId | CodeName       | Detail              | meaning        |
 | :----- | :------------- | :------------------ | :------------- |
@@ -29,6 +37,10 @@
 
 #### Auth
 
+用于登录一个已经存在的用户并返回其token
+
+错误:
+
 | CodeId | CodeName         | Detail           | meaning            |
 | :----- | :--------------- | :--------------- | :----------------- |
 | 5      | NOT_FOUND        | User Not Found   | 该用户不存在       |
@@ -36,6 +48,10 @@
 | 16     | UNAUTHENTICATED  | Wrong Password   | 密码错误           |
 
 #### Verify
+
+用于客户端发起邮箱验证，验证帐号是否被窃取
+
+错误:
 
 | CodeId | CodeName         | Detail           | meaning            |
 | :----- | :--------------- | :--------------- | :----------------- |
@@ -45,21 +61,54 @@
 
 ### BasicService
 
+该Service用于完成服务器中不需要额外权限的操作
+
 #### GetServerInfo
 
-| CodeId | CodeName    |    meaning     |
-| :----- | :---------- | :------------: |
-| 0      | OK          |    执行成功    |
-| 13     | INTERNAL    | 服务器内部错误 |
-| 14     | UNAVAILABLE |  服务器维护中  |
+获取服务器的各项基本信息，包括版本号等
+
+无错误
 
 #### GetId
+
+通过帐号ocid获取某个帐号的id
+
+错误:
 
 | CodeId | CodeName  | Detail         | meaning      |
 | :----- | :-------- | :------------- | :----------- |
 | 5      | NOT_FOUND | User Not Found | 该用户不存在 |
 
+#### GetPresetUserStatus
+
+获取预设的帐号社交状态
+
+错误:
+
+| CodeId | CodeName  | Detail         | meaning      |
+| :----- | :-------- | :------------- | :----------- |
+| 13     | INTERNAL    |Server Error | 服务器内部错误 |
+
 ### OurChatService
+
+该Service用于完成绝大部分操作，且所有操作都需要额外附带通过[AuthService](#authservice)中调用获取的token
+
+提供该token的方式为添加请求头: `token: <token>`
+
+token本身是以`JWT`的形式传递的，所以你可以解读token，token中数据格式为:
+
+```json
+{
+    "id": 1, // account id(not ocid)
+    "exp": 1600000000 // expiration time, this is unix timestamp
+}
+```
+
+一旦token过期，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Expired`
+
+如果token不合法，例如不是JWT或不包含所需要的字段，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Invalid`
+
+如果未提供token，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Missing`
 
 #### GetAccountInfo
 
