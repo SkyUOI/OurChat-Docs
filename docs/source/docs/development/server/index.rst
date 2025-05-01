@@ -10,3 +10,4 @@
    server-develop
    server-database
    server-design
+   server-network
