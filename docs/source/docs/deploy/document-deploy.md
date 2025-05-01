@@ -5,19 +5,15 @@
 ## 环境配置
 
 - Python: python3 以上即可
-- 相关依赖: 见下方说明
+- Python包管理器：uv
 
-首先，请创建一个虚拟环境，接下来的所有操作都在其中进行，例如:
+首先，请生成虚拟环境并安装相关依赖：
 
-```bash
-python -m venv venv
+```sh
+uv sync
 ```
 
-在项目根目录下运行下方命令以安装相关依赖
-
-```bash
-pip install -r requirements.txt
-```
+然后你需要激活虚拟环境。
 
 ## 生成文档
 
