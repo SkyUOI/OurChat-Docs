@@ -268,3 +268,7 @@ token本身是以`JWT`的形式传递的，所以你可以解读token，token中
 | CodeId | CodeName  | Detail           | meaning        |
 | :----- | :-------- | :--------------- | :------------- |
 | 5      | NOT_FOUND | Friend Not Found | 好友关系不存在 |
+
+#### Unregister
+
+暂时没有相关错误可能发生
