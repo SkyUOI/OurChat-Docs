@@ -12,5 +12,6 @@
    contributing
    http_api
    api
+   public_info
    special_string
    document_contributing
