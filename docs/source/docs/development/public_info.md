@@ -10,3 +10,5 @@
 |user_defined_status|
 |avatar_key|
 |ocid|
+|public_update_time|
+|display_name|
