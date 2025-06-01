@@ -1226,7 +1226,7 @@ msgstr ""
 
 #: ../../source/docs/development/public_info.md:1
 msgid "Public Info"
-msgstr "公有信息"
+msgstr "Public Info"
 
 #: ../../source/docs/development/public_info.md:3
 msgid "对于每个个人，信息被分为公有的和私有的。公有信息即意味着可以被任何人访问，不论其是不是本人或好友。数据库中保存了`update_time`和`public_update_time`两者，分别用于表示所有信息最后的更新时间和公有信息最后的更新时间。"
