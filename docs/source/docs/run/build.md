@@ -20,19 +20,56 @@
 - [Linux](https://docs.flutter.cn/get-started/install/linux/desktop)
 - [MacOS](https://docs.flutter.cn/get-started/install/macos/desktop)
 
-接下来进入客户端目录安装依赖包
+### 安装protoc
+
+详情参见[官方文档](https://grpc.io/docs/languages/dart/quickstart/)
+
+从[Github](https://github.com/google/protobuf/releases)下载官方编译版本的`Protobuf` 它将用于编译`proto`文件
+
+将下载的文件解压在任意位置**并添加到环境变量**
+
+### 安装dart的protoc编译插件
+
+详情参见[官方文档](https://grpc.io/docs/languages/dart/quickstart/)
+
+```bash
+dart pub global activate protoc_plugin
+```
+
+将Pub缓存路径添加到环境变量中
+
+若你是Windows用户，则默认路径为`C:/Users/%username%/AppData/Local/Pub/Cache/bin`
+
+若你是Mac/Linux用户，则应添加`~/.pub-cache/bin`至环境变量
+
+### 安装依赖
 
 ```bash
 cd ./client/pc/ourchat # 进入目录
 flutter pub get # 安装依赖
 ```
 
-### 运行项目
+### 生成代码
 
-进入客户端目录并运行项目
+在本项目根目录下运行
 
 ```bash
-cd ./client/ourchat # 进入目录
+# 生成grpc service相关代码
+python ./script/generate.pb.dart.py
+```
+
+等待完成后进入客户端目录并运行
+
+```bash
+cd ./client # 进入客户端目录
+# 生成数据库ORM相关代码
+dart run build_runner build
+```
+
+### 运行项目
+
+```bash
+cd ./client # 进入客户端目录
 flutter run
 
 # 会出现如下界面，选择你希望运行的平台即可
@@ -51,7 +88,7 @@ flutter run
 进入客户端目录并运行项目
 
 ```bash
-cd ./client/ourchat # 进入目录
+cd ./client # 进入目录
 flutter build # 查看可供构建的平台
 
 # 会出现可构建的平台列表，如：
