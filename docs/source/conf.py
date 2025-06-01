@@ -9,7 +9,7 @@
 import os
 
 project = "OurChat-Docs"
-copyright = "2024, OurChat"
+copyright = "2025, OurChat"
 author = "OurChat"
 release = "0.1.0"
 
