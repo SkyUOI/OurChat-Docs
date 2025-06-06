@@ -22,11 +22,13 @@
 
 ```nginx
 server {
-        server_name  xxx.com;
+    server_name  xxx.com;
 
-        location / {
-                grpc_pass grpc://127.0.0.1:17777;
-        }
+    location / {
+        grpc_pass grpc://127.0.0.1:17777;
+    }
+
+    http2 on;
 
     listen 7777 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/xxx.com/fullchain.pem; # managed by Certbot
@@ -36,11 +38,11 @@ server {
 }
 
 server {
-        server_name  xxx.com;
+    server_name  xxx.com;
 
-        location / {
-                proxy_pass http://127.0.0.1:17778;
-        }
+    location / {
+        proxy_pass http://127.0.0.1:17778;
+    }
 
     listen 7778 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/xxx.com/fullchain.pem; # managed by Certbot
