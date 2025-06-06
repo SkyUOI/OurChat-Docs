@@ -1435,11 +1435,9 @@ msgid ""
 "中完成，所以你也应当安装 Docker. docker-buildx 和 docker-compose 同样也需要安装."
 msgstr ""
 "The Server part is written in Rust. You should first install Rust. "
-"Development can be done locally or in docker.Deployment are done in "
+"Development can be done locally or in docker. Deployment are done in "
 "Docker, so you should also install Docker. docker-buildx and docker-"
-"compose also need to be installed.Development can be done locally or in "
-"docker.Deployment are done in Docker, so you should also install Docker. "
-"docker-buildx and docker-compose also need to be installed."
+"compose also need to be installed."
 
 #: ../../source/docs/development/server/server-develop.md:15
 msgid "服务器配置文件"
