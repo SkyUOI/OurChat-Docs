@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-01 16:36+0800\n"
+"POT-Creation-Date: 2025-06-01 10:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../../source/docs/deploy/document-deploy.md:1
 msgid "本地文档部署指南"
@@ -323,7 +323,7 @@ msgid "编译项目"
 msgstr "Compile the project"
 
 #: ../../source/docs/deploy/server-deploy.md:82
-#: ../../source/docs/run/build.md:30
+#: ../../source/docs/run/build.md:69
 msgid "运行项目"
 msgstr "Run the project"
 
@@ -535,9 +535,8 @@ msgid "16"
 msgstr "16"
 
 #: ../../source/docs/development/api.md
-#, fuzzy
 msgid "UNAUTHENTICATED"
-msgstr "Unauthenticated"
+msgstr "UNAUTHENTICATED"
 
 #: ../../source/docs/development/api.md
 msgid "Wrong Password"
@@ -592,9 +591,8 @@ msgid "获取预设的帐号社交状态"
 msgstr ""
 
 #: ../../source/docs/development/api.md
-#, fuzzy
 msgid "Server Error"
-msgstr "Server"
+msgstr "Server Error"
 
 #: ../../source/docs/development/api.md:92
 msgid "OurChatService"
@@ -674,9 +672,8 @@ msgid "信息冲突(如:新的 ocid 被占用)"
 msgstr "Information conflict (e.g. the new ocid is occupied)"
 
 #: ../../source/docs/development/api.md
-#, fuzzy
 msgid "Ocid Too Long"
-msgstr "Too Long Ocid"
+msgstr "Ocid Too Long"
 
 #: ../../source/docs/development/api.md
 msgid "新的 ocid 太长"
@@ -1007,6 +1004,14 @@ msgstr "Friend Not Found"
 msgid "好友关系不存在"
 msgstr "The friend relationship does not exist"
 
+#: ../../source/docs/development/api.md:272
+msgid "Unregister"
+msgstr "Unregister"
+
+#: ../../source/docs/development/api.md:274
+msgid "暂时没有相关错误可能发生"
+msgstr "No relevant errors can occur currently"
+
 #: ../../source/docs/development/contributing.md:1
 msgid "贡献指南"
 msgstr "Contribution Guide"
@@ -1117,13 +1122,12 @@ msgid ""
 "你可以通过运行`gettext_generator.py`脚本来生成项目文档的翻译字符串，对于母语非中文的用户，我们推荐的是首先使用您熟悉的语言编写文档，然后使用"
 " AI 翻译工具翻译为中文并粘贴到文档，然后将您的翻译内容放在您的语言所对应的翻译中."
 msgstr ""
-"You can "
-"generate the translation strings for the project documentation by running"
-" the `gettext_generator.py` script. For users whose native language is "
-"not Chinese, we recommend first writing the documentation in the language"
-" you are familiar with, and then using an AI translation tool to "
-"translate it into Chinese and paste it into the document. After that, "
-"place your translated content in the corresponding translation for your "
+"You can generate the translation strings for the project documentation by"
+" running the `gettext_generator.py` script. For users whose native "
+"language is not Chinese, we recommend first writing the documentation in "
+"the language you are familiar with, and then using an AI translation tool"
+" to translate it into Chinese and paste it into the document. After that,"
+" place your translated content in the corresponding translation for your "
 "language."
 
 #: ../../source/docs/development/document_contributing.md:17
@@ -1140,7 +1144,9 @@ msgstr ""
 
 #: ../../source/docs/development/document_contributing.md:19
 msgid "除此之外，你也可以通过一个简单的小脚本`find_untranslate.py`来找出所有的未翻译字符串。"
-msgstr "Besides, you can also use a simple script `find_untranslate.py` to find out all untranslated strings."
+msgstr ""
+"Besides, you can also use a simple script `find_untranslate.py` to find "
+"out all untranslated strings."
 
 #: ../../source/docs/development/document_contributing.md:21
 msgid "操作细节"
@@ -1217,6 +1223,46 @@ msgid ""
 msgstr ""
 "For development, please refer to `CONTRIBUTING "
 "<https://github.com/SkyUOI/OurChat/blob/main/CONTRIBUTING.md>`_"
+
+#: ../../source/docs/development/public_info.md:1
+msgid "Public Info"
+msgstr "Public Info"
+
+#: ../../source/docs/development/public_info.md:3
+msgid "对于每个个人，信息被分为公有的和私有的。公有信息即意味着可以被任何人访问，不论其是不是本人或好友。数据库中保存了`update_time`和`public_update_time`两者，分别用于表示所有信息最后的更新时间和公有信息最后的更新时间。"
+msgstr "For each individual, information is categorized as public or private.Public information can be accessed by anyone, regardless of whether they are the user themselves or a friend.The database stores both `update_time` and `public_update_time`, representing:update_time: The last update time of all information.public_update_time: The last update time of public information only."
+
+#: ../../source/docs/development/public_info.md:5
+msgid "其中，公有信息列举如下(grpc中的字段名称)，未列出的都是私有信息:"
+msgstr "Public information fields (gRPC field names) are listed below. All non-listed fields are considered private:"
+
+#: ../../source/docs/development/public_info.md
+msgid "字段"
+msgstr "field"
+
+#: ../../source/docs/development/public_info.md
+msgid "user_name"
+msgstr "user_name"
+
+#: ../../source/docs/development/public_info.md
+msgid "user_defined_status"
+msgstr "user_defined_status"
+
+#: ../../source/docs/development/public_info.md
+msgid "avatar_key"
+msgstr "avatar_key"
+
+#: ../../source/docs/development/public_info.md
+msgid "ocid"
+msgstr "ocid"
+
+#: ../../source/docs/development/public_info.md
+msgid "public_update_time"
+msgstr "public_update_time"
+
+#: ../../source/docs/development/public_info.md
+msgid "display_name"
+msgstr "display_name"
 
 #: ../../source/docs/development/server/basic.md:1
 msgid "开发基本注意事项"
@@ -1487,7 +1533,10 @@ msgstr ""
 
 #: ../../source/docs/development/server/server-develop.md:43
 msgid "然而，使用这样的配置并非一劳永逸，他可能会导致其他的网络服务无法正常工作，但在您的开发机上面，这应该不是一个大问题。"
-msgstr "However, using this config is not one-and-down, it may cause some other services being down, but in your development machine, it is not a big problem."
+msgstr ""
+"However, using this config is not one-and-down, it may cause some other "
+"services being down, but in your development machine, it is not a big "
+"problem."
 
 #: ../../source/docs/development/server/server-develop.md:47
 msgid "推荐的开发方式是在容器外进行开发，但是环境使用容器内设置好的环境，不然可能造成环境不一致问题"
@@ -1552,6 +1601,102 @@ msgstr ""
 "will automatically run pending database migrations when the server "
 "starts. To define a new database migration, please refer to [sea "
 "orm](https://www.sea-ql.org/SeaORM/docs/migration/setting-up-migration/)"
+
+#: ../../source/docs/development/server/server-network.md:1
+msgid "服务端网络开发事项"
+msgstr "Server Network Development Guidelines"
+
+#: ../../source/docs/development/server/server-network.md:3
+msgid "[SSL/TLS 证书生成](#ssltls证书生成)"
+msgstr ""
+
+#: ../../source/docs/development/server/server-network.md:5
+msgid "SSL/TLS证书生成"
+msgstr "SSL/TLS Certificate Generation"
+
+#: ../../source/docs/development/server/server-network.md:6
+msgid "本项目用openssl生成证书生成步骤总体可概括为："
+msgstr "The overall steps for certificate generation using openssl in this project are as: follows"
+
+#: ../../source/docs/development/server/server-network.md:8
+msgid "生成私钥key"
+msgstr "Generate private key"
+
+#: ../../source/docs/development/server/server-network.md:10
+msgid "具体而言，可以创建两个文件夹certs和private, certs中存放最后可以使用的文件，private中存放 中间文件。"
+msgstr "Specifically, you can create two folders: certs (for final usable files) and private (for intermediate files)."
+
+#: ../../source/docs/development/server/server-network.md:14
+msgid "第一步生成RSA私钥，举例如下"
+msgstr "First, generate an RSA private key. Example:"
+
+#: ../../source/docs/development/server/server-network.md:19
+msgid "其中8192为密钥长度，可自行选择。该命令会提示你输入一个密码，请记住他。"
+msgstr "Here, 8192 denotes the key length (customizable). The command will prompt you to enter a password; please remember it."
+
+#: ../../source/docs/development/server/server-network.md:22
+msgid "对于非根证书而言，还需要去除私钥文件的加密保护并输出为新文件，命令举例如下"
+msgstr "For non-root certificates, you need to remove the encryption protection from the private key file and output it to a new file. Example command:"
+
+#: ../../source/docs/development/server/server-network.md:27
+msgid "依据私钥生成请求文件csr"
+msgstr "Generate a certificate signing request (CSR) based on the private key."
+
+#: ../../source/docs/development/server/server-network.md:29
+msgid "请求文件生成命令举例如下"
+msgstr "Example of CSR generation command:"
+
+#: ../../source/docs/development/server/server-network.md:33
+msgid "`crt-name`为证书文件名，一般与``private-key-name``一致。"
+msgstr "The `crt-name` should match the `private-key-name` as the certificate filename."
+
+#: ../../source/docs/development/server/server-network.md:35
+msgid ""
+"输入后会提示输入一大堆信息。例如国家简码，地区，什么的，如果是根证书，如实填写或者不写都可以。 如果你想要点仪式感，那么就认真写。 "
+"**而如果是非根证书**，那么`Common Name`这个 选项要填域名，其他可以随便填。"
+msgstr ""
+"After entering, you'll be prompted to input various information such as country code and region. For root certificates, you may fill in truthfully or leave blank as desired. If you want a sense of ritual, fill in carefully.
+**For non-root certificates**, the `Common` Name field should be filled with the domain name, while others can be filled随意."
+
+#: ../../source/docs/development/server/server-network.md:41
+msgid "这一步可能需要输入你刚才设置的pem密码。"
+msgstr "This step may require entering the pem password you just set."
+
+#: ../../source/docs/development/server/server-network.md:43
+msgid "如果非根证书，那么此时嵌入域名信息"
+msgstr "If it's a non-root certificate, embed the domain name information at this point."
+
+#: ../../source/docs/development/server/server-network.md:45
+msgid "如果是非根证书，请创建一个文件 `private/crt-name.dns.ext` ， 然后粘贴以下信息："
+msgstr "For non-root certificates, create a file `private/crt-name.dns.ext` and paste the following information:"
+
+#: ../../source/docs/development/server/server-network.md:58
+msgid "后面会使用这个文件。"
+msgstr "This file will be used later."
+
+#: ../../source/docs/development/server/server-network.md:60
+msgid "如果你没有域名，而是持有一个固定IP，那么使用如下文件，请创建一个文件 `private/crt-name.ip.ext` ，然后粘贴以下信息："
+msgstr "If you don't have a domain name but have a fixed IP, use the following file. Create a file `private/crt-name.ip.ext` and paste the following information:"
+
+#: ../../source/docs/development/server/server-network.md:70
+msgid "后面用哪个就附加哪个。一般来说，只需要域名的信息就行了。"
+msgstr "Attach whichever is needed later. Generally, only domain name information is required."
+
+#: ../../source/docs/development/server/server-network.md:72
+msgid "签发证书pem"
+msgstr "Issue certificate pem"
+
+#: ../../source/docs/development/server/server-network.md:74
+msgid "使用这个指令签发根证书，有效期为10年"
+msgstr "Use this command to issue a root certificate valid for 10 years"
+
+#: ../../source/docs/development/server/server-network.md:78
+msgid "使用这个指令用ca签发非根证书`crt-name.pem`"
+msgstr "Use this command to issue a non-root certificate `crt-name.pem` with ca"
+
+#: ../../source/docs/development/server/server-network.md:82
+msgid "其中，`ca-private-key-name`为根证书的密钥名字。"
+msgstr "Here, `ca-private-key-name` refers to the root certificate's key name."
 
 #: ../../source/docs/development/special_string.md:1
 msgid "特殊字符串字面量"
@@ -1625,16 +1770,64 @@ msgid "[MacOS](https://docs.flutter.cn/get-started/install/macos/desktop)"
 msgstr "[MacOS](https://docs.flutter.dev/get-started/install/macos/desktop)"
 
 #: ../../source/docs/run/build.md:23
-msgid "接下来进入客户端目录安装依赖包"
-msgstr "Next, go to the client directory to install the dependency packages"
+msgid "安装protoc"
+msgstr "Install protoc"
 
-#: ../../source/docs/run/build.md:32 ../../source/docs/run/build.md:51
-msgid "进入客户端目录并运行项目"
-msgstr "Go to the client directory and run the project"
+#: ../../source/docs/run/build.md:25 ../../source/docs/run/build.md:33
+msgid "详情参见[官方文档](https://grpc.io/docs/languages/dart/quickstart/)"
+msgstr ""
+"For details, please refer to the [official documentation](https://grpc.io/docs/languages/dart/quickstart/)"
 
-#: ../../source/docs/run/build.md:49
+#: ../../source/docs/run/build.md:27
+msgid ""
+"从[Github](https://github.com/google/protobuf/releases)下载官方编译版本的`Protobuf`"
+" 它将用于编译`proto`文件"
+msgstr "Download official-compiled version `Protobuf`From [Github](https://github.com/google/protobuf/releases).It will be used to compile `proto` file"
+
+#: ../../source/docs/run/build.md:29
+msgid "将下载的文件解压在任意位置**并添加到环境变量**"
+msgstr "Extract the downloaded files to any location **and add to environment variables**"
+
+#: ../../source/docs/run/build.md:31
+msgid "安装dart的protoc编译插件"
+msgstr "Install the protocol compiler plugin for Dart "
+
+#: ../../source/docs/run/build.md:39
+msgid "将Pub缓存路径添加到环境变量中"
+msgstr "Add the Pub cache path to environment variables"
+
+#: ../../source/docs/run/build.md:41
+#, python-format
+msgid "若你是Windows用户，则默认路径为`C:/Users/%username%/AppData/Local/Pub/Cache/bin`"
+msgstr "If you are a Windows user, the default path is `C:/Users/%username%/AppData/Local/Pub/Cache/bin`"
+
+#: ../../source/docs/run/build.md:43
+msgid "若你是Mac/Linux用户，则应添加`~/.pub-cache/bin`至环境变量"
+msgstr "If you are a Mac/Linux user, add `~/.pub-cache/bin` to environment variables"
+
+#: ../../source/docs/run/build.md:45
+msgid "安装依赖"
+msgstr "Install dependencies"
+
+#: ../../source/docs/run/build.md:52
+msgid "生成代码"
+msgstr "Generate code"
+
+#: ../../source/docs/run/build.md:54
+msgid "在本项目根目录下运行"
+msgstr "Run at the root directory of this project"
+
+#: ../../source/docs/run/build.md:61
+msgid "等待完成后进入客户端目录并运行"
+msgstr "After it is completed, enter the client directory and run it"
+
+#: ../../source/docs/run/build.md:86
 msgid "构建为可执行文件"
 msgstr "Build as an executable file"
+
+#: ../../source/docs/run/build.md:88
+msgid "进入客户端目录并运行项目"
+msgstr "Go to the client directory and run the project"
 
 #: ../../source/docs/run/http_server_argv.md:1
 msgid "http服务器命令行参数"
@@ -1677,7 +1870,6 @@ msgstr "Configuration File Example"
 
 #: ../../source/docs/run/http_server_argv.md:9
 #: ../../source/docs/run/server_argv.md:19
-#, fuzzy
 msgid "配置文件格式支持多样，包括`toml`,`json`,`json5`,`yaml`,`ini`等，请自行选择熟悉的配置文件格式"
 msgstr ""
 "Noto,the supported type of config file is various,including "
@@ -1699,9 +1891,8 @@ msgid "此部分是关于运行该项目的文档"
 msgstr "This section is about the documentation for running this project"
 
 #: ../../source/docs/run/server_argv.md:1
-#, fuzzy
 msgid "服务器命令行参数"
-msgstr "Server Arguments"
+msgstr "Server Command Arguments"
 
 #: ../../source/docs/run/server_argv.md
 msgid "`--test-mode`"
@@ -2161,3 +2352,7 @@ msgstr "Admin has permissions `1 2 3 4 5 11 12`"
 #: ../../source/docs/use/role_permission.md:36
 msgid "Member 拥有权限 `1 2`"
 msgstr "Member has permissions `1 2`"
+
+#~ msgid "接下来进入客户端目录安装依赖包"
+#~ msgstr "Next, go to the client directory to install the dependency packages"
+
