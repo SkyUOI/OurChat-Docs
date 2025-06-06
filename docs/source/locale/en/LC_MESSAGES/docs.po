@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-01 10:37+0800\n"
+"POT-Creation-Date: 2025-06-06 09:21+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../source/docs/deploy/document-deploy.md:1
 msgid "本地文档部署指南"
@@ -1230,11 +1230,19 @@ msgstr "Public Info"
 
 #: ../../source/docs/development/public_info.md:3
 msgid "对于每个个人，信息被分为公有的和私有的。公有信息即意味着可以被任何人访问，不论其是不是本人或好友。数据库中保存了`update_time`和`public_update_time`两者，分别用于表示所有信息最后的更新时间和公有信息最后的更新时间。"
-msgstr "For each individual, information is categorized as public or private.Public information can be accessed by anyone, regardless of whether they are the user themselves or a friend.The database stores both `update_time` and `public_update_time`, representing:update_time: The last update time of all information.public_update_time: The last update time of public information only."
+msgstr ""
+"For each individual, information is categorized as public or "
+"private.Public information can be accessed by anyone, regardless of "
+"whether they are the user themselves or a friend.The database stores both"
+" `update_time` and `public_update_time`, representing:update_time: The "
+"last update time of all information.public_update_time: The last update "
+"time of public information only."
 
 #: ../../source/docs/development/public_info.md:5
 msgid "其中，公有信息列举如下(grpc中的字段名称)，未列出的都是私有信息:"
-msgstr "Public information fields (gRPC field names) are listed below. All non-listed fields are considered private:"
+msgstr ""
+"Public information fields (gRPC field names) are listed below. All non-"
+"listed fields are considered private:"
 
 #: ../../source/docs/development/public_info.md
 msgid "字段"
@@ -1329,7 +1337,9 @@ msgid "优化开发体验"
 msgstr "Optimize Development Experience"
 
 #: ../../source/docs/development/server/basic.md:23
-msgid "由于全部分析索引workspace中的所有crate对您的计算机是一种很大的负担，尤其是您很可能只会在其中几个crate上工作的情况下，我们强烈建议您使用如下配置，在vscode中:"
+msgid ""
+"由于全部分析索引 workspace 中的所有 crate 对您的计算机是一种很大的负担，尤其是您很可能只会在其中几个 crate "
+"上工作的情况下，我们强烈建议您使用如下配置，在 vscode 中:"
 msgstr ""
 "Since analyzing and indexing all crates in the workspace is a heavy "
 "burden on your computer, especially when you are likely to work on only a"
@@ -1616,7 +1626,9 @@ msgstr "SSL/TLS Certificate Generation"
 
 #: ../../source/docs/development/server/server-network.md:6
 msgid "本项目用openssl生成证书生成步骤总体可概括为："
-msgstr "The overall steps for certificate generation using openssl in this project are as: follows"
+msgstr ""
+"The overall steps for certificate generation using openssl in this "
+"project are as: follows"
 
 #: ../../source/docs/development/server/server-network.md:8
 msgid "生成私钥key"
@@ -1624,7 +1636,9 @@ msgstr "Generate private key"
 
 #: ../../source/docs/development/server/server-network.md:10
 msgid "具体而言，可以创建两个文件夹certs和private, certs中存放最后可以使用的文件，private中存放 中间文件。"
-msgstr "Specifically, you can create two folders: certs (for final usable files) and private (for intermediate files)."
+msgstr ""
+"Specifically, you can create two folders: certs (for final usable files) "
+"and private (for intermediate files)."
 
 #: ../../source/docs/development/server/server-network.md:14
 msgid "第一步生成RSA私钥，举例如下"
@@ -1632,11 +1646,15 @@ msgstr "First, generate an RSA private key. Example:"
 
 #: ../../source/docs/development/server/server-network.md:19
 msgid "其中8192为密钥长度，可自行选择。该命令会提示你输入一个密码，请记住他。"
-msgstr "Here, 8192 denotes the key length (customizable). The command will prompt you to enter a password; please remember it."
+msgstr ""
+"Here, 8192 denotes the key length (customizable). The command will prompt"
+" you to enter a password; please remember it."
 
 #: ../../source/docs/development/server/server-network.md:22
 msgid "对于非根证书而言，还需要去除私钥文件的加密保护并输出为新文件，命令举例如下"
-msgstr "For non-root certificates, you need to remove the encryption protection from the private key file and output it to a new file. Example command:"
+msgstr ""
+"For non-root certificates, you need to remove the encryption protection "
+"from the private key file and output it to a new file. Example command:"
 
 #: ../../source/docs/development/server/server-network.md:27
 msgid "依据私钥生成请求文件csr"
@@ -1648,15 +1666,19 @@ msgstr "Example of CSR generation command:"
 
 #: ../../source/docs/development/server/server-network.md:33
 msgid "`crt-name`为证书文件名，一般与``private-key-name``一致。"
-msgstr "The `crt-name` should match the `private-key-name` as the certificate filename."
+msgstr ""
+"The `crt-name` should match the `private-key-name` as the certificate "
+"filename."
 
 #: ../../source/docs/development/server/server-network.md:35
 msgid ""
 "输入后会提示输入一大堆信息。例如国家简码，地区，什么的，如果是根证书，如实填写或者不写都可以。 如果你想要点仪式感，那么就认真写。 "
 "**而如果是非根证书**，那么`Common Name`这个 选项要填域名，其他可以随便填。"
 msgstr ""
-"After entering, you'll be prompted to input various information such as country code and region. For root certificates, you may fill in truthfully or leave blank as desired. If you want a sense of ritual, fill in carefully.
-**For non-root certificates**, the `Common` Name field should be filled with the domain name, while others can be filled随意."
+"After entering, you'll be prompted to input various information such as "
+"country code and region. For root certificates, you may fill in "
+"truthfully or leave blank as desired. If you want a sense of ritual, fill"
+" in carefully"
 
 #: ../../source/docs/development/server/server-network.md:41
 msgid "这一步可能需要输入你刚才设置的pem密码。"
@@ -1664,11 +1686,15 @@ msgstr "This step may require entering the pem password you just set."
 
 #: ../../source/docs/development/server/server-network.md:43
 msgid "如果非根证书，那么此时嵌入域名信息"
-msgstr "If it's a non-root certificate, embed the domain name information at this point."
+msgstr ""
+"If it's a non-root certificate, embed the domain name information at this"
+" point."
 
 #: ../../source/docs/development/server/server-network.md:45
 msgid "如果是非根证书，请创建一个文件 `private/crt-name.dns.ext` ， 然后粘贴以下信息："
-msgstr "For non-root certificates, create a file `private/crt-name.dns.ext` and paste the following information:"
+msgstr ""
+"For non-root certificates, create a file `private/crt-name.dns.ext` and "
+"paste the following information:"
 
 #: ../../source/docs/development/server/server-network.md:58
 msgid "后面会使用这个文件。"
@@ -1676,11 +1702,16 @@ msgstr "This file will be used later."
 
 #: ../../source/docs/development/server/server-network.md:60
 msgid "如果你没有域名，而是持有一个固定IP，那么使用如下文件，请创建一个文件 `private/crt-name.ip.ext` ，然后粘贴以下信息："
-msgstr "If you don't have a domain name but have a fixed IP, use the following file. Create a file `private/crt-name.ip.ext` and paste the following information:"
+msgstr ""
+"If you don't have a domain name but have a fixed IP, use the following "
+"file. Create a file `private/crt-name.ip.ext` and paste the following "
+"information:"
 
 #: ../../source/docs/development/server/server-network.md:70
 msgid "后面用哪个就附加哪个。一般来说，只需要域名的信息就行了。"
-msgstr "Attach whichever is needed later. Generally, only domain name information is required."
+msgstr ""
+"Attach whichever is needed later. Generally, only domain name information"
+" is required."
 
 #: ../../source/docs/development/server/server-network.md:72
 msgid "签发证书pem"
@@ -1776,17 +1807,23 @@ msgstr "Install protoc"
 #: ../../source/docs/run/build.md:25 ../../source/docs/run/build.md:33
 msgid "详情参见[官方文档](https://grpc.io/docs/languages/dart/quickstart/)"
 msgstr ""
-"For details, please refer to the [official documentation](https://grpc.io/docs/languages/dart/quickstart/)"
+"For details, please refer to the [official "
+"documentation](https://grpc.io/docs/languages/dart/quickstart/)"
 
 #: ../../source/docs/run/build.md:27
 msgid ""
 "从[Github](https://github.com/google/protobuf/releases)下载官方编译版本的`Protobuf`"
 " 它将用于编译`proto`文件"
-msgstr "Download official-compiled version `Protobuf`From [Github](https://github.com/google/protobuf/releases).It will be used to compile `proto` file"
+msgstr ""
+"Download official-compiled version `Protobuf`From "
+"[Github](https://github.com/google/protobuf/releases).It will be used to "
+"compile `proto` file"
 
 #: ../../source/docs/run/build.md:29
 msgid "将下载的文件解压在任意位置**并添加到环境变量**"
-msgstr "Extract the downloaded files to any location **and add to environment variables**"
+msgstr ""
+"Extract the downloaded files to any location **and add to environment "
+"variables**"
 
 #: ../../source/docs/run/build.md:31
 msgid "安装dart的protoc编译插件"
@@ -1799,11 +1836,15 @@ msgstr "Add the Pub cache path to environment variables"
 #: ../../source/docs/run/build.md:41
 #, python-format
 msgid "若你是Windows用户，则默认路径为`C:/Users/%username%/AppData/Local/Pub/Cache/bin`"
-msgstr "If you are a Windows user, the default path is `C:/Users/%username%/AppData/Local/Pub/Cache/bin`"
+msgstr ""
+"If you are a Windows user, the default path is "
+"`C:/Users/%username%/AppData/Local/Pub/Cache/bin`"
 
 #: ../../source/docs/run/build.md:43
 msgid "若你是Mac/Linux用户，则应添加`~/.pub-cache/bin`至环境变量"
-msgstr "If you are a Mac/Linux user, add `~/.pub-cache/bin` to environment variables"
+msgstr ""
+"If you are a Mac/Linux user, add `~/.pub-cache/bin` to environment "
+"variables"
 
 #: ../../source/docs/run/build.md:45
 msgid "安装依赖"

@@ -20,15 +20,12 @@
 
 ## 优化开发体验
 
-由于全部分析索引workspace中的所有crate对您的计算机是一种很大的负担，尤其是您很可能只会在其中几个crate上工作的情况下，我们强烈建议您使用如下配置，在vscode中:
+由于全部分析索引 workspace 中的所有 crate 对您的计算机是一种很大的负担，尤其是您很可能只会在其中几个 crate 上工作的情况下，我们强烈建议您使用如下配置，在 vscode 中:
 
 ```json5
 {
-    "rust-analyzer.files.exclude": [
-        "server/migration" // example
-        // IMPORTANT! If you don't want to develop it, you SHOULD disable it.
-        // Because it will include a UI framework which will cost you a lot of memory.
-        "server/server_manager_gui" 
-    ]
+  "rust-analyzer.files.exclude": [
+    "server/migration", // example
+  ],
 }
 ```
