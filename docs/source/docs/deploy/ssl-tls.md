@@ -59,3 +59,16 @@ server {
 Ourchat Server 本身也可以配置证书加密，而不需要依赖 nginx，操作步骤如下：
 
 - 使用[certbot](https://certbot.eff.org/)获取证书
+
+- 根据证书设置`ourchat.toml`
+
+将`tls.enalbe`设置为`true`，
+并按照以下表格设置：
+|字段|用途|
+|--|--|
+|`tls.server_tls_cert_path`|服务端证书的`.pem`文件路径。|
+|`tls.server_key_cert_path`|服务端证书的`.key`文件路径。|
+|`client_tls_cert_path`|客户端证书的`.pem`文件路径。|
+|`client_key_cert_path`|客户端证书的`.key`文件路径。|
+|`ca_tls_cert_path`|服务端证书的根证书的`.pem`文件路径。|
+|`client_ca_tls_cert_path`|客户端证书的根证书的`.pem`文件路径。|
