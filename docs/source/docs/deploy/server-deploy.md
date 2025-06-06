@@ -5,13 +5,13 @@
 
 ## Docker(推荐)
 
-对于该项目，我们提供了两种在生产环境中使用的 docker 镜像，一种基于debian，另一种基于alpine, alpine系列镜像适合硬盘空间比较宝贵的场景。
+对于该项目，我们提供了两种在生产环境中使用的 docker 镜像，一种基于 debian，另一种基于 alpine, alpine 系列镜像适合硬盘空间比较宝贵的场景。
 
-除去操作系统的区别外，还有几种不同的tag供选择：
+除去操作系统的区别外，还有几种不同的 tag 供选择：
 
-- nightly: 在main分支上构建的最新版本，每天构建一次，可能不稳定，但具有最新的更改
+- nightly: 在 main 分支上构建的最新版本，每天构建一次，可能不稳定，但具有最新的更改
 - latest: 最新的稳定版本
-- 其余各个版本的镜像，例如v0.1.0.beta之类，代表特定版本的镜像
+- 其余各个版本的镜像，例如 v0.1.0.beta 之类，代表特定版本的镜像
 
 以下是具体操作步骤：
 
@@ -31,7 +31,7 @@ cd docker && docker compose -f compose.debian.yml up -d
 
 具体有以下几步:
 
-(如果你是用的debian系列镜像，下文的`compose.yml`全都指的是`compose.debian.yml`)
+(如果你是用的 debian 系列镜像，下文的`compose.yml`全都指的是`compose.debian.yml`)
 
 - 修改`compose.yml`中的`PORTGRES_PASSWORD`的`123456`为你自己的强密码
 - 修改`docker/config/redis.conf`中的`123456`为你自己的强密码
@@ -39,7 +39,7 @@ cd docker && docker compose -f compose.debian.yml up -d
 - 修改`docker/config/database.toml`中的密码为改后的 PostgreSQL 密码
 - 修改`docker/config/redis.toml`中的密码为改后的 Redis 密码
 - 修改`docker/config/rabbitmq.toml`中的密码为改后的 Rabbitmq 密码
-- 再次运行你用于启动docker的环境的命令
+- 再次运行你用于启动 docker 的环境的命令
 
 完成这几步之后，你就成功部署了该项目。
 
@@ -84,3 +84,7 @@ cd server && cargo build --release
 这一步请参考[服务器参数](../run/server_argv.md)进行运行，可执行文件位于`target/release/server`
 
 请注意服务器密码等依然需要修改!
+
+- SSL/TLS 加密
+
+见[SSL/TLS](../deploy/ssl-tls.md)
