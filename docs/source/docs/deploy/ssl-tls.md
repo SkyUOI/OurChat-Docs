@@ -29,6 +29,7 @@ server {
     }
 
     http2 on;
+    keepalive_timeout 20m;
 
     listen 7777 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/xxx.com/fullchain.pem; # managed by Certbot
@@ -66,14 +67,14 @@ Ourchat Server 本身也可以配置证书加密，而不需要依赖 nginx，�
 
 并按照以下表格设置：
 
-| 字段                           | 用途                                 |
-| -----------------------------  | ------------------------------------ |
-| `tls.server_tls_cert_path`     | 服务端证书的`.pem`文件路径。         |
-| `tls.server_key_cert_path`     | 服务端证书的`.key`文件路径。         |
-| `tls.client_tls_cert_path`     | 客户端证书的`.pem`文件路径。         |
-| `tls.client_key_cert_path`     | 客户端证书的`.key`文件路径。         |
-| `tls.ca_tls_cert_path`         | 服务端证书的根证书的`.pem`文件路径。 |
-| `tls.client_ca_tls_cert_path`  | 客户端证书的根证书的`.pem`文件路径。 |
+| 字段                          | 用途                                 |
+| ----------------------------- | ------------------------------------ |
+| `tls.server_tls_cert_path`    | 服务端证书的`.pem`文件路径。         |
+| `tls.server_key_cert_path`    | 服务端证书的`.key`文件路径。         |
+| `tls.client_tls_cert_path`    | 客户端证书的`.pem`文件路径。         |
+| `tls.client_key_cert_path`    | 客户端证书的`.key`文件路径。         |
+| `tls.ca_tls_cert_path`        | 服务端证书的根证书的`.pem`文件路径。 |
+| `tls.client_ca_tls_cert_path` | 客户端证书的根证书的`.pem`文件路径。 |
 
 参数在`server`和`http_server`中同时存在，可以根据需要来启用 TLS。
 
