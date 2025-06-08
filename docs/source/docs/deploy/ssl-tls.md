@@ -29,7 +29,8 @@ server {
     }
 
     http2 on;
-    keepalive_timeout 20m;
+    keepalive_timeout 1200s;
+    grpc_read_timeout 1200s;
 
     listen 7777 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/xxx.com/fullchain.pem; # managed by Certbot
