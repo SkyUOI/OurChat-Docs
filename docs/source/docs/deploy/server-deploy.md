@@ -2,7 +2,7 @@
 
 - [Docker 部署](#docker推荐)
 - [手动部署](#手动部署)
-- [与 nginx 集成](#与nginx集成)
+- [与 nginx 集成](#与-nginx-集成)
 
 ## Docker(推荐)
 
@@ -118,7 +118,7 @@ server {
 }
 ```
 
-然而，ourchat 有部分功能基于长时间打开的流，由于 nginx 固定时间终止未使用流的特性可能带来不便，故建议调高至 10min-1h 之间，给出如下更新配置：
+然而，ourchat 有部分功能基于长时间打开的流，由于 nginx 固定时间终止未使用流的特性可能带来不便，故建议调高至 10min-1h 之间，给出如下更新配置。**注意：该设置几乎在任何情况下都必须打开，否则客户端难以正常工作**：
 
 ```nginx
 server {
@@ -129,7 +129,8 @@ server {
     }
 
     http2 on;
-    keepalive_timeout 20m; # Added
+    keepalive_timeout 1200s; # Added
+    grpc_read_timeout 1200s; # Added
 
     listen 7777;
 }
