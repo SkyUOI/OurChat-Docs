@@ -10,7 +10,7 @@
 
 负责处理 HTTP 请求,如邮件验证等
 
-实验性matrix支持也由该节点负责
+实验性 matrix 支持也由该节点负责
 
 - 负载均衡器：LoadBalancer
 

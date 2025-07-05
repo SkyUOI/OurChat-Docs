@@ -20,24 +20,24 @@
 
 ### AuthService
 
-该Service用于完成服务器中的鉴权操作
+该 Service 用于完成服务器中的鉴权操作
 
 #### Register
 
-用于注册一个用户并返回其token
+用于注册一个用户并返回其 token
 
 错误:
 
-| CodeId | CodeName       | Detail              | meaning        |
-| :----- | :------------- | :------------------ | :------------- |
-| 6      | ALREADY_EXISTS | User Already Exists | 该邮箱已被注册 |
-| 3      | INVALID_ARGUMENT | Password Is Not Strong Enough | 密码不够强 |
-| 3      | INVALID_ARGUMENT | Username Is Invalid | 用户名非法，例如过长 |
-| 3      | INVALID_ARGUMENT | Email Address Is Invalid |不是合法的邮箱地址 |
+| CodeId | CodeName         | Detail                        | meaning              |
+| :----- | :--------------- | :---------------------------- | :------------------- |
+| 6      | ALREADY_EXISTS   | User Already Exists           | 该邮箱已被注册       |
+| 3      | INVALID_ARGUMENT | Password Is Not Strong Enough | 密码不够强           |
+| 3      | INVALID_ARGUMENT | Username Is Invalid           | 用户名非法，例如过长 |
+| 3      | INVALID_ARGUMENT | Email Address Is Invalid      | 不是合法的邮箱地址   |
 
 #### Auth
 
-用于登录一个已经存在的用户并返回其token
+用于登录一个已经存在的用户并返回其 token
 
 错误:
 
@@ -61,7 +61,7 @@
 
 ### BasicService
 
-该Service用于完成服务器中不需要额外权限的操作
+该 Service 用于完成服务器中不需要额外权限的操作
 
 #### GetServerInfo
 
@@ -71,7 +71,7 @@
 
 #### GetId
 
-通过帐号ocid获取某个帐号的id
+通过帐号 ocid 获取某个帐号的 id
 
 错误:
 
@@ -85,30 +85,32 @@
 
 错误:
 
-| CodeId | CodeName  | Detail         | meaning      |
-| :----- | :-------- | :------------- | :----------- |
-| 13     | INTERNAL    |Server Error | 服务器内部错误 |
+| CodeId | CodeName | Detail       | meaning        |
+| :----- | :------- | :----------- | :------------- |
+| 13     | INTERNAL | Server Error | 服务器内部错误 |
 
 ### OurChatService
 
-该Service用于完成绝大部分操作，且所有操作都需要额外附带通过[AuthService](#authservice)中调用获取的token
+该 Service 用于完成绝大部分操作，且所有操作都需要额外附带通过[AuthService](#authservice)中调用获取的 token
 
-提供该token的方式为添加请求头: `token: <token>`
+提供该 token 的方式为添加请求头: `Authorization: Bearer <token>`
 
-token本身是以`JWT`的形式传递的，所以你可以解读token，token中数据格式为:
+其遵循`RFC 6750`规范，`Bearer`为目前支持的唯一验证类型。
+
+token 本身是以`JWT`的形式传递的，所以你可以解读 token，token 中数据格式为:
 
 ```json
 {
-    "id": 1, // account id(not ocid)
-    "exp": 1600000000 // expiration time, this is unix timestamp
+  "id": 1, // account id(not ocid)
+  "exp": 1600000000 // expiration time, this is unix timestamp
 }
 ```
 
-一旦token过期，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Expired`
+一旦 token 过期，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Expired`
 
-如果token不合法，例如不是JWT或不包含所需要的字段，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Invalid`
+如果 token 不合法，例如不是 JWT 或不包含所需要的字段，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Invalid`
 
-如果未提供token，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Missing`
+如果未提供 token，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Missing`
 
 #### GetAccountInfo
 
@@ -120,12 +122,12 @@ token本身是以`JWT`的形式传递的，所以你可以解读token，token中
 
 #### SetSelfInfo
 
-| CodeId | CodeName         | Detail        | meaning                       |
-| :----- | :--------------- | :------------ | :---------------------------- |
-| 6      | ALREADY_EXISTS   | Conflict      | 信息冲突(如:新的 ocid 被占用) |
-| 3      | INVALID_ARGUMENT | Ocid Too Long | 新的 ocid 太长                |
-| 3      | INVALID_ARGUMENT | Status Too Long | 新的 ocid 太长                |
-| 3      | INVALID_ARGUMENT | Username Is Invalid | 用户名非法，例如过长或为空  |
+| CodeId | CodeName         | Detail              | meaning                       |
+| :----- | :--------------- | :------------------ | :---------------------------- |
+| 6      | ALREADY_EXISTS   | Conflict            | 信息冲突(如:新的 ocid 被占用) |
+| 3      | INVALID_ARGUMENT | Ocid Too Long       | 新的 ocid 太长                |
+| 3      | INVALID_ARGUMENT | Status Too Long     | 新的 ocid 太长                |
+| 3      | INVALID_ARGUMENT | Username Is Invalid | 用户名非法，例如过长或为空    |
 
 #### FetchMsgs
 
