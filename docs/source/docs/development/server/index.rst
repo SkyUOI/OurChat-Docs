@@ -8,6 +8,7 @@
    
    basic
    server-develop
+   guide
    server-database
    server-design
    server-network
