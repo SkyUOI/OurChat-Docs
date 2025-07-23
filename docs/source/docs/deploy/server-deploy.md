@@ -3,6 +3,7 @@
 - [Docker 部署](#docker推荐)
 - [手动部署](#手动部署)
 - [与 nginx 集成](#与-nginx-集成)
+- [SSL/TLS 加密](#ssltls-加密)
 
 ## Docker(推荐)
 
@@ -86,10 +87,6 @@ cd server && cargo build --release
 
 请注意服务器密码等依然需要修改!
 
-- SSL/TLS 加密
-
-见[SSL/TLS](../deploy/ssl-tls.md)
-
 ## 与 nginx 集成
 
 由于 grpc 基于 http2，故需要启用`http2 on;`参数，同时，较新版本的 nginx 提供了`grpc_pass`用于转发流量，故而可以给出如下示例配置：
@@ -145,3 +142,7 @@ server {
     listen 7778; # managed by Certbot
 }
 ```
+
+## SSL/TLS 加密
+
+见[SSL/TLS](../deploy/ssl-tls.md)
