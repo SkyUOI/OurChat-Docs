@@ -6,7 +6,7 @@
 
 ### 运行集成测试
 
-首先要设置环境变量，为了方便起见，我们支持`.env`的方式来设置环境变量，提供了一个[简单模板](https://github.com/SkyUOI/OurChat/blob/main/.env.template)，或者可以通过设置`OURCHAT_TEST_CONFIG_DIR`变量指向存有配置文件的目录。然后如正常 rust 项目运行`cargo test`即可运行测试
+首先要设置环境变量，为了方便起见，我们支持`.env`的方式来设置环境变量，提供了一个[简单模板](https://github.com/SkyUOI/OurChat/blob/main/.env.template)，或者可以通过设置`OURCHAT_CONFIG_FILE`变量指向存有配置文件的目录。然后如正常 rust 项目运行`cargo test`即可运行测试
 
 ## 文档
 

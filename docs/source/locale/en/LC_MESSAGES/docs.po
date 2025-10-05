@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-06 09:21+0800\n"
+"POT-Creation-Date: 2025-10-05 15:24+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -38,15 +38,17 @@ msgstr "Python: python3 or higher"
 
 #: ../../source/docs/deploy/document-deploy.md:8
 msgid "Python包管理器：uv"
-msgstr ""
+msgstr "Python Package Manager: uv"
 
 #: ../../source/docs/deploy/document-deploy.md:10
 msgid "首先，请生成虚拟环境并安装相关依赖："
 msgstr ""
+"First, generate a virtual environment and install the required "
+"dependencies:"
 
 #: ../../source/docs/deploy/document-deploy.md:16
 msgid "然后你需要激活虚拟环境。"
-msgstr ""
+msgstr "Then you need to activate the virtual environment."
 
 #: ../../source/docs/deploy/document-deploy.md:18
 msgid "生成文档"
@@ -135,125 +137,133 @@ msgstr "[Docker Deployment](#docker推荐)"
 msgid "[手动部署](#手动部署)"
 msgstr "[Manual Deployment](#手动部署)"
 
+#: ../../source/docs/deploy/server-deploy.md:5
+msgid "[与 nginx 集成](#与-nginx-集成)"
+msgstr "[Integration with Nginx](#与-nginx-集成)"
+
 #: ../../source/docs/deploy/server-deploy.md:6
+msgid "[SSL/TLS 加密](#ssltls-加密)"
+msgstr "[SSL/TLS Encryption](#ssltls-加密)"
+
+#: ../../source/docs/deploy/server-deploy.md:8
 msgid "Docker(推荐)"
 msgstr "Docker (Recommended)"
 
-#: ../../source/docs/deploy/server-deploy.md:8
+#: ../../source/docs/deploy/server-deploy.md:10
 msgid ""
-"对于该项目，我们提供了两种在生产环境中使用的 docker 镜像，一种基于debian，另一种基于alpine, "
-"alpine系列镜像适合硬盘空间比较宝贵的场景。"
+"对于该项目，我们提供了两种在生产环境中使用的 docker 镜像，一种基于 debian，另一种基于 alpine, alpine "
+"系列镜像适合硬盘空间比较宝贵的场景。"
 msgstr ""
 "For this project, we provide two docker images for use in production "
 "environments: one based on Debian and another based on Alpine. The Alpine"
 " series images are suitable for scenarios where disk space is precious."
 
-#: ../../source/docs/deploy/server-deploy.md:10
-msgid "除去操作系统的区别外，还有几种不同的tag供选择："
+#: ../../source/docs/deploy/server-deploy.md:12
+msgid "除去操作系统的区别外，还有几种不同的 tag 供选择："
 msgstr ""
 "Apart from the operating system differences, there are several different "
 "tags to choose from:"
 
-#: ../../source/docs/deploy/server-deploy.md:12
-msgid "nightly: 在main分支上构建的最新版本，每天构建一次，可能不稳定，但具有最新的更改"
+#: ../../source/docs/deploy/server-deploy.md:14
+msgid "nightly: 在 main 分支上构建的最新版本，每天构建一次，可能不稳定，但具有最新的更改"
 msgstr ""
 "nightly: The latest version built on the main branch, built once a day, "
 "may be unstable but has the latest changes"
 
-#: ../../source/docs/deploy/server-deploy.md:13
+#: ../../source/docs/deploy/server-deploy.md:15
 msgid "latest: 最新的稳定版本"
 msgstr "latest: The latest stable version"
 
-#: ../../source/docs/deploy/server-deploy.md:14
-msgid "其余各个版本的镜像，例如v0.1.0.beta之类，代表特定版本的镜像"
+#: ../../source/docs/deploy/server-deploy.md:16
+msgid "其余各个版本的镜像，例如 v0.1.0.beta 之类，代表特定版本的镜像"
 msgstr ""
 "Other version images, such as v0.1.0.beta, represent images of specific "
 "versions"
 
-#: ../../source/docs/deploy/server-deploy.md:16
+#: ../../source/docs/deploy/server-deploy.md:18
 msgid "以下是具体操作步骤："
 msgstr "Here are the specific steps to follow:"
 
-#: ../../source/docs/deploy/server-deploy.md:18
+#: ../../source/docs/deploy/server-deploy.md:20
 msgid "alpine"
 msgstr "alpine"
 
-#: ../../source/docs/deploy/server-deploy.md:24
+#: ../../source/docs/deploy/server-deploy.md:26
 msgid "debian"
 msgstr "debian"
 
-#: ../../source/docs/deploy/server-deploy.md:30
+#: ../../source/docs/deploy/server-deploy.md:32
 msgid "这一步完成只是创建了一个最基本的环境，但是安全性还远远没有达到，为了保证安全性，你需要修改 PostgreSQL 和 Redis 的密码。"
 msgstr ""
 "Completing this step only creates a very basic environment, but the "
 "security is far from adequate. To ensure security, you need to change the"
 " passwords for PostgreSQL and Redis."
 
-#: ../../source/docs/deploy/server-deploy.md:32
+#: ../../source/docs/deploy/server-deploy.md:34
 msgid "具体有以下几步:"
 msgstr "Here are the specific steps:"
 
-#: ../../source/docs/deploy/server-deploy.md:34
-msgid "(如果你是用的debian系列镜像，下文的`compose.yml`全都指的是`compose.debian.yml`)"
+#: ../../source/docs/deploy/server-deploy.md:36
+msgid "(如果你是用的 debian 系列镜像，下文的`compose.yml`全都指的是`compose.debian.yml`)"
 msgstr ""
 "(If you are using the Debian series image, all references to "
 "`compose.yml` below refer to `compose.debian.yml`)"
 
-#: ../../source/docs/deploy/server-deploy.md:36
+#: ../../source/docs/deploy/server-deploy.md:38
 msgid "修改`compose.yml`中的`PORTGRES_PASSWORD`的`123456`为你自己的强密码"
 msgstr ""
 "Change the `123456` for `POSTGRES_PASSWORD` in `compose.yml` to your own "
 "strong password"
 
-#: ../../source/docs/deploy/server-deploy.md:37
+#: ../../source/docs/deploy/server-deploy.md:39
 msgid "修改`docker/config/redis.conf`中的`123456`为你自己的强密码"
 msgstr ""
 "Change the `123456` in `docker/config/redis.conf` to your own strong "
 "password"
 
-#: ../../source/docs/deploy/server-deploy.md:38
+#: ../../source/docs/deploy/server-deploy.md:40
 msgid "修改`compose.yml`中的`RABBITMQ_DEFAULT_PASS`的`123456`为你自己的强密码"
 msgstr ""
 "Change the `123456` for `RABBITMQ_DEFAULT_PASS` in `compose.yml` to your "
 "own strong password"
 
-#: ../../source/docs/deploy/server-deploy.md:39
+#: ../../source/docs/deploy/server-deploy.md:41
 msgid "修改`docker/config/database.toml`中的密码为改后的 PostgreSQL 密码"
 msgstr ""
 "Change the password in `docker/config/database.toml` to the new "
 "PostgreSQL password"
 
-#: ../../source/docs/deploy/server-deploy.md:40
+#: ../../source/docs/deploy/server-deploy.md:42
 msgid "修改`docker/config/redis.toml`中的密码为改后的 Redis 密码"
 msgstr ""
 "Change the password in `docker/config/redis.toml` to the new Redis "
 "password"
 
-#: ../../source/docs/deploy/server-deploy.md:41
+#: ../../source/docs/deploy/server-deploy.md:43
 msgid "修改`docker/config/rabbitmq.toml`中的密码为改后的 Rabbitmq 密码"
 msgstr ""
 "Change the password in `docker/config/rabbitmq.toml` to the new Rabbitmq "
 "password"
 
-#: ../../source/docs/deploy/server-deploy.md:42
-msgid "再次运行你用于启动docker的环境的命令"
+#: ../../source/docs/deploy/server-deploy.md:44
+msgid "再次运行你用于启动 docker 的环境的命令"
 msgstr "Run your docker environment startup command again"
 
-#: ../../source/docs/deploy/server-deploy.md:44
+#: ../../source/docs/deploy/server-deploy.md:46
 msgid "完成这几步之后，你就成功部署了该项目。"
 msgstr "After completing these steps, you have successfully deployed the project."
 
-#: ../../source/docs/deploy/server-deploy.md:46
+#: ../../source/docs/deploy/server-deploy.md:48
 msgid "对于容器中的数据，我们将其映射在了`data`中，你可以随时保存数据"
 msgstr ""
 "For data in the container, we have mapped it to `data`, so you can save "
 "data at any time"
 
-#: ../../source/docs/deploy/server-deploy.md:48
+#: ../../source/docs/deploy/server-deploy.md:50
 msgid "手动部署"
 msgstr "Manual Deployment"
 
-#: ../../source/docs/deploy/server-deploy.md:50
+#: ../../source/docs/deploy/server-deploy.md:52
 msgid "对于性能不高和未安装 docker 的计算机，我们也提供了手动部署的文档，关于这一点，建议部署在 linux 环境，其他环境未经过严格的测试。"
 msgstr ""
 "For computers with low performance and no Docker installed, we also "
@@ -261,11 +271,11 @@ msgstr ""
 "to deploy in a Linux environment, as other environments have not been "
 "rigorously tested."
 
-#: ../../source/docs/deploy/server-deploy.md:52
+#: ../../source/docs/deploy/server-deploy.md:54
 msgid "安装 PostgreSQL"
 msgstr "install PostgreSQL"
 
-#: ../../source/docs/deploy/server-deploy.md:54
+#: ../../source/docs/deploy/server-deploy.md:56
 msgid ""
 "postgres 版本为 17（如果该文档未及时更新可以查看 "
 "[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的"
@@ -276,11 +286,11 @@ msgstr ""
 "[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)"
 " file)"
 
-#: ../../source/docs/deploy/server-deploy.md:56
+#: ../../source/docs/deploy/server-deploy.md:58
 msgid "安装 redis"
 msgstr "Install Redis"
 
-#: ../../source/docs/deploy/server-deploy.md:58
+#: ../../source/docs/deploy/server-deploy.md:60
 msgid ""
 "Redis 版本为 7（如果该文档未及时更新可以查看 "
 "[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)中的"
@@ -291,53 +301,222 @@ msgstr ""
 "in[compose.yml](https://github.com/SkyUOI/OurChat/blob/main/docker/compose.yml)"
 " file)"
 
-#: ../../source/docs/deploy/server-deploy.md:60
+#: ../../source/docs/deploy/server-deploy.md:62
 msgid "安装 ourchat server"
 msgstr "Install OurChat server"
 
-#: ../../source/docs/deploy/server-deploy.md:62
+#: ../../source/docs/deploy/server-deploy.md:64
 msgid "此处存在两种备选的方案:"
 msgstr "There are two alternative options here:"
 
-#: ../../source/docs/deploy/server-deploy.md:64
+#: ../../source/docs/deploy/server-deploy.md:66
 msgid "1.(推荐)从 github release 下载最新的 linux 编译结果，如果遇到 CPU 架构和其他兼容性问题，可能需要手动编译，参见下一节"
 msgstr ""
 "1. (Recommended) Download the latest Linux compilation results from the "
 "GitHub release. If you encounter CPU architecture and other compatibility"
 " issues, manual compilation may be necessary, see the following section"
 
-#: ../../source/docs/deploy/server-deploy.md:66
+#: ../../source/docs/deploy/server-deploy.md:68
 msgid "2.手动编译"
 msgstr "2. Manual Compilation"
 
-#: ../../source/docs/deploy/server-deploy.md:68
+#: ../../source/docs/deploy/server-deploy.md:70
 msgid "拉取源代码:"
 msgstr "Pull the source code:"
 
-#: ../../source/docs/deploy/server-deploy.md:74
+#: ../../source/docs/deploy/server-deploy.md:76
 msgid "安装 rust 工具链"
 msgstr "Install the Rust toolchain"
 
-#: ../../source/docs/deploy/server-deploy.md:76
+#: ../../source/docs/deploy/server-deploy.md:78
 msgid "编译项目"
 msgstr "Compile the project"
 
-#: ../../source/docs/deploy/server-deploy.md:82
+#: ../../source/docs/deploy/server-deploy.md:84
 #: ../../source/docs/run/build.md:69
 msgid "运行项目"
 msgstr "Run the project"
 
-#: ../../source/docs/deploy/server-deploy.md:84
+#: ../../source/docs/deploy/server-deploy.md:86
 msgid "这一步请参考[服务器参数](../run/server_argv.md)进行运行，可执行文件位于`target/release/server`"
 msgstr ""
 "Please refer to the [Server Arguments](../run/server_argv.md) for this "
 "step, and the executable file is located at `target/release/server`"
 
-#: ../../source/docs/deploy/server-deploy.md:86
+#: ../../source/docs/deploy/server-deploy.md:88
 msgid "请注意服务器密码等依然需要修改!"
 msgstr ""
 "Please note that server passwords and other settings still need to be "
 "modified!"
+
+#: ../../source/docs/deploy/server-deploy.md:90
+msgid "与 nginx 集成"
+msgstr "Being integrated with nginx"
+
+#: ../../source/docs/deploy/server-deploy.md:92
+msgid ""
+"由于 grpc 基于 http2，故需要启用`http2 on;`参数，同时，较新版本的 nginx "
+"提供了`grpc_pass`用于转发流量，故而可以给出如下示例配置："
+msgstr "Due to the fact that grpc is based on http2, the `http2 on;` parameter is enabled, and newer versions of nginx provide the `grpc_pass` parameter to forward traffic, so the following example configuration is provided:"
+
+#: ../../source/docs/deploy/server-deploy.md:108
+msgid ""
+"然而，ourchat 有部分功能基于长时间打开的流，由于 nginx 固定时间终止未使用流的特性可能带来不便，故建议调高至 10min-1h "
+"之间，给出如下更新配置。**注意：该设置几乎在任何情况下都必须打开，否则客户端难以正常工作**："
+msgstr "However, OurChat has some functions based on long-term open streams, due to the fixed time termination of unused streams by nginx, which may cause inconvenience. Therefore, it is recommended to increase it to between 10 minutes and 1 hour. The following updated configuration is provided. **Note: This setting must be enabled in almost all cases, otherwise the client may not work properly**:"
+
+#: ../../source/docs/deploy/server-deploy.md:126
+msgid "SSL/TLS 加密"
+msgstr "SSL/TLS Encryption"
+
+#: ../../source/docs/deploy/server-deploy.md:128
+msgid "见[SSL/TLS](../deploy/ssl-tls.md)"
+msgstr "Please see [SSL/TLS](../deploy/ssl-tls.md)"
+
+#: ../../source/docs/deploy/ssl-tls.md:1
+msgid "为服务器设置 SSL/TLS 证书"
+msgstr "Set SSL/TLS Certificate for Server"
+
+#: ../../source/docs/deploy/ssl-tls.md:3
+msgid ""
+"在一个规模不大或是内网中的服务器，通常不需要设置 SSL/TLS 证书。然而，如果你正在设置一个公共的服务器，设置一个 SSL/TLS "
+"证书是很有必要的，这可以有效防止一些恶意的攻击。"
+msgstr "In a small-scale or intranet server, it is usually not necessary to set up an SSL/TLS certificate. However, if you are setting up a public server, it is very necessary to set up an SSL/TLS certificate, which can effectively prevent some malicious attacks."
+
+#: ../../source/docs/deploy/ssl-tls.md:5
+msgid ""
+"首先，你需要一个可用的证书，你可以选择[Let's "
+"Encrypt](https://letsencrypt.org/)的免费证书，也可以选择其他的商业证书。"
+msgstr "First, you need an available certificate. You can choose a free certificate"
+" from [Let's Encrypt](https://letsencrypt.org/) or other commercial certificates."
+
+#: ../../source/docs/deploy/ssl-tls.md:7
+msgid "接下来，为服务器配置 SSL/TLS 加密有两种方法："
+msgstr "In the next step, there are two ways to configure SSL/TLS encryption:"
+
+#: ../../source/docs/deploy/ssl-tls.md:9
+msgid "与现有的代理服务结合(Recommended)"
+msgstr "Combine with existing proxy services (Recommended)"
+
+#: ../../source/docs/deploy/ssl-tls.md:11
+msgid ""
+"下面以[nginx](https://www.nginx.com/)+[Let's "
+"Encrypt](https://letsencrypt.org/)为例，配置 nginx 的 SSL/TLS 加密:"
+msgstr "In the following, we use [nginx](https://www.nginx.com/) and [Let's Encrypt](https://letsencrypt.org/) as an example to configure nginx's SSL/TLS encryption:"
+
+#: ../../source/docs/deploy/ssl-tls.md:13
+msgid "使用[certbot](https://certbot.eff.org/)安装证书"
+msgstr "Use [certbot](https://certbot.eff.org/) to install a certificate"
+
+#: ../../source/docs/deploy/ssl-tls.md:15
+msgid "修改 docker 服务映射到的端口（optional）"
+msgstr "Change the port mapped by the docker service (optional)"
+
+#: ../../source/docs/deploy/ssl-tls.md:17
+msgid "修改`docker/compose.yml`的`port`，例如将`7777:7777`修改为`17777:7777`，将端口映射到本地的`17777`端口"
+msgstr "Modify the `port` in `docker/compose.yml`, for example, change `7777:7777` to `17777:7777`, mapping the port to the local `17777` port"
+
+#: ../../source/docs/deploy/ssl-tls.md:19
+#, python-brace-format
+msgid "您可能需要在`/etc/docker/daemon.json`加入`{\"iptables\":false}`来禁用`iptables`，同时可能需要`ufw`之类的软件来帮助禁用`17777`端口暴露到公网。"
+msgstr "You may need to add `{\"iptables\":false}` in `/etc/docker/daemon.json` to disable `iptables`, and you may also need software like `ufw` to help disable the exposure of port `17777` to the public network."
+
+#: ../../source/docs/deploy/ssl-tls.md:21
+msgid "在`nginx.conf`中加入类似以下配置:"
+msgstr "Add the following configuration to `nginx.conf`:"
+
+#: ../../source/docs/deploy/ssl-tls.md:43
+msgid ""
+"从而将外部的流量转发到内部的端口，配合上 certbot 自动管理的 ssl 证书，就可以完成 SSL/TLS "
+"加密的设置了。这种方式不需要特别修改 server，换句话说，`tls.enable`不需要设置为`true`"
+msgstr "so that external traffic is forwarded to internal ports. With certbot's automatic management of SSL certificates, you can complete the SSL/TLS encryption setup. This method does not require special modifications to the server; in other words, `tls.enable` does not need to be set to `true`."
+
+#: ../../source/docs/deploy/ssl-tls.md:45
+msgid "独立启用 SSL/TLS 加密"
+msgstr "Enable SSL/TLS Encryption Individually"
+
+#: ../../source/docs/deploy/ssl-tls.md:47
+msgid "Ourchat Server 本身也可以配置证书加密，而不需要依赖 nginx，操作步骤如下："
+msgstr "Ourchat Server itself can also configure certificate encryption without depending on nginx, the operation steps are as follows:"
+
+#: ../../source/docs/deploy/ssl-tls.md:49
+msgid "使用[certbot](https://certbot.eff.org/)获取证书"
+msgstr "Use [certbot](https://certbot.eff.org/) to get a certificate"
+
+#: ../../source/docs/deploy/ssl-tls.md:51
+msgid "根据证书设置`http.toml`"
+msgstr "Set `http.toml` according to the certificate"
+
+#: ../../source/docs/deploy/ssl-tls.md:53
+msgid "将`tls.enable`设置为`true`，"
+msgstr "Set `tls.enable` to `true`, "
+
+#: ../../source/docs/deploy/ssl-tls.md:55
+msgid "并按照以下表格设置："
+msgstr "Please set as follows:"
+
+#: ../../source/docs/deploy/ssl-tls.md
+#: ../../source/docs/development/public_info.md
+msgid "字段"
+msgstr "field"
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "用途"
+msgstr "Use"
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "`tls.server_tls_cert_path`"
+msgstr "tls.server_tls_cert_path"
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "服务端证书的`.pem`文件路径。"
+msgstr "The `.pem` file path of the server certificate."
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "`tls.server_key_cert_path`"
+msgstr "tls.server_key_cert_path"
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "服务端证书的`.key`文件路径。"
+msgstr "The `.key` file path of the server certificate."
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "`tls.client_tls_cert_path`"
+msgstr "tls.client_tls_cert_path"
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "客户端证书的`.pem`文件路径。"
+msgstr "The `.pem` file path of the client certificate."
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "`tls.client_key_cert_path`"
+msgstr "tls.client_key_cert_path"
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "客户端证书的`.key`文件路径。"
+msgstr "The `.key` file path of the client certificate."
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "`tls.ca_tls_cert_path`"
+msgstr "tls.ca_tls_cert_path"
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "服务端证书的根证书的`.pem`文件路径。"
+msgstr "The `.pem` file path of the root certificate for the server certificate."
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "`tls.client_ca_tls_cert_path`"
+msgstr "tls.client_ca_tls_cert_path"
+
+#: ../../source/docs/deploy/ssl-tls.md
+msgid "客户端证书的根证书的`.pem`文件路径。"
+msgstr "The `.pem` file path of the root certificate for the client certificate."
+
+#: ../../source/docs/deploy/ssl-tls.md:66
+msgid "同时，客户端证书用于双向验证，不作为强制要求，仅在特殊情况下设置。"
+msgstr ""
+"At the same time, the client certificate is used for mutual "
+"authentication and is not mandatory, only set in special cases."
 
 #: ../../source/docs/development/api.md:1
 msgid "OurChat Api 文档"
@@ -418,22 +597,24 @@ msgstr "Api"
 #: ../../source/docs/development/api.md:19
 msgid "**_消息体本身不在此赘述，请查看代码中的注释_**"
 msgstr ""
+"**_The message body itself is not elaborated here, please refer to the "
+"comments in the code_**"
 
 #: ../../source/docs/development/api.md:21
 msgid "AuthService"
 msgstr "AuthService"
 
 #: ../../source/docs/development/api.md:23
-msgid "该Service用于完成服务器中的鉴权操作"
-msgstr ""
+msgid "该 Service 用于完成服务器中的鉴权操作"
+msgstr "This Service is used for authentication in the server"
 
 #: ../../source/docs/development/api.md:25
 msgid "Register"
 msgstr "Register"
 
 #: ../../source/docs/development/api.md:27
-msgid "用于注册一个用户并返回其token"
-msgstr ""
+msgid "用于注册一个用户并返回其 token"
+msgstr "Used to register a user and return its token"
 
 #: ../../source/docs/development/api.md:29
 #: ../../source/docs/development/api.md:42
@@ -441,7 +622,7 @@ msgstr ""
 #: ../../source/docs/development/api.md:76
 #: ../../source/docs/development/api.md:86
 msgid "错误:"
-msgstr ""
+msgstr "Error:"
 
 #: ../../source/docs/development/api.md
 msgid "Detail"
@@ -502,8 +683,8 @@ msgid "Auth"
 msgstr "Auth"
 
 #: ../../source/docs/development/api.md:40
-msgid "用于登录一个已经存在的用户并返回其token"
-msgstr ""
+msgid "用于登录一个已经存在的用户并返回其 token"
+msgstr "Used to log in an existing user and return its token"
 
 #: ../../source/docs/development/api.md
 #: ../../source/docs/use/role_permission.md
@@ -553,14 +734,18 @@ msgstr "Verify"
 #: ../../source/docs/development/api.md:52
 msgid "用于客户端发起邮箱验证，验证帐号是否被窃取"
 msgstr ""
+"Used to initiate an email verification, to verify whether the account has"
+" been stolen"
 
 #: ../../source/docs/development/api.md:62
 msgid "BasicService"
 msgstr "BasicService"
 
 #: ../../source/docs/development/api.md:64
-msgid "该Service用于完成服务器中不需要额外权限的操作"
+msgid "该 Service 用于完成服务器中不需要额外权限的操作"
 msgstr ""
+"This Service is used to complete operations that do not require "
+"additional permissions on the server"
 
 #: ../../source/docs/development/api.md:66
 msgid "GetServerInfo"
@@ -568,27 +753,27 @@ msgstr "GetServerInfo"
 
 #: ../../source/docs/development/api.md:68
 msgid "获取服务器的各项基本信息，包括版本号等"
-msgstr ""
+msgstr "Get Server Information, including version number, etc."
 
 #: ../../source/docs/development/api.md:70
 msgid "无错误"
-msgstr ""
+msgstr "No Error"
 
 #: ../../source/docs/development/api.md:72
 msgid "GetId"
 msgstr "GetId"
 
 #: ../../source/docs/development/api.md:74
-msgid "通过帐号ocid获取某个帐号的id"
-msgstr ""
+msgid "通过帐号 ocid 获取某个帐号的 id"
+msgstr "Through the account ocid to get the id of an account"
 
 #: ../../source/docs/development/api.md:82
 msgid "GetPresetUserStatus"
-msgstr ""
+msgstr "GetPresetUserStatus"
 
 #: ../../source/docs/development/api.md:84
 msgid "获取预设的帐号社交状态"
-msgstr ""
+msgstr "Get Preset User Social Status"
 
 #: ../../source/docs/development/api.md
 msgid "Server Error"
@@ -599,32 +784,52 @@ msgid "OurChatService"
 msgstr "OurChatService"
 
 #: ../../source/docs/development/api.md:94
-msgid "该Service用于完成绝大部分操作，且所有操作都需要额外附带通过[AuthService](#authservice)中调用获取的token"
+msgid "该 Service 用于完成绝大部分操作，且所有操作都需要额外附带通过[AuthService](#authservice)中调用获取的 token"
 msgstr ""
+"This Service is used to complete most operations, and all operations "
+"require an additional token obtained through the "
+"[AuthService](#authservice)"
 
 #: ../../source/docs/development/api.md:96
-msgid "提供该token的方式为添加请求头: `token: <token>`"
+msgid "提供该 token 的方式为添加请求头: `Authorization: Bearer <token>`"
 msgstr ""
+"Provide the token by adding the request header: `Authorization: Bearer "
+"<token>`"
 
 #: ../../source/docs/development/api.md:98
-msgid "token本身是以`JWT`的形式传递的，所以你可以解读token，token中数据格式为:"
+msgid "其遵循`RFC 6750`规范，`Bearer`为目前支持的唯一验证类型。"
 msgstr ""
+"It follows the `RFC 6750` specification, and `Bearer` is the only "
+"supported authentication type currently."
 
-#: ../../source/docs/development/api.md:107
-msgid "一旦token过期，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Expired`"
+#: ../../source/docs/development/api.md:100
+msgid "token 本身是以`JWT`的形式传递的，所以你可以解读 token，token 中数据格式为:"
 msgstr ""
+"The token itself is transmitted in the form of `JWT`, so you can decode "
+"the token. The data format in the token is:"
 
 #: ../../source/docs/development/api.md:109
-msgid ""
-"如果token不合法，例如不是JWT或不包含所需要的字段，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token "
-"Invalid`"
+msgid "一旦 token 过期，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Expired`"
 msgstr ""
+"Once the token expires, the server will return the `UNAUTHENTICATED` "
+"error, and the error message will be `Token Expired`"
 
 #: ../../source/docs/development/api.md:111
-msgid "如果未提供token，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Missing`"
+msgid ""
+"如果 token 不合法，例如不是 JWT 或不包含所需要的字段，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token "
+"Invalid`"
 msgstr ""
+"If the token is invalid, such as not being a JWT or not containing the "
+"required fields, the server will return the `UNAUTHENTICATED` error, and "
+"the error message will be `Token Invalid`"
 
 #: ../../source/docs/development/api.md:113
+msgid "如果未提供 token，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Missing`"
+msgstr ""
+"If no token is provided, the server will return the `UNAUTHENTICATED` "
+"error, and the error message will be `Token Missing`"
+
+#: ../../source/docs/development/api.md:115
 msgid "GetAccountInfo"
 msgstr "GetAccountInfo"
 
@@ -659,7 +864,7 @@ msgstr "Request Invalid Value"
 msgid "请求值无效(如:获取不存在的字段)"
 msgstr "Invalid request value (e.g. accessing a non-existent field)"
 
-#: ../../source/docs/development/api.md:121
+#: ../../source/docs/development/api.md:123
 msgid "SetSelfInfo"
 msgstr "SetSelfInfo"
 
@@ -687,7 +892,7 @@ msgstr "Status Too Long"
 msgid "用户名非法，例如过长或为空"
 msgstr "The username is invalid, for example, it is too long or empty"
 
-#: ../../source/docs/development/api.md:130
+#: ../../source/docs/development/api.md:132
 msgid "FetchMsgs"
 msgstr "FetchMsgs"
 
@@ -707,7 +912,7 @@ msgstr "Time Missing"
 msgid "缺少 time 参数"
 msgstr "Argument time is required"
 
-#: ../../source/docs/development/api.md:137
+#: ../../source/docs/development/api.md:139
 #: ../../source/docs/use/role_permission.md
 msgid "SendMsg"
 msgstr "SendMsg"
@@ -724,7 +929,7 @@ msgstr "Session Not Found"
 msgid "会话不存在"
 msgstr "The session does not exist"
 
-#: ../../source/docs/development/api.md:144
+#: ../../source/docs/development/api.md:146
 msgid "Upload"
 msgstr "Upload"
 
@@ -779,7 +984,7 @@ msgstr ""
 "You should upload a package of metadata, then upload content package "
 "until process finish"
 
-#: ../../source/docs/development/api.md:154
+#: ../../source/docs/development/api.md:156
 msgid "Download"
 msgstr "Download"
 
@@ -787,7 +992,7 @@ msgstr "Download"
 msgid "没有下载权限"
 msgstr "This file is not yours"
 
-#: ../../source/docs/development/api.md:160
+#: ../../source/docs/development/api.md:162
 msgid "NewSession"
 msgstr "NewSession"
 
@@ -795,7 +1000,7 @@ msgstr "NewSession"
 msgid "邀请的用户不存在"
 msgstr "The user you want to invite does not exist"
 
-#: ../../source/docs/development/api.md:166
+#: ../../source/docs/development/api.md:168
 msgid "GetSessionInfo"
 msgstr "DeleteSession"
 
@@ -803,7 +1008,7 @@ msgstr "DeleteSession"
 msgid "该会话不存在"
 msgstr "The session does not exist"
 
-#: ../../source/docs/development/api.md:173
+#: ../../source/docs/development/api.md:175
 msgid "SetSessionInfo"
 msgstr "SetSessionInfo"
 
@@ -835,7 +1040,7 @@ msgstr "Cannot Set Description"
 msgid "没有设置会话简介的权限"
 msgstr "You don't have the privilege to set description"
 
-#: ../../source/docs/development/api.md:182
+#: ../../source/docs/development/api.md:184
 #: ../../source/docs/use/role_permission.md
 msgid "RecallMsg"
 msgstr "RecallMsg"
@@ -852,7 +1057,7 @@ msgstr "Message Not Found"
 msgid "撤回的消息不存在"
 msgstr "The message you want to recall does not exist"
 
-#: ../../source/docs/development/api.md:189
+#: ../../source/docs/development/api.md:191
 #: ../../source/docs/use/role_permission.md
 msgid "SetRole"
 msgstr "SetRole"
@@ -865,11 +1070,11 @@ msgstr "You don't have the privilege to set role"
 msgid "User Not In Session"
 msgstr "User Not In Session"
 
-#: ../../source/docs/development/api.md:196
+#: ../../source/docs/development/api.md:198
 msgid "AddRole"
 msgstr "AddRole"
 
-#: ../../source/docs/development/api.md:198
+#: ../../source/docs/development/api.md:200
 #: ../../source/docs/use/role_permission.md
 msgid "DeleteSession"
 msgstr "DeleteSession"
@@ -878,7 +1083,7 @@ msgstr "DeleteSession"
 msgid "没有删除会话的权限"
 msgstr "You don't have the privilege to delete session"
 
-#: ../../source/docs/development/api.md:205
+#: ../../source/docs/development/api.md:207
 msgid "LeaveSession"
 msgstr "LeaveSession"
 
@@ -886,7 +1091,7 @@ msgstr "LeaveSession"
 msgid "用户不在该会话"
 msgstr "User is not in this session"
 
-#: ../../source/docs/development/api.md:211
+#: ../../source/docs/development/api.md:213
 msgid "JoinInSession"
 msgstr "JoinInSession"
 
@@ -898,7 +1103,7 @@ msgstr "Cannot join in session, for example, user was banned"
 msgid "该 session 不存在"
 msgstr "This session not exists"
 
-#: ../../source/docs/development/api.md:218
+#: ../../source/docs/development/api.md:220
 msgid "AcceptJoinInSession"
 msgstr "AcceptJoinInSession"
 
@@ -908,7 +1113,7 @@ msgstr ""
 "Cannot accept join in session request, for example, you don't have this "
 "permission"
 
-#: ../../source/docs/development/api.md:225
+#: ../../source/docs/development/api.md:227
 #: ../../source/docs/use/role_permission.md
 msgid "MuteUser"
 msgstr "MuteUser"
@@ -917,7 +1122,7 @@ msgstr "MuteUser"
 msgid "不具有 MuteUser 权限"
 msgstr "Don't have MuteUser permission"
 
-#: ../../source/docs/development/api.md:231
+#: ../../source/docs/development/api.md:233
 #: ../../source/docs/use/role_permission.md
 msgid "UnmuteUser"
 msgstr "UnmuteUser"
@@ -934,7 +1139,7 @@ msgstr "User Not Be Muted"
 msgid "用户没有被 Mute"
 msgstr "User wasn't be muted"
 
-#: ../../source/docs/development/api.md:238
+#: ../../source/docs/development/api.md:240
 #: ../../source/docs/use/role_permission.md
 msgid "BanUser"
 msgstr "BanUser"
@@ -943,7 +1148,7 @@ msgstr "BanUser"
 msgid "不具有 BanUser 权限"
 msgstr "Do not have BanUser permission"
 
-#: ../../source/docs/development/api.md:244
+#: ../../source/docs/development/api.md:246
 #: ../../source/docs/use/role_permission.md
 msgid "UnbanUser"
 msgstr "UnbanUser"
@@ -960,7 +1165,7 @@ msgstr "User Not Be Banned"
 msgid "用户没有被 Ban"
 msgstr "The user is not banned"
 
-#: ../../source/docs/development/api.md:251
+#: ../../source/docs/development/api.md:253
 msgid "AddFriend"
 msgstr "AddFriend"
 
@@ -980,7 +1185,7 @@ msgstr "The friend relationship already exists"
 msgid "好友不存在"
 msgstr "Friend does not exist"
 
-#: ../../source/docs/development/api.md:259
+#: ../../source/docs/development/api.md:261
 msgid "AcceptFriend"
 msgstr "AcceptFriend"
 
@@ -992,7 +1197,7 @@ msgstr "Friend Invitation Not Found"
 msgid "好友申请不存在"
 msgstr "The friend request does not exist"
 
-#: ../../source/docs/development/api.md:266
+#: ../../source/docs/development/api.md:268
 msgid "DeleteFriend"
 msgstr "DeleteFriend"
 
@@ -1004,11 +1209,11 @@ msgstr "Friend Not Found"
 msgid "好友关系不存在"
 msgstr "The friend relationship does not exist"
 
-#: ../../source/docs/development/api.md:272
+#: ../../source/docs/development/api.md:274
 msgid "Unregister"
 msgstr "Unregister"
 
-#: ../../source/docs/development/api.md:274
+#: ../../source/docs/development/api.md:276
 msgid "暂时没有相关错误可能发生"
 msgstr "No relevant errors can occur currently"
 
@@ -1204,6 +1409,26 @@ msgstr "Request Type: `GET` No parameters"
 msgid "用于获取服务器logo"
 msgstr "Used to get the server logo"
 
+#: ../../source/docs/development/http_api.md:20
+msgid "获取头像"
+msgstr "Fetch Avatar"
+
+#: ../../source/docs/development/http_api.md:22
+msgid "接口:`/v1/avatar`"
+msgstr "API: `/v1/avatar`"
+
+#: ../../source/docs/development/http_api.md:24
+msgid "请求类型:`GET`"
+msgstr "Request Type: `GET`"
+
+#: ../../source/docs/development/http_api.md:26
+msgid "参数:user_id"
+msgstr "Parameters: user_id"
+
+#: ../../source/docs/development/http_api.md:28
+msgid "用于获取用户头像"
+msgstr "Used to get user avatars"
+
 #: ../../source/docs/development/index.rst:2
 msgid "开发"
 msgstr "Development"
@@ -1243,10 +1468,6 @@ msgid "其中，公有信息列举如下(grpc中的字段名称)，未列出的�
 msgstr ""
 "Public information fields (gRPC field names) are listed below. All non-"
 "listed fields are considered private:"
-
-#: ../../source/docs/development/public_info.md
-msgid "字段"
-msgstr "field"
 
 #: ../../source/docs/development/public_info.md
 msgid "user_name"
@@ -1293,15 +1514,15 @@ msgstr "Run Integration Tests"
 
 #: ../../source/docs/development/server/basic.md:9
 msgid ""
-"首先要设置环境变量，为了方便起见，我们支持`.env`的方式来设置环境变量，提供了一个[简单模板](https://github.com/SkyUOI/OurChat/blob/main/.env.template)，或者可以通过设置`OURCHAT_TEST_CONFIG_DIR`变量指向存有配置文件的目录。然后如正常"
+"首先要设置环境变量，为了方便起见，我们支持`.env`的方式来设置环境变量，提供了一个[简单模板](https://github.com/SkyUOI/OurChat/blob/main/.env.template)，或者可以通过设置`OURCHAT_CONFIG_FILE`变量指向存有配置文件的目录。然后如正常"
 " rust 项目运行`cargo test`即可运行测试"
 msgstr ""
 "First, you need to set environment variables. For convenience, we support"
 " `.env` and provide a [simple "
 "template](https://github.com/SkyUOI/OurChat/blob/main/.env.template) for "
-"setting environment variables, or you can set the "
-"`OURCHAT_TEST_CONFIG_DIR` variable to point to the directory containing "
-"test configuration files. Then you can run `cargo test` to run the tests."
+"setting environment variables, or you can set the `OURCHAT_CONFIG_FILE` "
+"variable to point to the directory containing test configuration files. "
+"Then you can run `cargo test` to run the tests."
 
 #: ../../source/docs/development/server/basic.md:11
 msgid "文档"
@@ -1345,6 +1566,66 @@ msgstr ""
 "burden on your computer, especially when you are likely to work on only a"
 " few crates, we strongly recommend using the following configuration in "
 "VSCode:"
+
+#: ../../source/docs/development/server/guide.md:1
+msgid "服务端各部分开发指南"
+msgstr "Server Development Guide Of Each Part"
+
+#: ../../source/docs/development/server/guide.md:3
+#: ../../source/docs/use/role_permission.md
+msgid "权限"
+msgstr "Permission"
+
+#: ../../source/docs/development/server/guide.md:5
+msgid "Session 操作权限"
+msgstr "Session Operation Permission"
+
+#: ../../source/docs/development/server/guide.md:7
+msgid "定义位置"
+msgstr "Definition Location"
+
+#: ../../source/docs/development/server/guide.md:9
+msgid "请参考`server/migration/src/m20241229_022701_add_role_for_session.rs`文件，并在`PredefinedPermissions`和`PredefinedRoles`中添加自己所需的权限和角色。"
+msgstr ""
+"Please refer to the "
+"`server/migration/src/m20241229_022701_add_role_for_session.rs` file, and"
+" add your own permissions and roles to `PredefinedPermissions` and "
+"`PredefinedRoles`."
+
+#: ../../source/docs/development/server/guide.md:11
+msgid ""
+"大体上来说，如果你定义了一个新 permission，你需要考虑要将它添加到哪些原有的角色中，例如，无论你添加了什么 permission, "
+"Admin 总是该具有此权限。"
+msgstr ""
+"In general, if you define a new permission, you need to consider which "
+"existing roles to add it to. For example, regardless of what permission "
+"you add, Admin always has this permission."
+
+#: ../../source/docs/development/server/guide.md:13
+msgid ""
+"然后请注意，不要直接修改下方的`init_role_table`函数，以防止数据库迁移的相关问题，正确做法是使用`sea migrate "
+"generate xxx`，然后在里面编写新的权限相关代码。"
+msgstr ""
+"Then, please note that you should not directly modify the "
+"`init_role_table` function, to prevent database migration related "
+"problems, the correct way is to use `sea migrate generate xxx`, and then "
+"write new permission-related code in it."
+
+#: ../../source/docs/development/server/guide.md:15
+msgid "权限相关操作"
+msgstr "Permission Related Operations"
+
+#: ../../source/docs/development/server/guide.md:17
+msgid "`if_permission_exist`: 检查某权限是否存在"
+msgstr "if_permission_exist: Check if a permission exists"
+
+#: ../../source/docs/development/server/guide.md:18
+msgid "`get_all_roles_of_session`: 获取某个 session 定义的所有角色"
+msgstr "get_all_roles_of_session: Get all roles defined in a session"
+
+#: ../../source/docs/development/server/guide.md:19
+msgid "`query_session_role`: 获取所有在某个 session 中为特定角色的用户"
+msgstr "query_session_role: Get all users with a specific role in a session"
 
 #: ../../source/docs/development/server/index.rst:2
 msgid "开发-服务器"
@@ -1403,63 +1684,44 @@ msgstr ""
 "service of the distributed system, and can also be deployed separately"
 
 #: ../../source/docs/development/server/server-design.md:9
-msgid "HttpServer: HTTP 服务"
-msgstr "HttpServer: HTTP service"
-
-#: ../../source/docs/development/server/server-design.md:11
 msgid "负责处理 HTTP 请求,如邮件验证等"
 msgstr "Is responsible for handling HTTP requests, such as email verification"
 
-#: ../../source/docs/development/server/server-design.md:13
-msgid "实验性matrix支持也由该节点负责"
+#: ../../source/docs/development/server/server-design.md:11
+msgid "实验性 matrix 支持也由该节点负责"
 msgstr "Experimental Matrix support is also handled by this node"
 
-#: ../../source/docs/development/server/server-design.md:15
+#: ../../source/docs/development/server/server-design.md:13
 msgid "负载均衡器：LoadBalancer"
 msgstr "Load Balancer"
 
-#: ../../source/docs/development/server/server-design.md:17
+#: ../../source/docs/development/server/server-design.md:15
 msgid "负责将请求和流量均摊到节点上"
 msgstr "Is responsible for evenly distributing requests and traffic to nodes"
 
-#: ../../source/docs/development/server/server-design.md:19
+#: ../../source/docs/development/server/server-design.md:17
 msgid "Rabbitmq: 消息队列"
 msgstr "Rabbitmq: Message Queue"
 
-#: ../../source/docs/development/server/server-design.md:21
+#: ../../source/docs/development/server/server-design.md:19
 msgid "不同节点间消息传递的中间件"
 msgstr "Middleware for message passing between different nodes"
 
-#: ../../source/docs/development/server/server-design.md:23
+#: ../../source/docs/development/server/server-design.md:21
 msgid "Redis: 内存数据库"
 msgstr "Redis: In-memory database"
 
-#: ../../source/docs/development/server/server-design.md:25
+#: ../../source/docs/development/server/server-design.md:23
 msgid "用于高性能的缓存"
 msgstr "For high-performance caching"
 
-#: ../../source/docs/development/server/server-design.md:27
+#: ../../source/docs/development/server/server-design.md:25
 msgid "PostgreSQL: 数据库"
 msgstr "PostgreSQL: Database"
 
-#: ../../source/docs/development/server/server-design.md:29
+#: ../../source/docs/development/server/server-design.md:27
 msgid "用于持久化数据"
 msgstr "For persistent data"
-
-#: ../../source/docs/development/server/server-design.md:31
-msgid "JuiceFS: 分布式文件系统"
-msgstr "JuiceFS: Distributed file system"
-
-#: ../../source/docs/development/server/server-design.md:33
-msgid "具体参考其官网 [JuiceFS](https://juicefs.com)"
-msgstr "Please refer to the official website [JuiceFS](https://juicefs.com)"
-
-#: ../../source/docs/development/server/server-design.md:35
-msgid "组件之间计划可以通过 RPC 的方式进行通信，通过非对称加密签名来签名 JWT 进行身份验证，但目前主要还是通过消息队列通信"
-msgstr ""
-"Components are planned to communicate via RPC and authenticate using JWT "
-"signed with asymmetric encryption, but currently communication is mainly "
-"done through message queues"
 
 #: ../../source/docs/development/server/server-develop.md:1
 msgid "服务端开发指南"
@@ -1618,7 +1880,7 @@ msgstr "Server Network Development Guidelines"
 
 #: ../../source/docs/development/server/server-network.md:3
 msgid "[SSL/TLS 证书生成](#ssltls证书生成)"
-msgstr ""
+msgstr "[SSL/TLS Certificate Generation](#ssltls证书生成)"
 
 #: ../../source/docs/development/server/server-network.md:5
 msgid "SSL/TLS证书生成"
@@ -1870,59 +2132,6 @@ msgstr "Build as an executable file"
 msgid "进入客户端目录并运行项目"
 msgstr "Go to the client directory and run the project"
 
-#: ../../source/docs/run/http_server_argv.md:1
-msgid "http服务器命令行参数"
-msgstr "http server command argument"
-
-#: ../../source/docs/run/http_server_argv.md
-#: ../../source/docs/run/server_argv.md
-msgid "name"
-msgstr "Name"
-
-#: ../../source/docs/run/http_server_argv.md
-#: ../../source/docs/run/server_argv.md
-msgid "usage"
-msgstr "Usage"
-
-#: ../../source/docs/run/http_server_argv.md
-#: ../../source/docs/run/server_argv.md
-msgid "default"
-msgstr "Default"
-
-#: ../../source/docs/run/http_server_argv.md
-#: ../../source/docs/run/server_argv.md
-msgid "`--config config file path`"
-msgstr "`--config config file path`"
-
-#: ../../source/docs/run/http_server_argv.md
-#: ../../source/docs/run/server_argv.md
-msgid "选择配置文件.[example](#配置文件示例)"
-msgstr "Select the configuration file. [example](#配置文件示例)"
-
-#: ../../source/docs/run/http_server_argv.md
-#: ../../source/docs/run/server_argv.md
-msgid "不适用"
-msgstr "unsuitable"
-
-#: ../../source/docs/run/http_server_argv.md:7
-#: ../../source/docs/run/server_argv.md:15
-msgid "配置文件示例"
-msgstr "Configuration File Example"
-
-#: ../../source/docs/run/http_server_argv.md:9
-#: ../../source/docs/run/server_argv.md:19
-msgid "配置文件格式支持多样，包括`toml`,`json`,`json5`,`yaml`,`ini`等，请自行选择熟悉的配置文件格式"
-msgstr ""
-"Noto,the supported type of config file is various,including "
-"`toml`,`json`,`json5`,`yaml`,`ini`,etc.Please choose your familiar format"
-
-#: ../../source/docs/run/http_server_argv.md:11
-#: ../../source/docs/run/server_argv.md:21
-msgid "[配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)"
-msgstr ""
-"[Configuration file "
-"examples](https://github.com/SkyUOI/OurChat/tree/main/config)."
-
 #: ../../source/docs/run/index.rst:2
 msgid "运行"
 msgstr "Run"
@@ -1934,6 +2143,30 @@ msgstr "This section is about the documentation for running this project"
 #: ../../source/docs/run/server_argv.md:1
 msgid "服务器命令行参数"
 msgstr "Server Command Arguments"
+
+#: ../../source/docs/run/server_argv.md
+msgid "name"
+msgstr "Name"
+
+#: ../../source/docs/run/server_argv.md
+msgid "usage"
+msgstr "Usage"
+
+#: ../../source/docs/run/server_argv.md
+msgid "default"
+msgstr "Default"
+
+#: ../../source/docs/run/server_argv.md
+msgid "`--config config file path`"
+msgstr "`--config config file path`"
+
+#: ../../source/docs/run/server_argv.md
+msgid "选择配置文件.[example](#配置文件示例)"
+msgstr "Select the configuration file. [example](#配置文件示例)"
+
+#: ../../source/docs/run/server_argv.md
+msgid "不适用"
+msgstr "unsuitable"
 
 #: ../../source/docs/run/server_argv.md
 msgid "`--test-mode`"
@@ -1956,54 +2189,6 @@ msgid "在启动时清除服务器缓存和日志"
 msgstr "Clear server cache and logs on startup"
 
 #: ../../source/docs/run/server_argv.md
-msgid "`--port=server listening port`"
-msgstr "`--port=server listening port`"
-
-#: ../../source/docs/run/server_argv.md
-msgid "服务器监听的端口"
-msgstr "Port the server listens on"
-
-#: ../../source/docs/run/server_argv.md
-msgid "7777"
-msgstr "7777"
-
-#: ../../source/docs/run/server_argv.md
-msgid "`--http-port=http server listening port`"
-msgstr "`--http-port=http server listening port`"
-
-#: ../../source/docs/run/server_argv.md
-msgid "http 服务器监听的端口"
-msgstr "Port the http server listens on"
-
-#: ../../source/docs/run/server_argv.md
-msgid "7778"
-msgstr "7778"
-
-#: ../../source/docs/run/server_argv.md
-msgid "`--ip=server listening ip`"
-msgstr "`--ip=server listening ip`"
-
-#: ../../source/docs/run/server_argv.md
-msgid "服务器监听的 ip"
-msgstr "IP the server listens on"
-
-#: ../../source/docs/run/server_argv.md
-msgid "127.0.0.1"
-msgstr "127.0.0.1"
-
-#: ../../source/docs/run/server_argv.md
-msgid "`--db-type`"
-msgstr "`--db-type`"
-
-#: ../../source/docs/run/server_argv.md
-msgid "选择数据库类型"
-msgstr "Choose Database Type"
-
-#: ../../source/docs/run/server_argv.md
-msgid "mysql"
-msgstr "mysql"
-
-#: ../../source/docs/run/server_argv.md
 msgid "`--maintaining`"
 msgstr "`--maintaining`"
 
@@ -2011,26 +2196,30 @@ msgstr "`--maintaining`"
 msgid "启动维护模式，不断发送维护信息"
 msgstr "Enable maintenance mode, continuously send maintenance information"
 
-#: ../../source/docs/run/server_argv.md
-msgid "`--enable-cmd`"
-msgstr "`--enable-cmd`"
+#: ../../source/docs/run/server_argv.md:10
+msgid "配置文件示例"
+msgstr "Configuration File Example"
 
-#: ../../source/docs/run/server_argv.md
-msgid "是否启用 cmd"
-msgstr "whether to enable cmd"
-
-#: ../../source/docs/run/server_argv.md
-msgid "true"
-msgstr "true"
-
-#: ../../source/docs/run/server_argv.md:17
+#: ../../source/docs/run/server_argv.md:12
 msgid "注意，当配置文件和命令行参数冲突时，以命令行参数覆盖配置文件参数"
 msgstr ""
 "Note that when there is a conflict between the configuration file and "
 "command line arguments, the command line arguments will override the "
 "configuration file parameters"
 
-#: ../../source/docs/run/server_argv.md:23
+#: ../../source/docs/run/server_argv.md:14
+msgid "配置文件格式支持多样，包括`toml`,`json`,`json5`,`yaml`,`ini`等，请自行选择熟悉的配置文件格式"
+msgstr ""
+"Noto,the supported type of config file is various,including "
+"`toml`,`json`,`json5`,`yaml`,`ini`,etc.Please choose your familiar format"
+
+#: ../../source/docs/run/server_argv.md:16
+msgid "[配置文件示例](https://github.com/SkyUOI/OurChat/tree/main/config)"
+msgstr ""
+"[Configuration file "
+"examples](https://github.com/SkyUOI/OurChat/tree/main/config)."
+
+#: ../../source/docs/run/server_argv.md:18
 msgid "为了灵活的复用配置文件，配置文件支持指定多个，按照顺序以后面的覆盖前面的，例如首个配置文件指定`port=80`，指定的第二个配置文件可以设置`port=90`，后面的配置选项就会覆盖之前的，并且原有选项会得到保留"
 msgstr ""
 "For flexible reuse of configuration files, multiple configuration files "
@@ -2040,11 +2229,11 @@ msgstr ""
 "configuration option will override the previous one, while retaining "
 "other existing options"
 
-#: ../../source/docs/run/server_argv.md:25
+#: ../../source/docs/run/server_argv.md:20
 msgid "日志"
 msgstr "log"
 
-#: ../../source/docs/run/server_argv.md:27
+#: ../../source/docs/run/server_argv.md:22
 msgid "默认日志等级为`info`，可以通过`OURCHAT_LOG`环境变量配置，支持的等级为`trace`,`debug`,`info`,`warn`,`error`，日志储存路径在`log`文件夹下，以时间命名日志文件"
 msgstr ""
 "The default log level is `info`, which can be configured through the "
@@ -2052,17 +2241,17 @@ msgstr ""
 "`debug`, `info`, `warn`, `error`. Log files are stored in the `log` "
 "directory, with filenames based on timestamps."
 
-#: ../../source/docs/run/server_argv.md:29
+#: ../../source/docs/run/server_argv.md:24
 msgid "日志会定时清理，清理时间设定在`auto_clean_duration`中，也可以通过控制台指令更改"
 msgstr ""
 "Logs will be cleaned up periodically, with the cleanup interval set in "
 "`auto_clean_duration`. It can also be changed through console commands."
 
-#: ../../source/docs/run/server_argv.md:31
+#: ../../source/docs/run/server_argv.md:26
 msgid "测试日志"
 msgstr "Testing Log"
 
-#: ../../source/docs/run/server_argv.md:33
+#: ../../source/docs/run/server_argv.md:28
 msgid "`test_mode`启用时，日志不会被输出到文件中，并且测试等级会被默认调整到`trace`"
 msgstr ""
 "When `test_mode` is enabled, logs will not be output to files, and the "
@@ -2070,147 +2259,259 @@ msgstr ""
 "enabled, logs will not be output to files, and the test level will be "
 "automatically adjusted to `trace`."
 
-#: ../../source/docs/run/server_cmd.md:1
-msgid "服务器控制台指令"
-msgstr "Server Console Commands"
+#: ../../source/docs/use/e2ee.md:1
+msgid "端到端加密"
+msgstr "End-to-End Encryption"
 
-#: ../../source/docs/run/server_cmd.md:3
-msgid "概览"
-msgstr "Overview"
+#: ../../source/docs/use/e2ee.md:3
+msgid "[流程概述](#流程概述)"
+msgstr "[Overview](#流程概述)"
 
-#: ../../source/docs/run/server_cmd.md:5
-msgid "指令是大小写不敏感的，例如`help`,`HeLp`实际上是一个指令"
-msgstr ""
-"Commands are case insensitive, such as `help`, `HELP` actually is a "
-"command"
+#: ../../source/docs/use/e2ee.md:4
+msgid "[发送消息时的注意事项](#发送消息时的注意事项)"
+msgstr "[Precautions When Sending Messages](#发送消息时的注意事项)"
 
-#: ../../source/docs/run/server_cmd.md
-msgid "指令"
-msgstr "Command"
+#: ../../source/docs/use/e2ee.md:6
+msgid "流程概述"
+msgstr "Process Overview"
 
-#: ../../source/docs/run/server_cmd.md
-msgid "概要说明"
-msgstr "Overview Description"
+#: ../../source/docs/use/e2ee.md:8
+msgid "注册用户"
+msgstr "Registered user"
 
-#: ../../source/docs/run/server_cmd.md ../../source/docs/run/server_cmd.md:17
-msgid "Help"
-msgstr "Help"
+#: ../../source/docs/use/e2ee.md:10 ../../source/docs/use/e2ee.md:32
+#: ../../source/docs/use/e2ee.md:50 ../../source/docs/use/e2ee.md:72
+msgid "假设流程中涉及的操作方为："
+msgstr "Pretend that the involved operator is:"
 
-#: ../../source/docs/run/server_cmd.md
-msgid "显示帮助信息"
-msgstr "Display help information"
+#: ../../source/docs/use/e2ee.md
+msgid "操作方"
+msgstr "Operator"
 
-#: ../../source/docs/run/server_cmd.md ../../source/docs/run/server_cmd.md:22
-msgid "Set"
-msgstr "Set"
-
-#: ../../source/docs/run/server_cmd.md
-msgid "设置服务器变量"
-msgstr "Set server variables"
-
-#: ../../source/docs/run/server_cmd.md ../../source/docs/run/server_cmd.md:28
-msgid "Get"
-msgstr "Get"
-
-#: ../../source/docs/run/server_cmd.md
-msgid "获取服务器变量的值"
-msgstr "Get Server Variable Value"
-
-#: ../../source/docs/run/server_cmd.md ../../source/docs/run/server_cmd.md:38
-msgid "CleanFS"
-msgstr "CleanFS"
-
-#: ../../source/docs/run/server_cmd.md
-msgid "立刻运行清理命令清理服务器过期文件"
-msgstr "Run clean command to clean server expired files immediately"
-
-#: ../../source/docs/run/server_cmd.md ../../source/docs/run/server_cmd.md:34
-msgid "Exit"
-msgstr "Exit"
-
-#: ../../source/docs/run/server_cmd.md
-msgid "优雅地关闭服务器"
-msgstr "Shut down the server gracefully"
-
-#: ../../source/docs/run/server_cmd.md:15
-msgid "详细使用方法"
-msgstr "Usage Details"
-
-#: ../../source/docs/run/server_cmd.md:19
-msgid "参数: 任意个指令的名字 输出：各个指令的用法和详细信息"
-msgstr ""
-"Argument: Any command name. Output: Each command's usage and detailed "
-"information"
-
-#: ../../source/docs/run/server_cmd.md:24
-msgid "参数:变量+变量值"
-msgstr "Argument: Variable + Variable Value"
-
-#: ../../source/docs/run/server_cmd.md:26
-#: ../../source/docs/run/server_cmd.md:32
-msgid "[变量表](#变量表)"
-msgstr "[Variable Table](#变量表)"
-
-#: ../../source/docs/run/server_cmd.md:30
-msgid "参数:变量名"
-msgstr "Argument: Variable Name"
-
-#: ../../source/docs/run/server_cmd.md:36
-#: ../../source/docs/run/server_cmd.md:40
-msgid "无参数"
-msgstr "No Parameter"
-
-#: ../../source/docs/run/server_cmd.md:42
-msgid "附录"
-msgstr "Appendix"
-
-#: ../../source/docs/run/server_cmd.md:44
-msgid "变量表"
-msgstr "Variable Table"
-
-#: ../../source/docs/run/server_cmd.md
-msgid "变量"
-msgstr "Variable"
-
-#: ../../source/docs/run/server_cmd.md
+#: ../../source/docs/use/e2ee.md
 msgid "描述"
 msgstr "Description"
 
-#: ../../source/docs/run/server_cmd.md
-msgid "值"
-msgstr "Value"
+#: ../../source/docs/use/e2ee.md
+msgid "server"
+msgstr "server"
 
-#: ../../source/docs/run/server_cmd.md
-msgid "Status"
-msgstr "Status"
+#: ../../source/docs/use/e2ee.md
+msgid "服务器"
+msgstr "server"
 
-#: ../../source/docs/run/server_cmd.md
-msgid "服务器运行状态"
-msgstr "Server Running Status"
+#: ../../source/docs/use/e2ee.md
+msgid "userA"
+msgstr "userA"
 
-#: ../../source/docs/run/server_cmd.md
-msgid "normal(n)或 maintaining(m)"
-msgstr "normal(n) or maintaining(m)"
+#: ../../source/docs/use/e2ee.md
+msgid "该用户执行注册操作"
+msgstr "This user executes the registration operation"
 
-#: ../../source/docs/run/server_cmd.md
-msgid "AutoCleanCycle"
-msgstr "AutoCleanCycle"
+#: ../../source/docs/use/e2ee.md:17
+msgid "userA在向server注册前要生成一对RSA密钥对——公钥和私钥，并在`RegisterRequest`中将`public_key`字段设置为公钥。确保私钥不能泄漏给任何其他操作者，包括服务器，并保存在本地。"
+msgstr ""
+"userA generates a pair of RSA key pairs (public key and private key) and "
+"sets the `public_key` field in the `RegisterRequest` to the public key. "
+"Ensure that the private key is not leaked to any other operator, "
+"including the server, and is saved locally."
 
-#: ../../source/docs/run/server_cmd.md
-msgid "自动清理过期文件周期"
-msgstr "Cycle of auto clean expired files"
+#: ../../source/docs/use/e2ee.md:19
+msgid "创建端到端加密的群聊"
+msgstr "create an end-to-end encrypted group chat"
 
-#: ../../source/docs/run/server_cmd.md
-msgid "Number"
-msgstr "Number"
+#: ../../source/docs/use/e2ee.md
+msgid "该用户创建群聊"
+msgstr "This user creates a group chat"
 
-#: ../../source/docs/run/server_cmd.md
-msgid "FileSaveDays"
-msgstr "FileSaveDays"
+#: ../../source/docs/use/e2ee.md:26
+msgid "userA先创建一个用于对称加密（任何算法均可）的`room_key`，保存在本地，确保不泄漏给其他不信任的操作者，包括服务器。"
+msgstr ""
+"userA creates a symmetric encryption `room_key` and saves it locally. "
+"Ensure that it is not leaked to other untrusted operators, including the "
+"server."
 
-#: ../../source/docs/run/server_cmd.md
-msgid "文件保存天数"
-msgstr "File Save Days"
+#: ../../source/docs/use/e2ee.md:28
+msgid "接着userA向server发送请求创建群聊时，在`NewSessionRequest`中设置`e2ee_on`为`true`即可。"
+msgstr ""
+"Then userA sends a request to the server to create a group chat, setting "
+"`e2ee_on` to `true` in the `NewSessionRequest`."
+
+#: ../../source/docs/use/e2ee.md:30
+msgid "同意某人加入群聊"
+msgstr "Accept a user to join the group chat"
+
+#: ../../source/docs/use/e2ee.md
+msgid "某个已在该群的用户"
+msgstr "Someone who is already in the group"
+
+#: ../../source/docs/use/e2ee.md
+msgid "userB"
+msgstr "userB"
+
+#: ../../source/docs/use/e2ee.md
+msgid "尚未在该群的用户，将要向userA发送入群申请"
+msgstr "Yet to be in the group, will send an entry request to userA"
+
+#: ../../source/docs/use/e2ee.md:40
+msgid "userB向server发送`join_session`请求"
+msgstr "userB sends a `join_session` request to the server"
+
+#: ../../source/docs/use/e2ee.md:42
+msgid ""
+"userA将收到`JoinSessionApproval`的消息，其中将包含userB的公钥，即`public_key`字段。用`public_key`加密`room_key`,"
+" 获得加密后的`encrypted_room_key`"
+msgstr ""
+"userA receives a `JoinSessionApproval` message, which contains the public"
+" key of userB, `public_key`. Encrypt `room_key` with `public_key` to get "
+"`encrypted_room_key`"
+
+#: ../../source/docs/use/e2ee.md:44
+msgid "userA向server发送`allow_user_join_session`请求，将`room_key`字段设置为`encrypted_room_key`"
+msgstr ""
+"userA sends a `allow_user_join_session` request, sets the `room_key` "
+"field to `encrypted_room_key`"
+
+#: ../../source/docs/use/e2ee.md:46
+msgid "userB将收到`AllowUserJoinSessionNotification`的消息，其中将包含`room_key`字段，内容是`encrypted_room_key`，利用自己的RSA私钥将其解密，得到`room_key`原始内容，同样，不能泄漏给其他不信任的操作者，包括服务器。"
+msgstr ""
+"userB receives an `AllowUserJoinSessionNotification` message, which "
+"contains the `room_key` field with the content of `encrypted_room_key`. "
+"Use their own RSA private key to decrypt it and obtain the original "
+"content of `room_key`. Similarly, it must not be leaked to other "
+"untrusted operators, including the server."
+
+#: ../../source/docs/use/e2ee.md:48
+msgid "邀请某人加入群聊"
+msgstr "Invite a user to join the group chat"
+
+#: ../../source/docs/use/e2ee.md
+msgid "某个已在该群的用户，将要邀请userB加入"
+msgstr "Someone who is already in the group, will invite userB to join"
+
+#: ../../source/docs/use/e2ee.md
+msgid "尚未在该群的用户"
+msgstr "Yet to be in the group"
+
+#: ../../source/docs/use/e2ee.md:58
+msgid "userA向server发送`invite_user_to_session`请求"
+msgstr "userA sends a `invite_user_to_session` request to the server"
+
+#: ../../source/docs/use/e2ee.md:60
+msgid "userB将收到`InviteUserToSession`的消息，接着利用其中的信息，向server发送`accept_join_session_approval`请求"
+msgstr ""
+"userB receives an `InviteUserToSession` message, then uses the "
+"information to send an `accept_join_session_approval` request to the "
+"server"
+
+#: ../../source/docs/use/e2ee.md:62
+msgid ""
+"userA将收到`AcceptSessionNotification`的消息，其中将包含userB的公钥，即`public_key`字段。用`public_key`加密`room_key`,"
+" 获得加密后的`encrypted_room_key`"
+msgstr ""
+"userA receives an `AcceptSessionNotification` message, which contains the"
+" public key of userB, `public_key`. Encrypt `room_key` with `public_key` "
+"to get `encrypted_room_key`"
+
+#: ../../source/docs/use/e2ee.md:64 ../../source/docs/use/e2ee.md:84
+msgid "userA向server发送`send_room_key`请求，将`room_key`字段设置为`encrypted_room_key`"
+msgstr ""
+"userA sends a `send_room_key` request, sets the `room_key` field to "
+"`encrypted_room_key`"
+
+#: ../../source/docs/use/e2ee.md:66 ../../source/docs/use/e2ee.md:86
+msgid "userB将收到`ReceiveRoomKeyNotification`的消息，其中将包含`room_key`字段，内容是`encrypted_room_key`，利用自己的RSA私钥将其解密，得到`room_key`原始内容，同样，不能泄漏给其他不信任的操作者，包括服务器。"
+msgstr ""
+"userB receives a `ReceiveRoomKeyNotification` message, which contains the"
+" `room_key` field with the content of `encrypted_room_key`. Use their own"
+" RSA private key to decrypt it and obtain the original content of "
+"`room_key`. Similarly, it must not be leaked to other untrusted "
+"operators, including the server."
+
+#: ../../source/docs/use/e2ee.md:68
+msgid "`room_key`的更换"
+msgstr "The replacement of `room_key`"
+
+#: ../../source/docs/use/e2ee.md:70
+msgid "更换条件：当距离上次更换相差一定时间（可设置）或有人退出群聊时，该群会被标记，当有人在被标记的群发言时，会进行密钥交换操作。用户向服务器发送的`e2eeize_session`请求也可以让该群的`room_key`进行更换。"
+msgstr ""
+"Replacement conditions: When a certain time (can be set) has passed since"
+" the last replacement or someone leaves the group chat, the group will be"
+" marked. When someone speaks in the marked group, a key exchange "
+"operation will be performed. The user's `e2eeize_session` request to the "
+"server can also trigger a replacement of the group's `room_key`."
+
+#: ../../source/docs/use/e2ee.md
+msgid "首个在群被标记后发言的用户"
+msgstr "The first user to speak in the group after it is marked"
+
+#: ../../source/docs/use/e2ee.md
+msgid "其他在该群的用户"
+msgstr "Others in the group"
+
+#: ../../source/docs/use/e2ee.md:80
+msgid "需要更新时，userA会在消息发送成功后收到`UpdateRoomKeyNotification`的消息，这时需要userA对该群的`room_key`进行更新操作，以及还有若干`SendRoomKeyNotification`的消息，其中包含其他成员的公钥，以下以userB为例"
+msgstr ""
+"When an update is needed, userA will receive an "
+"`UpdateRoomKeyNotification` message after the message is successfully "
+"sent. At this time, userA needs to update the group's `room_key`, and "
+"there will be several `SendRoomKeyNotification` messages containing the "
+"public keys of other members. The following example uses userB."
+
+#: ../../source/docs/use/e2ee.md:82
+msgid "userA将更新后的`room_key`利用userB的公钥加密，获得加密后的`encrypted_room_key`"
+msgstr ""
+"userA encrypts the updated `room_key` with userB's public key to obtain "
+"the encrypted `encrypted_room_key`"
+
+#: ../../source/docs/use/e2ee.md:88
+msgid "切换群聊的端到端加密状态（开/关）"
+msgstr "Switch the end-to-end encryption status of the group chat (on/off)"
+
+#: ../../source/docs/use/e2ee.md:90
+msgid "假设流程中涉及操作方为："
+msgstr "Pretend that the involved operator is:"
+
+#: ../../source/docs/use/e2ee.md
+msgid "在该群且具有`Owner`权限的用户"
+msgstr "The user in this group and with `Owner` permissions"
+
+#: ../../source/docs/use/e2ee.md:97
+msgid "设置群聊为端到端加密"
+msgstr "Set the group chat to end-to-end encryption"
+
+#: ../../source/docs/use/e2ee.md:99
+msgid "userA向server发送`e2eeize_session`请求"
+msgstr "userA sends a `e2eeize_session` request to the server"
+
+#: ../../source/docs/use/e2ee.md:101
+msgid "随后就是[更换`room_key`的流程](#room_key的更换)"
+msgstr "then it is [the process of replacing `room_key`](#room_key的更换)"
+
+#: ../../source/docs/use/e2ee.md:103
+msgid "设置群聊为非端到端加密"
+msgstr "Set the group chat to non-end-to-end encryption"
+
+#: ../../source/docs/use/e2ee.md:105
+msgid "userA向server发送`dee2eeize_session`请求"
+msgstr "userA sends a `dee2eeize_session` request to the server"
+
+#: ../../source/docs/use/e2ee.md:107
+msgid "发送消息时的注意事项"
+msgstr "Things to note when sending messages"
+
+#: ../../source/docs/use/e2ee.md:109
+msgid "在端到端加密的群聊里，每个用户选择在发送消息时若选择加密，则利用`room_key`加密。"
+msgstr ""
+"In an end-to-end encrypted group chat, each user chooses whether to "
+"encrypt when sending a message. If so, they use the `room_key` for "
+"encryption."
+
+#: ../../source/docs/use/e2ee.md:111
+msgid "一个`room_key`一直到被更换之前，都对期间发的消息有效，任何持有`room_key`的客户端都可以对被加密的消息解密。"
+msgstr ""
+"A `room_key` is valid from the time it is created until it is replaced. "
+"Any client holding the `room_key` can decrypt the encrypted message."
 
 #: ../../source/docs/use/index.rst:3
 msgid "此部分是关于使用OurChat的文档"
@@ -2237,10 +2538,6 @@ msgstr ""
 #: ../../source/docs/use/role_permission.md:7
 msgid "以下是权限表："
 msgstr "The following is the permission table:"
-
-#: ../../source/docs/use/role_permission.md
-msgid "权限"
-msgstr "Permission"
 
 #: ../../source/docs/use/role_permission.md
 msgid "说明"
@@ -2396,4 +2693,207 @@ msgstr "Member has permissions `1 2`"
 
 #~ msgid "接下来进入客户端目录安装依赖包"
 #~ msgstr "Next, go to the client directory to install the dependency packages"
+
+#~ msgid "该Service用于完成服务器中的鉴权操作"
+#~ msgstr ""
+
+#~ msgid "用于注册一个用户并返回其token"
+#~ msgstr ""
+
+#~ msgid "用于登录一个已经存在的用户并返回其token"
+#~ msgstr ""
+
+#~ msgid "该Service用于完成服务器中不需要额外权限的操作"
+#~ msgstr ""
+
+#~ msgid "通过帐号ocid获取某个帐号的id"
+#~ msgstr ""
+
+#~ msgid "该Service用于完成绝大部分操作，且所有操作都需要额外附带通过[AuthService](#authservice)中调用获取的token"
+#~ msgstr ""
+
+#~ msgid "提供该token的方式为添加请求头: `token: <token>`"
+#~ msgstr ""
+
+#~ msgid "token本身是以`JWT`的形式传递的，所以你可以解读token，token中数据格式为:"
+#~ msgstr ""
+
+#~ msgid "一旦token过期，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Expired`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "如果token不合法，例如不是JWT或不包含所需要的字段，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token "
+#~ "Invalid`"
+#~ msgstr ""
+
+#~ msgid "如果未提供token，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Missing`"
+#~ msgstr ""
+
+#~ msgid "HttpServer: HTTP 服务"
+#~ msgstr "HttpServer: HTTP service"
+
+#~ msgid "JuiceFS: 分布式文件系统"
+#~ msgstr "JuiceFS: Distributed file system"
+
+#~ msgid "具体参考其官网 [JuiceFS](https://juicefs.com)"
+#~ msgstr "Please refer to the official website [JuiceFS](https://juicefs.com)"
+
+#~ msgid "组件之间计划可以通过 RPC 的方式进行通信，通过非对称加密签名来签名 JWT 进行身份验证，但目前主要还是通过消息队列通信"
+#~ msgstr ""
+#~ "Components are planned to communicate "
+#~ "via RPC and authenticate using JWT "
+#~ "signed with asymmetric encryption, but "
+#~ "currently communication is mainly done "
+#~ "through message queues"
+
+#~ msgid "http服务器命令行参数"
+#~ msgstr "http server command argument"
+
+#~ msgid "`--port=server listening port`"
+#~ msgstr "`--port=server listening port`"
+
+#~ msgid "服务器监听的端口"
+#~ msgstr "Port the server listens on"
+
+#~ msgid "7777"
+#~ msgstr "7777"
+
+#~ msgid "`--http-port=http server listening port`"
+#~ msgstr "`--http-port=http server listening port`"
+
+#~ msgid "http 服务器监听的端口"
+#~ msgstr "Port the http server listens on"
+
+#~ msgid "7778"
+#~ msgstr "7778"
+
+#~ msgid "`--ip=server listening ip`"
+#~ msgstr "`--ip=server listening ip`"
+
+#~ msgid "服务器监听的 ip"
+#~ msgstr "IP the server listens on"
+
+#~ msgid "127.0.0.1"
+#~ msgstr "127.0.0.1"
+
+#~ msgid "`--db-type`"
+#~ msgstr "`--db-type`"
+
+#~ msgid "选择数据库类型"
+#~ msgstr "Choose Database Type"
+
+#~ msgid "mysql"
+#~ msgstr "mysql"
+
+#~ msgid "`--enable-cmd`"
+#~ msgstr "`--enable-cmd`"
+
+#~ msgid "是否启用 cmd"
+#~ msgstr "whether to enable cmd"
+
+#~ msgid "true"
+#~ msgstr "true"
+
+#~ msgid "服务器控制台指令"
+#~ msgstr "Server Console Commands"
+
+#~ msgid "概览"
+#~ msgstr "Overview"
+
+#~ msgid "指令是大小写不敏感的，例如`help`,`HeLp`实际上是一个指令"
+#~ msgstr ""
+#~ "Commands are case insensitive, such as"
+#~ " `help`, `HELP` actually is a command"
+
+#~ msgid "指令"
+#~ msgstr "Command"
+
+#~ msgid "概要说明"
+#~ msgstr "Overview Description"
+
+#~ msgid "Help"
+#~ msgstr "Help"
+
+#~ msgid "显示帮助信息"
+#~ msgstr "Display help information"
+
+#~ msgid "Set"
+#~ msgstr "Set"
+
+#~ msgid "设置服务器变量"
+#~ msgstr "Set server variables"
+
+#~ msgid "Get"
+#~ msgstr "Get"
+
+#~ msgid "获取服务器变量的值"
+#~ msgstr "Get Server Variable Value"
+
+#~ msgid "CleanFS"
+#~ msgstr "CleanFS"
+
+#~ msgid "立刻运行清理命令清理服务器过期文件"
+#~ msgstr "Run clean command to clean server expired files immediately"
+
+#~ msgid "Exit"
+#~ msgstr "Exit"
+
+#~ msgid "优雅地关闭服务器"
+#~ msgstr "Shut down the server gracefully"
+
+#~ msgid "详细使用方法"
+#~ msgstr "Usage Details"
+
+#~ msgid "参数: 任意个指令的名字 输出：各个指令的用法和详细信息"
+#~ msgstr ""
+#~ "Argument: Any command name. Output: Each"
+#~ " command's usage and detailed information"
+
+#~ msgid "参数:变量+变量值"
+#~ msgstr "Argument: Variable + Variable Value"
+
+#~ msgid "[变量表](#变量表)"
+#~ msgstr "[Variable Table](#变量表)"
+
+#~ msgid "参数:变量名"
+#~ msgstr "Argument: Variable Name"
+
+#~ msgid "无参数"
+#~ msgstr "No Parameter"
+
+#~ msgid "附录"
+#~ msgstr "Appendix"
+
+#~ msgid "变量表"
+#~ msgstr "Variable Table"
+
+#~ msgid "变量"
+#~ msgstr "Variable"
+
+#~ msgid "值"
+#~ msgstr "Value"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "服务器运行状态"
+#~ msgstr "Server Running Status"
+
+#~ msgid "normal(n)或 maintaining(m)"
+#~ msgstr "normal(n) or maintaining(m)"
+
+#~ msgid "AutoCleanCycle"
+#~ msgstr "AutoCleanCycle"
+
+#~ msgid "自动清理过期文件周期"
+#~ msgstr "Cycle of auto clean expired files"
+
+#~ msgid "Number"
+#~ msgstr "Number"
+
+#~ msgid "FileSaveDays"
+#~ msgstr "FileSaveDays"
+
+#~ msgid "文件保存天数"
+#~ msgstr "File Save Days"
 

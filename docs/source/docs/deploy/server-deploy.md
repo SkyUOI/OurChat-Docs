@@ -103,16 +103,6 @@ server {
 
     listen 7777;
 }
-
-server {
-    server_name  xxx.com;
-
-    location / {
-        proxy_pass http://127.0.0.1:17778;
-    }
-
-    listen 7778; # managed by Certbot
-}
 ```
 
 然而，ourchat 有部分功能基于长时间打开的流，由于 nginx 固定时间终止未使用流的特性可能带来不便，故建议调高至 10min-1h 之间，给出如下更新配置。**注意：该设置几乎在任何情况下都必须打开，否则客户端难以正常工作**：
@@ -130,16 +120,6 @@ server {
     grpc_read_timeout 1200s; # Added
 
     listen 7777;
-}
-
-server {
-    server_name  xxx.com;
-
-    location / {
-        proxy_pass http://127.0.0.1:17778;
-    }
-
-    listen 7778; # managed by Certbot
 }
 ```
 

@@ -38,20 +38,6 @@ server {
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
-
-server {
-    server_name  xxx.com;
-
-    location / {
-        proxy_pass http://127.0.0.1:17778;
-    }
-
-    listen 7778 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/xxx.com/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/xxx.com/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-}
 ```
 
 从而将外部的流量转发到内部的端口，配合上 certbot 自动管理的 ssl 证书，就可以完成 SSL/TLS 加密的设置了。这种方式不需要特别修改 server，换句话说，`tls.enable`不需要设置为`true`
@@ -62,7 +48,7 @@ Ourchat Server 本身也可以配置证书加密，而不需要依赖 nginx，�
 
 - 使用[certbot](https://certbot.eff.org/)获取证书
 
-- 根据证书设置`ourchat.toml`
+- 根据证书设置`http.toml`
 
 将`tls.enable`设置为`true`，
 
@@ -76,7 +62,5 @@ Ourchat Server 本身也可以配置证书加密，而不需要依赖 nginx，�
 | `tls.client_key_cert_path`    | 客户端证书的`.key`文件路径。         |
 | `tls.ca_tls_cert_path`        | 服务端证书的根证书的`.pem`文件路径。 |
 | `tls.client_ca_tls_cert_path` | 客户端证书的根证书的`.pem`文件路径。 |
-
-参数在`server`和`http_server`中同时存在，可以根据需要来启用 TLS。
 
 同时，客户端证书用于双向验证，不作为强制要求，仅在特殊情况下设置。
