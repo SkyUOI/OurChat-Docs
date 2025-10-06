@@ -15,7 +15,7 @@
 ## 前置依赖
 
 - [Rust Compiler](https://rust-lang.org)
-- [buf](https://buf.build/)
+- [buf](https://buf.build/) (为了格式化和检测.proto 文件，可选)
 - [protobuf compiler](https://github.com/protocolbuffers/protobuf)
 
 ## 优化开发体验

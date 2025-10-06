@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-05 15:24+0800\n"
+"POT-Creation-Date: 2025-10-06 20:38+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -357,13 +357,22 @@ msgstr "Being integrated with nginx"
 msgid ""
 "由于 grpc 基于 http2，故需要启用`http2 on;`参数，同时，较新版本的 nginx "
 "提供了`grpc_pass`用于转发流量，故而可以给出如下示例配置："
-msgstr "Due to the fact that grpc is based on http2, the `http2 on;` parameter is enabled, and newer versions of nginx provide the `grpc_pass` parameter to forward traffic, so the following example configuration is provided:"
+msgstr ""
+"Due to the fact that grpc is based on http2, the `http2 on;` parameter is"
+" enabled, and newer versions of nginx provide the `grpc_pass` parameter "
+"to forward traffic, so the following example configuration is provided:"
 
 #: ../../source/docs/deploy/server-deploy.md:108
 msgid ""
 "然而，ourchat 有部分功能基于长时间打开的流，由于 nginx 固定时间终止未使用流的特性可能带来不便，故建议调高至 10min-1h "
 "之间，给出如下更新配置。**注意：该设置几乎在任何情况下都必须打开，否则客户端难以正常工作**："
-msgstr "However, OurChat has some functions based on long-term open streams, due to the fixed time termination of unused streams by nginx, which may cause inconvenience. Therefore, it is recommended to increase it to between 10 minutes and 1 hour. The following updated configuration is provided. **Note: This setting must be enabled in almost all cases, otherwise the client may not work properly**:"
+msgstr ""
+"However, OurChat has some functions based on long-term open streams, due "
+"to the fixed time termination of unused streams by nginx, which may cause"
+" inconvenience. Therefore, it is recommended to increase it to between 10"
+" minutes and 1 hour. The following updated configuration is provided. "
+"**Note: This setting must be enabled in almost all cases, otherwise the "
+"client may not work properly**:"
 
 #: ../../source/docs/deploy/server-deploy.md:126
 msgid "SSL/TLS 加密"
@@ -381,14 +390,20 @@ msgstr "Set SSL/TLS Certificate for Server"
 msgid ""
 "在一个规模不大或是内网中的服务器，通常不需要设置 SSL/TLS 证书。然而，如果你正在设置一个公共的服务器，设置一个 SSL/TLS "
 "证书是很有必要的，这可以有效防止一些恶意的攻击。"
-msgstr "In a small-scale or intranet server, it is usually not necessary to set up an SSL/TLS certificate. However, if you are setting up a public server, it is very necessary to set up an SSL/TLS certificate, which can effectively prevent some malicious attacks."
+msgstr ""
+"In a small-scale or intranet server, it is usually not necessary to set "
+"up an SSL/TLS certificate. However, if you are setting up a public "
+"server, it is very necessary to set up an SSL/TLS certificate, which can "
+"effectively prevent some malicious attacks."
 
 #: ../../source/docs/deploy/ssl-tls.md:5
 msgid ""
 "首先，你需要一个可用的证书，你可以选择[Let's "
 "Encrypt](https://letsencrypt.org/)的免费证书，也可以选择其他的商业证书。"
-msgstr "First, you need an available certificate. You can choose a free certificate"
-" from [Let's Encrypt](https://letsencrypt.org/) or other commercial certificates."
+msgstr ""
+"First, you need an available certificate. You can choose a free "
+"certificate from [Let's Encrypt](https://letsencrypt.org/) or other "
+"commercial certificates."
 
 #: ../../source/docs/deploy/ssl-tls.md:7
 msgid "接下来，为服务器配置 SSL/TLS 加密有两种方法："
@@ -402,7 +417,10 @@ msgstr "Combine with existing proxy services (Recommended)"
 msgid ""
 "下面以[nginx](https://www.nginx.com/)+[Let's "
 "Encrypt](https://letsencrypt.org/)为例，配置 nginx 的 SSL/TLS 加密:"
-msgstr "In the following, we use [nginx](https://www.nginx.com/) and [Let's Encrypt](https://letsencrypt.org/) as an example to configure nginx's SSL/TLS encryption:"
+msgstr ""
+"In the following, we use [nginx](https://www.nginx.com/) and [Let's "
+"Encrypt](https://letsencrypt.org/) as an example to configure nginx's "
+"SSL/TLS encryption:"
 
 #: ../../source/docs/deploy/ssl-tls.md:13
 msgid "使用[certbot](https://certbot.eff.org/)安装证书"
@@ -414,12 +432,17 @@ msgstr "Change the port mapped by the docker service (optional)"
 
 #: ../../source/docs/deploy/ssl-tls.md:17
 msgid "修改`docker/compose.yml`的`port`，例如将`7777:7777`修改为`17777:7777`，将端口映射到本地的`17777`端口"
-msgstr "Modify the `port` in `docker/compose.yml`, for example, change `7777:7777` to `17777:7777`, mapping the port to the local `17777` port"
+msgstr ""
+"Modify the `port` in `docker/compose.yml`, for example, change "
+"`7777:7777` to `17777:7777`, mapping the port to the local `17777` port"
 
 #: ../../source/docs/deploy/ssl-tls.md:19
 #, python-brace-format
 msgid "您可能需要在`/etc/docker/daemon.json`加入`{\"iptables\":false}`来禁用`iptables`，同时可能需要`ufw`之类的软件来帮助禁用`17777`端口暴露到公网。"
-msgstr "You may need to add `{\"iptables\":false}` in `/etc/docker/daemon.json` to disable `iptables`, and you may also need software like `ufw` to help disable the exposure of port `17777` to the public network."
+msgstr ""
+"You may need to add `{\"iptables\":false}` in `/etc/docker/daemon.json` "
+"to disable `iptables`, and you may also need software like `ufw` to help "
+"disable the exposure of port `17777` to the public network."
 
 #: ../../source/docs/deploy/ssl-tls.md:21
 msgid "在`nginx.conf`中加入类似以下配置:"
@@ -429,7 +452,12 @@ msgstr "Add the following configuration to `nginx.conf`:"
 msgid ""
 "从而将外部的流量转发到内部的端口，配合上 certbot 自动管理的 ssl 证书，就可以完成 SSL/TLS "
 "加密的设置了。这种方式不需要特别修改 server，换句话说，`tls.enable`不需要设置为`true`"
-msgstr "so that external traffic is forwarded to internal ports. With certbot's automatic management of SSL certificates, you can complete the SSL/TLS encryption setup. This method does not require special modifications to the server; in other words, `tls.enable` does not need to be set to `true`."
+msgstr ""
+"so that external traffic is forwarded to internal ports. With certbot's "
+"automatic management of SSL certificates, you can complete the SSL/TLS "
+"encryption setup. This method does not require special modifications to "
+"the server; in other words, `tls.enable` does not need to be set to "
+"`true`."
 
 #: ../../source/docs/deploy/ssl-tls.md:45
 msgid "独立启用 SSL/TLS 加密"
@@ -437,7 +465,9 @@ msgstr "Enable SSL/TLS Encryption Individually"
 
 #: ../../source/docs/deploy/ssl-tls.md:47
 msgid "Ourchat Server 本身也可以配置证书加密，而不需要依赖 nginx，操作步骤如下："
-msgstr "Ourchat Server itself can also configure certificate encryption without depending on nginx, the operation steps are as follows:"
+msgstr ""
+"Ourchat Server itself can also configure certificate encryption without "
+"depending on nginx, the operation steps are as follows:"
 
 #: ../../source/docs/deploy/ssl-tls.md:49
 msgid "使用[certbot](https://certbot.eff.org/)获取证书"
@@ -1546,8 +1576,8 @@ msgid "[Rust Compiler](https://rust-lang.org)"
 msgstr "[Rust Compiler](https://rust-lang.org)"
 
 #: ../../source/docs/development/server/basic.md:18
-msgid "[buf](https://buf.build/)"
-msgstr "[buf](https://buf.build/)"
+msgid "[buf](https://buf.build/) (为了格式化和检测.proto 文件，可选)"
+msgstr "[buf](https://buf.build/) (for formatting and checking .proto files, optional)"
 
 #: ../../source/docs/development/server/basic.md:19
 msgid "[protobuf compiler](https://github.com/protocolbuffers/protobuf)"
