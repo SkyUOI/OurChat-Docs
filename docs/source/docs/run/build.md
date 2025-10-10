@@ -87,7 +87,7 @@ flutter run
 
 #### 构建APK并签名
 
-我们强烈建议构建apk时为其签名，若您暂时不打算签名，可直接跳至[常规构建](#常规构建)
+我们强烈建议构建apk时为其签名，若您暂时不打算签名，可直接跳至常规构建
 
 你需要准备：
 
@@ -96,7 +96,7 @@ flutter run
 
 将密钥库文件复制到`client/android/app`下，并在同目录下新建`key.properties`文件，内容为：
 
-```plaintext
+```
 storePassword = <storePassword>
 keyPassword = <keyPassword>
 keyAlias = key
@@ -105,7 +105,7 @@ storeFile = <storeFile>
 
 例如
 
-```plaintext
+```
 storePassword = test123
 keyPassword = test123
 keyAlias = key
