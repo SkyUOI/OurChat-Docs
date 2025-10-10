@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-06 20:38+0800\n"
+"POT-Creation-Date: 2025-10-10 20:53+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -1577,7 +1577,9 @@ msgstr "[Rust Compiler](https://rust-lang.org)"
 
 #: ../../source/docs/development/server/basic.md:18
 msgid "[buf](https://buf.build/) (为了格式化和检测.proto 文件，可选)"
-msgstr "[buf](https://buf.build/) (for formatting and checking .proto files, optional)"
+msgstr ""
+"[buf](https://buf.build/) (for formatting and checking .proto files, "
+"optional)"
 
 #: ../../source/docs/development/server/basic.md:19
 msgid "[protobuf compiler](https://github.com/protocolbuffers/protobuf)"
@@ -2159,6 +2161,42 @@ msgid "构建为可执行文件"
 msgstr "Build as an executable file"
 
 #: ../../source/docs/run/build.md:88
+msgid "构建APK并签名"
+msgstr "Build and Sign the APK"
+
+#: ../../source/docs/run/build.md:90
+msgid "我们强烈建议构建apk时为其签名，若您暂时不打算签名，可直接跳至[常规构建](#常规构建)"
+msgstr "We strongly recommend signing the APK during the build process. If you do not plan to sign it for the time being, you can skip directly to [Regular Build](#常规构建)"
+
+#: ../../source/docs/run/build.md:92
+msgid "你需要准备："
+msgstr "You need to prepare:"
+
+#: ../../source/docs/run/build.md:94
+msgid "密钥库文件及密钥"
+msgstr "Keystore file and key"
+
+#: ../../source/docs/run/build.md:95
+msgid "脑子"
+msgstr "YOUR HAND"
+
+#: ../../source/docs/run/build.md:97
+msgid "将密钥库文件复制到`client/android/app`下，并在同目录下新建`key.properties`文件，内容为："
+msgstr msgstr "Copy the keystore file to `client/android/app`, and create a new `key.properties` file in the same directory with the following content:"
+
+#: ../../source/docs/run/build.md:106
+msgid "例如"
+msgstr "For example"
+
+#: ../../source/docs/run/build.md:115
+msgid "接下来只需在`client`目录下执行"
+msgstr "Next, you just need to execute the following command in the `client` directory"
+
+#: ../../source/docs/run/build.md:121
+msgid "常规构建"
+msgstr "Regular Build"
+
+#: ../../source/docs/run/build.md:123
 msgid "进入客户端目录并运行项目"
 msgstr "Go to the client directory and run the project"
 
