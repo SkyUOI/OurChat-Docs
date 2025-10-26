@@ -56,6 +56,8 @@ flutter pub get # 安装依赖
 ```bash
 # 生成grpc service相关代码
 python ./script/generate.pb.dart.py
+# 获取about界面相关信息
+python ./script/generate_about_code.py
 ```
 
 等待完成后进入客户端目录并运行
