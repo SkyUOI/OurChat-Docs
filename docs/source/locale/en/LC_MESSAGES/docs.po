@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-10 21:00+0800\n"
+"POT-Creation-Date: 2025-10-26 16:54+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -333,7 +333,7 @@ msgid "编译项目"
 msgstr "Compile the project"
 
 #: ../../source/docs/deploy/server-deploy.md:84
-#: ../../source/docs/run/build.md:69
+#: ../../source/docs/run/build.md:78
 msgid "运行项目"
 msgstr "Run the project"
 
@@ -1240,10 +1240,30 @@ msgid "好友关系不存在"
 msgstr "The friend relationship does not exist"
 
 #: ../../source/docs/development/api.md:274
+msgid "GetRole"
+msgstr "GetRole"
+
+#: ../../source/docs/development/api.md
+msgid "Not In Session"
+msgstr "Not In Session"
+
+#: ../../source/docs/development/api.md
+msgid "Not in the session, do not have permission."
+msgstr "Session Operation Permission"
+
+#: ../../source/docs/development/api.md
+msgid "Role Not Found"
+msgstr "Role Not Found"
+
+#: ../../source/docs/development/api.md
+msgid "角色不存在"
+msgstr "Role does not exist"
+
+#: ../../source/docs/development/api.md:281
 msgid "Unregister"
 msgstr "Unregister"
 
-#: ../../source/docs/development/api.md:276
+#: ../../source/docs/development/api.md:283
 msgid "暂时没有相关错误可能发生"
 msgstr "No relevant errors can occur currently"
 
@@ -2038,6 +2058,7 @@ msgid "字符串"
 msgstr "String"
 
 #: ../../source/docs/development/special_string.md
+#: ../../source/docs/run/build.md
 msgid "含义"
 msgstr "Meaning"
 
@@ -2152,58 +2173,106 @@ msgstr "Generate code"
 msgid "在本项目根目录下运行"
 msgstr "Run at the root directory of this project"
 
-#: ../../source/docs/run/build.md:61
+#: ../../source/docs/run/build.md
+msgid "参数"
+msgstr "Argument"
+
+#: ../../source/docs/run/build.md
+msgid "可选"
+msgstr "Optional"
+
+#: ../../source/docs/run/build.md
+msgid "afdian_userid"
+msgstr "afdian_userid"
+
+#: ../../source/docs/run/build.md
+msgid "爱发电平台的userId，用于获取捐献者列表"
+msgstr "The user ID on the Aifadian platform, used for obtaining the donor list."
+
+#: ../../source/docs/run/build.md
+msgid "●"
+msgstr "●"
+
+#: ../../source/docs/run/build.md
+msgid "afdian_token"
+msgstr "afdian_token"
+
+#: ../../source/docs/run/build.md
+msgid "爱发电平台的token，用于获取捐献者列表"
+msgstr "The token on the Aifadian platform, used for obtaining the donor list."
+
+#: ../../source/docs/run/build.md
+msgid "version"
+msgstr "version"
+
+#: ../../source/docs/run/build.md
+msgid "当前版本的版本号"
+msgstr "Version Id of current version"
+
+#: ../../source/docs/run/build.md
+msgid "×"
+msgstr "×"
+
+#: ../../source/docs/run/build.md
+msgid "commit_sha"
+msgstr "commit_sha"
+
+#: ../../source/docs/run/build.md
+msgid "当前版本的commit_sha"
+msgstr "commit_sha of current version"
+
+#: ../../source/docs/run/build.md:70
 msgid "等待完成后进入客户端目录并运行"
 msgstr "After it is completed, enter the client directory and run it"
 
-#: ../../source/docs/run/build.md:86
+#: ../../source/docs/run/build.md:95
 msgid "构建为可执行文件"
 msgstr "Build as an executable file"
 
-#: ../../source/docs/run/build.md:88
+#: ../../source/docs/run/build.md:97
 msgid "构建APK并签名"
 msgstr "Build and Sign the APK"
 
-#: ../../source/docs/run/build.md:90
-#, fuzzy
+#: ../../source/docs/run/build.md:99
 msgid "我们强烈建议构建apk时为其签名，若您暂时不打算签名，可直接跳至常规构建"
 msgstr ""
 "We strongly recommend signing the APK during the build process. If you do"
-" not plan to sign it for the time being, you can skip directly to Regular Build"
+" not plan to sign it for the time being, you can skip directly to Regular"
+" Build"
 
-#: ../../source/docs/run/build.md:92
+#: ../../source/docs/run/build.md:101
 msgid "你需要准备："
 msgstr "You need to prepare:"
 
-#: ../../source/docs/run/build.md:94
+#: ../../source/docs/run/build.md:103
 msgid "密钥库文件及密钥"
 msgstr "Keystore file and key"
 
-#: ../../source/docs/run/build.md:95
+#: ../../source/docs/run/build.md:104
 msgid "脑子"
 msgstr "YOUR HAND"
 
-#: ../../source/docs/run/build.md:97
+#: ../../source/docs/run/build.md:106
 msgid "将密钥库文件复制到`client/android/app`下，并在同目录下新建`key.properties`文件，内容为："
 msgstr ""
 "sgstr \"Copy the keystore file to `client/android/app`, and create a new "
 "`key.properties` file in the same directory with the following content:"
 
-#: ../../source/docs/run/build.md:106
+#: ../../source/docs/run/build.md:115
 msgid "例如"
 msgstr "For example"
 
-#: ../../source/docs/run/build.md:115
+#: ../../source/docs/run/build.md:124
 msgid "接下来只需在`client`目录下执行"
 msgstr ""
 "Next, you just need to execute the following command in the `client` "
 "directory"
 
-#: ../../source/docs/run/build.md:121
+#: ../../source/docs/run/build.md:130
 msgid "常规构建"
 msgstr "Regular Build"
 
-#: ../../source/docs/run/build.md:123
+#: ../../source/docs/run/build.md:132
 msgid "进入客户端目录并运行项目"
 msgstr "Go to the client directory and run the project"
 

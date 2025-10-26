@@ -57,8 +57,15 @@ flutter pub get # 安装依赖
 # 生成grpc service相关代码
 python ./script/generate.pb.dart.py
 # 获取about界面相关信息
-python ./script/generate_about_code.py
+python ./script/generate_about_code.py --afdian_userid userid --afdian_token token --version v0.1.0.beta --commit_sha 123456abc
 ```
+
+| 参数 | 含义 |可选|
+|-----|------|---|
+|afdian_userid|爱发电平台的userId，用于获取捐献者列表| ● |
+|afdian_token|爱发电平台的token，用于获取捐献者列表| ● |
+|version|当前版本的版本号|×|
+|commit_sha|当前版本的commit_sha|×|
 
 等待完成后进入客户端目录并运行
 
