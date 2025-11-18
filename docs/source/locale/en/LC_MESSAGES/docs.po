@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-26 16:54+0800\n"
+"POT-Creation-Date: 2025-11-18 09:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -919,6 +919,10 @@ msgid "Status Too Long"
 msgstr "Status Too Long"
 
 #: ../../source/docs/development/api.md
+msgid "新的 Status 太长"
+msgstr "The new status is too long"
+
+#: ../../source/docs/development/api.md
 msgid "用户名非法，例如过长或为空"
 msgstr "The username is invalid, for example, it is too long or empty"
 
@@ -1248,8 +1252,8 @@ msgid "Not In Session"
 msgstr "Not In Session"
 
 #: ../../source/docs/development/api.md
-msgid "Not in the session, do not have permission."
-msgstr "Session Operation Permission"
+msgid "不在Session中，不具备权限"
+msgstr "Not in the session, do not have permission"
 
 #: ../../source/docs/development/api.md
 msgid "Role Not Found"
@@ -3040,4 +3044,7 @@ msgstr "Member has permissions `1 2`"
 
 #~ msgid "文件保存天数"
 #~ msgstr "File Save Days"
+
+#~ msgid "Not in the session, do not have permission."
+#~ msgstr "Session Operation Permission"
 
