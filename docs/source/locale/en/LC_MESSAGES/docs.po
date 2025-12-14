@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-14 12:17+0800\n"
+"POT-Creation-Date: 2025-12-14 15:59+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -1509,43 +1509,115 @@ msgstr "Markdown in Messages"
 
 #: ../../source/docs/development/markdown_in_msg.md:3
 msgid "为了确保用户消息的丰富性与传递的便携性，我们对Markdown基础语法进行了一些扩展"
-msgstr "To ensure the richness and portability of user messages, we have made some extensions to the basic Markdown syntax"
+msgstr ""
+"To ensure the richness and portability of user messages, we have made "
+"some extensions to the basic Markdown syntax"
 
 #: ../../source/docs/development/markdown_in_msg.md:5
+msgid "媒体"
+msgstr "Media"
+
+#: ../../source/docs/development/markdown_in_msg.md:7
+msgid "目前共有三种媒体"
+msgstr "There are currently three types of media"
+
+#: ../../source/docs/development/markdown_in_msg.md
+#: ../../source/docs/development/markdown_in_msg.md:9
 msgid "图片"
 msgstr "Image"
 
-#: ../../source/docs/development/markdown_in_msg.md:7
-msgid "消息内的Image标签分为两种"
-msgstr "There are two types of Image tags in messages"
-
-#: ../../source/docs/development/markdown_in_msg.md:9
-#: ../../source/docs/development/markdown_in_msg.md:12
-msgid "网络图片"
-msgstr "Network Image"
-
+#: ../../source/docs/development/markdown_in_msg.md
 #: ../../source/docs/development/markdown_in_msg.md:10
-#: ../../source/docs/development/markdown_in_msg.md:17
-msgid "服务器图片"
-msgstr "Server Image"
+msgid "视频"
+msgstr "Video"
 
-#: ../../source/docs/development/markdown_in_msg.md:14
-msgid ""
-"网络图片与Markdown语法一致，即 `![alt](url \"title\")` "
-"由于网络图片的安全性问题，在OurChat官方客户端内，网络图片旁将存在安全性提示，我们强烈建议第三方客户端也提供该功能"
-msgstr ""
-"Network images follow the standard Markdown syntax: `![alt](url \"title\")`"
-"Due to security concerns with network images, a security prompt will be displayed next to network images in the official OurChat client."
-"We strongly recommend that third-party clients also implement this feature."
+#: ../../source/docs/development/markdown_in_msg.md
+#: ../../source/docs/development/markdown_in_msg.md:11
+msgid "文件"
+msgstr "File"
 
-#: ../../source/docs/development/markdown_in_msg.md:19
-msgid ""
-"服务器图片是指经过upload api上传到服务器的图片 在消息内写作`![alt](ourchat://key \"title\")` "
-"key即为调用upload api所返回的key"
+#: ../../source/docs/development/markdown_in_msg.md:13
+msgid "消息内的媒体标签分为两种"
+msgstr "There are two types of medias tags in messages"
+
+#: ../../source/docs/development/markdown_in_msg.md:15
+msgid "网络媒体(__注意：考虑到安全性，OurChat官方客户端会对来自网络的内容进行明显的标记，我们强烈建议第三方客户端也实现该功能__)"
+msgstr "Network Media (__ Note: For security reasons, the official OurChat client will clearly mark content from the Internet. We strongly recommend that third-party clients also implement this function __)"
+
+#: ../../source/docs/development/markdown_in_msg.md:16
+msgid "服务器媒体"
+msgstr "Server Media"
+
+#: ../../source/docs/development/markdown_in_msg.md:18
+msgid "在消息中，一个媒体标签写作"
+msgstr "In the message, a media tag is written as"
+
+#: ../../source/docs/development/markdown_in_msg.md:24
+msgid "其中字符T代表媒体类型"
+msgstr "Among them, the character "T" represents the media type"
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "字符"
+msgstr "Character"
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "媒体类型"
+msgstr "Media type"
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "I"
 msgstr ""
-"Server images refer to images uploaded to the server via the upload API."
-"In messages, they are written as `![alt](ourchat://key \"title\")`"
-"where the `key` is the value returned by calling the upload API."
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "V"
+msgstr ""
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "F"
+msgstr ""
+
+#: ../../source/docs/development/markdown_in_msg.md:32
+msgid "字符S代表来源"
+msgstr "The character 'S' represents the source"
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "来源"
+msgstr "Source"
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "content对应内容"
+msgstr "content"
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "O"
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "OurChat服务器"
+msgstr "OurChat Server"
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "媒体key"
+msgstr "key of media"
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "N"
+msgstr ""
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "网络"
+msgstr "Network"
+
+#: ../../source/docs/development/markdown_in_msg.md
+msgid "媒体的url"
+msgstr "url of media"
+
+#: ../../source/docs/development/markdown_in_msg.md:39
+msgid "因此，来自OurChat服务器的图片(key为xxx)写作："
+msgstr "Therefore, the image from the OurChat server (key: xxx) is written as:"
+
+#: ../../source/docs/development/markdown_in_msg.md:45
+msgid "来自网络的图片写作："
+msgstr "the image from network (key: xxx) is written as:"
 
 #: ../../source/docs/development/public_info.md:1
 msgid "Public Info"
@@ -3091,4 +3163,31 @@ msgstr "Member has permissions `1 2`"
 
 #~ msgid "Not in the session, do not have permission."
 #~ msgstr "Session Operation Permission"
+
+#~ msgid "服务器图片"
+#~ msgstr "Server Image"
+
+#~ msgid ""
+#~ "网络图片与Markdown语法一致，即 `![alt](url \"title\")` "
+#~ "由于网络图片的安全性问题，在OurChat官方客户端内，网络图片旁将存在安全性提示，我们强烈建议第三方客户端也提供该功能"
+#~ msgstr ""
+#~ "Network images follow the standard "
+#~ "Markdown syntax: `![alt](url \"title\")`Due to"
+#~ " security concerns with network images, "
+#~ "a security prompt will be displayed "
+#~ "next to network images in the "
+#~ "official OurChat client.We strongly recommend"
+#~ " that third-party clients also "
+#~ "implement this feature."
+
+#~ msgid ""
+#~ "服务器图片是指经过upload api上传到服务器的图片 在消息内写作`![alt](ourchat://key"
+#~ " \"title\")` key即为调用upload api所返回的key"
+#~ msgstr ""
+#~ "Server images refer to images uploaded"
+#~ " to the server via the upload "
+#~ "API.In messages, they are written as "
+#~ "`![alt](ourchat://key \"title\")`where the `key` "
+#~ "is the value returned by calling "
+#~ "the upload API."
 
