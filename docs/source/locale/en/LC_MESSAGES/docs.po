@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-14 15:59+0800\n"
+"POT-Creation-Date: 2025-12-14 16:50+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -375,10 +375,16 @@ msgstr ""
 "client may not work properly**:"
 
 #: ../../source/docs/deploy/server-deploy.md:126
+msgid ""
+"由于nginx默认最大传输限制为1MB，所以传输1MB以上的文件时将会触发413 Content Too "
+"Large错误导致无法传输大文件，所以需要进行以下配置"
+msgstr "Since the default maximum transfer limit of nginx is 1MB, a 413 Content Too Large error will be triggered when transferring files larger than 1MB, resulting in the inability to transfer large files. Therefore, the following configuration is required."
+
+#: ../../source/docs/deploy/server-deploy.md:143
 msgid "SSL/TLS 加密"
 msgstr "SSL/TLS Encryption"
 
-#: ../../source/docs/deploy/server-deploy.md:128
+#: ../../source/docs/deploy/server-deploy.md:145
 msgid "见[SSL/TLS](../deploy/ssl-tls.md)"
 msgstr "Please see [SSL/TLS](../deploy/ssl-tls.md)"
 
@@ -1542,7 +1548,10 @@ msgstr "There are two types of medias tags in messages"
 
 #: ../../source/docs/development/markdown_in_msg.md:15
 msgid "网络媒体(__注意：考虑到安全性，OurChat官方客户端会对来自网络的内容进行明显的标记，我们强烈建议第三方客户端也实现该功能__)"
-msgstr "Network Media (__ Note: For security reasons, the official OurChat client will clearly mark content from the Internet. We strongly recommend that third-party clients also implement this function __)"
+msgstr ""
+"Network Media (__ Note: For security reasons, the official OurChat client"
+" will clearly mark content from the Internet. We strongly recommend that "
+"third-party clients also implement this function __)"
 
 #: ../../source/docs/development/markdown_in_msg.md:16
 msgid "服务器媒体"
@@ -1554,7 +1563,7 @@ msgstr "In the message, a media tag is written as"
 
 #: ../../source/docs/development/markdown_in_msg.md:24
 msgid "其中字符T代表媒体类型"
-msgstr "Among them, the character "T" represents the media type"
+msgstr "Among them, the character \"T\" represents the media type"
 
 #: ../../source/docs/development/markdown_in_msg.md
 msgid "字符"
@@ -1590,6 +1599,7 @@ msgstr "content"
 
 #: ../../source/docs/development/markdown_in_msg.md
 msgid "O"
+msgstr ""
 
 #: ../../source/docs/development/markdown_in_msg.md
 msgid "OurChat服务器"

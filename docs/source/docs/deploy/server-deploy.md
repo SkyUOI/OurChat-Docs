@@ -123,6 +123,23 @@ server {
 }
 ```
 
+由于nginx默认最大传输限制为1MB，所以传输1MB以上的文件时将会触发413 Content Too Large错误导致无法传输大文件，所以需要进行以下配置
+
+```nginx
+server_name  xxx.com;
+
+    location / {
+        grpc_pass grpc://127.0.0.1:17777;
+    }
+
+    http2 on;
+    keepalive_timeout 1200s;
+    grpc_read_timeout 1200s;
+    client_max_body_size 2048M # Added
+
+    listen 7777;
+```
+
 ## SSL/TLS 加密
 
 见[SSL/TLS](../deploy/ssl-tls.md)
