@@ -15,3 +15,4 @@
    public_info
    special_string
    document_contributing
+   markdown_in_msg
