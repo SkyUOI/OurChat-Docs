@@ -33,7 +33,7 @@
 详情参见[官方文档](https://grpc.io/docs/languages/dart/quickstart/)
 
 ```bash
-dart pub global activate protoc_plugin
+dart pub global activate protoc_plugin 23.0.0
 ```
 
 将Pub缓存路径添加到环境变量中
