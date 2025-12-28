@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-14 16:50+0800\n"
+"POT-Creation-Date: 2025-12-28 14:46+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -333,7 +333,7 @@ msgid "编译项目"
 msgstr "Compile the project"
 
 #: ../../source/docs/deploy/server-deploy.md:84
-#: ../../source/docs/run/build.md:78
+#: ../../source/docs/run/build.md:76
 msgid "运行项目"
 msgstr "Run the project"
 
@@ -378,7 +378,11 @@ msgstr ""
 msgid ""
 "由于nginx默认最大传输限制为1MB，所以传输1MB以上的文件时将会触发413 Content Too "
 "Large错误导致无法传输大文件，所以需要进行以下配置"
-msgstr "Since the default maximum transfer limit of nginx is 1MB, a 413 Content Too Large error will be triggered when transferring files larger than 1MB, resulting in the inability to transfer large files. Therefore, the following configuration is required."
+msgstr ""
+"Since the default maximum transfer limit of nginx is 1MB, a 413 Content "
+"Too Large error will be triggered when transferring files larger than "
+"1MB, resulting in the inability to transfer large files. Therefore, the "
+"following configuration is required."
 
 #: ../../source/docs/deploy/server-deploy.md:143
 msgid "SSL/TLS 加密"
@@ -2351,60 +2355,67 @@ msgstr "commit_sha"
 msgid "当前版本的commit_sha"
 msgstr "commit_sha of current version"
 
-#: ../../source/docs/run/build.md:70
+#: ../../source/docs/run/build.md:68
 msgid "等待完成后进入客户端目录并运行"
 msgstr "After it is completed, enter the client directory and run it"
 
-#: ../../source/docs/run/build.md:95
+#: ../../source/docs/run/build.md:93
 msgid "构建为可执行文件"
 msgstr "Build as an executable file"
 
+#: ../../source/docs/run/build.md:95
+msgid "常规构建"
+msgstr "Regular Build"
+
 #: ../../source/docs/run/build.md:97
+msgid "进入客户端目录并运行项目"
+msgstr "Go to the client directory and run the project"
+
+#: ../../source/docs/run/build.md:120
+msgid "启用版本检查"
+msgstr "Enable version check"
+
+#: ../../source/docs/run/build.md:122
+msgid "只需在生成编译变量时加入`--enable_version_check`参数即可"
+msgstr "Just add the '--enable_version_check' parameter when generating the compiled variable"
+
+#: ../../source/docs/run/build.md:128
 msgid "构建APK并签名"
 msgstr "Build and Sign the APK"
 
-#: ../../source/docs/run/build.md:99
-msgid "我们强烈建议构建apk时为其签名，若您暂时不打算签名，可直接跳至常规构建"
+#: ../../source/docs/run/build.md:130
+msgid "我们强烈建议构建apk时为其签名，若您暂时不打算签名，可直接跳过该板块"
 msgstr ""
 "We strongly recommend signing the APK during the build process. If you do"
-" not plan to sign it for the time being, you can skip directly to Regular"
-" Build"
+" not plan to sign it for the time being, you can skip directly."
 
-#: ../../source/docs/run/build.md:101
+#: ../../source/docs/run/build.md:132
 msgid "你需要准备："
 msgstr "You need to prepare:"
 
-#: ../../source/docs/run/build.md:103
+#: ../../source/docs/run/build.md:134
 msgid "密钥库文件及密钥"
 msgstr "Keystore file and key"
 
-#: ../../source/docs/run/build.md:104
+#: ../../source/docs/run/build.md:135
 msgid "脑子"
 msgstr "YOUR HAND"
 
-#: ../../source/docs/run/build.md:106
+#: ../../source/docs/run/build.md:137
 msgid "将密钥库文件复制到`client/android/app`下，并在同目录下新建`key.properties`文件，内容为："
 msgstr ""
 "sgstr \"Copy the keystore file to `client/android/app`, and create a new "
 "`key.properties` file in the same directory with the following content:"
 
-#: ../../source/docs/run/build.md:115
+#: ../../source/docs/run/build.md:146
 msgid "例如"
 msgstr "For example"
 
-#: ../../source/docs/run/build.md:124
+#: ../../source/docs/run/build.md:155
 msgid "接下来只需在`client`目录下执行"
 msgstr ""
 "Next, you just need to execute the following command in the `client` "
 "directory"
-
-#: ../../source/docs/run/build.md:130
-msgid "常规构建"
-msgstr "Regular Build"
-
-#: ../../source/docs/run/build.md:132
-msgid "进入客户端目录并运行项目"
-msgstr "Go to the client directory and run the project"
 
 #: ../../source/docs/run/index.rst:2
 msgid "运行"

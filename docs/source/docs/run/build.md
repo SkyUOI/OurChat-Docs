@@ -56,8 +56,6 @@ flutter pub get # 安装依赖
 ```bash
 # 生成grpc service相关代码
 python ./script/generate.pb.dart.py
-# 获取about界面相关信息
-python ./script/generate_about_code.py --afdian_userid userid --afdian_token token --version v0.1.0.beta --commit_sha 123456abc
 ```
 
 | 参数 | 含义 |可选|
@@ -94,9 +92,42 @@ flutter run
 
 ### 构建为可执行文件
 
+#### 常规构建
+
+进入客户端目录并运行项目
+
+```bash
+# 生成编译变量
+python ./script/generate_about_code.py --afdian_userid userid --afdian_token token --version v0.1.0.beta --commit_sha 123456abc
+cd ./client # 进入目录
+flutter build # 查看可供构建的平台
+
+# 会出现可构建的平台列表，如：
+> Available subcommands:
+>   aar         Build a repository containing an AAR and a POM file.
+>   apk         Build an Android APK file from your app.
+>   appbundle   Build an Android App Bundle file from your app.
+>   bundle      Build the Flutter assets directory from your app.
+>   web         Build a web application bundle.
+>   windows     Build a Windows desktop application.
+
+# 选择你想要构建的平台即可，这里选择windows为例
+flutter build windows
+
+# 构建完成后会显示可执行文件的目录
+```
+
+#### 启用版本检查
+
+只需在生成编译变量时加入`--enable_version_check`参数即可
+
+```bash
+python ./script/generate_about_code.py --afdian_userid userid --afdian_token token --version v0.1.0.beta --commit_sha 123456abc --enable_version_check
+```
+
 #### 构建APK并签名
 
-我们强烈建议构建apk时为其签名，若您暂时不打算签名，可直接跳至常规构建
+我们强烈建议构建apk时为其签名，若您暂时不打算签名，可直接跳过该板块
 
 你需要准备：
 
@@ -124,28 +155,5 @@ storeFile = key.jks
 接下来只需在`client`目录下执行
 
 ```bash
-flutter build apk --release -PuseReleaseSigning=true
-```
-
-#### 常规构建
-
-进入客户端目录并运行项目
-
-```bash
-cd ./client # 进入目录
-flutter build # 查看可供构建的平台
-
-# 会出现可构建的平台列表，如：
-> Available subcommands:
->   aar         Build a repository containing an AAR and a POM file.
->   apk         Build an Android APK file from your app.
->   appbundle   Build an Android App Bundle file from your app.
->   bundle      Build the Flutter assets directory from your app.
->   web         Build a web application bundle.
->   windows     Build a Windows desktop application.
-
-# 选择你想要构建的平台即可，这里选择windows为例
-flutter build windows
-
-# 构建完成后会显示可执行文件的目录
+flutter build apk --dart-define-from-file=build.json --release -PuseReleaseSigning=true
 ```
