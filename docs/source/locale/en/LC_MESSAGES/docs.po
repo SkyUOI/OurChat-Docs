@@ -2377,7 +2377,7 @@ msgstr "Enable version check"
 
 #: ../../source/docs/run/build.md:122
 msgid "只需在生成编译变量时加入`--enable_version_check`参数即可"
-msgstr "Just add the '--enable_version_check' parameter when generating the compiled variable"
+msgstr "Just add the `--enable_version_check` parameter when generating the compiled variable"
 
 #: ../../source/docs/run/build.md:128
 msgid "构建APK并签名"
