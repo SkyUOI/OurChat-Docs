@@ -18,32 +18,32 @@
 在消息中，一个媒体标签写作
 
 ```markdown
-!(alt)[TS://content "title"]
+![alt](TS://content "title")
 ```
 
 其中字符T代表媒体类型
 
 |字符|媒体类型|
-|:--|:-------|
-| I |  图片  |
-| V |  视频  |
-| F |  文件  |
+|:---|:-------|
+| I  |  图片  |
+| V  |  视频  |
+| F  |  文件  |
 
 字符S代表来源
 
 |字符|     来源     |content对应内容|
-|:--|:-------------|:--------------|
-| O | OurChat服务器 |     媒体key    |
-| N |      网络     |    媒体的url   |
+|:---|:-------------|:--------------|
+| O  | OurChat服务器|     媒体key   |
+| N  |      网络    | {协议},{路径} |
 
 因此，来自OurChat服务器的图片(key为xxx)写作：
 
 ```markdown
-!(alt)[IO://xxx "title"]
+![alt](IO://xxx "title")
 ```
 
 来自网络的图片写作：
 
 ```markdown
-!(alt)[IN://https://ourchat.skyuoi.org/resources/images/logo.png "title"]
+![alt](IN://https,ourchat.skyuoi.org/resources/images/logo.png "title")
 ```
