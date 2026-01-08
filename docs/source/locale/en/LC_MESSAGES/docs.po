@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-28 16:39+0800\n"
+"POT-Creation-Date: 2026-01-09 01:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -1610,8 +1610,8 @@ msgid "OurChat服务器"
 msgstr "OurChat Server"
 
 #: ../../source/docs/development/markdown_in_msg.md
-msgid "媒体key"
-msgstr "key of media"
+msgid "非负整数i，代表该媒体为involvedFile中的第i项"
+msgstr "A non-negative integer i indicates that this medium is the i-th item in the involvedFile"
 
 #: ../../source/docs/development/markdown_in_msg.md
 msgid "N"
@@ -1627,8 +1627,8 @@ msgid "{协议},{路径}"
 msgstr "{Protocol},{path}"
 
 #: ../../source/docs/development/markdown_in_msg.md:39
-msgid "因此，来自OurChat服务器的图片(key为xxx)写作："
-msgstr "Therefore, the image from the OurChat server (key: xxx) is written as:"
+msgid "因此，来自OurChat服务器的图片写作："
+msgstr "Therefore, the image from the OurChat server is written as:"
 
 #: ../../source/docs/development/markdown_in_msg.md:45
 msgid "来自网络的图片写作："
@@ -3217,4 +3217,7 @@ msgstr "Member has permissions `1 2`"
 
 #~ msgid "媒体的url"
 #~ msgstr "url of media"
+
+#~ msgid "媒体key"
+#~ msgstr "key of media"
 
