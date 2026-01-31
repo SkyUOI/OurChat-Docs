@@ -41,12 +41,13 @@
 
 错误:
 
-| CodeId | CodeName         | Detail           | meaning            |
-| :----- | :--------------- | :--------------- | :----------------- |
-| 5      | NOT_FOUND        | User Not Found   | 该用户不存在       |
-| 3      | INVALID_ARGUMENT | Missing AuthType | 缺少 AuthType 参数 |
-| 16     | UNAUTHENTICATED  | Wrong Password   | 密码错误           |
-| 16     | UNAUTHENTICATED  | Account Locked   | 帐号已锁定         |
+| CodeId | CodeName         | Detail             | meaning            |
+| :----- | :--------------- | :----------------- | :----------------- |
+| 5      | NOT_FOUND        | User Not Found     | 该用户不存在       |
+| 3      | INVALID_ARGUMENT | Missing AuthType   | 缺少 AuthType 参数 |
+| 16     | UNAUTHENTICATED  | Wrong Password     | 密码错误           |
+| 16     | UNAUTHENTICATED  | Account Locked     | 帐号已锁定         |
+| 16     | UNAUTHENTICATED  | Email Not Verified | 邮箱未验证         |
 
 #### Verify
 
