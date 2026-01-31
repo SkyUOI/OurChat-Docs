@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OurChat-Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-09 01:31+0800\n"
+"POT-Creation-Date: 2026-01-31 10:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -658,9 +658,9 @@ msgstr "Used to register a user and return its token"
 
 #: ../../source/docs/development/api.md:29
 #: ../../source/docs/development/api.md:42
-#: ../../source/docs/development/api.md:54
-#: ../../source/docs/development/api.md:76
-#: ../../source/docs/development/api.md:86
+#: ../../source/docs/development/api.md:55
+#: ../../source/docs/development/api.md:77
+#: ../../source/docs/development/api.md:87
 msgid "错误:"
 msgstr "Error:"
 
@@ -767,51 +767,59 @@ msgstr "Wrong Password"
 msgid "密码错误"
 msgstr "Password is incorrect"
 
-#: ../../source/docs/development/api.md:50
+#: ../../source/docs/development/api.md
+msgid "Account Locked"
+msgstr "Account Locked"
+
+#: ../../source/docs/development/api.md
+msgid "帐号已锁定"
+msgstr "The account is locked"
+
+#: ../../source/docs/development/api.md:51
 msgid "Verify"
 msgstr "Verify"
 
-#: ../../source/docs/development/api.md:52
+#: ../../source/docs/development/api.md:53
 msgid "用于客户端发起邮箱验证，验证帐号是否被窃取"
 msgstr ""
 "Used to initiate an email verification, to verify whether the account has"
 " been stolen"
 
-#: ../../source/docs/development/api.md:62
+#: ../../source/docs/development/api.md:63
 msgid "BasicService"
 msgstr "BasicService"
 
-#: ../../source/docs/development/api.md:64
+#: ../../source/docs/development/api.md:65
 msgid "该 Service 用于完成服务器中不需要额外权限的操作"
 msgstr ""
 "This Service is used to complete operations that do not require "
 "additional permissions on the server"
 
-#: ../../source/docs/development/api.md:66
+#: ../../source/docs/development/api.md:67
 msgid "GetServerInfo"
 msgstr "GetServerInfo"
 
-#: ../../source/docs/development/api.md:68
+#: ../../source/docs/development/api.md:69
 msgid "获取服务器的各项基本信息，包括版本号等"
 msgstr "Get Server Information, including version number, etc."
 
-#: ../../source/docs/development/api.md:70
+#: ../../source/docs/development/api.md:71
 msgid "无错误"
 msgstr "No Error"
 
-#: ../../source/docs/development/api.md:72
+#: ../../source/docs/development/api.md:73
 msgid "GetId"
 msgstr "GetId"
 
-#: ../../source/docs/development/api.md:74
+#: ../../source/docs/development/api.md:75
 msgid "通过帐号 ocid 获取某个帐号的 id"
 msgstr "Through the account ocid to get the id of an account"
 
-#: ../../source/docs/development/api.md:82
+#: ../../source/docs/development/api.md:83
 msgid "GetPresetUserStatus"
 msgstr "GetPresetUserStatus"
 
-#: ../../source/docs/development/api.md:84
+#: ../../source/docs/development/api.md:85
 msgid "获取预设的帐号社交状态"
 msgstr "Get Preset User Social Status"
 
@@ -819,42 +827,42 @@ msgstr "Get Preset User Social Status"
 msgid "Server Error"
 msgstr "Server Error"
 
-#: ../../source/docs/development/api.md:92
+#: ../../source/docs/development/api.md:93
 msgid "OurChatService"
 msgstr "OurChatService"
 
-#: ../../source/docs/development/api.md:94
+#: ../../source/docs/development/api.md:95
 msgid "该 Service 用于完成绝大部分操作，且所有操作都需要额外附带通过[AuthService](#authservice)中调用获取的 token"
 msgstr ""
 "This Service is used to complete most operations, and all operations "
 "require an additional token obtained through the "
 "[AuthService](#authservice)"
 
-#: ../../source/docs/development/api.md:96
+#: ../../source/docs/development/api.md:97
 msgid "提供该 token 的方式为添加请求头: `Authorization: Bearer <token>`"
 msgstr ""
 "Provide the token by adding the request header: `Authorization: Bearer "
 "<token>`"
 
-#: ../../source/docs/development/api.md:98
+#: ../../source/docs/development/api.md:99
 msgid "其遵循`RFC 6750`规范，`Bearer`为目前支持的唯一验证类型。"
 msgstr ""
 "It follows the `RFC 6750` specification, and `Bearer` is the only "
 "supported authentication type currently."
 
-#: ../../source/docs/development/api.md:100
+#: ../../source/docs/development/api.md:101
 msgid "token 本身是以`JWT`的形式传递的，所以你可以解读 token，token 中数据格式为:"
 msgstr ""
 "The token itself is transmitted in the form of `JWT`, so you can decode "
 "the token. The data format in the token is:"
 
-#: ../../source/docs/development/api.md:109
+#: ../../source/docs/development/api.md:110
 msgid "一旦 token 过期，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Expired`"
 msgstr ""
 "Once the token expires, the server will return the `UNAUTHENTICATED` "
 "error, and the error message will be `Token Expired`"
 
-#: ../../source/docs/development/api.md:111
+#: ../../source/docs/development/api.md:112
 msgid ""
 "如果 token 不合法，例如不是 JWT 或不包含所需要的字段，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token "
 "Invalid`"
@@ -863,13 +871,13 @@ msgstr ""
 "required fields, the server will return the `UNAUTHENTICATED` error, and "
 "the error message will be `Token Invalid`"
 
-#: ../../source/docs/development/api.md:113
+#: ../../source/docs/development/api.md:114
 msgid "如果未提供 token，服务器会返回`UNAUTHENTICATED`错误，错误信息为`Token Missing`"
 msgstr ""
 "If no token is provided, the server will return the `UNAUTHENTICATED` "
 "error, and the error message will be `Token Missing`"
 
-#: ../../source/docs/development/api.md:115
+#: ../../source/docs/development/api.md:116
 msgid "GetAccountInfo"
 msgstr "GetAccountInfo"
 
@@ -904,7 +912,7 @@ msgstr "Request Invalid Value"
 msgid "请求值无效(如:获取不存在的字段)"
 msgstr "Invalid request value (e.g. accessing a non-existent field)"
 
-#: ../../source/docs/development/api.md:123
+#: ../../source/docs/development/api.md:124
 msgid "SetSelfInfo"
 msgstr "SetSelfInfo"
 
@@ -936,7 +944,7 @@ msgstr "The new status is too long"
 msgid "用户名非法，例如过长或为空"
 msgstr "The username is invalid, for example, it is too long or empty"
 
-#: ../../source/docs/development/api.md:132
+#: ../../source/docs/development/api.md:133
 msgid "FetchMsgs"
 msgstr "FetchMsgs"
 
@@ -956,7 +964,7 @@ msgstr "Time Missing"
 msgid "缺少 time 参数"
 msgstr "Argument time is required"
 
-#: ../../source/docs/development/api.md:139
+#: ../../source/docs/development/api.md:140
 #: ../../source/docs/use/role_permission.md
 msgid "SendMsg"
 msgstr "SendMsg"
@@ -973,7 +981,7 @@ msgstr "Session Not Found"
 msgid "会话不存在"
 msgstr "The session does not exist"
 
-#: ../../source/docs/development/api.md:146
+#: ../../source/docs/development/api.md:147
 msgid "Upload"
 msgstr "Upload"
 
@@ -1028,7 +1036,7 @@ msgstr ""
 "You should upload a package of metadata, then upload content package "
 "until process finish"
 
-#: ../../source/docs/development/api.md:156
+#: ../../source/docs/development/api.md:157
 msgid "Download"
 msgstr "Download"
 
@@ -1036,7 +1044,7 @@ msgstr "Download"
 msgid "没有下载权限"
 msgstr "This file is not yours"
 
-#: ../../source/docs/development/api.md:162
+#: ../../source/docs/development/api.md:163
 msgid "NewSession"
 msgstr "NewSession"
 
@@ -1044,7 +1052,7 @@ msgstr "NewSession"
 msgid "邀请的用户不存在"
 msgstr "The user you want to invite does not exist"
 
-#: ../../source/docs/development/api.md:168
+#: ../../source/docs/development/api.md:169
 msgid "GetSessionInfo"
 msgstr "DeleteSession"
 
@@ -1052,7 +1060,7 @@ msgstr "DeleteSession"
 msgid "该会话不存在"
 msgstr "The session does not exist"
 
-#: ../../source/docs/development/api.md:175
+#: ../../source/docs/development/api.md:176
 msgid "SetSessionInfo"
 msgstr "SetSessionInfo"
 
@@ -1084,7 +1092,7 @@ msgstr "Cannot Set Description"
 msgid "没有设置会话简介的权限"
 msgstr "You don't have the privilege to set description"
 
-#: ../../source/docs/development/api.md:184
+#: ../../source/docs/development/api.md:185
 #: ../../source/docs/use/role_permission.md
 msgid "RecallMsg"
 msgstr "RecallMsg"
@@ -1101,7 +1109,7 @@ msgstr "Message Not Found"
 msgid "撤回的消息不存在"
 msgstr "The message you want to recall does not exist"
 
-#: ../../source/docs/development/api.md:191
+#: ../../source/docs/development/api.md:192
 #: ../../source/docs/use/role_permission.md
 msgid "SetRole"
 msgstr "SetRole"
@@ -1114,11 +1122,11 @@ msgstr "You don't have the privilege to set role"
 msgid "User Not In Session"
 msgstr "User Not In Session"
 
-#: ../../source/docs/development/api.md:198
+#: ../../source/docs/development/api.md:199
 msgid "AddRole"
 msgstr "AddRole"
 
-#: ../../source/docs/development/api.md:200
+#: ../../source/docs/development/api.md:201
 #: ../../source/docs/use/role_permission.md
 msgid "DeleteSession"
 msgstr "DeleteSession"
@@ -1127,7 +1135,7 @@ msgstr "DeleteSession"
 msgid "没有删除会话的权限"
 msgstr "You don't have the privilege to delete session"
 
-#: ../../source/docs/development/api.md:207
+#: ../../source/docs/development/api.md:208
 msgid "LeaveSession"
 msgstr "LeaveSession"
 
@@ -1135,7 +1143,7 @@ msgstr "LeaveSession"
 msgid "用户不在该会话"
 msgstr "User is not in this session"
 
-#: ../../source/docs/development/api.md:213
+#: ../../source/docs/development/api.md:214
 msgid "JoinInSession"
 msgstr "JoinInSession"
 
@@ -1147,7 +1155,7 @@ msgstr "Cannot join in session, for example, user was banned"
 msgid "该 session 不存在"
 msgstr "This session not exists"
 
-#: ../../source/docs/development/api.md:220
+#: ../../source/docs/development/api.md:221
 msgid "AcceptJoinInSession"
 msgstr "AcceptJoinInSession"
 
@@ -1157,7 +1165,7 @@ msgstr ""
 "Cannot accept join in session request, for example, you don't have this "
 "permission"
 
-#: ../../source/docs/development/api.md:227
+#: ../../source/docs/development/api.md:228
 #: ../../source/docs/use/role_permission.md
 msgid "MuteUser"
 msgstr "MuteUser"
@@ -1166,7 +1174,7 @@ msgstr "MuteUser"
 msgid "不具有 MuteUser 权限"
 msgstr "Don't have MuteUser permission"
 
-#: ../../source/docs/development/api.md:233
+#: ../../source/docs/development/api.md:234
 #: ../../source/docs/use/role_permission.md
 msgid "UnmuteUser"
 msgstr "UnmuteUser"
@@ -1183,7 +1191,7 @@ msgstr "User Not Be Muted"
 msgid "用户没有被 Mute"
 msgstr "User wasn't be muted"
 
-#: ../../source/docs/development/api.md:240
+#: ../../source/docs/development/api.md:241
 #: ../../source/docs/use/role_permission.md
 msgid "BanUser"
 msgstr "BanUser"
@@ -1192,7 +1200,7 @@ msgstr "BanUser"
 msgid "不具有 BanUser 权限"
 msgstr "Do not have BanUser permission"
 
-#: ../../source/docs/development/api.md:246
+#: ../../source/docs/development/api.md:247
 #: ../../source/docs/use/role_permission.md
 msgid "UnbanUser"
 msgstr "UnbanUser"
@@ -1209,7 +1217,7 @@ msgstr "User Not Be Banned"
 msgid "用户没有被 Ban"
 msgstr "The user is not banned"
 
-#: ../../source/docs/development/api.md:253
+#: ../../source/docs/development/api.md:254
 msgid "AddFriend"
 msgstr "AddFriend"
 
@@ -1229,7 +1237,7 @@ msgstr "The friend relationship already exists"
 msgid "好友不存在"
 msgstr "Friend does not exist"
 
-#: ../../source/docs/development/api.md:261
+#: ../../source/docs/development/api.md:262
 msgid "AcceptFriend"
 msgstr "AcceptFriend"
 
@@ -1241,7 +1249,7 @@ msgstr "Friend Invitation Not Found"
 msgid "好友申请不存在"
 msgstr "The friend request does not exist"
 
-#: ../../source/docs/development/api.md:268
+#: ../../source/docs/development/api.md:269
 msgid "DeleteFriend"
 msgstr "DeleteFriend"
 
@@ -1253,7 +1261,7 @@ msgstr "Friend Not Found"
 msgid "好友关系不存在"
 msgstr "The friend relationship does not exist"
 
-#: ../../source/docs/development/api.md:274
+#: ../../source/docs/development/api.md:275
 msgid "GetRole"
 msgstr "GetRole"
 
@@ -1273,11 +1281,11 @@ msgstr "Role Not Found"
 msgid "角色不存在"
 msgstr "Role does not exist"
 
-#: ../../source/docs/development/api.md:281
+#: ../../source/docs/development/api.md:282
 msgid "Unregister"
 msgstr "Unregister"
 
-#: ../../source/docs/development/api.md:283
+#: ../../source/docs/development/api.md:284
 msgid "暂时没有相关错误可能发生"
 msgstr "No relevant errors can occur currently"
 
@@ -1611,7 +1619,9 @@ msgstr "OurChat Server"
 
 #: ../../source/docs/development/markdown_in_msg.md
 msgid "非负整数i，代表该媒体为involvedFile中的第i项"
-msgstr "A non-negative integer i indicates that this medium is the i-th item in the involvedFile"
+msgstr ""
+"A non-negative integer i indicates that this medium is the i-th item in "
+"the involvedFile"
 
 #: ../../source/docs/development/markdown_in_msg.md
 msgid "N"

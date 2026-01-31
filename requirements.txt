@@ -9,67 +9,65 @@ babel==2.17.0
     #   pydata-sphinx-theme
     #   sphinx
     #   sphinx-intl
-beautifulsoup4==4.13.3
+beautifulsoup4==4.14.3
     # via pydata-sphinx-theme
-certifi==2025.1.31
+certifi==2026.1.4
     # via requests
-charset-normalizer==3.4.1
+charset-normalizer==3.4.4
     # via requests
-click==8.1.8
+click==8.3.1
     # via sphinx-intl
-docutils==0.21.2
+docutils==0.22.4
     # via
     #   myst-parser
     #   pydata-sphinx-theme
     #   sphinx
-idna==3.10
+idna==3.11
     # via requests
 imagesize==1.4.1
     # via sphinx
-jinja2==3.1.5
+jinja2==3.1.6
     # via
     #   myst-parser
     #   sphinx
-markdown-it-py==3.0.0
+markdown-it-py==4.0.0
     # via
     #   mdit-py-plugins
     #   myst-parser
-markupsafe==3.0.2
+markupsafe==3.0.3
     # via jinja2
-mdit-py-plugins==0.4.2
+mdit-py-plugins==0.5.0
     # via myst-parser
 mdurl==0.1.2
     # via markdown-it-py
-myst-parser==4.0.1
+myst-parser==5.0.0
     # via ourchat-docs (pyproject.toml)
-packaging==24.2
+packaging==26.0
     # via sphinx
 pydata-sphinx-theme==0.16.1
     # via ourchat-docs (pyproject.toml)
-pygments==2.19.1
+pygments==2.19.2
     # via
     #   accessible-pygments
     #   pydata-sphinx-theme
     #   sphinx
-pyyaml==6.0.2
+pyyaml==6.0.3
     # via myst-parser
-requests==2.32.3
+requests==2.32.5
     # via sphinx
-roman-numerals-py==3.1.0
+roman-numerals==4.1.0
     # via sphinx
-setuptools==75.8.0
-    # via sphinx-intl
-snowballstemmer==2.2.0
+snowballstemmer==3.0.1
     # via sphinx
-soupsieve==2.6
+soupsieve==2.8.3
     # via beautifulsoup4
-sphinx==8.2.3
+sphinx==9.0.4
     # via
     #   ourchat-docs (pyproject.toml)
     #   myst-parser
     #   pydata-sphinx-theme
     #   sphinx-intl
-sphinx-intl==2.3.1
+sphinx-intl==2.3.2
     # via ourchat-docs (pyproject.toml)
 sphinxcontrib-applehelp==2.0.0
     # via sphinx
@@ -83,9 +81,9 @@ sphinxcontrib-qthelp==2.0.0
     # via sphinx
 sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
-typing-extensions==4.12.2
+typing-extensions==4.15.0
     # via
     #   beautifulsoup4
     #   pydata-sphinx-theme
-urllib3==2.3.0
+urllib3==2.6.3
     # via requests

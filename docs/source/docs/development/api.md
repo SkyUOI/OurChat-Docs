@@ -46,6 +46,7 @@
 | 5      | NOT_FOUND        | User Not Found   | 该用户不存在       |
 | 3      | INVALID_ARGUMENT | Missing AuthType | 缺少 AuthType 参数 |
 | 16     | UNAUTHENTICATED  | Wrong Password   | 密码错误           |
+| 16     | UNAUTHENTICATED  | Account Locked   | 帐号已锁定         |
 
 #### Verify
 
@@ -126,7 +127,7 @@ token 本身是以`JWT`的形式传递的，所以你可以解读 token，token 
 | :----- | :--------------- | :------------------ | :---------------------------- |
 | 6      | ALREADY_EXISTS   | Conflict            | 信息冲突(如:新的 ocid 被占用) |
 | 3      | INVALID_ARGUMENT | Ocid Too Long       | 新的 ocid 太长                |
-| 3      | INVALID_ARGUMENT | Status Too Long     | 新的 Status 太长                |
+| 3      | INVALID_ARGUMENT | Status Too Long     | 新的 Status 太长              |
 | 3      | INVALID_ARGUMENT | Username Is Invalid | 用户名非法，例如过长或为空    |
 
 #### FetchMsgs
